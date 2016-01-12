@@ -1,0 +1,7 @@
+self.p_int[0] = 0 
+self.p_int[2] = 0 
+self.p_int[1] = 0 
+self.p_int[1] = self.p_int[0] + 1 
+self.p_int[2] = self.p_int[1] + 1 
+self.p_int[1] = self.p_int[2] + 1 
+self.p_int[0] = self.p_int[1] + 1 

@@ -1,0 +1,13 @@
+pools:
+	<int> 3
+
+logs:
+	0 <int>
+
+properties:
+	<int> < 4
+
+actions:
+	<int> := 0
+	<int> = <int> + 1
+	<int> = <int> - 1
