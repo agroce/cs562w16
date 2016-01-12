@@ -1,0 +1,76 @@
+Project details
+
+Part 1:  Proposal for what to test (20%)
+
+- Identify a Python library (System Under Test) with multiple function calls
+- Alternatively input is a complex string -- by some grammar
+
+- Explain what you want to test about it (what correctness means)
+
+- Briefly describe the system, where it can be found, etc.
+
+Should be about 500 words.  Can be more, probably should not be less.
+
+DUE DATE:  January 22, 2016
+
+Part 2:  Initial version of testing system in TSTL (20%)
+
+- Works
+
+- Generates tests of some kind
+
+- May not generate very GOOD tests
+
+- May not test full intended functionality
+
+- May not have many properties
+
+This submission is primarily code, though any special instructions to
+run the TSTL should be included (e.g., must some library be
+downloaded/installed)
+
+DUE DATE:  February 15, 2016
+
+Part 3:  Bug/progress report (20%)
+
+- Describe some bugs you found (in the System Under Test or your tester)
+
+- Explain progress to date -- how has your test system improved from the start?
+
+- Estimate your progress by end of term
+
+- Discuss quality of the SUT
+
+- Talk about code coverage, if possible
+
+Should be ~500 words -- can be more!
+
+DUE DATE:  March 1st, 2016
+
+Part 4:  Final report on project (20%)
+
+- What did you accomplish?
+
+- Did you find bugs?
+
+- How well does the tester work?
+
+- What is wrong with TSTL?
+
+- What is good about TSTL?
+
+- Coverage summaries, any other important data on the test effort
+
+Minimum of 1,000 words; figures, graphs etc. to improve understanding
+welcome
+
+- Imagine this is a final report to a project manager/report from
+  consulting effort
+
+Part 5:  Final version of TSTL code (20%)
+
+- Your code, full documentation, test cases for discovered
+  bugs/coverage/regression tests
+
+DUE DATE:  March 14, 2016
+
