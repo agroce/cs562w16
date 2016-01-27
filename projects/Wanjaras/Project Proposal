@@ -1,1 +1,17 @@
+Shivani Wanjara 
+CS 562 
 
+                                    Applied Software Engineering Project Proposal 
+PART 1: Proposal for what to test
+         As a part of my course work, for class 562, I will try to test the features of a selected Python Library .I will be using TSTL “Template Scripting Testing Language tool “to test a python Library called “Algorithms”. You can find this library at https://github.com/nryoung/algorithms. This Library contains 8 modules namely Data structures, Dynamic Programming , Factorization , Random , Math , Searching , Sorting , Shuffling and Sorting. Algorithms is a library of algorithms and data structures implemented in Python. There are multiple modules under this library, I will be focusing on the Data structures part of the given modules. Of which I plan to test different type of data structures like Binary search tree, singly linked list, queue and undirected graph. The goal is to test the functionality of the functions in it. Due to the diversity in the functions available in the library, it would be good to test multiple features. I will try to cover all kind of scenarios and cases for the mentioned above algorithms/data structures. To determine and understand if actions like add, delete, update and search is appropriate or no. With the help of given inputs we can determine if these data structure function correctly or no.
+
+The Binary Search Tree represents an ordered symbol table of generic key-value pairs.  Keys must be comparable.  Does not permit duplicate keys. When associating a value with a key already present in the BST, the previous value is replaced by the new one.  This implementation is for an unbalanced BST .
+
+  A linked list is a data structure consisting of a group of nodes which together represent a sequence. Under the simplest form, each node is composed of data and a reference to the next node in the sequence; more complex variants add additional Links. This structure allows for efficient insertion or removal of elements from any position in the sequence. 
+
+  A Queue is a linear data structure, or more abstractly a sequential collection. The entities in the collection are kept in order and the principal (or only) operations on the collection are the addition of entities to the rear terminal position, known as enqueue, and removal of entities from the front terminal position, known as dequeue. This makes the queue a First-In-First-Out (FIFO) data structure. In a FIFO data structure, the first element added to the queue will be the first one to be removed.. 
+  
+  The Undirected graph class represents an undirected graph of vertices, which can be any has able value.
+  
+        This way I plan to find the correctness of the input to the algorithms and data structures. With the help of tstl create test that will test all the functions mentioned / used. These basic Functionality of addition, deletion, updating, traversing , searching etc  of these nodes/input will be tested . At the same time it is necessary to make sure that we are also receiving the expected output. Providing Inputs which may be out of the scope/ boundary, values/variables which may not be supported. I plan to cover most of the cases for each of them and test for the known deliverables as well. 
+  
