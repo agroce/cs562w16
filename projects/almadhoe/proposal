@@ -1,0 +1,52 @@
+CS562 Applied Software Engineering - Assignment1 – Eman Almadhoun, Student ID: 932909951
+
+Proposal
+
+After lots of search on Python libraries, I decide to test mininet.Topo library. The idea comes from one of the students his name is Rafid Almahdi who gave me the idea of using mininet system. As I am interesting and working on Networking and computer system, so this library will be very useful for me to understand how the nodes connect and communicate between each other which will help me in my research.
+
+Mininet is a virtual network environment which creates switch, kernel, topology and hosts on a PC using Linux operating system and runs them. It is very fast, easy to use, open source and writing in Python. I will test the creation of topology in the system which can create a different type of topology (linear, single, tree, ..). Topo.py has many function calls some of them are: [3]
+
+Method and Description
+Topo.__init__(,) To initialize topology.
+self.addLink(host, switch) To add links between nodes
+Topo.addHost(self, name, opts) To add host to the graph.
+Topo.isSwitch(self, n) Returns true if node is a switch.
+Topo.build(self, args, params) Override this method to build the topology.
+Topo.convertTo(self, cls, data=True, keys=True) Convert to a new object of networkx.MultiGraph-like class cls.
+
+This system is exist on GitHub website under: https://github.com/mininet/mininet 
+
+In my project, I will test if the system creates the topology type. Is the system creating switches and hosts correctly? Also, check if every hosts can communicate between each other and so on.
+
+To test this system, I will write test harness in a declarative style which is writing a program using "Template Scripting Testing Language" (tstl) language to check the correctness of the system's answers. TSTL is using for many testing types, such as code coverage, logging, and delta debugging. TSTL uses for testing API calls and also, grammar testing. When I write the Python libraries name on tstl file, TSTL will use the source code for the Software Under Test(SUT) for operations support. After run the test, I will see if the test has no bugs, then the test is successful and the answers are correct. The report will generate. [2]
+
+
+
+Inside .TSTL file:
+
+•	In the first lines, I will write some Python raw which starts with @ symbol. These are raw for defining some functions which are be used in the harness body, as will as to import the SUT's code.
+•	After that, I will write some functions (test cases) for testing.
+•	Then, I will define the source code of my Python file. Source: myfile.py
+•	After that, I will define the pool of values which I going to use them in the test [1-4]. The state of the SUT will be store. (e.g. pool: <INT> 4.) the number refer to the number of values of integer the test need them.
+•	I will write some properties which is after each test action have to be true and unchangeable. 
+•	I will define some actions for testing which have some API calls.
+•	Then I will define references to indicate how SUT calls are to be converted to reference calls.
+•	Finally, I will use word compare for comparing return values of the SUT to return values of the references which should be the same [1, 2]
+
+To run the test, I will write (.tstl) file and store it in the generators folder with the python source code which I will test it. Then, I will compile it using this command ( tstl filename.tstl). sut.py file will generate. After that, I will run the random tester using this command (python randomtester.py) with some parameter. And the test result will come up. 
+
+Why testing: 
+
+•	Software testing is very important to detect any error which was done during development phases.
+•	Also, to ensure that any result will be correct and successes without any failure. 
+•	It is important to make sure the Quality and the reliability of the software.
+•	When the software is so big, automated testing is very useful. [4]
+
+
+References:
+[1] Groce, A., Pinto, J., “A Little Language for Testing”, http://www.cs.cmu.edu/~agroce/nfm15.pdf
+[2] “TSTL: A Language and Tool for Testing (Demo) “,Groce, A., Pinto, J., Azimi, P., Mittal, P.,  http://www.cs.cmu.edu/~agroce/issta15.pdf
+[3] https://github.com/mininet/mininet
+[4] http://istqbexamcertification.com/why-is-testing-necessary/
+[5] http://mininet.org/api/classmininet_1_1topo_1_1Topo.html
+
