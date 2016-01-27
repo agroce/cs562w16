@@ -5,8 +5,9 @@ Student ID: 932-705-076
 
 Library under test:
 
-In this project I plan to use TSTL to test the python libraries of “binary_search_tree.py” and “singly_linked_list.py” which are the python files for Binary Search Trees and Linked List respectively. These python files were obtained from the GitHub repository.
-The link of the files is as given below
+In this project I plan to use TSTL to test the python libraries of “binary_search_tree.py” and
+“singly_linked_list.py” which are the python files for Binary Search Trees and Linked List respectively.
+These python files were obtained from the GitHub repository. The link of the files is as given below
 
 Binary Search: https://github.com/nryoung/algorithms/blob/master/algorithms/data_structures/binary_search_tree.py
 Linked List: https://github.com/nryoung/algorithms/blob/master/algorithms/data_structures/singly_linked_list.py
@@ -21,7 +22,8 @@ In this project I will perform the below tests:-
 ->	Access the uniqueness of a key inside the Binary Search Tree i.e. accessing if the tree accepts and maintains duplicate values.
 ->	How the library handles when a non existing key is tried to delete.
 ->	Check whether the node on the left hand side of a key is less and the key on the right hand side is greater. 
-->	I will be testing the traversal patterns of a Binary Search tree which are preorder, postorder and inorder and check whether after insertion,deletion does the function give out correct inorder,preorder and postorder patterns.
+->	I will be testing the traversal patterns of a Binary Search tree which are preorder,
+    postorder and inorder and check whether after insertion,deletion does the function give out correct inorder,preorder and postorder patterns.
 ->	Examine the behavior of the library when an unknown/incorrect input is given to the tree.  
 ->	When a deletion is performed on a particular key in the tree, does the tree remain adhered to the standard properties of a Binary Search tree? 
 ->  What happens when a deletion, searching operation is performed on an empty Binary Search Tree?
