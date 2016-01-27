@@ -15,10 +15,15 @@ I am currently planning to test two aspects of the PyOpenCL API: correctness and
 
 ##### Correctness #####
 Ensuring correctness is key, this can be achieved by using the built in serial implementations of the respective parallel algorithms as oracles.
-The serial implementation of these is as trivial as:
+The serial implementation of these are as trivial as:
 - Map: list(map(fun, somelist))
 - Reduce (sum): sum(somelist)
 - Sort: somelist.sort() 
+
+Some additional targets for testing include predicate copies, for example:  
+- "return a list where n > 100 in some list": [i for i in somelist if i > 100]
+
+While these can be trivial to implement in serial, there might be issues associated with translating a predicate to OpenCL.
 
 ##### Performance #####
 In addition to correctness we can verify that PyOpenCL is providing the speedup that we are expecting.
