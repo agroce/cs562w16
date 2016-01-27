@@ -23,7 +23,7 @@ In this project I will perform the below tests:-
 ->	How the library handles when a non existing key is tried to delete.
 ->	Check whether the node on the left hand side of a key is less and the key on the right hand side is greater. 
 ->	I will be testing the traversal patterns of a Binary Search tree which are preorder,
-     postorder and inorder and check whether after insertion,deletion does the function give out correct inorder,preorder and postorder patterns.
+       postorder and inorder and check whether after insertion,deletion does the function give out correct inorder,preorder and postorder patterns.
 ->	Examine the behavior of the library when an unknown/incorrect input is given to the tree.  
 ->	When a deletion is performed on a particular key in the tree, does the tree remain adhered to the standard properties of a Binary Search tree? 
 ->  What happens when a deletion, searching operation is performed on an empty Binary Search Tree?
@@ -33,7 +33,7 @@ Applications which have to deal with unknown number of data items would preferab
 ->	Test whether after deletion of a particular node in the middle of linked list ,do the elements on the list maintain their structure in the linked list.
 ->	How the library handles when a wrong data type input is provided to the linked list.
 ->	Since the source library files do not have implementations for adding and deletion of elements on the rear of a linked list,
-I intend to provide that functionality myself and test the working of the same.
+    I intend to provide that functionality myself and test the working of the same.
 ->	Test whether insertion, deletion, searching and the size functions produce correct results.
 
 
