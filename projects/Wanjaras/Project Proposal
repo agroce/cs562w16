@@ -15,3 +15,10 @@ The Binary Search Tree represents an ordered symbol table of generic key-value p
   
         This way I plan to find the correctness of the input to the algorithms and data structures. With the help of tstl create test that will test all the functions mentioned / used. These basic Functionality of addition, deletion, updating, traversing , searching etc  of these nodes/input will be tested . At the same time it is necessary to make sure that we are also receiving the expected output. Providing Inputs which may be out of the scope/ boundary, values/variables which may not be supported. I plan to cover most of the cases for each of them and test for the known deliverables as well. 
   
+
+
+Reference  : 
+https://github.com/nryoung/algorithms.
+https://github.com/nryoung/algorithms/tree/master/algorithms/data_structures
+
+  
