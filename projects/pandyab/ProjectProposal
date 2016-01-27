@@ -1,7 +1,8 @@
 CS562 Project Proposal
 Bhargav Pandya
 
-I intend to use TSTL to test two individual data structure python libraries, namely, singly_linked_list and binary_search_tree which can be found at this link: https://github.com/nryoung/algorithms/tree/master/algorithms/data_structures. 
+I intend to use TSTL to test two individual data structure python libraries, namely, singly_linked_list and binary_search_tree which can be 
+found at this link: https://github.com/nryoung/algorithms/tree/master/algorithms/data_structures. 
 I chose them because both the libraries have multiple function calls and have sufficient complexity for effective testing. 
 Another reason for choosing these libraries is that both the libraries have multiple cases to be tested for.
 
