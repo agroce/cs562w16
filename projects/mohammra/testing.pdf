@@ -1,0 +1,72 @@
+Proposal
+CS562_Applied Software Engineering
+Alex Groce
+System under Test
+I will test Mininet library. Mininet is a network emulator, or perhaps more precisely a network emulation orchestration system. It runs a collection of end-hosts, switches, routers, and links on a single Linux kernel. It uses lightweight virtualization to make a single system look like a complete network, running the same kernel, system, and user code. There many library like:
+from mininet.topo import Top
+from mininet.net import Mininet
+from mininet.util import dumpNodeConnections
+from mininet.log import setLogLevel
+Also,there are many function calls like:
+build(): The method to override in your topology class. Constructor parameters (n) will be passed through to it automatically by Topo.__init__().
+addSwitch(): adds a switch to a topology and returns the switch name
+addHost(): adds a host to a topology and returns the host name
+addLink(): adds a bidirectional link to a topology (and returns a link key, but this is not important). Links in Mininet are bidirectional unless noted otherwise.
+start(): starts your network
+pingAll(): tests connectivity by trying to have all nodes ping each other
+stop(): stops your network
+net.hosts: all the hosts in a network
+dumpNodeConnections(): dumps connections to/from a set of nodes.
+Mininet combines many of the best features of emulators, hardware testbeds, and simulators.
+Compared to full system virtualization based approaches, Mininet:
+Boots faster: seconds instead of minutes
+Scales larger: hundreds of hosts and switches vs. single digits
+Provides more bandwidth: typically 2Gbps total bandwidth on modest hardware
+Installs easily: a prepackaged VM is available that runs on VMware or VirtualBox for Mac/Win/Linux with OpenFlow v1.0 tools already installed.
+Compared to hardware testbeds, Mininet
+is inexpensive and always available (even before conference deadlines)
+is quickly reconfigurable and restartable
+Compared to simulators, Mininet
+runs real, unmodified code including application code, OS kernel code, and control plane code (both OpenFlow controller code and Open vSwitch code)
+easily connects to real networks.
+I will test this library by use TSTL .and I will test all function to see what happen when I put this system under test.For example in following program I need to know what the limit to create host
+And switch
+ from mininet.topo import Topo
+    from mininet.net import Mininet
+    from mininet.node import CPULimitedHost
+    from mininet.link import TCLink
+    from mininet.util import dumpNodeConnections
+    from mininet.log import setLogLevel
+
+    class SingleSwitchTopo(Topo):
+        "Single switch connected to n hosts."
+        def build(self, n=2):
+            switch = self.addSwitch('s1')
+            for h in range(n):
+                # Each host gets 50%/n of system CPU
+                host = self.addHost('h%s' % (h + 1),
+                   cpu=.5/n)
+                # 10 Mbps, 5ms delay, 10% loss, 1000 packet queue
+                self.addLink(host, switch,
+                   bw=10, delay='5ms', loss=10, max_queue_size=1000, use_htb=True)
+
+    def perfTest():
+        "Create network and run simple performance test"
+        topo = SingleSwitchTopo(n=4)
+        net = Mininet(topo=topo, 
+                      host=CPULimitedHost, link=TCLink)
+        net.start()
+        print "Dumping host connections"
+        dumpNodeConnections(net.hosts)
+        print "Testing network connectivity"
+        net.pingAll()
+        print "Testing bandwidth between h1 and h4"
+        h1, h4 = net.get('h1', 'h4')
+        net.iperf((h1, h4))
+        net.stop()
+
+    if __name__ == '__main__':
+        setLogLevel('info')
+        perfTest()
+Sometime when I worked with mininet I found many problem to create topology like I cannot run and ping all more than ten host .I think this test will help me to understand how mininet work. 
+
