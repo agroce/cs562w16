@@ -23,3 +23,78 @@ interface:
     $ pip install sqlparse
 
 **TODO:** describe other ways to install module
+
+## SQL Syntax ##
+
+**TODO:** introduction to section
+
+The structured query language (SQL) consists of two sublanguages: the data
+definition language (DDL) and the data manipulation language (DML). Concrete
+syntax shared by the DDL and DML is given by the following grammar.
+
+    <letter>  ::= a | b | ... | z
+    <digit>   ::= 0 | 1 | ... | 9
+    <space>   ::= _ | \t | \n | \r
+    <letters> ::= <letter>
+                | <letter> <letters>
+    <digits>  ::= <digit>
+                | <digit> <digits>
+    <sep>     ::= ε
+                | <space> <sep>
+    <comma>   ::= <sep> , <sep>
+    <left>    ::= ( <sep>
+    <right>   ::= <sep> )
+    <name>    ::= <letters>
+                | <letters> <digits> <name>
+    <names>   ::= <name>
+                | <name> <comma> <names>
+    
+    <num>     ::= ... | -1 | 0 | 1 | ...
+    <bool>    ::= true | false
+    <char>    ::= <letter> | <digit> | <space>
+    <nums>    ::= <num>
+                | <num> <comma> <nums>
+    <chars>   ::= ε
+                | <char> <chars>
+    <str>     ::= " <chars> "
+    <place>   ::= ? | : <name>
+    <val>     ::= <num> | <bool> | <str> | <name> | <place>
+    <op1>     ::= - | NOT
+    <op2>     ::= + | - | * | / | AND | OR | == | <> | < | >
+    <expr>    ::= <val>
+                | <left> <expr> <right>
+                | <op1> <sep> <expr>
+                | <expr> <sep> <op2> <sep> <expr>
+    <exprs>   ::= <expr>
+                | <expr> <comma> <exprs>
+
+The concrete syntax for DDL statements is given by the following grammar:
+
+**TODO:** write grammar for DDL
+
+The concrete syntax for DML statements is given by the following grammar:
+
+    <which>   ::= ε | ALL | DISTINCT
+    <which'>  ::= <sep> <which> <sep>
+    <cols>    ::= * | <nums> | <names>
+    <cols'>   ::= <sep> <cols> <sep>
+    
+    <where>   ::= ε | WHERE <sep> <expr>
+    <where'>  ::= <sep> <where> <sep>
+    <having>  ::= ε | HAVING <sep> <expr>
+    <having'> ::= <sep> <having> <sep>
+    <group>   ::= ε | GROUP BY <sep> <exprs> <having'>
+    <group'>  ::= <sep> <group> <sep>
+    <order>   ::= ε | ORDER BY <sep> <cols>
+    <order'>  ::= <sep> <order> <sep>
+    <limit>   ::= ε | LIMIT <sep> <expr>
+    <limit'>  ::= <sep> <limit> <sep>
+    
+    <as>      ::= ε | AS <sep> <name>
+    <table>   ::= <left> <select> <right> | <name>
+    <from>    ::= ε | FROM <sep> <table> <sep> <as>
+    <from'>   ::= <sep> <from> <as'>
+    
+    <select>  ::= SELECT <which'> <cols'> <from'> <where'> <group'> <order'> <limit'>
+
+**TODO:** finish syntax
