@@ -11,7 +11,8 @@ pool: <array> 1
 
 <int> := <[1..1024]>
 <char> := "+"
+#<char> := "-"  #yields incorrect results, possibly underflow?
 #<char> := <["+", "-", "/", "*"]>  #removing other reduction types for now because of overflow errors
 <array> := red.get_cpu_data(seed=<int>, exponent=<int>)
 
-{RuntimeWarning} <int> and <char> -> assert red.pyopencl_reduction(<array>, <char>) == red.python_reduction(<array>, <char>)
+assert red.pyopencl_reduction(<array>, <char>) == red.python_reduction(<array>, <char>)

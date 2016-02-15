@@ -15,8 +15,8 @@ def get_array_length(seed):
     return int(math.pow(2, 1 + seed % 12))
 
 
-def get_cpu_data(seed=42, min_endpoint=-1024, max_endpoint=1024, exponent=10):
-    length = get_array_length(exponent)
+def get_cpu_data(seed=42, min_endpoint=-10, max_endpoint=10, exponent=10, maxlength=None):
+    length = maxlength if maxlength else get_array_length(exponent)
     return np.random.RandomState(seed=seed).randint(min_endpoint, max_endpoint, length).astype(np.int32)
 
 
@@ -42,8 +42,9 @@ def pyopencl_reduction(cpu_data, reduction="+"):
     return clresult
 
 
-def compare_reductions(seed=42, reduction="+", min_endpoint=-1024, max_endpoint=1024):
-    arr = get_cpu_data(seed, min_endpoint, max_endpoint)
+def compare_reductions(seed=42, reduction="+", min_endpoint=-1024, max_endpoint=1024, maxlength=None):
+    arr = get_cpu_data(seed, min_endpoint, max_endpoint, maxlength)
+    print(arr)
 
     clresult = pyopencl_reduction(arr, reduction)
     pyresult = python_reduction(arr, reduction)
@@ -53,7 +54,7 @@ def compare_reductions(seed=42, reduction="+", min_endpoint=-1024, max_endpoint=
 
 
 def main():
-    compare_reductions(seed=3)
+    compare_reductions(seed=246, reduction="-", maxlength=10)
 
 
 if __name__ == '__main__':
