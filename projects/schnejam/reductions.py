@@ -1,4 +1,5 @@
 from __future__ import print_function
+import math
 import numpy as np
 import pyopencl as cl
 import pyopencl.array
@@ -10,23 +11,20 @@ reduction_actions = {"+": lambda x, y: x + y,
                      "/": lambda x, y: x / y}
 
 
-def pyopencl_reduction(seed=42, length=3, reduction="+", min_endpoint=0, max_endpoint=5):
-    """
-    Proof of concept for PyOpenCL to guide testing
-    :param seed: Seed for repeatability
-    :param length: Length of test array
-    :param reduction: Type of reduction to be performed, see expr
-    :param min_endpoint: Lower bound of random values
-    :param max_endpoint: Upper bound of random values
-    :return: Nothing
-    """
-    assert isinstance(seed, int) and isinstance(length, int)
-    assert isinstance(min_endpoint, int) and isinstance(max_endpoint, int)
-    assert reduction in reduction_actions.keys()
+def get_array_length(seed):
+    return int(math.pow(2, 1 + seed % 12))
 
-    rand = np.random.RandomState(seed=seed)
-    cpu_data = rand.randint(min_endpoint, max_endpoint, length).astype(np.int32)
 
+def get_cpu_data(seed=42, min_endpoint=-1024, max_endpoint=1024, exponent=10):
+    length = get_array_length(exponent)
+    return np.random.RandomState(seed=seed).randint(min_endpoint, max_endpoint, length).astype(np.int32)
+
+
+def python_reduction(cpu_data, reduction="+"):
+    return reduce(reduction_actions[reduction], cpu_data)
+
+
+def pyopencl_reduction(cpu_data, reduction="+"):
     ctx = cl.create_some_context()
     queue = cl.CommandQueue(ctx)
     gpu_data = pyopencl.array.to_device(queue, cpu_data)
@@ -39,14 +37,21 @@ def pyopencl_reduction(seed=42, length=3, reduction="+", min_endpoint=0, max_end
                                                 arguments="__global int *x")
     clresult = kernel(gpu_data).get()
     queue.finish()
+    return clresult
 
-    pyresult = reduce(reduction_actions[reduction], cpu_data)
+
+def compare_reductions(seed=42, reduction="+", min_endpoint=-1024, max_endpoint=1024):
+    arr = get_cpu_data(seed, min_endpoint, max_endpoint)
+
+    clresult = pyopencl_reduction(arr, reduction)
+    pyresult = python_reduction(arr, reduction)
+
     print("clresult: {0}, pyresult: {1}".format(clresult, pyresult))
     return clresult == pyresult
 
 
 def main():
-    print(pyopencl_reduction(seed=42))
+    print(compare_reductions(seed=42))
 
 
 if __name__ == '__main__':

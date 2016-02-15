@@ -1,0 +1,12 @@
+@import reductions
+
+pool: <int> 1
+pool: <char> 1
+pool: <array> 1
+
+<int> := <[1..1024]>
+<char> := <["+", "-", "/", "*"]>
+#  seed configures RandomState and exponent is constrained to 1 and 13 for array lengths of 2..8096 for now
+<array> := reductions.get_cpu_data(seed=<int>, exponent=<int>)
+
+assert reductions.pyopencl_reduction(<array>, <char>) == reductions.python_reduction(<array>, <char>)
