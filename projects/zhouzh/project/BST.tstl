@@ -1,0 +1,57 @@
+@from algorithms.data_structures import binary_search_tree
+
+<@
+
+def maxNode(root):
+        if root is None:
+                return float("-inf")
+
+        maxleft = maxNode(root.left)
+        maxright = maxNode(root.right)
+        
+        return max(root.key, maxleft, maxright)
+
+
+def minNode(root):
+        if root is None:
+                return float("inf")
+
+        minleft = minNode(root.left)
+        minright = minNode(root.right)
+        
+        return min(root.key, minleft, minright)
+
+def isBST(node):
+        if node is None:
+                return True
+
+        if (maxNode(node.left) <= node.key <= minNode(node.right) and isBST(node.left) and isBST(node.right)):
+                return True
+        else:
+                return False
+@>
+
+
+pools:
+        <val> 5
+        <key> 5
+        <tree> 2
+        <list> 2
+
+actions:
+        <val> := <[0..10]>
+        <key> := <[0..10]>
+        <list> := []
+        <tree> := binary_search_tree.BinarySearchTree()
+        ~<tree>.put(<key>,<val>); ~<list>.append(<val,1>) => <tree,1>.contains(<key,1>) and isBST(<tree,1>.root)
+
+        ~<tree>.contains(<key>) and (~<tree,1>.get(<key,1>) in ~<list>) -> \
+        values = (~<tree,1>.get(<key,1>)); ~<tree,1>.delete(<key,1>); ~<list,1>.remove(values); => \
+        (<tree,1>.contains(<key,1>) == False) and isBST(<tree,1>.root)
+
+
+
+
+
+
+

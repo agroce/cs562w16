@@ -1,0 +1,16 @@
+        First version of my testing project have tested all data structures in algorithms library except
+union data structures. I get a little bit trouble when write test cases for union data structures. This
+Version only contains some naive but useful test skills. Later I will add more test strategies into the
+data structures test case. Later, I will also test all sorting algorithms and other module in this library.
+For now, I have six test files:
+        1. stack.tstl: testing stack data structure.
+        2. digraph.tstl: testing directed graph data structure.
+        3. undigraph.tstl: testing undirected graph data structure.
+        4. BST.tstl: testing Binary Search Tree data structure.
+        5. queue.tstl: testing queue data structure.
+        6. LinkedList.tstl: testing singly linked list data structure.
+
+This version does not need any extra library. User only need to install algorithms library as I provide in 
+proposal. To test each module, simply type "tstl testFileName --nocover" and run "python randomtester --nocover"
+in command line.
+
