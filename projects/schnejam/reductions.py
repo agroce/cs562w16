@@ -25,14 +25,16 @@ def python_reduction(cpu_data, reduction="+"):
 
 
 def pyopencl_reduction(cpu_data, reduction="+"):
-    ctx = cl.create_some_context()
+    platforms = cl.get_platforms()
+    ctx = cl.Context(dev_type=cl.device_type.ALL, properties=[(cl.context_properties.PLATFORM, platforms[0])])
     queue = cl.CommandQueue(ctx)
     gpu_data = pyopencl.array.to_device(queue, cpu_data)
 
+    expr = "a{0}b".format(reduction)
     kernel = pyopencl.reduction.ReductionKernel(ctx=ctx,
                                                 dtype_out=np.int32,
                                                 neutral="0",
-                                                reduce_expr="a+b".format(reduction),
+                                                reduce_expr=expr,
                                                 map_expr="x[i]",
                                                 arguments="__global int *x")
     clresult = kernel(gpu_data).get()
@@ -51,7 +53,7 @@ def compare_reductions(seed=42, reduction="+", min_endpoint=-1024, max_endpoint=
 
 
 def main():
-    print(compare_reductions(seed=42))
+    compare_reductions(seed=3)
 
 
 if __name__ == '__main__':
