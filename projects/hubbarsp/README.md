@@ -3,13 +3,13 @@
 My project proposal is to use the Template Scripting Testing Language (TSTL) to
 define a test harness for the `sqlparse` Python module. The module provides a
 parser for SQL statements. The parser takes a string for one or more SQL
-statements and returns a tuple of objects for the abstract syntax trees (ASTs)
-of the SQL statements. The module also provides classes and methods for
-analyzing the ASTs of SQL statements.
+statements and returns a tuple of objects for the parse trees  of the SQL
+statements. The module also provides classes and methods for analyzing the parse
+trees of SQL statements.
 
 The parser provided by the module will be tested for correctness. The parser is
-considered correct if it returns the ASTs of the input SQL statements, for any
-standard SQL statements. The XML example will be used to guide the initial
+considered correct if it returns the parse tree of the input SQL statements, for
+any standard SQL statements. The XML example will be used to guide the initial
 design.
 
 **TODO:** describe subset of SQL to test
@@ -23,6 +23,24 @@ interface:
     $ pip install sqlparse
 
 **TODO:** describe other ways to install module
+
+## Instructions ##
+
+To generate the test harness defined by `mysqlparse.py` run the following
+commands (in this directory):
+
+    $ rm sut.*
+    
+    $ tstl --nocover mysqlparse.tstl
+
+This will generate the test harness named `sut.py`. To run the random tester on
+the test harness, run a command similar to the following (in this directory):
+
+    $ python ../../../tstl/generators/randomtester.py --nocover --maxtest=4 --depth=2
+
+In general, you must run the following command:
+
+    $ python <path to randomtester> --nocover --maxtest=<m> --depth=<n>
 
 ## SQL Syntax ##
 
