@@ -1,7 +1,54 @@
-# this file defines a test harness for the sqlparse
+# this file defines a test harness for sqlparse
 @import sqlparse
 
-# for code coverage
+# helper python code
+<@
+# pretty print given AST
+def pretty(ast):
+  def helper(token, i = 0):
+    indent = ' ' * (2 * i)
+    print('%s%s \'%s\'' % (indent, token._get_repr_name(), token._get_repr_value()))
+    if token.is_group():
+      for t in filter((lambda t: not t.is_whitespace()), token.tokens):
+        helper(t, i + 1)
+  print('\n')
+  helper(ast)
+
+# TODO: check property of given AST
+def check(ast):
+  return ast.get_type() == 'SELECT'
+
+# called when reduction of test cases completes
+#def test_after_reduce(sut): 
+#  sut.setLog(0)
+@>
+
+# source for code coverage
 source: sqlparse.py
 
-# TODO: translate grammar into tstl code
+# pools
+pool: <tab> 3
+pool: <col> 3
+pool: <tabs> 3
+pool: <cols> 3
+pool: <stmt> 3
+pool: <ast> 3
+
+# properties
+property: check(<ast>)
+
+# logging
+#log: POST 1 <ast>
+
+# TODO: actions
+<tab> := <['A', 'B', 'C']>
+<col> := <['a', 'b', 'c']>
+<col> := <tab> + '.' + <col>
+<tabs> := <tab>
+<cols> := <col>
+~<tabs> += ', ' + <tab>
+~<cols> += ', ' + <col>
+<stmt> := 'SELECT ' + <cols> + ' FROM ' + <tabs> + ';'
+<stmt> := 'SELECT ' + <cols> + ' FROM (' + ~<stmt> + ');'
+<ast> := sqlparse.parse(<stmt>)[0]
+pretty(<ast>)
