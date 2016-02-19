@@ -1,4 +1,12 @@
 ## CS 562 Project ##
+### Part 0: VirtualEnv Setup ###
+Setup a virtualenv using the requirements file like this:
+`pip install -r requirements.txt`
+
+You may need to install pyopencl directly from it's repo like so:
+`pip install git+https://github.com/pyopencl/pyopencl.git`
+
+
 ### Part 1: Proposal ###
 
 #### System Under Test - PyOpenCL ####
