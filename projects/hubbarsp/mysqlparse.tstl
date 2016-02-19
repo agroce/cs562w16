@@ -57,14 +57,13 @@ log: POST 1 pretty(<parsed>)
 
 <name>    := <['a'..'c']> 
 <name>    := <['A'..'C']> 
-#<name>    := <['a', 'b', 'c', 'A', 'B', 'C']> 
 ~<name>   += <name>
 <col>     := <name>
 <col>     := <name> + '.' + <name>
 <alias>   := '' 
 <alias>   := 'AS' + <sep> + <name>
 
-<num>     := <['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']> 
+<num>     := <['0'..'9']> 
 <num,1> [0] != '0' -> ~<num> += <num>
 <val>     := 'NULL' 
 <val>     := '\"' + <name> + '\"' 
@@ -87,6 +86,7 @@ log: POST 1 pretty(<parsed>)
 
 <select>  := 'SELECT' + <sep> + <cols> + <sep> + 'FROM' + <sep> + <tab> + 'WHERE' + <sep> + <expr>
 <select>  := 'SELECT' + <sep> + <cols> + <sep> + 'FROM' + <sep> + <tab>
+# removing this guard can lead to an assertion error
 <select,1> [-1] != ';' -> ~<select> += ';' 
 
 # after action, check that parse tree equals statement string
