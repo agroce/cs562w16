@@ -27,8 +27,8 @@ pool: <length> 3
 
 <seed> := <[1..20]>
 <func> := <["a+b","a*b"]> #valid GPU operations for folding must be associative
-<array> := red.get_cpu_data(seed=<seed>, min_endpoint=-2, max_endpoint=2, length=<length>)
-<length> := int(red.array_len(<[1..10]>))
+<array> := red.get_cpu_data(seed=<seed>, min_endpoint=-10, max_endpoint=10, length=<length>)
+<length> := int(red.array_len(<[1..13]>))
 
 <array,1> = compare_fold(<array>, <func>)
 <array,1> = compare_zip(<array>, <func>)
