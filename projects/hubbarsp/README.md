@@ -36,7 +36,7 @@ $ pip install sqlparse
 ```
 
 Note that the version of the module installed using pip might be older and
-incompatable with the version targeted by the test harness.
+incompatible with the version targeted by the test harness.
 
 ### Test Module
 
