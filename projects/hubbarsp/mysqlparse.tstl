@@ -1,4 +1,5 @@
 # this file defines a test harness for sqlparse
+
 @import sqlparse
 @from sqlparse import tokens
 @from sqlparse import compat
@@ -6,7 +7,7 @@
 # helper python code
 <@
 
-# pretty print string for given parse tree
+# pretty print string for parse tree
 def pretty(parsed):
   def helper(parsed, i = 0):
     result = '%s%s \'%s\'\n' % (' ' * (2 * i), parsed._get_repr_name(), parsed._get_repr_value())
@@ -16,13 +17,9 @@ def pretty(parsed):
     return result
   return '\n' + helper(parsed)
 
-# check that parse tree equals statement string
-def check(parsed, s):
-  return compat.u(parsed) == s
-
-# TODO: set logging level after reduce
-#def test_after_reduce(sut): 
-#  sut.setLog(0)
+# set logging level after reduce
+def test_after_reduce(sut): 
+  sut.setLog(1)
 
 @>
 
@@ -30,59 +27,66 @@ def check(parsed, s):
 source: sqlparse.py
 
 # pools
-pool: <sep>    3 # NOTE: python runs out of memory if pool size is at least 6
+pool: <sep>    3
 
 pool: <name>   3
 pool: <col>    3
 pool: <alias>  3
 
-#pool: <num>    3
-#pool: <val>    3
-#pool: <expr>   3
+pool: <num>    3
+pool: <val>    3
+pool: <expr>   3
 
 pool: <cols>   3
 pool: <which>  3
 pool: <tab>    3
 
-pool: <select> 3
-pool: <parsed> 3
+pool: <select> 1
+pool: <parsed> 1
 
-# TODO: properties
+# properties
+property: <parsed>.get_type() == 'SELECT' 
 
-# TODO: logging
-#log: POST 0 pretty(<parsed>)
+# logging
+log: POST 1 pretty(<parsed>)
 
-<sep>     := <[' ', '\t', '\n', '\r']>
-<sep>     := '/*' + <sep> + '*/'
+<sep>     := <[' ', '\t', '\n', '\r']> 
+<sep>     := '/*' + <sep> + '*/' 
 ~<sep>    += <sep>
 
-<name>    := <['a', 'b', 'c', 'A', 'B', 'C']>
+<name>    := <['a'..'c']> 
+<name>    := <['A'..'C']> 
+#<name>    := <['a', 'b', 'c', 'A', 'B', 'C']> 
 ~<name>   += <name>
 <col>     := <name>
 <col>     := <name> + '.' + <name>
-<alias>   := ''
+<alias>   := '' 
 <alias>   := 'AS' + <sep> + <name>
 
-#<num>     := <['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']>
-#<num,1> [0] != '0' -> ~<num> += <num>
-#<val>     := 'NULL'
-#<val>     := '\"' + <name> + '\"'
-#<val>     := <num>
-#<val>     := <col>
-#<expr>    := <val> + ' == ' + <val>
-#<expr>    := <val> + ' <> ' + <val>
-#<expr>    := 'NOT ' + <expr>
-#~<expr>   += ' AND ' + <expr>
-#~<expr>   += ' OR ' + <expr>
+<num>     := <['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']> 
+<num,1> [0] != '0' -> ~<num> += <num>
+<val>     := 'NULL' 
+<val>     := '\"' + <name> + '\"' 
+<val>     := <num>
+<val>     := <col>
+<expr>    := <val> + ' == ' + <val>
+<expr>    := <val> + ' <> ' + <val>
+<expr>    := 'NOT ' + <expr>
+~<expr>   += ' AND ' + <expr>
+~<expr>   += ' OR ' + <expr>
 
+<cols>    := '*' 
 <cols>    := <col> + <sep> + <alias>
-~<cols>   += ',' + <sep> + <cols>
+<cols,2> [0] != '*' -> ~<cols> += ',' + <sep> + <cols>
 
 <tab>     := <name>
-<tab>     := '(' + <sep> + <select> + <sep> + ')'
+# removing this guard can lead to an assertion error
+<select,1> [-1] != ';' -> <tab> := '(' + <sep> + <select> + <sep> + ')' 
 ~<tab>    += <tab> + <sep> + <alias>
 
-<select>  := 'SELECT' + <sep> + <cols> + <sep> + 'FROM' + <sep> + <tab> + ';' # 'WHERE' + <sep> + <expr> + ';'
+<select>  := 'SELECT' + <sep> + <cols> + <sep> + 'FROM' + <sep> + <tab> + 'WHERE' + <sep> + <expr>
+<select>  := 'SELECT' + <sep> + <cols> + <sep> + 'FROM' + <sep> + <tab>
+<select,1> [-1] != ';' -> ~<select> += ';' 
 
-<parsed>  := sqlparse.parse(<select>)[0] => check(<parsed,1>, <select,1>)
-
+# after action, check that parse tree equals statement string
+<parsed>  := sqlparse.parse(<select>)[0] => compat.u(<parsed,1>) == <select,1>
