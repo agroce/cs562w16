@@ -1,18 +1,34 @@
 @import reductions as red
+@import math
+@import numpy as np
 
 <@
-# what if the library is spread across many files?
-#  seed configures RandomState and exponent is constrained to 1 and 13 for array lengths of 2..8096 for now
+def compare_fold(arr, func):
+    gpu_result = red.pyopencl_fold_with(arr, func)
+    cpu_result = red.python_fold_with(arr, func)
+    success = gpu_result == cpu_result
+    if not success: print(arr)
+    assert success
+    return np.arange(cpu_result, dtype=np.int32)
+
+def compare_zip(arr, func):
+    gpu_result = red.pyopencl_zip_with(arr, func)
+    cpu_result = red.python_zip_with(arr, func)
+    success = (gpu_result == cpu_result).all()
+    if not success: print(arr)
+    assert success
+    return cpu_result
 @>
 
-pool: <int> 1
-pool: <char> 1
-pool: <array> 1
+pool: <seed> 3
+pool: <func> 3
+pool: <array> 3
+pool: <length> 3
 
-<int> := <[1..1024]>
-<char> := "+"
-#<char> := "-"  #yields incorrect results, possibly underflow?
-#<char> := <["+", "-", "/", "*"]>  #removing other reduction types for now because of overflow errors
-<array> := red.get_cpu_data(seed=<int>, exponent=<int>)
+<seed> := <[1..20]>
+<func> := <["a+b","a*b"]> #valid GPU operations for folding must be associative
+<array> := red.get_cpu_data(seed=<seed>, min_endpoint=-10, max_endpoint=10, length=<length>)
+<length> := int(red.array_len(<[1..13]>))
 
-assert red.pyopencl_reduction(<array>, <char>) == red.python_reduction(<array>, <char>)
+<array,1> = compare_fold(<array>, <func>)
+<array,1> = compare_zip(<array>, <func>)
