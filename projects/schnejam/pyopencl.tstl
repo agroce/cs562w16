@@ -1,3 +1,5 @@
+#Instructions: SEE README ON HOW TO INSTALL pyopencl (into a virtualenv if you wish) using pip
+
 @import reductions as red
 @import math
 @import numpy as np
