@@ -1,4 +1,5 @@
 # this file defines a test harness for sqlparse
+# NOTE: detailed instructions on installing sqlparse are given in README.md
 
 @import sqlparse
 @from sqlparse import tokens

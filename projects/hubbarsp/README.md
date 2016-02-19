@@ -25,11 +25,15 @@ are several ways to install the module.
 One way to install the module is by cloning the [repository][sqlparse] and then
 running the setup script:
 
-    $ python setup.py install
+```bash
+$ python setup.py install
+```
 
 Another way to install the module is by using pip:
 
-    $ pip install sqlparse
+```bash
+$ pip install sqlparse
+```
 
 Note that the version of the module installed using pip might be older and
 incompatable with the version targeted by the test harness.
@@ -39,8 +43,10 @@ incompatable with the version targeted by the test harness.
 A simple test harness for the `sqlparse` module is defined by `mysqlparse.tstl`.
 The test harness is generated using TSTL:
 
-    $ rm sut.*
-    $ tstl --nocover mysqlparse.tstl
+```bash
+$ rm sut.*
+$ tstl --nocover mysqlparse.tstl
+```
 
 These commands will generate the test harness (without coverage) named `sut.py`
 and `sut.pyc`.
@@ -48,11 +54,15 @@ and `sut.pyc`.
 For the next two commands, the path to the random tester and model checker
 should be replaced. An example run of the random tester:
 
-    $ python ../../../tstl/generators/randomtester.py --nocover --maxtest=100 --depth=50
+```bash
+$ python ../../../tstl/generators/randomtester.py --nocover --maxtest=100 --depth=50
+```
 
 An example run of the breadth first search (BFS) model checker:
 
-    $ python ../../../tstl/generators/bfsmodelchecker.py --nocover --forget=0.5 --depth=50
+```bash
+$ python ../../../tstl/generators/bfsmodelchecker.py --nocover --forget=0.5 --depth=50
+```
 
 Note that model checker has not actually run on the test harness.
 
@@ -64,41 +74,43 @@ The structured query language (SQL) consists of two sublanguages: the data
 definition language (DDL) and the data manipulation language (DML). Concrete
 syntax shared by the DDL and DML is given by the following grammar.
 
-    <letter>  ::= a | b | ... | z
-    <digit>   ::= 0 | 1 | ... | 9
-    <space>   ::= _ | \t | \n | \r
-    <letters> ::= <letter>
-                | <letter> <letters>
-    <digits>  ::= <digit>
-                | <digit> <digits>
-    <sep>     ::= ε
-                | <space> <sep>
-    <comma>   ::= <sep> , <sep>
-    <left>    ::= ( <sep>
-    <right>   ::= <sep> )
-    <name>    ::= <letters>
-                | <letters> <digits> <name>
-    <names>   ::= <name>
-                | <name> <comma> <names>
-    
-    <num>     ::= ... | -1 | 0 | 1 | ...
-    <bool>    ::= true | false
-    <char>    ::= <letter> | <digit> | <space>
-    <nums>    ::= <num>
-                | <num> <comma> <nums>
-    <chars>   ::= ε
-                | <char> <chars>
-    <str>     ::= " <chars> "
-    <place>   ::= ? | : <name>
-    <val>     ::= <num> | <bool> | <str> | <name> | <place>
-    <op1>     ::= - | NOT
-    <op2>     ::= + | - | * | / | AND | OR | == | <> | < | >
-    <expr>    ::= <val>
-                | <left> <expr> <right>
-                | <op1> <sep> <expr>
-                | <expr> <sep> <op2> <sep> <expr>
-    <exprs>   ::= <expr>
-                | <expr> <comma> <exprs>
+```
+<letter>  ::= a | b | ... | z
+<digit>   ::= 0 | 1 | ... | 9
+<space>   ::= _ | \t | \n | \r
+<letters> ::= <letter>
+            | <letter> <letters>
+<digits>  ::= <digit>
+            | <digit> <digits>
+<sep>     ::= ε
+            | <space> <sep>
+<comma>   ::= <sep> , <sep>
+<left>    ::= ( <sep>
+<right>   ::= <sep> )
+<name>    ::= <letters>
+            | <letters> <digits> <name>
+<names>   ::= <name>
+            | <name> <comma> <names>
+
+<num>     ::= ... | -1 | 0 | 1 | ...
+<bool>    ::= true | false
+<char>    ::= <letter> | <digit> | <space>
+<nums>    ::= <num>
+            | <num> <comma> <nums>
+<chars>   ::= ε
+            | <char> <chars>
+<str>     ::= " <chars> "
+<place>   ::= ? | : <name>
+<val>     ::= <num> | <bool> | <str> | <name> | <place>
+<op1>     ::= - | NOT
+<op2>     ::= + | - | * | / | AND | OR | == | <> | < | >
+<expr>    ::= <val>
+            | <left> <expr> <right>
+            | <op1> <sep> <expr>
+            | <expr> <sep> <op2> <sep> <expr>
+<exprs>   ::= <expr>
+            | <expr> <comma> <exprs>
+```
 
 The concrete syntax for DDL statements is given by the following grammar:
 
@@ -106,28 +118,30 @@ The concrete syntax for DDL statements is given by the following grammar:
 
 The concrete syntax for DML statements is given by the following grammar:
 
-    <which>   ::= ε | ALL | DISTINCT
-    <which'>  ::= <sep> <which> <sep>
-    <cols>    ::= * | <nums> | <names>
-    <cols'>   ::= <sep> <cols> <sep>
-    
-    <where>   ::= ε | WHERE <sep> <expr>
-    <where'>  ::= <sep> <where> <sep>
-    <having>  ::= ε | HAVING <sep> <expr>
-    <having'> ::= <sep> <having> <sep>
-    <group>   ::= ε | GROUP BY <sep> <exprs> <having'>
-    <group'>  ::= <sep> <group> <sep>
-    <order>   ::= ε | ORDER BY <sep> <cols>
-    <order'>  ::= <sep> <order> <sep>
-    <limit>   ::= ε | LIMIT <sep> <expr>
-    <limit'>  ::= <sep> <limit> <sep>
-    
-    <as>      ::= ε | AS <sep> <name>
-    <table>   ::= <left> <select> <right> | <name>
-    <from>    ::= ε | FROM <sep> <table> <sep> <as>
-    <from'>   ::= <sep> <from> <as'>
-    
-    <select>  ::= SELECT <which'> <cols'> <from'> <where'> <group'> <order'> <limit'>
+```
+<which>   ::= ε | ALL | DISTINCT
+<which'>  ::= <sep> <which> <sep>
+<cols>    ::= * | <nums> | <names>
+<cols'>   ::= <sep> <cols> <sep>
+
+<where>   ::= ε | WHERE <sep> <expr>
+<where'>  ::= <sep> <where> <sep>
+<having>  ::= ε | HAVING <sep> <expr>
+<having'> ::= <sep> <having> <sep>
+<group>   ::= ε | GROUP BY <sep> <exprs> <having'>
+<group'>  ::= <sep> <group> <sep>
+<order>   ::= ε | ORDER BY <sep> <cols>
+<order'>  ::= <sep> <order> <sep>
+<limit>   ::= ε | LIMIT <sep> <expr>
+<limit'>  ::= <sep> <limit> <sep>
+
+<as>      ::= ε | AS <sep> <name>
+<table>   ::= <left> <select> <right> | <name>
+<from>    ::= ε | FROM <sep> <table> <sep> <as>
+<from'>   ::= <sep> <from> <as'>
+
+<select>  ::= SELECT <which'> <cols'> <from'> <where'> <group'> <order'> <limit'>
+```
 
 **TODO:** finish syntax
 
