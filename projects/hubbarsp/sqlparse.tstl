@@ -1,7 +1,0 @@
-# this file defines a test harness for the sqlparse
-@import sqlparse
-
-# for code coverage
-source: sqlparse.py
-
-# TODO: translate grammar into tstl code

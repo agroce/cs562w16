@@ -1,0 +1,12 @@
+@import queue
+
+pools:
+        <int> 5
+        <queue> 2
+
+actions:
+        <int> := <[0..10]>
+        <queue> := queue.Queue()
+        <queue>.add(<int>)
+        not <queue>.is_empty() -> <queue,1>.remove()
+

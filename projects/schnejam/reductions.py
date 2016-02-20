@@ -1,52 +1,90 @@
 from __future__ import print_function
+import math
 import numpy as np
 import pyopencl as cl
 import pyopencl.array
 import pyopencl.reduction
 
-reduction_actions = {"+": lambda x, y: x + y,
-                     "-": lambda x, y: x - y,
-                     "*": lambda x, y: x * y,
-                     "/": lambda x, y: x / y}
+reduction_actions = {"a+b": lambda x, y: x + y,
+                     "a*b": lambda x, y: x * y}
 
 
-def pyopencl_reduction(seed=42, length=3, reduction="+", min_endpoint=0, max_endpoint=5):
-    """
-    Proof of concept for PyOpenCL to guide testing
-    :param seed: Seed for repeatability
-    :param length: Length of test array
-    :param reduction: Type of reduction to be performed, see expr
-    :param min_endpoint: Lower bound of random values
-    :param max_endpoint: Upper bound of random values
-    :return: Nothing
-    """
-    assert isinstance(seed, int) and isinstance(length, int)
-    assert isinstance(min_endpoint, int) and isinstance(max_endpoint, int)
-    assert reduction in reduction_actions.keys()
+map_functions = {"sin": lambda x: math.sin(x)}
 
-    rand = np.random.RandomState(seed=seed)
-    cpu_data = rand.randint(min_endpoint, max_endpoint, length).astype(np.int32)
 
-    ctx = cl.create_some_context()
+reduction_accumulators = {"a+b": "0",
+                          "a*b": "1"}
+
+
+
+def array_len(n):
+    return 1 << n
+
+
+def get_cpu_data(seed=42, min_endpoint=-10, max_endpoint=10, length=1024):
+    return np.random.RandomState(seed=seed).randint(min_endpoint, max_endpoint, length).astype(np.int32)
+
+
+def python_zip_with(cpu_data, func="a+b"):
+    return reduction_actions[func](cpu_data, cpu_data)
+
+
+def pyopencl_map_with(cpu_data, func="sin"):
+    #TODO: implement me!
+    pass
+
+
+def pyopencl_zip_with(cpu_data, func="a+b"):
+    platforms = cl.get_platforms()
+    ctx = cl.Context(dev_type=cl.device_type.ALL, properties=[(cl.context_properties.PLATFORM, platforms[0])])
+    queue = cl.CommandQueue(ctx)
+    gpu_data_a = pyopencl.array.to_device(queue, cpu_data)
+    gpu_data_b = pyopencl.array.to_device(queue, cpu_data)
+    return reduction_actions[func](gpu_data_a, gpu_data_b).get()
+
+
+def python_fold_with(cpu_data, func="a+b"):
+    try:
+        return reduce(reduction_actions[func], cpu_data)
+    except TypeError:
+        print("TypeError using {0} on {1}".format(func, cpu_data))
+
+
+def pyopencl_fold_with(cpu_data, func="a+b"):
+    platforms = cl.get_platforms()
+    ctx = cl.Context(dev_type=cl.device_type.ALL, properties=[(cl.context_properties.PLATFORM, platforms[0])])
     queue = cl.CommandQueue(ctx)
     gpu_data = pyopencl.array.to_device(queue, cpu_data)
-
     kernel = pyopencl.reduction.ReductionKernel(ctx=ctx,
                                                 dtype_out=np.int32,
-                                                neutral="0",
-                                                reduce_expr="a+b".format(reduction),
+                                                neutral=reduction_accumulators[func],
+                                                reduce_expr=func,
                                                 map_expr="x[i]",
                                                 arguments="__global int *x")
     clresult = kernel(gpu_data).get()
     queue.finish()
+    return clresult
 
-    pyresult = reduce(reduction_actions[reduction], cpu_data)
-    print("clresult: {0}, pyresult: {1}".format(clresult, pyresult))
-    return clresult == pyresult
+
+def compare_reductions(seed=42, func="a+b", min_endpoint=-10, max_endpoint=10, length=32):
+    print("Beginning {0} test on seed: {1}".format(func, seed))
+    arr = get_cpu_data(seed, min_endpoint, max_endpoint, length)
+
+    clresult = pyopencl_fold_with(arr, func)
+    pyresult = python_fold_with(arr, func)
+    print("reduce")
+    print("original: {0}\nclresult: {1}\npyresult: {2}\nequivalent: {3}\n".format(arr, clresult, pyresult,
+                                                                               clresult == pyresult))
+
+    clresult = pyopencl_zip_with(arr, func=func)
+    pyresult = python_zip_with(arr, func=func)
+    print("zip")
+    print("original: {0}\nclresult: {1}\npyresult: {2}\nequivalent: {3}\n".format(arr, clresult, pyresult,
+                                                                               (clresult == pyresult).all()))
 
 
 def main():
-    print(pyopencl_reduction(seed=42))
+    compare_reductions()
 
 
 if __name__ == '__main__':

@@ -1,0 +1,59 @@
+
+@from astropy.table import Table, Column
+@import random
+@from string import ascii_uppercase
+<@
+t= Table()
+
+def	columnsOK(t):
+	#t= Table()
+	print t
+	#t.add_column(Column(data=[1, 2, 3], name='d'))
+	c = len(t.columns)
+	print c
+	r = len(t)
+	print r
+	if (c == 0):
+		return "Table has no columns"
+	#assert(len(t.columns)> == len(t.columns))
+	return c
+
+def test_after_reduce(sut): 
+    sut.setLog(0) # if this was 1, there would be heavy logging of replays after reduction
+
+
+@>
+
+#log: 1 len(<table>.columns)
+#log: POST 1 len(<table>.columns)
+
+pool: <int> 4
+pool: <char> 3
+#pool: <table> 3 REF
+pool: <string> 4
+pool: <list> 4
+
+property: columnsOK(t)
+
+<int> := random.randint(0,100000000000)
+<char> := (''.join(random.choice(ascii_uppercase) for i in range(1)))
+<string> := (''.join(random.choice(ascii_uppercase) for i in range(4)))
+#<string> = <string> + <char>
+#~<list> := [<int>,<int>,<int>]
+#~<list>.append(<int>)
+# initialize an empty table 
+#<table> := Table()
+print ('String value = ' + <string>)
+print ('int value = ' + <int>)
+
+t.add_column(Column(data=[<int>,<int>,<int>], name=<string>)) => \
+   (len(t.columns) == len(t.columns))
+
+#t.add_column(Column(data=[1, 2, 3], name='d')))
+
+
+
+#<table>.columns
+
+#~<table> == ~<table>
+
