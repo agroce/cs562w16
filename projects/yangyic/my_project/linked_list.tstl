@@ -1,0 +1,41 @@
+# @from linkedlist import LinkedList
+# @from linkedlist import linked_list
+# @from linkedlist import linked_list
+@import linked_list
+@import weakref 
+@import math
+@import time
+
+pool: <list> 2
+pool: <INT> 3
+pool: <KEY> 3
+pool: <LIST> 3
+pool: <aaa> 2
+<INT> := <[1..20]>
+<KEY> := <[2..20]>
+<LIST> := <[1,2,3,4,5]>
+# <list> := []
+# ~<list>.append(<INT>)
+# print "aaaaaa"
+
+# source: linked_list.py
+
+<list>:=linked_list.LinkedList()
+# <list> := linked_list.LinkedList()
+# ~<list>.append(<INT>)
+
+
+#print <KEY>
+#print "---------"
+
+~<list>.add_to_front(<KEY>,<INT>) => \
+    (<list,1>.length==pre<(<list,1>.length)>+1) 
+	
+#~<list>.length==1 -> print ~<list,1>.front.value
+
+# print <KEY>å
+# print "-----------------------"
+# sprint <list>.find_first(<KEY>)
+# <list>.add_to_front(<KEY>,<INT>)  ->  print <KEY>
+# print "----------------"
+# print <list>.find_fist(<INT>)
