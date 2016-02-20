@@ -1,0 +1,41 @@
+@import math
+@import time
+@import Tree
+
+<@
+def test_addChild(self, Child):
+		if (self.data == None):
+			return False
+		if (Child.getParent().data == self.data):
+			return True
+		else:
+			return False
+			
+@>
+
+
+source: Tree.py
+
+pools:
+        <val> 3
+        <root> 1
+        <child1> 1
+        <child2> 1
+        <child3> 1
+         
+actions:
+        <val> := <[0..10]>
+        <char> := <['R']>
+        <root> := Tree.Tree('R')
+        <child1> := Tree.Tree(<val>)
+        <root>.addChild(<child1>) => (test_addChild(<root>, <child1>) == True)
+        
+        <child2> := Tree.Tree(<val>)
+        <root>.addChild(<child2>) => (test_addChild(<root>, <child2>) == True)
+        
+        <child3> := Tree.Tree(<val>)
+        <child1>.addChild(<child3>) => (test_addChild(<child1>, <child3>) == True)
+        
+        
+        
+        
