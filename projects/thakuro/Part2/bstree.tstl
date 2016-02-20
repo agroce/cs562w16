@@ -31,7 +31,14 @@ pool: <bstree> 3 REF
 property: heightchk(<bstree>) 
 
 <int> := <[1..20]>
+
+#<key> := <[1..10]>
+#<val> := <[1..10]>
 <bstree> := bstree.BSTree()
+#<avltree>.insert(<key>,<val>) => <avl,1> is_valid() == True
+#<avltree>.delete(<key,1>) => <avltree,1>.contains (<key,1>) = False
+#<avltree>.delete(<key>,<val>);
+#<avl,1> contains(<key,1>) == True
 ~<bstree>.insert(<int>) => \
    (len(<bstree,1>.preorder()) == pre<(len(<bstree,1>.preorder()))>+1) \
    or pre<(<bstree,1>.find(<int,1>))>

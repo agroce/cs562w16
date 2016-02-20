@@ -20,7 +20,6 @@ def heightchk(rbtree):
 
 
 
-
 def test_after_reduce(sut): 
     sut.setLog(0)
 @>
@@ -28,40 +27,31 @@ def test_after_reduce(sut):
 
 source: rbtree.py
 
-
 log: 1 <rbtree>.preorder()
 log: POST 1 <rbtree>.preorder()
-
 
 pool: <int> 3
 pool: <rbtree> 3 REF
 
-
 property: heightchk(<rbtree>) 
 
-
-
 <int> := <[1..20]>
-
-
+#<key> := <[1..10]>
+#<val> := <[1..10]>
 <rbtree> := rbtree.RBTree()
-
+ #<avltree>.insert(<key>,<val>) => <avl,1> is_valid() == True
+#<avltree>.delete(<key,1>) => <avltree,1>.contains (<key,1>) = False
+#<avltree>.delete(<key>,<val>);
+#<avl,1> contains(<key,1>) == True
 
 ~<rbtree>.insert(<int>) => \
    (len(<rbtree,1>.preorder()) == pre<(len(<rbtree,1>.preorder()))>+1) \
    or pre<(<rbtree,1>.find(<int,1>))>
-
-
 ~<rbtree>.delete(<int>) => \
    (len(<rbtree,1>.preorder()) == pre<(len(<rbtree,1>.preorder()))>-1) \
    or not pre<((<rbtree,1>.find(<int,1>)))>
-
-
 <rbtree>.preorder()
-
 ~<rbtree> == ~<rbtree>
-
-
 len(<rbtree,1>.preorder()) > 5 -> <rbtree>.display()
 
 
