@@ -1,0 +1,22 @@
+@import adjList
+
+# pools are where TSTL stores state of the SUT; REF indicates a pool that is mirrored by a reference implementation
+pools:
+	<int> 10
+	<from> 10
+	<to> 10
+	<adjList> 3
+
+
+actions:
+
+# initialize
+	<int> := <[0..50]>
+	<from> := <['a','b','c','d','e','f','g','h','i','j','k','l','m','n']>
+	<to> := <['a','b','c','d','e','f','g','h','i','j','k','l','m','n']>
+# initialize adjList
+	<adjList> := adjList.AdjList()
+# add
+	~<adjList>.addVertex(<int>)
+	#not ~<adjList>.() -> ~<adjList,1>.removeVertex()
+	~<adjList>.addEdge(<from>,<to>)
