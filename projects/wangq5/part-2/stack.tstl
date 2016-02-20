@@ -1,0 +1,13 @@
+@import Stack
+
+source: Stack.py
+
+pools:
+	<INT> 10
+	<STACK> 3
+
+actions:
+	<INT> := <[0..50]>
+	<STACK> := Stack.Stack()
+	~<STACK>.push(<INT>)
+	not ~<STACK>.empty() -> ~<STACK,1>.pop()
