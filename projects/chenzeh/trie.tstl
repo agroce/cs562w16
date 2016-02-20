@@ -1,0 +1,27 @@
+@import pygtrie
+@import os
+@import stat
+@import sys
+
+<@
+
+@>
+
+pools:
+	<string> 5
+	<val> 5
+	<tr> 2
+
+
+actions:
+	<string> := []
+	<val> := <[1..10]>
+	~<string>.append(<['a'..'z']>)
+	#<tr> := pygtrie.Trie()
+	#<tr>[<string>] = <string>
+	print <val>
+	print <string>
+
+    
+
+
