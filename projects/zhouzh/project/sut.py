@@ -25,14 +25,32 @@ def minNode(root):
         
         return min(root.key, minleft, minright)
 
-def isBST(node):
+def isBST(tree):
+        if tree is None:
+                return True
+        else:
+                return _isBST(tree.root)
+
+def _isBST(node):
         if node is None:
                 return True
 
-        if (maxNode(node.left) <= node.key <= minNode(node.right) and isBST(node.left) and isBST(node.right)):
+        if (maxNode(node.left) <= node.key <= minNode(node.right) and _isBST(node.left) and _isBST(node.right)):
                 return True
         else:
                 return False
+
+def printTreePreOrder(tree):
+        list = []
+        printHelper(tree.root, list)
+        return list
+
+def printHelper(node, list):
+        if node == None:
+                return
+        list.append(node.key)
+        printHelper(node.left,list)
+        printHelper(node.right,list)
 # END STANDALONE CODE
 class sut(object):
     def act0(self):
@@ -1870,7 +1888,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[0],self.p_val[0]); self.p_list[0].append(self.p_val[0])''')
         self.p_key_used[0]=True
         self.p_val_used[0]=True
@@ -1888,7 +1906,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[0],self.p_val[0]); self.p_list[1].append(self.p_val[0])''')
         self.p_key_used[0]=True
         self.p_val_used[0]=True
@@ -1906,7 +1924,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[0],self.p_val[1]); self.p_list[0].append(self.p_val[1])''')
         self.p_key_used[0]=True
         self.p_val_used[1]=True
@@ -1924,7 +1942,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[0],self.p_val[1]); self.p_list[1].append(self.p_val[1])''')
         self.p_key_used[0]=True
         self.p_val_used[1]=True
@@ -1942,7 +1960,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[0],self.p_val[2]); self.p_list[0].append(self.p_val[2])''')
         self.p_key_used[0]=True
         self.p_val_used[2]=True
@@ -1960,7 +1978,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[0],self.p_val[2]); self.p_list[1].append(self.p_val[2])''')
         self.p_key_used[0]=True
         self.p_val_used[2]=True
@@ -1978,7 +1996,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[0],self.p_val[3]); self.p_list[0].append(self.p_val[3])''')
         self.p_key_used[0]=True
         self.p_val_used[3]=True
@@ -1996,7 +2014,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[0],self.p_val[3]); self.p_list[1].append(self.p_val[3])''')
         self.p_key_used[0]=True
         self.p_val_used[3]=True
@@ -2014,7 +2032,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[0],self.p_val[4]); self.p_list[0].append(self.p_val[4])''')
         self.p_key_used[0]=True
         self.p_val_used[4]=True
@@ -2032,7 +2050,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[0],self.p_val[4]); self.p_list[1].append(self.p_val[4])''')
         self.p_key_used[0]=True
         self.p_val_used[4]=True
@@ -2050,7 +2068,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[1],self.p_val[0]); self.p_list[0].append(self.p_val[0])''')
         self.p_key_used[1]=True
         self.p_val_used[0]=True
@@ -2068,7 +2086,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[1],self.p_val[0]); self.p_list[1].append(self.p_val[0])''')
         self.p_key_used[1]=True
         self.p_val_used[0]=True
@@ -2086,7 +2104,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[1],self.p_val[1]); self.p_list[0].append(self.p_val[1])''')
         self.p_key_used[1]=True
         self.p_val_used[1]=True
@@ -2104,7 +2122,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[1],self.p_val[1]); self.p_list[1].append(self.p_val[1])''')
         self.p_key_used[1]=True
         self.p_val_used[1]=True
@@ -2122,7 +2140,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[1],self.p_val[2]); self.p_list[0].append(self.p_val[2])''')
         self.p_key_used[1]=True
         self.p_val_used[2]=True
@@ -2140,7 +2158,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[1],self.p_val[2]); self.p_list[1].append(self.p_val[2])''')
         self.p_key_used[1]=True
         self.p_val_used[2]=True
@@ -2158,7 +2176,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[1],self.p_val[3]); self.p_list[0].append(self.p_val[3])''')
         self.p_key_used[1]=True
         self.p_val_used[3]=True
@@ -2176,7 +2194,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[1],self.p_val[3]); self.p_list[1].append(self.p_val[3])''')
         self.p_key_used[1]=True
         self.p_val_used[3]=True
@@ -2194,7 +2212,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[1],self.p_val[4]); self.p_list[0].append(self.p_val[4])''')
         self.p_key_used[1]=True
         self.p_val_used[4]=True
@@ -2212,7 +2230,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[1],self.p_val[4]); self.p_list[1].append(self.p_val[4])''')
         self.p_key_used[1]=True
         self.p_val_used[4]=True
@@ -2230,7 +2248,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[2],self.p_val[0]); self.p_list[0].append(self.p_val[0])''')
         self.p_key_used[2]=True
         self.p_val_used[0]=True
@@ -2248,7 +2266,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[2],self.p_val[0]); self.p_list[1].append(self.p_val[0])''')
         self.p_key_used[2]=True
         self.p_val_used[0]=True
@@ -2266,7 +2284,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[2],self.p_val[1]); self.p_list[0].append(self.p_val[1])''')
         self.p_key_used[2]=True
         self.p_val_used[1]=True
@@ -2284,7 +2302,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[2],self.p_val[1]); self.p_list[1].append(self.p_val[1])''')
         self.p_key_used[2]=True
         self.p_val_used[1]=True
@@ -2302,7 +2320,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[2],self.p_val[2]); self.p_list[0].append(self.p_val[2])''')
         self.p_key_used[2]=True
         self.p_val_used[2]=True
@@ -2320,7 +2338,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[2],self.p_val[2]); self.p_list[1].append(self.p_val[2])''')
         self.p_key_used[2]=True
         self.p_val_used[2]=True
@@ -2338,7 +2356,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[2],self.p_val[3]); self.p_list[0].append(self.p_val[3])''')
         self.p_key_used[2]=True
         self.p_val_used[3]=True
@@ -2356,7 +2374,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[2],self.p_val[3]); self.p_list[1].append(self.p_val[3])''')
         self.p_key_used[2]=True
         self.p_val_used[3]=True
@@ -2374,7 +2392,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[2],self.p_val[4]); self.p_list[0].append(self.p_val[4])''')
         self.p_key_used[2]=True
         self.p_val_used[4]=True
@@ -2392,7 +2410,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[2],self.p_val[4]); self.p_list[1].append(self.p_val[4])''')
         self.p_key_used[2]=True
         self.p_val_used[4]=True
@@ -2410,7 +2428,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[3],self.p_val[0]); self.p_list[0].append(self.p_val[0])''')
         self.p_key_used[3]=True
         self.p_val_used[0]=True
@@ -2428,7 +2446,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[3],self.p_val[0]); self.p_list[1].append(self.p_val[0])''')
         self.p_key_used[3]=True
         self.p_val_used[0]=True
@@ -2446,7 +2464,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[3],self.p_val[1]); self.p_list[0].append(self.p_val[1])''')
         self.p_key_used[3]=True
         self.p_val_used[1]=True
@@ -2464,7 +2482,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[3],self.p_val[1]); self.p_list[1].append(self.p_val[1])''')
         self.p_key_used[3]=True
         self.p_val_used[1]=True
@@ -2482,7 +2500,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[3],self.p_val[2]); self.p_list[0].append(self.p_val[2])''')
         self.p_key_used[3]=True
         self.p_val_used[2]=True
@@ -2500,7 +2518,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[3],self.p_val[2]); self.p_list[1].append(self.p_val[2])''')
         self.p_key_used[3]=True
         self.p_val_used[2]=True
@@ -2518,7 +2536,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[3],self.p_val[3]); self.p_list[0].append(self.p_val[3])''')
         self.p_key_used[3]=True
         self.p_val_used[3]=True
@@ -2536,7 +2554,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[3],self.p_val[3]); self.p_list[1].append(self.p_val[3])''')
         self.p_key_used[3]=True
         self.p_val_used[3]=True
@@ -2554,7 +2572,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[3],self.p_val[4]); self.p_list[0].append(self.p_val[4])''')
         self.p_key_used[3]=True
         self.p_val_used[4]=True
@@ -2572,7 +2590,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[3],self.p_val[4]); self.p_list[1].append(self.p_val[4])''')
         self.p_key_used[3]=True
         self.p_val_used[4]=True
@@ -2590,7 +2608,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[4],self.p_val[0]); self.p_list[0].append(self.p_val[0])''')
         self.p_key_used[4]=True
         self.p_val_used[0]=True
@@ -2608,7 +2626,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[4],self.p_val[0]); self.p_list[1].append(self.p_val[0])''')
         self.p_key_used[4]=True
         self.p_val_used[0]=True
@@ -2626,7 +2644,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[4],self.p_val[1]); self.p_list[0].append(self.p_val[1])''')
         self.p_key_used[4]=True
         self.p_val_used[1]=True
@@ -2644,7 +2662,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[4],self.p_val[1]); self.p_list[1].append(self.p_val[1])''')
         self.p_key_used[4]=True
         self.p_val_used[1]=True
@@ -2662,7 +2680,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[4],self.p_val[2]); self.p_list[0].append(self.p_val[2])''')
         self.p_key_used[4]=True
         self.p_val_used[2]=True
@@ -2680,7 +2698,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[4],self.p_val[2]); self.p_list[1].append(self.p_val[2])''')
         self.p_key_used[4]=True
         self.p_val_used[2]=True
@@ -2698,7 +2716,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[4],self.p_val[3]); self.p_list[0].append(self.p_val[3])''')
         self.p_key_used[4]=True
         self.p_val_used[3]=True
@@ -2716,7 +2734,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[4],self.p_val[3]); self.p_list[1].append(self.p_val[3])''')
         self.p_key_used[4]=True
         self.p_val_used[3]=True
@@ -2734,7 +2752,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[4],self.p_val[4]); self.p_list[0].append(self.p_val[4])''')
         self.p_key_used[4]=True
         self.p_val_used[4]=True
@@ -2752,7 +2770,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0].root)
+        assert self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0])
         self.logPost('''self.p_tree[0].put(self.p_key[4],self.p_val[4]); self.p_list[1].append(self.p_val[4])''')
         self.p_key_used[4]=True
         self.p_val_used[4]=True
@@ -2770,7 +2788,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[0],self.p_val[0]); self.p_list[0].append(self.p_val[0])''')
         self.p_key_used[0]=True
         self.p_val_used[0]=True
@@ -2788,7 +2806,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[0],self.p_val[0]); self.p_list[1].append(self.p_val[0])''')
         self.p_key_used[0]=True
         self.p_val_used[0]=True
@@ -2806,7 +2824,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[0],self.p_val[1]); self.p_list[0].append(self.p_val[1])''')
         self.p_key_used[0]=True
         self.p_val_used[1]=True
@@ -2824,7 +2842,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[0],self.p_val[1]); self.p_list[1].append(self.p_val[1])''')
         self.p_key_used[0]=True
         self.p_val_used[1]=True
@@ -2842,7 +2860,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[0],self.p_val[2]); self.p_list[0].append(self.p_val[2])''')
         self.p_key_used[0]=True
         self.p_val_used[2]=True
@@ -2860,7 +2878,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[0],self.p_val[2]); self.p_list[1].append(self.p_val[2])''')
         self.p_key_used[0]=True
         self.p_val_used[2]=True
@@ -2878,7 +2896,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[0],self.p_val[3]); self.p_list[0].append(self.p_val[3])''')
         self.p_key_used[0]=True
         self.p_val_used[3]=True
@@ -2896,7 +2914,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[0],self.p_val[3]); self.p_list[1].append(self.p_val[3])''')
         self.p_key_used[0]=True
         self.p_val_used[3]=True
@@ -2914,7 +2932,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[0],self.p_val[4]); self.p_list[0].append(self.p_val[4])''')
         self.p_key_used[0]=True
         self.p_val_used[4]=True
@@ -2932,7 +2950,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[0],self.p_val[4]); self.p_list[1].append(self.p_val[4])''')
         self.p_key_used[0]=True
         self.p_val_used[4]=True
@@ -2950,7 +2968,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[1],self.p_val[0]); self.p_list[0].append(self.p_val[0])''')
         self.p_key_used[1]=True
         self.p_val_used[0]=True
@@ -2968,7 +2986,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[1],self.p_val[0]); self.p_list[1].append(self.p_val[0])''')
         self.p_key_used[1]=True
         self.p_val_used[0]=True
@@ -2986,7 +3004,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[1],self.p_val[1]); self.p_list[0].append(self.p_val[1])''')
         self.p_key_used[1]=True
         self.p_val_used[1]=True
@@ -3004,7 +3022,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[1],self.p_val[1]); self.p_list[1].append(self.p_val[1])''')
         self.p_key_used[1]=True
         self.p_val_used[1]=True
@@ -3022,7 +3040,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[1],self.p_val[2]); self.p_list[0].append(self.p_val[2])''')
         self.p_key_used[1]=True
         self.p_val_used[2]=True
@@ -3040,7 +3058,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[1],self.p_val[2]); self.p_list[1].append(self.p_val[2])''')
         self.p_key_used[1]=True
         self.p_val_used[2]=True
@@ -3058,7 +3076,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[1],self.p_val[3]); self.p_list[0].append(self.p_val[3])''')
         self.p_key_used[1]=True
         self.p_val_used[3]=True
@@ -3076,7 +3094,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[1],self.p_val[3]); self.p_list[1].append(self.p_val[3])''')
         self.p_key_used[1]=True
         self.p_val_used[3]=True
@@ -3094,7 +3112,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[1],self.p_val[4]); self.p_list[0].append(self.p_val[4])''')
         self.p_key_used[1]=True
         self.p_val_used[4]=True
@@ -3112,7 +3130,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[1],self.p_val[4]); self.p_list[1].append(self.p_val[4])''')
         self.p_key_used[1]=True
         self.p_val_used[4]=True
@@ -3130,7 +3148,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[2],self.p_val[0]); self.p_list[0].append(self.p_val[0])''')
         self.p_key_used[2]=True
         self.p_val_used[0]=True
@@ -3148,7 +3166,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[2],self.p_val[0]); self.p_list[1].append(self.p_val[0])''')
         self.p_key_used[2]=True
         self.p_val_used[0]=True
@@ -3166,7 +3184,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[2],self.p_val[1]); self.p_list[0].append(self.p_val[1])''')
         self.p_key_used[2]=True
         self.p_val_used[1]=True
@@ -3184,7 +3202,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[2],self.p_val[1]); self.p_list[1].append(self.p_val[1])''')
         self.p_key_used[2]=True
         self.p_val_used[1]=True
@@ -3202,7 +3220,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[2],self.p_val[2]); self.p_list[0].append(self.p_val[2])''')
         self.p_key_used[2]=True
         self.p_val_used[2]=True
@@ -3220,7 +3238,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[2],self.p_val[2]); self.p_list[1].append(self.p_val[2])''')
         self.p_key_used[2]=True
         self.p_val_used[2]=True
@@ -3238,7 +3256,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[2],self.p_val[3]); self.p_list[0].append(self.p_val[3])''')
         self.p_key_used[2]=True
         self.p_val_used[3]=True
@@ -3256,7 +3274,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[2],self.p_val[3]); self.p_list[1].append(self.p_val[3])''')
         self.p_key_used[2]=True
         self.p_val_used[3]=True
@@ -3274,7 +3292,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[2],self.p_val[4]); self.p_list[0].append(self.p_val[4])''')
         self.p_key_used[2]=True
         self.p_val_used[4]=True
@@ -3292,7 +3310,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[2],self.p_val[4]); self.p_list[1].append(self.p_val[4])''')
         self.p_key_used[2]=True
         self.p_val_used[4]=True
@@ -3310,7 +3328,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[3],self.p_val[0]); self.p_list[0].append(self.p_val[0])''')
         self.p_key_used[3]=True
         self.p_val_used[0]=True
@@ -3328,7 +3346,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[3],self.p_val[0]); self.p_list[1].append(self.p_val[0])''')
         self.p_key_used[3]=True
         self.p_val_used[0]=True
@@ -3346,7 +3364,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[3],self.p_val[1]); self.p_list[0].append(self.p_val[1])''')
         self.p_key_used[3]=True
         self.p_val_used[1]=True
@@ -3364,7 +3382,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[3],self.p_val[1]); self.p_list[1].append(self.p_val[1])''')
         self.p_key_used[3]=True
         self.p_val_used[1]=True
@@ -3382,7 +3400,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[3],self.p_val[2]); self.p_list[0].append(self.p_val[2])''')
         self.p_key_used[3]=True
         self.p_val_used[2]=True
@@ -3400,7 +3418,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[3],self.p_val[2]); self.p_list[1].append(self.p_val[2])''')
         self.p_key_used[3]=True
         self.p_val_used[2]=True
@@ -3418,7 +3436,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[3],self.p_val[3]); self.p_list[0].append(self.p_val[3])''')
         self.p_key_used[3]=True
         self.p_val_used[3]=True
@@ -3436,7 +3454,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[3],self.p_val[3]); self.p_list[1].append(self.p_val[3])''')
         self.p_key_used[3]=True
         self.p_val_used[3]=True
@@ -3454,7 +3472,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[3],self.p_val[4]); self.p_list[0].append(self.p_val[4])''')
         self.p_key_used[3]=True
         self.p_val_used[4]=True
@@ -3472,7 +3490,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[3],self.p_val[4]); self.p_list[1].append(self.p_val[4])''')
         self.p_key_used[3]=True
         self.p_val_used[4]=True
@@ -3490,7 +3508,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[4],self.p_val[0]); self.p_list[0].append(self.p_val[0])''')
         self.p_key_used[4]=True
         self.p_val_used[0]=True
@@ -3508,7 +3526,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[4],self.p_val[0]); self.p_list[1].append(self.p_val[0])''')
         self.p_key_used[4]=True
         self.p_val_used[0]=True
@@ -3526,7 +3544,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[4],self.p_val[1]); self.p_list[0].append(self.p_val[1])''')
         self.p_key_used[4]=True
         self.p_val_used[1]=True
@@ -3544,7 +3562,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[4],self.p_val[1]); self.p_list[1].append(self.p_val[1])''')
         self.p_key_used[4]=True
         self.p_val_used[1]=True
@@ -3562,7 +3580,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[4],self.p_val[2]); self.p_list[0].append(self.p_val[2])''')
         self.p_key_used[4]=True
         self.p_val_used[2]=True
@@ -3580,7 +3598,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[4],self.p_val[2]); self.p_list[1].append(self.p_val[2])''')
         self.p_key_used[4]=True
         self.p_val_used[2]=True
@@ -3598,7 +3616,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[4],self.p_val[3]); self.p_list[0].append(self.p_val[3])''')
         self.p_key_used[4]=True
         self.p_val_used[3]=True
@@ -3616,7 +3634,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[4],self.p_val[3]); self.p_list[1].append(self.p_val[3])''')
         self.p_key_used[4]=True
         self.p_val_used[3]=True
@@ -3634,7 +3652,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[4],self.p_val[4]); self.p_list[0].append(self.p_val[4])''')
         self.p_key_used[4]=True
         self.p_val_used[4]=True
@@ -3652,7 +3670,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1].root)
+        assert self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1])
         self.logPost('''self.p_tree[1].put(self.p_key[4],self.p_val[4]); self.p_list[1].append(self.p_val[4])''')
         self.p_key_used[4]=True
         self.p_val_used[4]=True
@@ -3670,7 +3688,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert         (self.p_tree[0].contains(self.p_key[0]) == False) and isBST(self.p_tree[0].root)
+        assert         (self.p_tree[0].contains(self.p_key[0]) == False) and isBST(self.p_tree[0])
         self.logPost('''        values = (self.p_tree[0].get(self.p_key[0])); self.p_tree[0].delete(self.p_key[0]); self.p_list[0].remove(values);''')
         self.p_key_used[0]=True
     def guard214(self):
@@ -3687,7 +3705,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert         (self.p_tree[0].contains(self.p_key[0]) == False) and isBST(self.p_tree[0].root)
+        assert         (self.p_tree[0].contains(self.p_key[0]) == False) and isBST(self.p_tree[0])
         self.logPost('''        values = (self.p_tree[0].get(self.p_key[0])); self.p_tree[0].delete(self.p_key[0]); self.p_list[1].remove(values);''')
         self.p_key_used[0]=True
     def guard215(self):
@@ -3704,7 +3722,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert         (self.p_tree[0].contains(self.p_key[1]) == False) and isBST(self.p_tree[0].root)
+        assert         (self.p_tree[0].contains(self.p_key[1]) == False) and isBST(self.p_tree[0])
         self.logPost('''        values = (self.p_tree[0].get(self.p_key[1])); self.p_tree[0].delete(self.p_key[1]); self.p_list[0].remove(values);''')
         self.p_key_used[1]=True
     def guard216(self):
@@ -3721,7 +3739,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert         (self.p_tree[0].contains(self.p_key[1]) == False) and isBST(self.p_tree[0].root)
+        assert         (self.p_tree[0].contains(self.p_key[1]) == False) and isBST(self.p_tree[0])
         self.logPost('''        values = (self.p_tree[0].get(self.p_key[1])); self.p_tree[0].delete(self.p_key[1]); self.p_list[1].remove(values);''')
         self.p_key_used[1]=True
     def guard217(self):
@@ -3738,7 +3756,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert         (self.p_tree[0].contains(self.p_key[2]) == False) and isBST(self.p_tree[0].root)
+        assert         (self.p_tree[0].contains(self.p_key[2]) == False) and isBST(self.p_tree[0])
         self.logPost('''        values = (self.p_tree[0].get(self.p_key[2])); self.p_tree[0].delete(self.p_key[2]); self.p_list[0].remove(values);''')
         self.p_key_used[2]=True
     def guard218(self):
@@ -3755,7 +3773,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert         (self.p_tree[0].contains(self.p_key[2]) == False) and isBST(self.p_tree[0].root)
+        assert         (self.p_tree[0].contains(self.p_key[2]) == False) and isBST(self.p_tree[0])
         self.logPost('''        values = (self.p_tree[0].get(self.p_key[2])); self.p_tree[0].delete(self.p_key[2]); self.p_list[1].remove(values);''')
         self.p_key_used[2]=True
     def guard219(self):
@@ -3772,7 +3790,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert         (self.p_tree[0].contains(self.p_key[3]) == False) and isBST(self.p_tree[0].root)
+        assert         (self.p_tree[0].contains(self.p_key[3]) == False) and isBST(self.p_tree[0])
         self.logPost('''        values = (self.p_tree[0].get(self.p_key[3])); self.p_tree[0].delete(self.p_key[3]); self.p_list[0].remove(values);''')
         self.p_key_used[3]=True
     def guard220(self):
@@ -3789,7 +3807,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert         (self.p_tree[0].contains(self.p_key[3]) == False) and isBST(self.p_tree[0].root)
+        assert         (self.p_tree[0].contains(self.p_key[3]) == False) and isBST(self.p_tree[0])
         self.logPost('''        values = (self.p_tree[0].get(self.p_key[3])); self.p_tree[0].delete(self.p_key[3]); self.p_list[1].remove(values);''')
         self.p_key_used[3]=True
     def guard221(self):
@@ -3806,7 +3824,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert         (self.p_tree[0].contains(self.p_key[4]) == False) and isBST(self.p_tree[0].root)
+        assert         (self.p_tree[0].contains(self.p_key[4]) == False) and isBST(self.p_tree[0])
         self.logPost('''        values = (self.p_tree[0].get(self.p_key[4])); self.p_tree[0].delete(self.p_key[4]); self.p_list[0].remove(values);''')
         self.p_key_used[4]=True
     def guard222(self):
@@ -3823,7 +3841,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert         (self.p_tree[0].contains(self.p_key[4]) == False) and isBST(self.p_tree[0].root)
+        assert         (self.p_tree[0].contains(self.p_key[4]) == False) and isBST(self.p_tree[0])
         self.logPost('''        values = (self.p_tree[0].get(self.p_key[4])); self.p_tree[0].delete(self.p_key[4]); self.p_list[1].remove(values);''')
         self.p_key_used[4]=True
     def guard223(self):
@@ -3840,7 +3858,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert         (self.p_tree[1].contains(self.p_key[0]) == False) and isBST(self.p_tree[1].root)
+        assert         (self.p_tree[1].contains(self.p_key[0]) == False) and isBST(self.p_tree[1])
         self.logPost('''        values = (self.p_tree[1].get(self.p_key[0])); self.p_tree[1].delete(self.p_key[0]); self.p_list[0].remove(values);''')
         self.p_key_used[0]=True
     def guard224(self):
@@ -3857,7 +3875,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert         (self.p_tree[1].contains(self.p_key[0]) == False) and isBST(self.p_tree[1].root)
+        assert         (self.p_tree[1].contains(self.p_key[0]) == False) and isBST(self.p_tree[1])
         self.logPost('''        values = (self.p_tree[1].get(self.p_key[0])); self.p_tree[1].delete(self.p_key[0]); self.p_list[1].remove(values);''')
         self.p_key_used[0]=True
     def guard225(self):
@@ -3874,7 +3892,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert         (self.p_tree[1].contains(self.p_key[1]) == False) and isBST(self.p_tree[1].root)
+        assert         (self.p_tree[1].contains(self.p_key[1]) == False) and isBST(self.p_tree[1])
         self.logPost('''        values = (self.p_tree[1].get(self.p_key[1])); self.p_tree[1].delete(self.p_key[1]); self.p_list[0].remove(values);''')
         self.p_key_used[1]=True
     def guard226(self):
@@ -3891,7 +3909,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert         (self.p_tree[1].contains(self.p_key[1]) == False) and isBST(self.p_tree[1].root)
+        assert         (self.p_tree[1].contains(self.p_key[1]) == False) and isBST(self.p_tree[1])
         self.logPost('''        values = (self.p_tree[1].get(self.p_key[1])); self.p_tree[1].delete(self.p_key[1]); self.p_list[1].remove(values);''')
         self.p_key_used[1]=True
     def guard227(self):
@@ -3908,7 +3926,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert         (self.p_tree[1].contains(self.p_key[2]) == False) and isBST(self.p_tree[1].root)
+        assert         (self.p_tree[1].contains(self.p_key[2]) == False) and isBST(self.p_tree[1])
         self.logPost('''        values = (self.p_tree[1].get(self.p_key[2])); self.p_tree[1].delete(self.p_key[2]); self.p_list[0].remove(values);''')
         self.p_key_used[2]=True
     def guard228(self):
@@ -3925,7 +3943,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert         (self.p_tree[1].contains(self.p_key[2]) == False) and isBST(self.p_tree[1].root)
+        assert         (self.p_tree[1].contains(self.p_key[2]) == False) and isBST(self.p_tree[1])
         self.logPost('''        values = (self.p_tree[1].get(self.p_key[2])); self.p_tree[1].delete(self.p_key[2]); self.p_list[1].remove(values);''')
         self.p_key_used[2]=True
     def guard229(self):
@@ -3942,7 +3960,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert         (self.p_tree[1].contains(self.p_key[3]) == False) and isBST(self.p_tree[1].root)
+        assert         (self.p_tree[1].contains(self.p_key[3]) == False) and isBST(self.p_tree[1])
         self.logPost('''        values = (self.p_tree[1].get(self.p_key[3])); self.p_tree[1].delete(self.p_key[3]); self.p_list[0].remove(values);''')
         self.p_key_used[3]=True
     def guard230(self):
@@ -3959,7 +3977,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert         (self.p_tree[1].contains(self.p_key[3]) == False) and isBST(self.p_tree[1].root)
+        assert         (self.p_tree[1].contains(self.p_key[3]) == False) and isBST(self.p_tree[1])
         self.logPost('''        values = (self.p_tree[1].get(self.p_key[3])); self.p_tree[1].delete(self.p_key[3]); self.p_list[1].remove(values);''')
         self.p_key_used[3]=True
     def guard231(self):
@@ -3976,7 +3994,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert         (self.p_tree[1].contains(self.p_key[4]) == False) and isBST(self.p_tree[1].root)
+        assert         (self.p_tree[1].contains(self.p_key[4]) == False) and isBST(self.p_tree[1])
         self.logPost('''        values = (self.p_tree[1].get(self.p_key[4])); self.p_tree[1].delete(self.p_key[4]); self.p_list[0].remove(values);''')
         self.p_key_used[4]=True
     def guard232(self):
@@ -3993,7 +4011,7 @@ class sut(object):
                 test_after_each(self)
             except:
                 pass
-        assert         (self.p_tree[1].contains(self.p_key[4]) == False) and isBST(self.p_tree[1].root)
+        assert         (self.p_tree[1].contains(self.p_key[4]) == False) and isBST(self.p_tree[1])
         self.logPost('''        values = (self.p_tree[1].get(self.p_key[4])); self.p_tree[1].delete(self.p_key[4]); self.p_list[1].remove(values);''')
         self.p_key_used[4]=True
     def guard233(self):
@@ -4995,7 +5013,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[0],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[0],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = r"self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[0],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = r"self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[0],self.p_val[0]); self.p_list[1].append(self.p_val[0]) ''',self.guard115,self.act115))
 
@@ -5005,7 +5023,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[0],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[0],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = r"self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[0],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = r"self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[0],self.p_val[1]); self.p_list[0].append(self.p_val[1]) ''',self.guard116,self.act116))
 
@@ -5015,7 +5033,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[0],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[0],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = r"self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[0],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = r"self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[0],self.p_val[1]); self.p_list[1].append(self.p_val[1]) ''',self.guard117,self.act117))
 
@@ -5025,7 +5043,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[0],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[0],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = r"self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[0],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = r"self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[0],self.p_val[2]); self.p_list[0].append(self.p_val[2]) ''',self.guard118,self.act118))
 
@@ -5035,7 +5053,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[0],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[0],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = r"self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[0],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = r"self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[0],self.p_val[2]); self.p_list[1].append(self.p_val[2]) ''',self.guard119,self.act119))
 
@@ -5045,7 +5063,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[0],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[0],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = r"self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[0],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = r"self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[0],self.p_val[3]); self.p_list[0].append(self.p_val[3]) ''',self.guard120,self.act120))
 
@@ -5055,7 +5073,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[0],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[0],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = r"self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[0],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = r"self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[0],self.p_val[3]); self.p_list[1].append(self.p_val[3]) ''',self.guard121,self.act121))
 
@@ -5065,7 +5083,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[0],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[0],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = r"self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[0],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = r"self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[0],self.p_val[4]); self.p_list[0].append(self.p_val[4]) ''',self.guard122,self.act122))
 
@@ -5075,7 +5093,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[0],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[0],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = r"self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[0],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = r"self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[0],self.p_val[4]); self.p_list[1].append(self.p_val[4]) ''',self.guard123,self.act123))
 
@@ -5085,7 +5103,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[0],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[0],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = r"self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[0],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = r"self.p_tree[0].contains(self.p_key[0]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[1],self.p_val[0]); self.p_list[0].append(self.p_val[0]) ''',self.guard124,self.act124))
 
@@ -5095,7 +5113,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[1],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[1],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = r"self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[1],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = r"self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[1],self.p_val[0]); self.p_list[1].append(self.p_val[0]) ''',self.guard125,self.act125))
 
@@ -5105,7 +5123,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[1],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[1],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = r"self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[1],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = r"self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[1],self.p_val[1]); self.p_list[0].append(self.p_val[1]) ''',self.guard126,self.act126))
 
@@ -5115,7 +5133,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[1],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[1],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = r"self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[1],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = r"self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[1],self.p_val[1]); self.p_list[1].append(self.p_val[1]) ''',self.guard127,self.act127))
 
@@ -5125,7 +5143,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[1],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[1],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = r"self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[1],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = r"self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[1],self.p_val[2]); self.p_list[0].append(self.p_val[2]) ''',self.guard128,self.act128))
 
@@ -5135,7 +5153,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[1],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[1],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = r"self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[1],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = r"self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[1],self.p_val[2]); self.p_list[1].append(self.p_val[2]) ''',self.guard129,self.act129))
 
@@ -5145,7 +5163,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[1],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[1],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = r"self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[1],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = r"self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[1],self.p_val[3]); self.p_list[0].append(self.p_val[3]) ''',self.guard130,self.act130))
 
@@ -5155,7 +5173,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[1],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[1],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = r"self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[1],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = r"self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[1],self.p_val[3]); self.p_list[1].append(self.p_val[3]) ''',self.guard131,self.act131))
 
@@ -5165,7 +5183,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[1],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[1],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = r"self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[1],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = r"self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[1],self.p_val[4]); self.p_list[0].append(self.p_val[4]) ''',self.guard132,self.act132))
 
@@ -5175,7 +5193,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[1],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[1],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = r"self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[1],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = r"self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[1],self.p_val[4]); self.p_list[1].append(self.p_val[4]) ''',self.guard133,self.act133))
 
@@ -5185,7 +5203,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[1],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[1],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = r"self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[1],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = r"self.p_tree[0].contains(self.p_key[1]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[2],self.p_val[0]); self.p_list[0].append(self.p_val[0]) ''',self.guard134,self.act134))
 
@@ -5195,7 +5213,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[2],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[2],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = r"self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[2],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = r"self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[2],self.p_val[0]); self.p_list[1].append(self.p_val[0]) ''',self.guard135,self.act135))
 
@@ -5205,7 +5223,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[2],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[2],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = r"self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[2],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = r"self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[2],self.p_val[1]); self.p_list[0].append(self.p_val[1]) ''',self.guard136,self.act136))
 
@@ -5215,7 +5233,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[2],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[2],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = r"self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[2],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = r"self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[2],self.p_val[1]); self.p_list[1].append(self.p_val[1]) ''',self.guard137,self.act137))
 
@@ -5225,7 +5243,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[2],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[2],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = r"self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[2],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = r"self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[2],self.p_val[2]); self.p_list[0].append(self.p_val[2]) ''',self.guard138,self.act138))
 
@@ -5235,7 +5253,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[2],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[2],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = r"self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[2],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = r"self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[2],self.p_val[2]); self.p_list[1].append(self.p_val[2]) ''',self.guard139,self.act139))
 
@@ -5245,7 +5263,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[2],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[2],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = r"self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[2],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = r"self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[2],self.p_val[3]); self.p_list[0].append(self.p_val[3]) ''',self.guard140,self.act140))
 
@@ -5255,7 +5273,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[2],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[2],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = r"self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[2],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = r"self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[2],self.p_val[3]); self.p_list[1].append(self.p_val[3]) ''',self.guard141,self.act141))
 
@@ -5265,7 +5283,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[2],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[2],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = r"self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[2],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = r"self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[2],self.p_val[4]); self.p_list[0].append(self.p_val[4]) ''',self.guard142,self.act142))
 
@@ -5275,7 +5293,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[2],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[2],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = r"self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[2],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = r"self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[2],self.p_val[4]); self.p_list[1].append(self.p_val[4]) ''',self.guard143,self.act143))
 
@@ -5285,7 +5303,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[2],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[2],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = r"self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[2],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = r"self.p_tree[0].contains(self.p_key[2]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[3],self.p_val[0]); self.p_list[0].append(self.p_val[0]) ''',self.guard144,self.act144))
 
@@ -5295,7 +5313,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[3],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[3],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = r"self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[3],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = r"self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[3],self.p_val[0]); self.p_list[1].append(self.p_val[0]) ''',self.guard145,self.act145))
 
@@ -5305,7 +5323,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[3],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[3],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = r"self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[3],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = r"self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[3],self.p_val[1]); self.p_list[0].append(self.p_val[1]) ''',self.guard146,self.act146))
 
@@ -5315,7 +5333,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[3],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[3],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = r"self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[3],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = r"self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[3],self.p_val[1]); self.p_list[1].append(self.p_val[1]) ''',self.guard147,self.act147))
 
@@ -5325,7 +5343,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[3],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[3],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = r"self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[3],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = r"self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[3],self.p_val[2]); self.p_list[0].append(self.p_val[2]) ''',self.guard148,self.act148))
 
@@ -5335,7 +5353,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[3],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[3],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = r"self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[3],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = r"self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[3],self.p_val[2]); self.p_list[1].append(self.p_val[2]) ''',self.guard149,self.act149))
 
@@ -5345,7 +5363,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[3],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[3],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = r"self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[3],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = r"self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[3],self.p_val[3]); self.p_list[0].append(self.p_val[3]) ''',self.guard150,self.act150))
 
@@ -5355,7 +5373,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[3],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[3],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = r"self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[3],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = r"self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[3],self.p_val[3]); self.p_list[1].append(self.p_val[3]) ''',self.guard151,self.act151))
 
@@ -5365,7 +5383,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[3],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[3],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = r"self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[3],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = r"self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[3],self.p_val[4]); self.p_list[0].append(self.p_val[4]) ''',self.guard152,self.act152))
 
@@ -5375,7 +5393,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[3],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[3],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = r"self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[3],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = r"self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[3],self.p_val[4]); self.p_list[1].append(self.p_val[4]) ''',self.guard153,self.act153))
 
@@ -5385,7 +5403,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[3],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[3],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = r"self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[3],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = r"self.p_tree[0].contains(self.p_key[3]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[4],self.p_val[0]); self.p_list[0].append(self.p_val[0]) ''',self.guard154,self.act154))
 
@@ -5395,7 +5413,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[4],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[4],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = r"self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[4],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = r"self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[4],self.p_val[0]); self.p_list[1].append(self.p_val[0]) ''',self.guard155,self.act155))
 
@@ -5405,7 +5423,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[4],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[4],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = r"self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[4],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = r"self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[4],self.p_val[1]); self.p_list[0].append(self.p_val[1]) ''',self.guard156,self.act156))
 
@@ -5415,7 +5433,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[4],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[4],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = r"self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[4],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = r"self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[4],self.p_val[1]); self.p_list[1].append(self.p_val[1]) ''',self.guard157,self.act157))
 
@@ -5425,7 +5443,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[4],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[4],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = r"self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[4],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = r"self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[4],self.p_val[2]); self.p_list[0].append(self.p_val[2]) ''',self.guard158,self.act158))
 
@@ -5435,7 +5453,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[4],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[4],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = r"self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[4],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = r"self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[4],self.p_val[2]); self.p_list[1].append(self.p_val[2]) ''',self.guard159,self.act159))
 
@@ -5445,7 +5463,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[4],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[4],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = r"self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[4],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = r"self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[4],self.p_val[3]); self.p_list[0].append(self.p_val[3]) ''',self.guard160,self.act160))
 
@@ -5455,7 +5473,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[4],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[4],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = r"self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[4],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = r"self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[4],self.p_val[3]); self.p_list[1].append(self.p_val[3]) ''',self.guard161,self.act161))
 
@@ -5465,7 +5483,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[4],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[4],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = r"self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[4],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = r"self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[4],self.p_val[4]); self.p_list[0].append(self.p_val[4]) ''',self.guard162,self.act162))
 
@@ -5475,7 +5493,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[4],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[4],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = r"self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[4],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = r"self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[0].put(self.p_key[4],self.p_val[4]); self.p_list[1].append(self.p_val[4]) ''',self.guard163,self.act163))
 
@@ -5485,7 +5503,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[0].put(self.p_key[4],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[0].put(self.p_key[4],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = r"self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0].root)"
+        self.__propCode['''self.p_tree[0].put(self.p_key[4],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = r"self.p_tree[0].contains(self.p_key[4]) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[0],self.p_val[0]); self.p_list[0].append(self.p_val[0]) ''',self.guard164,self.act164))
 
@@ -5495,7 +5513,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[0],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[0],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = r"self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[0],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = r"self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[0],self.p_val[0]); self.p_list[1].append(self.p_val[0]) ''',self.guard165,self.act165))
 
@@ -5505,7 +5523,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[0],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[0],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = r"self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[0],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = r"self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[0],self.p_val[1]); self.p_list[0].append(self.p_val[1]) ''',self.guard166,self.act166))
 
@@ -5515,7 +5533,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[0],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[0],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = r"self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[0],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = r"self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[0],self.p_val[1]); self.p_list[1].append(self.p_val[1]) ''',self.guard167,self.act167))
 
@@ -5525,7 +5543,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[0],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[0],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = r"self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[0],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = r"self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[0],self.p_val[2]); self.p_list[0].append(self.p_val[2]) ''',self.guard168,self.act168))
 
@@ -5535,7 +5553,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[0],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[0],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = r"self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[0],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = r"self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[0],self.p_val[2]); self.p_list[1].append(self.p_val[2]) ''',self.guard169,self.act169))
 
@@ -5545,7 +5563,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[0],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[0],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = r"self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[0],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = r"self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[0],self.p_val[3]); self.p_list[0].append(self.p_val[3]) ''',self.guard170,self.act170))
 
@@ -5555,7 +5573,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[0],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[0],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = r"self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[0],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = r"self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[0],self.p_val[3]); self.p_list[1].append(self.p_val[3]) ''',self.guard171,self.act171))
 
@@ -5565,7 +5583,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[0],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[0],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = r"self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[0],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = r"self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[0],self.p_val[4]); self.p_list[0].append(self.p_val[4]) ''',self.guard172,self.act172))
 
@@ -5575,7 +5593,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[0],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[0],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = r"self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[0],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = r"self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[0],self.p_val[4]); self.p_list[1].append(self.p_val[4]) ''',self.guard173,self.act173))
 
@@ -5585,7 +5603,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[0],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[0],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = r"self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[0],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = r"self.p_tree[1].contains(self.p_key[0]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[1],self.p_val[0]); self.p_list[0].append(self.p_val[0]) ''',self.guard174,self.act174))
 
@@ -5595,7 +5613,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[1],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[1],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = r"self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[1],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = r"self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[1],self.p_val[0]); self.p_list[1].append(self.p_val[0]) ''',self.guard175,self.act175))
 
@@ -5605,7 +5623,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[1],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[1],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = r"self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[1],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = r"self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[1],self.p_val[1]); self.p_list[0].append(self.p_val[1]) ''',self.guard176,self.act176))
 
@@ -5615,7 +5633,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[1],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[1],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = r"self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[1],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = r"self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[1],self.p_val[1]); self.p_list[1].append(self.p_val[1]) ''',self.guard177,self.act177))
 
@@ -5625,7 +5643,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[1],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[1],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = r"self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[1],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = r"self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[1],self.p_val[2]); self.p_list[0].append(self.p_val[2]) ''',self.guard178,self.act178))
 
@@ -5635,7 +5653,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[1],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[1],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = r"self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[1],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = r"self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[1],self.p_val[2]); self.p_list[1].append(self.p_val[2]) ''',self.guard179,self.act179))
 
@@ -5645,7 +5663,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[1],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[1],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = r"self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[1],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = r"self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[1],self.p_val[3]); self.p_list[0].append(self.p_val[3]) ''',self.guard180,self.act180))
 
@@ -5655,7 +5673,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[1],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[1],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = r"self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[1],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = r"self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[1],self.p_val[3]); self.p_list[1].append(self.p_val[3]) ''',self.guard181,self.act181))
 
@@ -5665,7 +5683,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[1],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[1],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = r"self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[1],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = r"self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[1],self.p_val[4]); self.p_list[0].append(self.p_val[4]) ''',self.guard182,self.act182))
 
@@ -5675,7 +5693,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[1],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[1],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = r"self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[1],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = r"self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[1],self.p_val[4]); self.p_list[1].append(self.p_val[4]) ''',self.guard183,self.act183))
 
@@ -5685,7 +5703,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[1],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[1],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = r"self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[1],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = r"self.p_tree[1].contains(self.p_key[1]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[2],self.p_val[0]); self.p_list[0].append(self.p_val[0]) ''',self.guard184,self.act184))
 
@@ -5695,7 +5713,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[2],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[2],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = r"self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[2],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = r"self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[2],self.p_val[0]); self.p_list[1].append(self.p_val[0]) ''',self.guard185,self.act185))
 
@@ -5705,7 +5723,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[2],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[2],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = r"self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[2],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = r"self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[2],self.p_val[1]); self.p_list[0].append(self.p_val[1]) ''',self.guard186,self.act186))
 
@@ -5715,7 +5733,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[2],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[2],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = r"self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[2],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = r"self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[2],self.p_val[1]); self.p_list[1].append(self.p_val[1]) ''',self.guard187,self.act187))
 
@@ -5725,7 +5743,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[2],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[2],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = r"self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[2],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = r"self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[2],self.p_val[2]); self.p_list[0].append(self.p_val[2]) ''',self.guard188,self.act188))
 
@@ -5735,7 +5753,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[2],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[2],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = r"self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[2],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = r"self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[2],self.p_val[2]); self.p_list[1].append(self.p_val[2]) ''',self.guard189,self.act189))
 
@@ -5745,7 +5763,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[2],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[2],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = r"self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[2],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = r"self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[2],self.p_val[3]); self.p_list[0].append(self.p_val[3]) ''',self.guard190,self.act190))
 
@@ -5755,7 +5773,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[2],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[2],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = r"self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[2],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = r"self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[2],self.p_val[3]); self.p_list[1].append(self.p_val[3]) ''',self.guard191,self.act191))
 
@@ -5765,7 +5783,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[2],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[2],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = r"self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[2],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = r"self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[2],self.p_val[4]); self.p_list[0].append(self.p_val[4]) ''',self.guard192,self.act192))
 
@@ -5775,7 +5793,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[2],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[2],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = r"self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[2],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = r"self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[2],self.p_val[4]); self.p_list[1].append(self.p_val[4]) ''',self.guard193,self.act193))
 
@@ -5785,7 +5803,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[2],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[2],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = r"self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[2],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = r"self.p_tree[1].contains(self.p_key[2]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[3],self.p_val[0]); self.p_list[0].append(self.p_val[0]) ''',self.guard194,self.act194))
 
@@ -5795,7 +5813,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[3],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[3],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = r"self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[3],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = r"self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[3],self.p_val[0]); self.p_list[1].append(self.p_val[0]) ''',self.guard195,self.act195))
 
@@ -5805,7 +5823,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[3],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[3],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = r"self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[3],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = r"self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[3],self.p_val[1]); self.p_list[0].append(self.p_val[1]) ''',self.guard196,self.act196))
 
@@ -5815,7 +5833,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[3],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[3],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = r"self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[3],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = r"self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[3],self.p_val[1]); self.p_list[1].append(self.p_val[1]) ''',self.guard197,self.act197))
 
@@ -5825,7 +5843,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[3],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[3],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = r"self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[3],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = r"self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[3],self.p_val[2]); self.p_list[0].append(self.p_val[2]) ''',self.guard198,self.act198))
 
@@ -5835,7 +5853,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[3],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[3],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = r"self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[3],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = r"self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[3],self.p_val[2]); self.p_list[1].append(self.p_val[2]) ''',self.guard199,self.act199))
 
@@ -5845,7 +5863,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[3],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[3],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = r"self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[3],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = r"self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[3],self.p_val[3]); self.p_list[0].append(self.p_val[3]) ''',self.guard200,self.act200))
 
@@ -5855,7 +5873,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[3],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[3],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = r"self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[3],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = r"self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[3],self.p_val[3]); self.p_list[1].append(self.p_val[3]) ''',self.guard201,self.act201))
 
@@ -5865,7 +5883,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[3],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[3],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = r"self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[3],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = r"self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[3],self.p_val[4]); self.p_list[0].append(self.p_val[4]) ''',self.guard202,self.act202))
 
@@ -5875,7 +5893,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[3],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[3],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = r"self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[3],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = r"self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[3],self.p_val[4]); self.p_list[1].append(self.p_val[4]) ''',self.guard203,self.act203))
 
@@ -5885,7 +5903,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[3],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[3],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = r"self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[3],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = r"self.p_tree[1].contains(self.p_key[3]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[4],self.p_val[0]); self.p_list[0].append(self.p_val[0]) ''',self.guard204,self.act204))
 
@@ -5895,7 +5913,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[4],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[4],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = r"self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[4],self.p_val[0]); self.p_list[0].append(self.p_val[0]) '''] = r"self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[4],self.p_val[0]); self.p_list[1].append(self.p_val[0]) ''',self.guard205,self.act205))
 
@@ -5905,7 +5923,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[4],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[4],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = r"self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[4],self.p_val[0]); self.p_list[1].append(self.p_val[0]) '''] = r"self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[4],self.p_val[1]); self.p_list[0].append(self.p_val[1]) ''',self.guard206,self.act206))
 
@@ -5915,7 +5933,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[4],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[4],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = r"self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[4],self.p_val[1]); self.p_list[0].append(self.p_val[1]) '''] = r"self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[4],self.p_val[1]); self.p_list[1].append(self.p_val[1]) ''',self.guard207,self.act207))
 
@@ -5925,7 +5943,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[4],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[4],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = r"self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[4],self.p_val[1]); self.p_list[1].append(self.p_val[1]) '''] = r"self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[4],self.p_val[2]); self.p_list[0].append(self.p_val[2]) ''',self.guard208,self.act208))
 
@@ -5935,7 +5953,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[4],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[4],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = r"self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[4],self.p_val[2]); self.p_list[0].append(self.p_val[2]) '''] = r"self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[4],self.p_val[2]); self.p_list[1].append(self.p_val[2]) ''',self.guard209,self.act209))
 
@@ -5945,7 +5963,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[4],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[4],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = r"self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[4],self.p_val[2]); self.p_list[1].append(self.p_val[2]) '''] = r"self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[4],self.p_val[3]); self.p_list[0].append(self.p_val[3]) ''',self.guard210,self.act210))
 
@@ -5955,7 +5973,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[4],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[4],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = r"self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[4],self.p_val[3]); self.p_list[0].append(self.p_val[3]) '''] = r"self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[4],self.p_val[3]); self.p_list[1].append(self.p_val[3]) ''',self.guard211,self.act211))
 
@@ -5965,7 +5983,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[4],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[4],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = r"self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[4],self.p_val[3]); self.p_list[1].append(self.p_val[3]) '''] = r"self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[4],self.p_val[4]); self.p_list[0].append(self.p_val[4]) ''',self.guard212,self.act212))
 
@@ -5975,7 +5993,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[4],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[4],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = r"self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[4],self.p_val[4]); self.p_list[0].append(self.p_val[4]) '''] = r"self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''self.p_tree[1].put(self.p_key[4],self.p_val[4]); self.p_list[1].append(self.p_val[4]) ''',self.guard213,self.act213))
 
@@ -5985,7 +6003,7 @@ class sut(object):
 
         self.__okExcepts['''self.p_tree[1].put(self.p_key[4],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = ''''''
 
-        self.__propCode['''self.p_tree[1].put(self.p_key[4],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = r"self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1].root)"
+        self.__propCode['''self.p_tree[1].put(self.p_key[4],self.p_val[4]); self.p_list[1].append(self.p_val[4]) '''] = r"self.p_tree[1].contains(self.p_key[4]) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''        values = (self.p_tree[0].get(self.p_key[0])); self.p_tree[0].delete(self.p_key[0]); self.p_list[0].remove(values); ''',self.guard214,self.act214))
 
@@ -5995,7 +6013,7 @@ class sut(object):
 
         self.__okExcepts['''        values = (self.p_tree[0].get(self.p_key[0])); self.p_tree[0].delete(self.p_key[0]); self.p_list[0].remove(values); '''] = ''''''
 
-        self.__propCode['''        values = (self.p_tree[0].get(self.p_key[0])); self.p_tree[0].delete(self.p_key[0]); self.p_list[0].remove(values); '''] = r"        (self.p_tree[0].contains(self.p_key[0]) == False) and isBST(self.p_tree[0].root)"
+        self.__propCode['''        values = (self.p_tree[0].get(self.p_key[0])); self.p_tree[0].delete(self.p_key[0]); self.p_list[0].remove(values); '''] = r"        (self.p_tree[0].contains(self.p_key[0]) == False) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''        values = (self.p_tree[0].get(self.p_key[0])); self.p_tree[0].delete(self.p_key[0]); self.p_list[1].remove(values); ''',self.guard215,self.act215))
 
@@ -6005,7 +6023,7 @@ class sut(object):
 
         self.__okExcepts['''        values = (self.p_tree[0].get(self.p_key[0])); self.p_tree[0].delete(self.p_key[0]); self.p_list[1].remove(values); '''] = ''''''
 
-        self.__propCode['''        values = (self.p_tree[0].get(self.p_key[0])); self.p_tree[0].delete(self.p_key[0]); self.p_list[1].remove(values); '''] = r"        (self.p_tree[0].contains(self.p_key[0]) == False) and isBST(self.p_tree[0].root)"
+        self.__propCode['''        values = (self.p_tree[0].get(self.p_key[0])); self.p_tree[0].delete(self.p_key[0]); self.p_list[1].remove(values); '''] = r"        (self.p_tree[0].contains(self.p_key[0]) == False) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''        values = (self.p_tree[0].get(self.p_key[1])); self.p_tree[0].delete(self.p_key[1]); self.p_list[0].remove(values); ''',self.guard216,self.act216))
 
@@ -6015,7 +6033,7 @@ class sut(object):
 
         self.__okExcepts['''        values = (self.p_tree[0].get(self.p_key[1])); self.p_tree[0].delete(self.p_key[1]); self.p_list[0].remove(values); '''] = ''''''
 
-        self.__propCode['''        values = (self.p_tree[0].get(self.p_key[1])); self.p_tree[0].delete(self.p_key[1]); self.p_list[0].remove(values); '''] = r"        (self.p_tree[0].contains(self.p_key[1]) == False) and isBST(self.p_tree[0].root)"
+        self.__propCode['''        values = (self.p_tree[0].get(self.p_key[1])); self.p_tree[0].delete(self.p_key[1]); self.p_list[0].remove(values); '''] = r"        (self.p_tree[0].contains(self.p_key[1]) == False) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''        values = (self.p_tree[0].get(self.p_key[1])); self.p_tree[0].delete(self.p_key[1]); self.p_list[1].remove(values); ''',self.guard217,self.act217))
 
@@ -6025,7 +6043,7 @@ class sut(object):
 
         self.__okExcepts['''        values = (self.p_tree[0].get(self.p_key[1])); self.p_tree[0].delete(self.p_key[1]); self.p_list[1].remove(values); '''] = ''''''
 
-        self.__propCode['''        values = (self.p_tree[0].get(self.p_key[1])); self.p_tree[0].delete(self.p_key[1]); self.p_list[1].remove(values); '''] = r"        (self.p_tree[0].contains(self.p_key[1]) == False) and isBST(self.p_tree[0].root)"
+        self.__propCode['''        values = (self.p_tree[0].get(self.p_key[1])); self.p_tree[0].delete(self.p_key[1]); self.p_list[1].remove(values); '''] = r"        (self.p_tree[0].contains(self.p_key[1]) == False) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''        values = (self.p_tree[0].get(self.p_key[2])); self.p_tree[0].delete(self.p_key[2]); self.p_list[0].remove(values); ''',self.guard218,self.act218))
 
@@ -6035,7 +6053,7 @@ class sut(object):
 
         self.__okExcepts['''        values = (self.p_tree[0].get(self.p_key[2])); self.p_tree[0].delete(self.p_key[2]); self.p_list[0].remove(values); '''] = ''''''
 
-        self.__propCode['''        values = (self.p_tree[0].get(self.p_key[2])); self.p_tree[0].delete(self.p_key[2]); self.p_list[0].remove(values); '''] = r"        (self.p_tree[0].contains(self.p_key[2]) == False) and isBST(self.p_tree[0].root)"
+        self.__propCode['''        values = (self.p_tree[0].get(self.p_key[2])); self.p_tree[0].delete(self.p_key[2]); self.p_list[0].remove(values); '''] = r"        (self.p_tree[0].contains(self.p_key[2]) == False) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''        values = (self.p_tree[0].get(self.p_key[2])); self.p_tree[0].delete(self.p_key[2]); self.p_list[1].remove(values); ''',self.guard219,self.act219))
 
@@ -6045,7 +6063,7 @@ class sut(object):
 
         self.__okExcepts['''        values = (self.p_tree[0].get(self.p_key[2])); self.p_tree[0].delete(self.p_key[2]); self.p_list[1].remove(values); '''] = ''''''
 
-        self.__propCode['''        values = (self.p_tree[0].get(self.p_key[2])); self.p_tree[0].delete(self.p_key[2]); self.p_list[1].remove(values); '''] = r"        (self.p_tree[0].contains(self.p_key[2]) == False) and isBST(self.p_tree[0].root)"
+        self.__propCode['''        values = (self.p_tree[0].get(self.p_key[2])); self.p_tree[0].delete(self.p_key[2]); self.p_list[1].remove(values); '''] = r"        (self.p_tree[0].contains(self.p_key[2]) == False) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''        values = (self.p_tree[0].get(self.p_key[3])); self.p_tree[0].delete(self.p_key[3]); self.p_list[0].remove(values); ''',self.guard220,self.act220))
 
@@ -6055,7 +6073,7 @@ class sut(object):
 
         self.__okExcepts['''        values = (self.p_tree[0].get(self.p_key[3])); self.p_tree[0].delete(self.p_key[3]); self.p_list[0].remove(values); '''] = ''''''
 
-        self.__propCode['''        values = (self.p_tree[0].get(self.p_key[3])); self.p_tree[0].delete(self.p_key[3]); self.p_list[0].remove(values); '''] = r"        (self.p_tree[0].contains(self.p_key[3]) == False) and isBST(self.p_tree[0].root)"
+        self.__propCode['''        values = (self.p_tree[0].get(self.p_key[3])); self.p_tree[0].delete(self.p_key[3]); self.p_list[0].remove(values); '''] = r"        (self.p_tree[0].contains(self.p_key[3]) == False) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''        values = (self.p_tree[0].get(self.p_key[3])); self.p_tree[0].delete(self.p_key[3]); self.p_list[1].remove(values); ''',self.guard221,self.act221))
 
@@ -6065,7 +6083,7 @@ class sut(object):
 
         self.__okExcepts['''        values = (self.p_tree[0].get(self.p_key[3])); self.p_tree[0].delete(self.p_key[3]); self.p_list[1].remove(values); '''] = ''''''
 
-        self.__propCode['''        values = (self.p_tree[0].get(self.p_key[3])); self.p_tree[0].delete(self.p_key[3]); self.p_list[1].remove(values); '''] = r"        (self.p_tree[0].contains(self.p_key[3]) == False) and isBST(self.p_tree[0].root)"
+        self.__propCode['''        values = (self.p_tree[0].get(self.p_key[3])); self.p_tree[0].delete(self.p_key[3]); self.p_list[1].remove(values); '''] = r"        (self.p_tree[0].contains(self.p_key[3]) == False) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''        values = (self.p_tree[0].get(self.p_key[4])); self.p_tree[0].delete(self.p_key[4]); self.p_list[0].remove(values); ''',self.guard222,self.act222))
 
@@ -6075,7 +6093,7 @@ class sut(object):
 
         self.__okExcepts['''        values = (self.p_tree[0].get(self.p_key[4])); self.p_tree[0].delete(self.p_key[4]); self.p_list[0].remove(values); '''] = ''''''
 
-        self.__propCode['''        values = (self.p_tree[0].get(self.p_key[4])); self.p_tree[0].delete(self.p_key[4]); self.p_list[0].remove(values); '''] = r"        (self.p_tree[0].contains(self.p_key[4]) == False) and isBST(self.p_tree[0].root)"
+        self.__propCode['''        values = (self.p_tree[0].get(self.p_key[4])); self.p_tree[0].delete(self.p_key[4]); self.p_list[0].remove(values); '''] = r"        (self.p_tree[0].contains(self.p_key[4]) == False) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''        values = (self.p_tree[0].get(self.p_key[4])); self.p_tree[0].delete(self.p_key[4]); self.p_list[1].remove(values); ''',self.guard223,self.act223))
 
@@ -6085,7 +6103,7 @@ class sut(object):
 
         self.__okExcepts['''        values = (self.p_tree[0].get(self.p_key[4])); self.p_tree[0].delete(self.p_key[4]); self.p_list[1].remove(values); '''] = ''''''
 
-        self.__propCode['''        values = (self.p_tree[0].get(self.p_key[4])); self.p_tree[0].delete(self.p_key[4]); self.p_list[1].remove(values); '''] = r"        (self.p_tree[0].contains(self.p_key[4]) == False) and isBST(self.p_tree[0].root)"
+        self.__propCode['''        values = (self.p_tree[0].get(self.p_key[4])); self.p_tree[0].delete(self.p_key[4]); self.p_list[1].remove(values); '''] = r"        (self.p_tree[0].contains(self.p_key[4]) == False) and isBST(self.p_tree[0])"
 
         self.__actions.append(('''        values = (self.p_tree[1].get(self.p_key[0])); self.p_tree[1].delete(self.p_key[0]); self.p_list[0].remove(values); ''',self.guard224,self.act224))
 
@@ -6095,7 +6113,7 @@ class sut(object):
 
         self.__okExcepts['''        values = (self.p_tree[1].get(self.p_key[0])); self.p_tree[1].delete(self.p_key[0]); self.p_list[0].remove(values); '''] = ''''''
 
-        self.__propCode['''        values = (self.p_tree[1].get(self.p_key[0])); self.p_tree[1].delete(self.p_key[0]); self.p_list[0].remove(values); '''] = r"        (self.p_tree[1].contains(self.p_key[0]) == False) and isBST(self.p_tree[1].root)"
+        self.__propCode['''        values = (self.p_tree[1].get(self.p_key[0])); self.p_tree[1].delete(self.p_key[0]); self.p_list[0].remove(values); '''] = r"        (self.p_tree[1].contains(self.p_key[0]) == False) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''        values = (self.p_tree[1].get(self.p_key[0])); self.p_tree[1].delete(self.p_key[0]); self.p_list[1].remove(values); ''',self.guard225,self.act225))
 
@@ -6105,7 +6123,7 @@ class sut(object):
 
         self.__okExcepts['''        values = (self.p_tree[1].get(self.p_key[0])); self.p_tree[1].delete(self.p_key[0]); self.p_list[1].remove(values); '''] = ''''''
 
-        self.__propCode['''        values = (self.p_tree[1].get(self.p_key[0])); self.p_tree[1].delete(self.p_key[0]); self.p_list[1].remove(values); '''] = r"        (self.p_tree[1].contains(self.p_key[0]) == False) and isBST(self.p_tree[1].root)"
+        self.__propCode['''        values = (self.p_tree[1].get(self.p_key[0])); self.p_tree[1].delete(self.p_key[0]); self.p_list[1].remove(values); '''] = r"        (self.p_tree[1].contains(self.p_key[0]) == False) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''        values = (self.p_tree[1].get(self.p_key[1])); self.p_tree[1].delete(self.p_key[1]); self.p_list[0].remove(values); ''',self.guard226,self.act226))
 
@@ -6115,7 +6133,7 @@ class sut(object):
 
         self.__okExcepts['''        values = (self.p_tree[1].get(self.p_key[1])); self.p_tree[1].delete(self.p_key[1]); self.p_list[0].remove(values); '''] = ''''''
 
-        self.__propCode['''        values = (self.p_tree[1].get(self.p_key[1])); self.p_tree[1].delete(self.p_key[1]); self.p_list[0].remove(values); '''] = r"        (self.p_tree[1].contains(self.p_key[1]) == False) and isBST(self.p_tree[1].root)"
+        self.__propCode['''        values = (self.p_tree[1].get(self.p_key[1])); self.p_tree[1].delete(self.p_key[1]); self.p_list[0].remove(values); '''] = r"        (self.p_tree[1].contains(self.p_key[1]) == False) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''        values = (self.p_tree[1].get(self.p_key[1])); self.p_tree[1].delete(self.p_key[1]); self.p_list[1].remove(values); ''',self.guard227,self.act227))
 
@@ -6125,7 +6143,7 @@ class sut(object):
 
         self.__okExcepts['''        values = (self.p_tree[1].get(self.p_key[1])); self.p_tree[1].delete(self.p_key[1]); self.p_list[1].remove(values); '''] = ''''''
 
-        self.__propCode['''        values = (self.p_tree[1].get(self.p_key[1])); self.p_tree[1].delete(self.p_key[1]); self.p_list[1].remove(values); '''] = r"        (self.p_tree[1].contains(self.p_key[1]) == False) and isBST(self.p_tree[1].root)"
+        self.__propCode['''        values = (self.p_tree[1].get(self.p_key[1])); self.p_tree[1].delete(self.p_key[1]); self.p_list[1].remove(values); '''] = r"        (self.p_tree[1].contains(self.p_key[1]) == False) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''        values = (self.p_tree[1].get(self.p_key[2])); self.p_tree[1].delete(self.p_key[2]); self.p_list[0].remove(values); ''',self.guard228,self.act228))
 
@@ -6135,7 +6153,7 @@ class sut(object):
 
         self.__okExcepts['''        values = (self.p_tree[1].get(self.p_key[2])); self.p_tree[1].delete(self.p_key[2]); self.p_list[0].remove(values); '''] = ''''''
 
-        self.__propCode['''        values = (self.p_tree[1].get(self.p_key[2])); self.p_tree[1].delete(self.p_key[2]); self.p_list[0].remove(values); '''] = r"        (self.p_tree[1].contains(self.p_key[2]) == False) and isBST(self.p_tree[1].root)"
+        self.__propCode['''        values = (self.p_tree[1].get(self.p_key[2])); self.p_tree[1].delete(self.p_key[2]); self.p_list[0].remove(values); '''] = r"        (self.p_tree[1].contains(self.p_key[2]) == False) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''        values = (self.p_tree[1].get(self.p_key[2])); self.p_tree[1].delete(self.p_key[2]); self.p_list[1].remove(values); ''',self.guard229,self.act229))
 
@@ -6145,7 +6163,7 @@ class sut(object):
 
         self.__okExcepts['''        values = (self.p_tree[1].get(self.p_key[2])); self.p_tree[1].delete(self.p_key[2]); self.p_list[1].remove(values); '''] = ''''''
 
-        self.__propCode['''        values = (self.p_tree[1].get(self.p_key[2])); self.p_tree[1].delete(self.p_key[2]); self.p_list[1].remove(values); '''] = r"        (self.p_tree[1].contains(self.p_key[2]) == False) and isBST(self.p_tree[1].root)"
+        self.__propCode['''        values = (self.p_tree[1].get(self.p_key[2])); self.p_tree[1].delete(self.p_key[2]); self.p_list[1].remove(values); '''] = r"        (self.p_tree[1].contains(self.p_key[2]) == False) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''        values = (self.p_tree[1].get(self.p_key[3])); self.p_tree[1].delete(self.p_key[3]); self.p_list[0].remove(values); ''',self.guard230,self.act230))
 
@@ -6155,7 +6173,7 @@ class sut(object):
 
         self.__okExcepts['''        values = (self.p_tree[1].get(self.p_key[3])); self.p_tree[1].delete(self.p_key[3]); self.p_list[0].remove(values); '''] = ''''''
 
-        self.__propCode['''        values = (self.p_tree[1].get(self.p_key[3])); self.p_tree[1].delete(self.p_key[3]); self.p_list[0].remove(values); '''] = r"        (self.p_tree[1].contains(self.p_key[3]) == False) and isBST(self.p_tree[1].root)"
+        self.__propCode['''        values = (self.p_tree[1].get(self.p_key[3])); self.p_tree[1].delete(self.p_key[3]); self.p_list[0].remove(values); '''] = r"        (self.p_tree[1].contains(self.p_key[3]) == False) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''        values = (self.p_tree[1].get(self.p_key[3])); self.p_tree[1].delete(self.p_key[3]); self.p_list[1].remove(values); ''',self.guard231,self.act231))
 
@@ -6165,7 +6183,7 @@ class sut(object):
 
         self.__okExcepts['''        values = (self.p_tree[1].get(self.p_key[3])); self.p_tree[1].delete(self.p_key[3]); self.p_list[1].remove(values); '''] = ''''''
 
-        self.__propCode['''        values = (self.p_tree[1].get(self.p_key[3])); self.p_tree[1].delete(self.p_key[3]); self.p_list[1].remove(values); '''] = r"        (self.p_tree[1].contains(self.p_key[3]) == False) and isBST(self.p_tree[1].root)"
+        self.__propCode['''        values = (self.p_tree[1].get(self.p_key[3])); self.p_tree[1].delete(self.p_key[3]); self.p_list[1].remove(values); '''] = r"        (self.p_tree[1].contains(self.p_key[3]) == False) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''        values = (self.p_tree[1].get(self.p_key[4])); self.p_tree[1].delete(self.p_key[4]); self.p_list[0].remove(values); ''',self.guard232,self.act232))
 
@@ -6175,7 +6193,7 @@ class sut(object):
 
         self.__okExcepts['''        values = (self.p_tree[1].get(self.p_key[4])); self.p_tree[1].delete(self.p_key[4]); self.p_list[0].remove(values); '''] = ''''''
 
-        self.__propCode['''        values = (self.p_tree[1].get(self.p_key[4])); self.p_tree[1].delete(self.p_key[4]); self.p_list[0].remove(values); '''] = r"        (self.p_tree[1].contains(self.p_key[4]) == False) and isBST(self.p_tree[1].root)"
+        self.__propCode['''        values = (self.p_tree[1].get(self.p_key[4])); self.p_tree[1].delete(self.p_key[4]); self.p_list[0].remove(values); '''] = r"        (self.p_tree[1].contains(self.p_key[4]) == False) and isBST(self.p_tree[1])"
 
         self.__actions.append(('''        values = (self.p_tree[1].get(self.p_key[4])); self.p_tree[1].delete(self.p_key[4]); self.p_list[1].remove(values); ''',self.guard233,self.act233))
 
@@ -6185,7 +6203,7 @@ class sut(object):
 
         self.__okExcepts['''        values = (self.p_tree[1].get(self.p_key[4])); self.p_tree[1].delete(self.p_key[4]); self.p_list[1].remove(values); '''] = ''''''
 
-        self.__propCode['''        values = (self.p_tree[1].get(self.p_key[4])); self.p_tree[1].delete(self.p_key[4]); self.p_list[1].remove(values); '''] = r"        (self.p_tree[1].contains(self.p_key[4]) == False) and isBST(self.p_tree[1].root)"
+        self.__propCode['''        values = (self.p_tree[1].get(self.p_key[4])); self.p_tree[1].delete(self.p_key[4]); self.p_list[1].remove(values); '''] = r"        (self.p_tree[1].contains(self.p_key[4]) == False) and isBST(self.p_tree[1])"
 
         self.__actions_backup = list(self.__actions)
     def restart(self):
@@ -6255,17 +6273,27 @@ class sut(object):
             return
         if (self.__log == 'All') or (self.__log >= 1):
             try:
-                self.__logAction(name,"""self.p_tree[0]""",self.p_tree[0],False)
+                self.__logAction(name,"""printTreePreOrder(self.p_tree[0])""",printTreePreOrder(self.p_tree[0]),False)
             except:
                 pass
         if (self.__log == 'All') or (self.__log >= 1):
             try:
-                self.__logAction(name,"""self.p_tree[1]""",self.p_tree[1],False)
+                self.__logAction(name,"""printTreePreOrder(self.p_tree[1])""",printTreePreOrder(self.p_tree[1]),False)
             except:
                 pass
     def logPost(self, name):
         if self.__log == None:
             return
+        if (self.__log == 'All') or (self.__log >= 1):
+            try:
+                self.__logAction(name,"""printTreePreOrder(self.p_tree[0])""",printTreePreOrder(self.p_tree[0]),True)
+            except:
+                pass
+        if (self.__log == 'All') or (self.__log >= 1):
+            try:
+                self.__logAction(name,"""printTreePreOrder(self.p_tree[1])""",printTreePreOrder(self.p_tree[1]),True)
+            except:
+                pass
     def state(self):
         if self.__replayBacktrack:
             return self.captureReplay(self.__test)
@@ -6283,6 +6311,20 @@ class sut(object):
         self.p_val = copy.deepcopy(old[6])
         self.p_val_used = copy.deepcopy(old[7])
     def check(self):
+        try:
+            # BEGIN CHECK CODE
+            # GLOBAL self.p_tree[0]
+            if (self.p_tree[0] != None): # CHECK POOL INIT
+                assert isBST(self.p_tree[0])
+
+            # GLOBAL self.p_tree[1]
+            if (self.p_tree[1] != None): # CHECK POOL INIT
+                assert isBST(self.p_tree[1])
+
+            # END CHECK CODE
+        except:
+            self.__failure = sys.exc_info()
+            return False
         return True
     """
     BOILERPLATE METHODS OF SUT
