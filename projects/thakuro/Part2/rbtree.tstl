@@ -1,0 +1,68 @@
+@import rbtree
+@import math
+@import time
+@import collections
+@import rbtree
+
+
+
+
+<@
+def heightchk(rbtree):
+    h = tree.tree_height()
+    l = len(tree.preorder())
+    if (l == 0):
+       return True
+    m = math.log(l,2)
+    
+    assert(pre<(tree.preorder())> == tree.preorder())
+    return h <= (m + 1)
+
+
+
+
+def test_after_reduce(sut): 
+    sut.setLog(0)
+@>
+
+
+source: rbtree.py
+
+
+log: 1 <rbtree>.preorder()
+log: POST 1 <rbtree>.preorder()
+
+
+pool: <int> 3
+pool: <rbtree> 3 REF
+
+
+property: heightchk(<rbtree>) 
+
+
+
+<int> := <[1..20]>
+
+
+<rbtree> := rbtree.RBTree()
+
+
+~<rbtree>.insert(<int>) => \
+   (len(<rbtree,1>.preorder()) == pre<(len(<rbtree,1>.preorder()))>+1) \
+   or pre<(<rbtree,1>.find(<int,1>))>
+
+
+~<rbtree>.delete(<int>) => \
+   (len(<rbtree,1>.preorder()) == pre<(len(<rbtree,1>.preorder()))>-1) \
+   or not pre<((<rbtree,1>.find(<int,1>)))>
+
+
+<rbtree>.preorder()
+
+~<rbtree> == ~<rbtree>
+
+
+len(<rbtree,1>.preorder()) > 5 -> <rbtree>.display()
+
+
+

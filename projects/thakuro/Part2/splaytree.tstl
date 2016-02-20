@@ -1,0 +1,68 @@
+@import splaytree
+@import math
+@import time
+@import collections
+@import splaytree
+
+
+
+
+<@
+def heightchk(splaytree):
+    h = tree.tree_height()
+    l = len(tree.preorder())
+    if (l == 0):
+       return True
+    m = math.log(l,2)
+    
+    assert(pre<(tree.preorder())> == tree.preorder())
+    return h <= (m + 1)
+
+
+
+
+def test_after_reduce(sut): 
+    sut.setLog(0)
+@>
+
+
+source: splaytree.py
+
+
+log: 1 <splaytree>.preorder()
+log: POST 1 <splaytree>.preorder()
+
+
+pool: <int> 3
+pool: <splaytree> 3 REF
+
+
+property: heightchk(<splaytree>) 
+
+
+
+<int> := <[1..20]>
+
+
+<splaytree> := splaytree.SplayTree()
+
+
+~<splaytree>.insert(<int>) => \
+   (len(<splaytree,1>.preorder()) == pre<(len(<splaytree,1>.preorder()))>+1) \
+   or pre<(<splaytree,1>.find(<int,1>))>
+
+
+~<splaytree>.delete(<int>) => \
+   (len(<splaytree,1>.preorder()) == pre<(len(<splaytree,1>.preorder()))>-1) \
+   or not pre<((<splaytree,1>.find(<int,1>)))>
+
+
+<splaytree>.preorder()
+
+~<splaytree> == ~<splaytree>
+
+
+len(<splaytree,1>.preorder()) > 5 -> <splaytree>.display()
+
+
+

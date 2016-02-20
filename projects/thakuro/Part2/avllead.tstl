@@ -1,0 +1,68 @@
+@import avltree
+@import math
+@import time
+@import collections
+@import bstree
+
+
+
+
+<@
+def heightchk(avltree):
+    h = tree.tree_height()
+    l = len(tree.preorder())
+    if (l == 0):
+       return True
+    m = math.log(l,2)
+    
+    assert(pre<(tree.preorder())> == tree.preorder())
+    return h <= (m + 1)
+
+
+
+
+def test_after_reduce(sut): 
+    sut.setLog(0)
+@>
+
+
+source: avltree.py
+
+
+log: 1 <avltree>.preorder()
+log: POST 1 <avltree>.preorder()
+
+
+pool: <int> 3
+pool: <avltree> 3 REF
+
+
+property: heightchk(<avltree>) 
+
+
+
+<int> := <[1..20]>
+
+
+<avltree> := avltree.AVLTree()
+
+
+~<avltree>.insert(<int>) => \
+   (len(<avltree,1>.preorder()) == pre<(len(<avltree,1>.preorder()))>+1) \
+   or pre<(<avltree,1>.find(<int,1>))>
+
+
+~<avltree>.delete(<int>) => \
+   (len(<avltree,1>.preorder()) == pre<(len(<avltree,1>.preorder()))>-1) \
+   or not pre<((<avltree,1>.find(<int,1>)))>
+
+
+<avltree>.preorder()
+
+~<avltree> == ~<avltree>
+
+
+len(<avltree,1>.preorder()) > 5 -> <avltree>.display()
+
+
+
