@@ -8,8 +8,8 @@ actions:
         <val> := <[0..10]>
         <key> := <[0..10]>
         <tree> := binary_search_tree.BinarySearchTree()
-        <tree>.put(<key>,<val>) =>  <tree,1>.contains(<key,1>) => (<tree,1>.is_empty() == False)
-	<tree>.put(<key>,<val>) => (<tree,1>.is_empty()== False) 
+        <tree>.put(<key>,<val>) ; <tree,1>.contains(<key,1>) => (<tree,1>.is_empty() == False)
+	<tree>.put(<key>,<val>) ; (<tree,1>.is_empty()== False) 
 	<tree>.put(<key>,<val>) ; <tree,1>.contains(<key,1>) == True ; <tree,1>.delete(<key,1>) => (<tree,1>.contains(<key,1>) == False)
 #	<tree>.put(<key>,<val>); val = (<tree,1>.max_key())  ; max = (<tree,1>.delete_max())  => (max == val) 
 
