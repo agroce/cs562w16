@@ -1,0 +1,48 @@
+Proposal
+Class: Cs562
+Name: Xiaotao Yang 
+Student ID: 932-237-336
+
+About the library:
+In this project, I am going to test a tree data structure library by using tstl. The python library is called pyTree. 
+This library is developed by yoyzhou. The source code can be found from: https://github.com/yoyzhou/pyTree. In this 
+library, the author provides several methods. They are:
+
+addChild : add a child to this tree.
+addChildren : add many children to this tree.
+getParent : get node’s parent node
+getChild : get node’s child node
+getChildren : get node’s all children nodes.
+getNode : get the node.
+delChild : delete node’s child.
+delNode : delete node.
+getRoot : get the tree root.
+isRoot : determine whether node is a root or not.
+isBranch : determine whether node is a branch node or not. prettyTree : print tree in a hierarchy style like:
+root 
+|_____c01
+|      |___c11 
+|_____c02
+nestedTree : print tree in a nest-list style like: [Root [C01 [C11], C02] ].
+
+In this python library, the developer focus more on represents the tree data structure with its property. It doesn’t 
+consider more on the efficiency of his library. It doesn’t give you an efficiency way to build a tree. You need to 
+build by yourself and then test it. It also lack some useful methods like: leftmost, rightmost, hight, inorder traversal,
+preorder traversal. Although it lacks some method, it is still a source code over than 300 lines and it already contains 
+lot methods in it. I think it is enough for the project.
+Choose this one as the project because tree data structure is very important and basic. As a TSTL beginner, it is a good
+way to learn how to use the TSTL by using this library.
+
+How I test it:
+Since this library basically implement a tree data structure. I will test whether this library satisfied the properties 
+of the tree data structure. This library has two ways to represent the tree, hierarchy style and nest-list style. I will
+test if two style shows as the right way. For each method, I will check if it is correctly do the job. For example, for 
+addChild method, I will check if it is correctly add the child in the correct position. For getParent method, I will test
+if it is correctly get the node’s parent, not the other node. For isRoot method, I will see if tis actually the root, not
+the other node. For isBranch method, I will see if it is the branch of this tree or not. And for both showing style, I will
+check if it is actually shows the right way.
+
+Future job:
+I will finish the test project for this library in the future. But if I still have time, I will try to add some new function
+to this library and try to do the further job or I will choose another library to do the test. I hope this project will 
+help me and let me learn the technique of the TSTL.

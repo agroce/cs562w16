@@ -1,0 +1,36 @@
+#Instructions: SEE README ON HOW TO INSTALL pyopencl (into a virtualenv if you wish) using pip
+
+@import reductions as red
+@import math
+@import numpy as np
+
+<@
+def compare_fold(arr, func):
+    gpu_result = red.pyopencl_fold_with(arr, func)
+    cpu_result = red.python_fold_with(arr, func)
+    success = gpu_result == cpu_result
+    if not success: print(arr)
+    assert success
+    return np.arange(cpu_result, dtype=np.int32)
+
+def compare_zip(arr, func):
+    gpu_result = red.pyopencl_zip_with(arr, func)
+    cpu_result = red.python_zip_with(arr, func)
+    success = (gpu_result == cpu_result).all()
+    if not success: print(arr)
+    assert success
+    return cpu_result
+@>
+
+pool: <seed> 3
+pool: <func> 3
+pool: <array> 3
+pool: <length> 3
+
+<seed> := <[1..20]>
+<func> := <["a+b","a*b"]> #valid GPU operations for folding must be associative
+<array> := red.get_cpu_data(seed=<seed>, min_endpoint=-10, max_endpoint=10, length=<length>)
+<length> := int(red.array_len(<[1..13]>))
+
+<array,1> = compare_fold(<array>, <func>)
+<array,1> = compare_zip(<array>, <func>)

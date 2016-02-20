@@ -1,0 +1,49 @@
+
+@from astropy.table import Table, Column
+@import random
+@from string import ascii_uppercase
+
+
+pool: <Table> 3
+pool: <string> 4
+pool: <string1> 4
+pool: <Column> 3
+pool: <row> 3
+pool: <TableLength> 1
+pool: <ComlumnsNumber> 1
+pool: <RowsNumber> 1
+pool: <int> 10
+#pool: <list> 1
+
+
+<int> := <[-10..10]>
+#<int> := random.randint(-10,10)
+#<int> := random.randint(-100,100)
+#<int> := random.randint(-1000,1000)
+#<int> := random.randint(-10000,10000)
+#<int> := random.randint(-100000,100000)
+#<int> := random.randint(-1000000,1000000)
+
+<string> := (''.join(random.choice(ascii_uppercase) for i in range(1)))
+#<string> := (''.join(random.choice(ascii_uppercase) for i in range(2)))
+#<string> := (''.join(random.choice(ascii_uppercase) for i in range(3)))
+#<string> := (''.join(random.choice(ascii_uppercase) for i in range(4)))
+<string1> := (''.join(random.choice(ascii_uppercase) for i in range(1)))
+#<string1> := (''.join(random.choice(ascii_uppercase) for i in range(2)))
+#<string1> := (''.join(random.choice(ascii_uppercase) for i in range(3)))
+#<string1> := (''.join(random.choice(ascii_uppercase) for i in range(4)))
+<row> := []
+~<row>.append(<int>)
+~<row>.append(<string>)
+@t=Table()
+print t
+#<Column> := t.add_column(Column(data=<row>, name=<string>))
+#<Column> := t.add_column(Column(data=[<int>,<int>,<int>], name=<string>))
+#print <Column>
+#print t
+#print <string>
+t[<string>]= Column([<int>,<int>,<int>], unit= <string1>, description=<string1>)
+#print t
+#print <string>
+#print t[<Column>]
+print t

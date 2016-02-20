@@ -1,0 +1,35 @@
+CS562 Project Proposal
+Bhargav Pandya
+
+I intend to use TSTL to test two individual data structure python libraries, namely, singly_linked_list and binary_search_tree which can be 
+found at this link: https://github.com/nryoung/algorithms/tree/master/algorithms/data_structures. 
+I chose them because both the libraries have multiple function calls and have sufficient complexity for effective testing. 
+Another reason for choosing these libraries is that both the libraries have multiple cases to be tested for.
+
+A linked list is a data structure consisting of a group of nodes which together represent a sequence.
+Each node in the linked list is composed of data part or information part and a reference or a link to the next node in the sequence. 
+Such a structure enables efficient insertion and removal of elements from any position in the sequence. 
+The binary search tree represents an ordered symbol table of generic key-value pairs. The keys must be of same type, that is, they should be comparable and duplicate keys are not permitted. 
+In the case that an already present key is associated with a value, the previous value is replaced by the new value.
+
+The singly linked list has various functions like adding a node, deleting a node, searching for a node with particular data or information part. 
+I intend to test if all these functions work perfectly for expected inputs and I would test it against what happens when a search is performed for a
+data part which is not present in the linked list, traversing an empty list, inserting a smaller linked list in an already present linked list and
+some performance and stress issues like if and how the list could encounter memory overflow when its expanded beyond a certain length. 
+Here, I also intend to extend to extend the library by providing more functionalities like adding a node at the head, adding a node at the tail and if possible also change the structure of the linked list
+to hold the index numbers of the nodes and give the option to remove a node with a given index. 
+I would also use various test cases to test these added functionalities. I would also check if the size of the linked list is properly calculated upon deletion and addition of nodes.
+
+The binary search tree library provides functionalities of creating a new node and a complete binary search tree. 
+It has functions like inserting a key value pair at a particular node, checking if the tree is empty, get the value of a particular key, check if a key is present in the tree,
+find the node with the minimum key, maximum key, find if a key is present in the tree, delete a node, delete the maximum or minimum key-value pair. 
+As it is evident, there are many boundary cases that a binary search tree can be tested against. 
+Some of which are looking for a value in an empty tree, inserting non-unique values, check if the structure of the BST is always correct, trying to delete a non-existing node. 
+I would check all the present functions with non-standard inputs, what would happen when I enter non-comparable values. 
+I would test each function against special cases like a BST with one node and an empty tree.
+
+References:
+
+http://www.csc.villanova.edu/~helwig/lstpage.html
+
+https://en.wikipedia.org/wiki/Binary_search_tree

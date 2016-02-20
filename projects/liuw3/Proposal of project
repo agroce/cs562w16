@@ -1,0 +1,45 @@
+Proposal of Project
+Wei Liu
+CS562
+Prof Groce Alex
+01/26/2016
+
+Section 1: Where did I find the library?
+In my opinion, the tested code should be longer than 300 lines with full function so that this code can be test. I have many ideas and plans and search them online to find a useable library. Finally, I choose data structure as the library because data structure is the basic subject for Computer Science, it has string input, which is accord with this project requirement, also the output will be easy to figure out it is correct or not. Then I searched data structure by python on Githup website. After that, I find this library and read all these python code, then I chose AVL Tree as the testable part because the code is 350 lines and this is an appropriate length for this project. 
+Link of my library: https://github.com/mirob2005/Python_Data_Structures
+Section 2: A short instruction of this AVL Tree code.
+This code is used to implements a AVL tree, it used a balance factor to determine whether the AVL tree is balanced. If it is not, rotate it .
+The balance factor is the height (left – subtree) – height (right - subtree). If the balance factor is -1, 0, 1, that means the AVL tree is balanced. If not, rotate it. 
+After every time rotate, the balance factor should be compute again. 
+This code has many functions, which can be test in future. I chose kernel functions and introduce them.
+1, Insert: 
+insert(self, key, root=None): 
+This function is used to insert a value into the tree. 
+2, CheckBalance
+checkBalance(self,root)
+This function is used to check balance when insert a new value. If the Balance factor is not -1,0,1, it will print that rotation need on left or right.
+3, delete
+delete(self, key, root=None):
+This function is used to delete values in the tree and replace it in order predecessor. 
+4.calcBFAfterInsert(self,root) 
+This function is used to compute the balance factor after insert a new value. 
+5, calcBFAfterDelete(self,root,sign)
+This function is used to compute the balance factor after delete a value.
+6, rotateLeft(self,root) and rotateRight(self,root):
+These two functions are used to rotate left or right side when the balance factor is not -1,0,1. Also, they will compute the new balance factor after rotated. 
+
+Section 3: How to test this code?
+
+Actually, I run this code on my PC and the main functions are working. I chose these aspects and try to find bugs in code.
+1, Are the numbers can be replaced by letters?
+If I input a string like this “ apple banana red yellow orange”, will this string be ordered as AVL tree? 
+In my opinion, this string will be ordered by their first letter. So the result will be “ apple banana orange red yellow”
+2, If the string is too long as ten thousands numbers, will it work?
+3, As we know, AVL tree can only hold one keyword, if I input two same words, what will happen?
+4: Could it hold numbers with letters? For example, “apple23, banana15 orange7 red20 yellow 92”. 
+	
+
+
+
+
+

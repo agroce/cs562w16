@@ -1,0 +1,37 @@
+# @ refer to paython raw
+@import mininet.topo
+@from mininet import *
+@import topo
+
+# The source code of the Python file which I am testing it
+source: topo.py
+
+# The pools are for declaring the variable
+pool: <topo> 3
+pool: <int> 4
+pool: <string> 3
+pool: <string1> 4
+pool: <string2> 4
+pool: <string3> 3
+pool: <string4> 3
+
+# Intilize the int value for IP Addresses
+<int> := <[0..255]>
+
+# Intilize the string values for node, host, switch anf IP addresses
+<string> := <["N1", "N2", "N3"]>
+#<string1> :=  str(<int>)+'.'+str(<int>)+'.' + str(<int>) + '.' + str(<int>)
+#<string2> :=  str(<int>)+'.'+str(<int>)+'.' + str(<int>) + '.' + str(<int>)
+<string3> := <["S1", "S2", "S3"]>
+<string4> := <["H1", "H2", "H3"]>
+
+# Intitialize an empty topo object
+<topo> := topo.Topo()
+
+# Some actions for testing
+<topo>.addNode(<string>)
+<topo>.addPort(<string1> , <string2>)
+<topo>.addSwitch(<string3>)
+<topo>.addHost(<string4>)
+
+

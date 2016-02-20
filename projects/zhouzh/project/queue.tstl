@@ -1,0 +1,12 @@
+@from algorithms.data_structures import queue
+
+pools:
+        <int> 10
+        <queue> 2
+
+actions:
+        <int> := <[0..50]>
+        <queue> := queue.Queue()
+        ~<queue>.add(<int>)
+        not ~<queue>.is_empty() -> ~<queue,1>.remove()
+

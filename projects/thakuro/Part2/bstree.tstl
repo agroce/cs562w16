@@ -1,0 +1,46 @@
+
+
+@import collections
+@import bstree
+
+<@
+def heightchk(bstree):
+    h = tree.tree_height()
+    l = len(tree.preorder())
+    if (l == 0):
+       return True
+    m = math.log(l,2)
+   
+    assert(pre<(tree.preorder())> == tree.preorder())
+    return h <= (m + 1)
+
+
+
+
+def test_after_reduce(sut): 
+    sut.setLog(0) 
+@>
+source: bstree.py
+
+log: 1 <bstree>.preorder()
+log: POST 1 <bstree>.preorder()
+
+pool: <int> 3
+pool: <bstree> 3 REF
+
+property: heightchk(<bstree>) 
+
+<int> := <[1..20]>
+<bstree> := bstree.BSTree()
+~<bstree>.insert(<int>) => \
+   (len(<bstree,1>.preorder()) == pre<(len(<bstree,1>.preorder()))>+1) \
+   or pre<(<bstree,1>.find(<int,1>))>
+~<bstree>.delete(<int>) => \
+   (len(<bstree,1>.preorder()) == pre<(len(<bstree,1>.preorder()))>-1) \
+   or not pre<((<bstree,1>.find(<int,1>)))>
+<bstree>.preorder()
+~<bstree> == ~<bstree>
+len(<bstree,1>.preorder()) > 5 -> <bstree>.display()
+
+
+
