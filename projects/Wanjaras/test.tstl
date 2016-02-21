@@ -1,0 +1,19 @@
+@import binary_search_tree
+ 
+pools:
+	<value> 5
+	<key>  5
+	<tree> 2
+
+actions:
+	<value> := <[0..10]>
+	<key>  := <[0..10]>
+	<tree> := binary_search_tree.BinarySearchTree()
+	<tree>.put(<key>,<value>) ; <tree,1>.contains(<key,1>) => (<tree,1>.is_empty() == False)
+	<tree>.put(<key>,<value>) ; <tree,1>.contains(<key,1>) == True ;<tree,1>.delete(<key,1>) => (<tree,1>.contains(<key,1>) == False)
+	<tree>.put(<key>,<value>) ; ((<tree,1>._max_node().key) == (<tree,1>.max_key()))
+	<tree>.put(<key>,<value>) ; ((<tree,1>._min_node().key) == (<tree,1>.min_key()))
+	<tree>.put(<key>,<value>) ; (<tree,1>.is_empty() == False)
+
+	
+		
