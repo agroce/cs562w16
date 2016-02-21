@@ -1,0 +1,52 @@
+# This TSTL file will required the installation of astropy and numpy libraries
+
+@from astropy.table import Table, Column
+
+# Defining pools
+
+pool: <Table> 1
+pool: <Column> 1
+pool: <Unit> 1
+pool: <Description> 1
+pool: <int> 3
+
+# pools initilization
+
+<int> := <[-10..10]>
+
+# Note: (') is not working with TSTL logging while (") does work
+# The values below are randomly going to be used to fill the column in the Table
+
+#<Column> := <['AB','BC','CD','DE','EF','FG','GH','HI','IJ','JK','KL','LM','MN','TT','OP','PQ','QR','RS']>
+<Column> := <["AB","BC","CD","DE","EF","FG","GH","HI","IJ","JK","KL","LM","MN","TT","OP","PQ","QR","RS"]>
+
+<Unit> := <["CMMMM","MMMMMM","KMMMMMMM", "MileMile","InchInch","FeetFeet","Prercent%","2^p^2"]>
+
+<Description> := <["ab","bc","cd","de","ef","fg","gh","hi","ij","jk","kl","lm","mn","no","op","pq","qr","rs"]>
+
+# logging is not required but it will give more details about the actions implemented before and after
+
+log: 1 t[<Column>].unit
+log: POST 1 t[<Column>].unit
+
+# Create a global variable t as a table and try to insert and update the columns randomly
+
+@t=Table()
+
+#The following action is just for inserting and updating a column. 
+
+#I found that if you insert the column again it will update the values (rows) while 
+# not updating the unit field. This is a bug because either it should update all the
+# fields or none of them to be updated (For Example rasing an error indicating that
+# this is a wrong action). This can be a source of failure when users try to delete
+# columns based on the unit values (this can be done by developing a function).
+
+t[<Column>]= Column([<int>,<int>,<int>], unit= <Unit>, description=<Description>); print '\n The Column: ', t[<Column>] ,'\n We would like to update the Unit value to: ', \
+<Unit>, '\n The updated Unit value : ', t[<Column>].unit => \
+t[<Column>].unit ==  <Unit> , 'Updating units is not working'
+
+
+# To confirm that this is a bug you can replace the last line with the following line or somthing like that: 
+#t[<Column>].unit ==  <Unit> or t[<Column>].unit !=  <Unit> , 'Updating units is not working'
+
+
