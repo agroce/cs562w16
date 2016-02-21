@@ -1,0 +1,16 @@
+@from algorithms.data_structures import singly_linked_list 
+
+pool: <int> 5
+pool: <list> 3
+        
+<int> := <[1..20]>
+
+<list> := singly_linked_list.SinglyLinkedList()
+
+~<list>.add(<int>) => \
+<list,1>.size == pre<(<list,1>.size)>+1
+        
+~<list>.size >= 0 -> \
+<list,1>.search(<int>) -> \
+~<list,1>.remove(<int,1>) => \
+<list,1>.size == pre<(<list,1>.size)>-1

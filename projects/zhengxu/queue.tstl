@@ -1,0 +1,16 @@
+@from algorithms.data_structures import queue
+
+pool: <int> 5
+pool: <queue> 3
+
+<int> := <[1..20]>
+
+<queue> := queue.Queue()
+
+~<queue>.add(<int>) => \
+(<int,1> in <queue,1>.queue_list ) \
+and (<queue,1>.size() == pre<(<queue,1>.size())>+1)
+
+not <queue>.is_empty() -> \
+~<queue,1>.remove() => \
+<queue,1>.size() == pre<(<queue,1>.size())>-1
