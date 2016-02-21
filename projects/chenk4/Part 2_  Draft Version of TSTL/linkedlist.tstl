@@ -42,7 +42,7 @@ pool: <LIST> 3
 # test (ReversePrint function) 
 #Descprtion of (printList function): print the whole list from head to tail 
 #Descprtion of (ReversePrint function): print the whole list from tail to head 
-countLength(~<LINKED,1>.getHead()) == 5 -> <LINKED,1>.printList(<LINKED>.getHead());\
+countLength(~<LINKED,1>.getHead()) == 5 -> ~<LINKED,1>.printList(<LINKED>.getHead());\
 ~<LINKED,1>.ReversePrint(<LINKED,1>.getHead())
 
 
