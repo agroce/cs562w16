@@ -1,0 +1,94 @@
+######## To use this tstl, please do as following:
+######## pip install python-skiplist
+######## pip install sortedcontainers
+
+@from skiplist import SortedDict
+@from sortedcontainers import SortedDict as Sort
+@import time
+@import random
+
+<@
+#Generate the random string that we can use it for dictionary or set, the length can be as long as the maximum size of dictionary
+def genString(upper):
+	s = ''
+	length = random.randint(0, upper)
+	while (len(s) < length):
+		s = s + chr(random.randint(0, 255))
+	return s
+	
+
+#Generate dictionary with multiple combinations of string and numbers
+def genMulDict(low, high, size):
+	d = {}
+	flag = random.randint(0,3)
+	while (len(d) != size):
+		if (flag == 0):
+			d[genString(size)] = genString(size)
+		elif (flag == 1):
+			d[random.randint(low, high)] = genString(size)
+		elif (flag == 2):
+			d[genString(size)] = random.randint(low, high)
+		else:
+			d[random.randint(low, high)] = random.randint(low, high)
+	return d
+
+#Generate dictionary with pure numbers
+def genNumDict(low, high, size):
+	d = {}
+	while (len(d) != size):
+		d[random.randint(low, high)] = random.randint(low, high)
+	return d
+	
+#Generate dictionary with pure strings
+def genStrDict(high, size):
+	d = {}
+	while (len(d) != size):
+		d[genString(size)] = genString(size)
+	return d
+
+	
+def testCSortDict(dict):
+	dura = time.time()
+	SortedDict(dict)
+	dura = time.time() - dura
+	return dura
+	
+def testPSortDict(dict):
+	dura = time.time()
+	Sort(dict)
+	dura = time.time() - dura
+	return dura
+
+def EqualResult(dict):
+	c = SortedDict(dict)
+	p = Sort(dict)
+	if (c == p):
+		return True
+	else:
+		return False
+
+@>
+
+pool: <dict>		1
+pool: <size>		1
+pool: <high>		1
+pool: <low>			1
+pool: <cdura>		1
+pool: <pdura>		1
+
+
+<dict>		:= {}
+<size>		:= 10
+<high>		:= 10
+<low>		:= -10
+<cdura>		:= 0.0
+<pdura>		:= 0.0
+	
+<dict> = genMulDict(<low>, <high>, <size>) 	
+#<dict> = genNumDict(<low>, <high>, <size>) 	
+#<dict> = genStrDict(<low>, <high>, <size>) 	
+
+
+len(<dict>) == <size> -> flag = EqualResult(<dict>); <cdura> = testCSortDict(<dict>); <pdura> = testPSortDict(<dict>); print 'C Sort: size = ', <size>, ';Duration = ', <cdura>; print 'Dictrionary: ', <dict>; print 'P Sort: size = ', <size>, ';Duration = ', <pdura>; print 'Result Corretness: ', flag;
+
+	
