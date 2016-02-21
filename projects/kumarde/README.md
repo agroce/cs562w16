@@ -13,22 +13,19 @@ Installation
 ============
 
 #### FuzzyWuzzy
+Install using any of the following methods.
 
 Using PIP via PyPI
 
-.. code:: bash
 
     pip install fuzzywuzzy
 
 Using PIP via Github
 
-.. code:: bash
 
     pip install git+git://github.com/seatgeek/fuzzywuzzy.git@0.8.1#egg=fuzzywuzzy
 
 Adding to your ``requirements.txt`` file (run ``pip install -r requirements.txt`` afterwards)
-
-.. code:: bash
 
     git+ssh://git@github.com/seatgeek/fuzzywuzzy.git@0.8.1#egg=fuzzywuzzy
     
