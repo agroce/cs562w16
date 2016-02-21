@@ -1,0 +1,42 @@
+@import LinkedList_Circular
+@import math
+@import time
+
+
+# @ indicates raw python code, such as imports, and is usually not parsed by TSTL, but available for use in testing
+<@
+def leng(self):
+        ptr = self.head
+        count = 0
+        while ptr:
+            count = count + 1
+            ptr = ptr.next
+        return count
+def checkInsert(self, D):
+    ptr = self.head
+    if (ptr == None):
+        return False
+    if(D == ptr.data):
+        return True
+    else:
+        return False
+
+@>
+
+
+# tells TSTL where the source code of the module tested is, to enable code coverage
+	source: LinkedList_Circular.py
+
+# pools are where TSTL stores state of the SUT; REF indicates a pool that is mirrored by a reference implementation
+	pool: <INT> 100
+	pool: <LINKEDLIST> 1
+
+# initializes value
+	<INT>:=<[1..200]>
+
+# initialize an empty LinkedList
+	<LINKEDLIST> := LinkedList_Circular.CircularLinkedList()
+
+# insert 
+	~<LINKEDLIST>.insert(<INT>) => (leng(<LINKEDLIST,1>) == PRE<(leng(<LINKEDLIST,1>))>+1) and (checkInsert(%LINKEDLIST,1%,%INT%) == True )
+

@@ -1,0 +1,19 @@
+# _*_ coding: utf-8 _*_
+@from xpinyin import Pinyin
+
+pool: <word> 4
+pool: <w> 1
+
+
+<word> := <[u"成都",u"广州"]>
+<word> := <[u"值得注意的是，本书使用了一套“古怪”的计时术语作为全书的时间框架体系，如“阏逄摄提格之岁”之类。“阏逄”相当于汉语“甲”，“摄提格”相当于汉语“寅”。为什么不用汉语的天干地支，而偏偏要用一套多音节语言的干支体系呢？司马光没有交代。",u"干支体系呢"]>
+
+<w> := Pinyin()
+
+print <w>.get_pinyin(<word>)
+
+print <w>.get_initials(<word>)
+
+print <w>.get_pinyin(<word>, show_tone_marks=True)
+
+print <w>.get_pinyin(<word>, ' ')

@@ -14,7 +14,7 @@ class CircularLinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
-    
+        
     def __str__(self):
         if(self.head != None):
             string = ("HEAD(%d) <"%self.head.data)
@@ -53,20 +53,20 @@ class CircularLinkedList:
             self.head = CircularNode(data,self.head, self.tail)
             oldHead.prev = self.head
             self.tail.next = self.head
-
-def append(self, data):
-    ptr = self.head
+        
+    def append(self, data):
+        ptr = self.head
         if(ptr == None):
             self.insert(data)
-    else:
-        while ptr.next != self.head:
-            ptr=ptr.next
+        else:
+            while ptr.next != self.head:
+                ptr=ptr.next
             ptr.next = CircularNode(data, self.head, ptr)
             self.tail = ptr.next
             self.head.prev = self.tail
-
-def returnIndex(self, data):
-    ptr = self.head
+            
+    def returnIndex(self, data):
+        ptr = self.head
         index = 0
         if(ptr != None):
             while True:
@@ -75,11 +75,11 @@ def returnIndex(self, data):
                 index += 1
                 ptr=ptr.next
                 if(ptr == self.head): break
-    return None
-
-def updateIndex(self,index,data):
-    if(index <0 or self.head == None):
-        return False
+        return None
+    
+    def updateIndex(self,index,data):
+        if(index <0 or self.head == None):
+            return False
         currentIndex = 0
         ptr = self.head
         while True:
@@ -89,11 +89,11 @@ def updateIndex(self,index,data):
             currentIndex+=1
             ptr=ptr.next
             if(ptr == self.head): break
-    return False
-
-def deleteIndex(self, index):
-    if(index<0 or self.head == None):
         return False
+    
+    def deleteIndex(self, index):
+        if(index<0 or self.head == None):
+            return False
         ptr = self.head
         if(index==0):
             if(self.head == self.head.next):
@@ -111,14 +111,14 @@ def deleteIndex(self, index):
                 self.head.prev = self.tail
                 self.tail.next = self.head
                 return True
-    currentIndex=0
+        currentIndex=0
         while ptr.next != self.head:
             if(currentIndex+1 == index):
                 self.deletePtr(ptr)
                 return True
             ptr=ptr.next
             currentIndex+=1
-return False
+        return False
     
     def insertBeforeIndex(self,index,data):
         if(index==0):
@@ -143,7 +143,7 @@ return False
     def insertAfterIndex(self,index,data):
         if(index ==-1):
             self.insert(data)
-            return True
+            return True        
         if(index <-1 or self.head == None):
             return False
         currentIndex=0
@@ -152,7 +152,7 @@ return False
             if(currentIndex==index):
                 ptr.next = CircularNode(data,ptr.next,ptr)
                 if(ptr == self.tail):
-                    self.tail = ptr.next
+                    self.tail = ptr.next                
                 ptr.next.next.prev = ptr.next
                 return True
             currentIndex+=1
@@ -203,7 +203,7 @@ return False
             while(self.deleteData(data)):
                 continue
         return success
-    
+        
     def insertAfterEveryData(self,data,dataToInsert):
         if(self.head == None):
             return False
@@ -251,7 +251,7 @@ return False
             self.head.prev = self.tail
             self.tail.next = self.head
             ptr = self.head
-        #print("\t%s" % self)
+            #print("\t%s" % self)
         #print("\nDeleting %d" % self.head.data)
         self.head.next = None
         self.head.prev = None
@@ -259,10 +259,10 @@ return False
         self.tail.prev = None
         self.head = None
         self.tail = None
-    
+        
     def copyList(self):
         copy = CircularLinkedList()
-        
+    
         ptr = self.head
         while True:
             copy.append(ptr.data)
@@ -279,12 +279,12 @@ return False
             if(ptr == self.tail):
                 return None
         return ptr.data
-
+        
 
 if __name__ == '__main__':
     alist = CircularLinkedList()
-    
+
     for data in [4,3,2,1]:
         alist.insert(data)
-    
+
     print(alist)
