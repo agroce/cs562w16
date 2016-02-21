@@ -1,0 +1,31 @@
+@import LinkedList_Double
+@import math
+@import time
+
+<@
+def DLLlength(self):
+        ptr = self.head
+        count = 0
+        while ptr:
+            count = count + 1
+            ptr = ptr.next
+        return count
+
+def isEmpty(self):
+	if (DLLlength(self) == 0):
+		return True
+	else :
+		return False
+@>
+
+source: LinkedList_Double.py
+
+pools: 
+	<INT> 10
+ 	<DOUBLELINKEDLIST> 3
+
+actions:
+	<INT>:=<[1..50]>
+	<DOUBLELINKEDLIST>:=LinkedList_Double.DoublyLinkedList()
+	~<DOUBLELINKEDLIST>.insert(<INT>) => (DLLlength(<DOUBLELINKEDLIST,1>) == PRE<(DLLlength(<DOUBLELINKEDLIST,1>))>+1)
+	~<DOUBLELINKEDLIST>.append(<INT>) => (DLLlength(<DOUBLELINKEDLIST,1>) == PRE<(DLLlength(<DOUBLELINKEDLIST,1>))>+1) 

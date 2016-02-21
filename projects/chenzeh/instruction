@@ -1,0 +1,3 @@
+This is how you install the library "pygtrie"
+pip install pygtrie 
+including sudo sometimes.
