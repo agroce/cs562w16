@@ -1,0 +1,64 @@
+# @ refer to paython raw
+@from mininet import topo
+
+# Python functions which used in the test to find nodes, hosts and switches names in the topology and return true if the name is found
+<@
+def findNode(t, nodeName):
+    name = nodeName
+    topolo = t.nodes()
+    
+    return name in topolo
+
+def findSwitch(t, switchName):
+    name = switchName
+    topolo = t.switches()
+    
+    return name in topolo
+
+def findHost(t, hostName):
+    name = hostName
+    topolo = t.hosts()
+    
+    return name in topolo
+@>
+
+# The source code of the Python file which I am testing it
+source: topo.py
+
+# The pools are for declaring the variable
+pool: <topo> 1
+pool: <string> 1
+pool: <string1> 1
+pool: <string2> 1
+
+# Intilize the string values for nodes, hosts and switches
+<string> := <["N1","N2","N3"]>
+<string1> := <["S1","S2","S3"]>
+<string2> := <["H1","H2","H3"]>
+
+# Intitialize an empty topo object
+<topo> := topo.Topo()
+
+# Some actions for testing
+# This action is for adding node name to the topology.
+# Print the node name.
+# Assert that the node is added to the topology. 
+<topo>.addNode(<string>); print <topo>.nodes() => \
+findNode(<topo>, <string>) == True
+
+# This action is for adding switch name to the topology.
+# Print the switch name.
+# Assert that the switch is added to the topology.
+<topo>.addSwitch(<string1>); print <topo>.switches() => \
+findSwitch(<topo>, <string1>) == True
+
+# This action is for adding host name to the topology.
+# Print the host name.
+# Assert that the host is added to the topology.
+<topo>.addHost(<string2>); print <topo>.hosts() => \
+findHost(<topo>, <string2>) == True
+
+
+
+
+
