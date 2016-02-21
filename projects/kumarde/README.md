@@ -1,5 +1,5 @@
-##Fuzzywuzzy.tstl
-###
+#Fuzzywuzzy.tstl
+
 
 Requirements
 ============
@@ -12,7 +12,7 @@ Requirements
 Installation
 ============
 
-###### FuzzyWuzzy
+#### FuzzyWuzzy
 
 Using PIP via PyPI
 
@@ -40,7 +40,7 @@ Manually via GIT
     cd fuzzywuzzy
     python setup.py install
 
-####### python-Levenshtein
+#### python-Levenshtein
 
 apt-get install python-Levenshtein
 
