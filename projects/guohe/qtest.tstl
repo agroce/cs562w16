@@ -1,0 +1,14 @@
+@import Queue as queue
+
+pools:
+<data> 10
+<queue> 3
+
+
+actions:
+<data> := <[0..50]>
+<queue> := queue.Queue()
+
+~<queue>.enqueue(~<data>) => (<queue,1>.size() == pre<(<queue,1>.size())>+1)
+print ~<queue>.queue
+

@@ -1,10 +1,12 @@
 
 
-Tools required for this project
+## CS 562 Project - Alghamha ##
+### Astropy Installation ###
 
-1- Install Astropy Package uning /
-      pip install --no-deps astropy
-      
-2- install numpy
-      pip install numpy
+You can install Astropy using the following commands:
+
+`pip install astropy” OR “pip install --no-deps astropy`
+
+
+
       

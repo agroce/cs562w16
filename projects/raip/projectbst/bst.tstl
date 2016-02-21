@@ -1,0 +1,75 @@
+@import time
+
+@import binary_search_tree
+
+<@
+
+
+def checktreeBST(tree):
+	p = tree.inorder()
+	s = sorted(set(p))
+	if s == p:
+	
+		return True
+	else:
+
+		return False
+
+def _inorder(self,node):
+        if node == None:
+                return
+
+        if node != None:
+                        self._inorder(node.left)
+
+                        if node:
+                                self.__nodes.append(node.key)
+
+                        self._inorder(node.right)
+
+        return self.__nodes
+
+def inorder(self):
+	self.__nodes = []
+     	return self._inorder(self.root)
+
+
+
+def checkroot(self):
+	if self.root == None:
+		return 0
+	else:
+		return 1
+	
+
+@>
+
+source: binary_search_tree.py
+
+logs:
+	1 <int>		
+	
+pools:
+	<int> 2
+	<bst> 2
+	<key> 2
+
+
+actions:
+	<key>:= <[0..10]>
+	
+	<int>:= <[0..10]>
+	
+	<bst>:= binary_search_tree.BinarySearchTree() 
+	
+	~<bst>.put(~<key>,<int>) => <bst,1>.contains(<key,1>) and checktreeBST(<bst,1>)
+	
+	(<bst>.contains(<key>) == False) -> <bst,1>.put(<key,1>,<int>) => (pre<(<bst,1>.size())> + 1) == <bst,1>.size() and checktreeBST(<bst,1>)     
+	
+	<bst>.contains(<key>) -> <bst,1>.delete(<key,1>) => (pre<(<bst,1>.size())>  == <bst,1>.size() + 1) and (<bst,1>.contains(<key,1>) == False)  
+	
+	(checkroot(<bst>) == 0) -> <bst,1>.delete(<key>) => <bst,1>.is_empty() 
+	
+	(<bst>.contains(<key>) == True) -> <bst,1>.put(<key,1>,<int>) => (pre<(<bst,1>.size())> ) == <bst,1>.size() and checktreeBST(<bst,1>)
+		
+		

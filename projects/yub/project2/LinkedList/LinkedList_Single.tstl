@@ -1,0 +1,34 @@
+@import LinkedList_Single
+@import math
+@import time
+
+
+# @ indicates raw python code, such as imports, and is usually not parsed by TSTL, but available for use in testing
+<@
+def cap(self):
+        ptr = self.head
+        count = 0
+        while ptr:
+            count = count + 1
+            ptr = ptr.next
+        return count
+@>
+
+
+# tells TSTL where the source code of the module tested is, to enable code coverage
+	source: LinkedList_Single.py
+
+# pools are where TSTL stores state of the SUT; REF indicates a pool that is mirrored by a reference implementation
+	pool: <INT> 10
+	pool: <LINKEDLIST> 3
+
+# initializes value
+	<INT> := <[1..20]>
+
+# initialize an empty LinkedList
+	<LINKEDLIST> := LinkedList_Single.LinkedList()
+
+# insert 
+	~<LINKEDLIST>.insert(<INT>) => (cap(<LINKEDLIST,1>) == PRE<(cap(<LINKEDLIST,1>))>+1) 
+	
+

@@ -1,0 +1,33 @@
+#import the library I am testing
+@import heapq
+
+#The source code of the Python file
+source: heapq.py
+
+#Using logs to print out the steps from TSTL
+logs:
+	1 <heap>
+	POST 1 <heap>
+
+#The int variable is for natural num and the structure of heap is kind of like the list. (I will try the char in the furture work if possible, but still need more time to figure out)
+pools:
+	<int> 10
+	<heap> 3
+
+actions:
+	<int> := <[0..50]>
+#The way to initial the heap
+	<heap>:= []
+	~<heap>.append(<int>)
+
+#Testing the "heappush" function, one rule for this one is that the length of the heap will increase one after we push one element to heap
+	heapq.heappush(<heap>,<int>) => (len(<heap,1>) == pre<(len(<heap,1>))>+1)
+
+#Testing the "heappop" function, first we need to aware that we cannot have an empty heap to pop or we will get a "index error". I have tested it and TSTL can track this error
+	((len(<heap,1>))!= 0) -> heapq.heappop(<heap>) => (len(<heap,1>) == pre<(len(<heap,1>))>-1)
+
+#Testing the "heapreplace" function. Same with the heappop, we need to make sure the heap is not empty
+	((len(<heap,1>))!= 0) -> heapq.heapreplace(<heap>,<int>) => (len(<heap,1>) == pre<(len(<heap,1>))>)
+
+#Testing the "heappushpop" function.
+	heapq.heappushpop(<heap>,<int>) => (len(<heap,1>) == pre<(len(<heap,1>))>)

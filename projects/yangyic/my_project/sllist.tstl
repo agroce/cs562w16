@@ -1,0 +1,28 @@
+@from pyllist import sllist, sllistnode
+# @import s_list
+@import math
+@import time
+
+
+pool: <list> 3
+pool: <INT> 1
+pool: <KEY> 1
+pool: <LIST> 1
+pool: <aaa> 2
+<INT> := <[1..20]>
+<KEY> := <[2..20]>
+
+# <list> := sllist
+
+#  Initialize the list... I can not use the <list> := sllist.sllist() 
+<list> := []
+
+# To test the inset function. If the insert function is correct,
+# the length should be equal to the previous state plus 1 more.
+~<list>.insert(<INT>,<KEY>) => \
+    ((len(<list,1>))==pre<(len(<list,1>))>+1) 
+
+# -----------------
+# ~<list>.insert(<INT>,<KEY>)
+# ((len(<list,1>))!= 0) -> print len(<list>) =>
+#  print <lsit>

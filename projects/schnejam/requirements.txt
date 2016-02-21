@@ -1,0 +1,15 @@
+Mako==1.0.3
+MarkupSafe==0.23
+appdirs==1.4.0
+argparse==1.2.1
+cffi==1.5.2
+coverage==4.1b2
+decorator==4.0.9
+numpy==1.10.4
+pycparser==2.14
+pyopencl==2015.2.4
+pytest==2.8.7
+pytools==2016.1
+six==1.10.0
+tstl==0.2
+wsgiref==0.1.2
