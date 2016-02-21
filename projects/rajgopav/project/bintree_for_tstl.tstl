@@ -1,12 +1,41 @@
 @from bintrees import BinaryTree
 
+<@
+def displayTree(tree):
+        list = []
+        printHelper(tree.root, list)
+        return list
+
+def printHelper(node, list):
+        if node == None:
+                return
+        list.append(node.key)
+        printHelper(node.left,list)
+        printHelper(node.right,list)
+@>
+
+source: bintree.py
+
+logs:
+    1 displayTree(<bt>)
+    POST 1 displayTree(<bt>)
+
 #pools are where TSTL stores state of the SUT
-pool: <int> 4
-pool: <bt> 3
+pools:
+    <key> 1
+    <val> 1
+    <list> 1
+    <bt> 1
 
 #initialization
 actions:
-<int> := <[1..20]>
+<key> := <[1..10]>
+<val> := <[1..10]>
+<list> := []
 <bt>  := BinaryTree()
-~<bt>.insert(~<bt>,~<int>)
-~<bt>.remove(~<int>)
+
+
+~<bt>.insert(<key>,<val>); ~<list>.append(<val>);print <bt>
+
+len(~<bt>) > 5 -> ~<bt>.__contains__(<key>) and (~<bt>.__getitem__(<key>) in ~<list>) -> \
+    values = (~<bt>.__getitem__(<key>)); ~<bt>.remove(<key>); ~<list>.remove(values);
