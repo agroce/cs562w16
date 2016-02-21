@@ -1,0 +1,107 @@
+# NOTE: Need to install "Cython-0.23.4" and "bintrees-2.0.4".
+# Download "Cython-0.23.4" at "http://cython.org/#download".
+# Download "bintrees-2.0.4" at "https://pypi.python.org/pypi/bintrees/2.0.4#downloads".
+# Install them by "sudo python setup.py install" at each directory.
+# Move to the directory where "perftrees.tstl" and "randomtester.py" are together.
+# Run "perftrees.tstl" by "tstl perftrees.tstl --nocover" and "python randomtester.py -n -t 10".
+# The program prints out the inserting and removing times for Red Black Tree and AVL Tree.
+# If there are the unusual results, timeInRBT > timeInAVL or timeReRBT < timeReAVL,
+# the results are saved in "unusualInsert.txt" and "unusualRemove.txt".
+
+@import time
+@import random
+@import bintrees
+
+<@
+# display results
+def displayResults(timeInRBT, timeInAVL, timeReRBT, timeReAVL):
+	print 'timeInRBT', timeInRBT, '\t', 'timeInAVL', timeInAVL, '\t', 'timeReRBT', timeReRBT, '\t', 'timeReAVL', timeReAVL
+
+# create a list with distinct integer
+def listDistinct(low, high, size):
+	return random.sample(range(low, high), size)
+
+# create an inorder list with integer
+def listInorder(size):
+	return range(size)
+
+# create a list with integer
+def listNormal(low, high, size):
+	temp = []
+	while len(temp) != size:
+		temp.append(random.randint(low, high))
+	return temp
+
+# time for inserting each element in list into tree
+def timeInsert(tree, list):
+	start = time.time()
+	for value, key in enumerate(list):
+		tree.insert(key, value)
+	return time.time() - start
+
+# time for removing each node in tree
+def timeRemove(tree, list):
+	start = time.time()
+	for key in list:
+		tree.remove(key)
+	return time.time() - start
+
+# remove duplicate in list
+def removeDuplicate(list):
+	temp = []
+	[temp.append(i) for i in list if not temp.count(i)]
+	return temp
+
+# save unsual results
+def saveUnusual(timeInRBT, timeInAVL, timeReRBT, timeReAVL, list, removed):
+	if timeInRBT > timeInAVL:
+		f = open('unusualInsert.txt', 'a')
+		f.write('timeInRBT ' + str(timeInRBT) + '\t' + 'timeInAVL ' + str(timeInAVL) + '\t' + 'list ' + str(list) + '\n')
+		f.close()
+
+	if timeReRBT < timeReAVL:
+		f = open('unusualRemove.txt', 'a')
+		f.write('timeReRBT ' + str(timeReRBT) + '\t' + 'timeReAVL ' + str(timeReAVL) + '\t' + 'removed ' + str(removed) + '\n')
+		f.close()
+@>
+
+# set pools
+pool: <list>		1
+pool: <removed>		1
+pool: <rbt>		1
+pool: <avl>		1
+pool: <low>		1
+pool: <high>		1
+pool: <size>		1
+pool: <timeInRBT>	1
+pool: <timeInAVL>	1
+pool: <timeReRBT>	1
+pool: <timeReAVL>	1
+
+# init
+<list>		:= []
+<removed>	:= []
+<rbt>		:= bintrees.RBTree()
+<avl>		:= bintrees.AVLTree()
+<low>		:= -1000
+<high>		:= 1000
+<size>		:= 1000
+<timeInRBT>	:= 0.0
+<timeInAVL>	:= 0.0
+<timeReRBT>	:= 0.0
+<timeReAVL>	:= 0.0
+
+# assign distinct, normal, or inorder integers into list
+~<list> = listDistinct(<low>, <high>, <size>)
+#~<list> = listNormal(<low>, <high>, <size>)
+#~<list> = listInorder(<size>)
+
+# performance test for insert & remove functions in red black tree and avl tree
+len(<list>) == <size> -> \
+	<timeInRBT> = timeInsert(<rbt>, <list>); \
+	<timeInAVL> = timeInsert(<avl>, <list>); \
+	<removed> = removeDuplicate(<list>); \
+	<timeReRBT> = timeRemove(<rbt>, <removed>); \
+	<timeReAVL> = timeRemove(<avl>, <removed>); \
+	displayResults(<timeInRBT>, <timeInAVL>, <timeReRBT>, <timeReAVL>); \
+	saveUnusual(<timeInRBT>, <timeInAVL>, <timeReRBT>, <timeReAVL>, <list>, <removed>)	
