@@ -31,8 +31,6 @@ Adding to your ``requirements.txt`` file (run ``pip install -r requirements.txt`
     
 Manually via GIT
 
-.. code:: bash
-
     git clone git://github.com/seatgeek/fuzzywuzzy.git fuzzywuzzy
     cd fuzzywuzzy
     python setup.py install

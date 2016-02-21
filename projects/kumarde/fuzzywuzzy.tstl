@@ -91,7 +91,8 @@ assert (fuzz.token_set_ratio(<str1>,<str1,1>) == 100)
 
 assertRatioSwap(<str1>,<str2>)
 
-assertPartialRatioSwap(<str1>,<str2>)
+#partial_ratio is for strings with different lengths
+len(<str1>) != len(<str2>) -> assertPartialRatioSwap(<str1,1>,<str2,1>)
 
 assertTSortRatioSwap(<str1>,<str2>)
 
