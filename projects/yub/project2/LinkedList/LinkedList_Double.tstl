@@ -30,5 +30,5 @@ def cap(self):
 
 # insert 
 	~<LINKEDLISTDOUBLE>.insert(<INT>) => (cap(<LINKEDLISTDOUBLE,1>) == PRE<(cap(<LINKEDLISTDOUBLE,1>))>+1) 
-	#~<LINKEDLISTDOUBLE>.append(<INT>) => (cap(<LINKEDLISTDOUBLE,1>) == PRE<(cap(<LINKEDLISTDOUBLE,1>))>+1)
+	
 
