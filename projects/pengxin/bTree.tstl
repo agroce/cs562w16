@@ -1,0 +1,54 @@
+@from BTrees.OOBTree import OOBTree
+@from BTrees.check import *
+<@
+#def check_update(bt,key,value):
+#    if bt.get(key) == value :
+#       return 1
+#    else:
+#       return 0
+#def test_after_reduce(sut):
+#    sut.setLog(0)
+@>
+pools:
+       <int>    3
+       <char>   3
+       <string> 3
+       <key>    3
+       <value>  3
+       <btree>  3
+       <d>      1
+logs:
+	1 <key>
+	1 <value>
+	1 list(<btree>.items())	
+	
+	POST 1 <key>
+	POST 1 <value>
+	POST 1 list(<btree>.items())
+
+actions:
+	<int> := <[1..10]>
+
+    <char> :=<["a","b","c","d"]>
+	<string> := <char>
+	~<string> += <char>
+
+	<key> := <string>
+	<key> := <int>
+	 
+	<value> := <string>
+	<value> := <int>
+	
+	<btree> := OOBTree()
+	~<btree>.insert(<key>,<value>) =>  check(<btree,1>) == None \
+	 and  (len(<btree,1>) == pre<(len(<btree,1>))> + 1 or <btree,1>.has_key(<key,1>) > 0 ) 
+ 	
+#	~<btree>.update({<key>:<value>}) => check(<btree,1>) == None \
+#	 and  (len(<btree,1>) == pre<(len(<btree,1>))> + 1 or len(<btree,1>) == pre<(len(<btree,1>))>) \
+#	 and check_update(<btree,1>,<key,1>,<value,1>) == 1
+#
+#	~<btree>.pop(<key>,0) => check(<btree,1>) == None \
+#	 and  (len(<btree,1>) == pre<(len(<btree,1>))> -1 or <btree,1>.pop(<key,1>,0) == 0) \
+#	 and <btree,1>.has_key(<key,1>) == 0
+
+	 
