@@ -32,7 +32,7 @@ class linkedList:
         return head
     
     def printList(self,head=None):
-        print "{{{{{{{{{{{{{{"
+        print "{{{{{{{{{{{{{{{{{{{{{{{{{{{"
         if head==None:
            head=self.head
         while head!=None:
@@ -41,7 +41,7 @@ class linkedList:
         print "}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
 
     def ReversePrint(self,head):
-        print "->->->->->->->->->->->->->->"
+        print ">->->->->->->->->->->->->->->"
         if not head:
             return
         if  head.next is None:
@@ -58,7 +58,7 @@ class linkedList:
         while prev:
             print prev.val
             prev=prev.next
-        print "<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-"
+        print "<-<-<-<-<-<-<-<-<-<-<-<-<-<-<"
 
     def deleteNode(self, node):
         "Write a function to delete a node (except the tail) in a singly linked list, given only access to that node."

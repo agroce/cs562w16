@@ -1,0 +1,50 @@
+# Description: purpose of linkedlist.tstl file is to test the functions for \
+# a single linked list. Library's name is (linkedlist.py). 
+# The class name in (linkedlist.py) is  (class linkedList)
+
+@import linkedlist
+@import math
+@import time
+
+<@
+# (function: countLength) is used to calculate the length of single linked list 
+def countLength(head):
+	count = 0
+	if head==None:
+		return count
+	while head!=None:
+		head=head.next
+		count = count + 1
+	return count
+@>	
+
+# the tested python file is (linkedlist.py)
+source: linkedlist.py
+
+pool: <INT> 3
+pool: <CHAR> 3
+pool: <LINKED> 3
+pool: <LIST> 3
+
+<INT>:=<[1..20]>
+<CHAR> := <['a','b','c','d','*','hello good',1,1.33,100]>
+<LIST>:=[]
+~<LIST>.append(<INT>)
+
+<LINKED>:=linkedlist.linkedList()
+
+#insert the randomized numbers and test (insert function)
+# Descprtion of (insert function): insert a value to the linked list
+<LINKED>.insert(<CHAR>) => \
+  (countLength(<LINKED,1>.getHead())==pre<(countLength(<LINKED,1>.getHead()))>+1)
+
+# restrict the length of single linked list to be 5, then test (printList function) and \
+# test (ReversePrint function) 
+#Descprtion of (printList function): print the whole list from head to tail 
+#Descprtion of (ReversePrint function): print the whole list from tail to head 
+countLength(~<LINKED,1>.getHead()) == 5 -> <LINKED,1>.printList(<LINKED>.getHead());\
+~<LINKED,1>.ReversePrint(<LINKED,1>.getHead())
+
+
+
+
