@@ -1,0 +1,155 @@
+@from fuzzywuzzy import fuzz
+@from difflib import SequenceMatcher
+@import Levenshtein as lvs
+
+<@
+#Check ratio using difflib 
+
+def seqMatcherRatio(str1,str2):
+  m = SequenceMatcher(None, str1, str2)
+  return int(round(100 * m.ratio()))
+
+#Check ratio using Levenshtein lib
+
+def lvsMatcherRatio(str1,str2):
+  m = lvs.ratio(str1, str2)
+  return int(round(100 * m))
+
+#swap the string and the ratio should still be the same
+
+def assertRatioSwap(str1,str2):
+  print "Ratio ",str1,",",str2
+  assert (fuzz.ratio(str1,str2) == fuzz.ratio(str2,str1))
+
+def assertPartialRatioSwap(str1,str2):
+  print "Partial Ratio ",str1,",",str2
+  assert (fuzz.partial_ratio(str1,str2) == fuzz.partial_ratio(str2,str1))
+
+def assertTSetRatioSwap(str1,str2):
+  print "Token Set Ratio ",str1,",",str2
+  assert (fuzz.token_set_ratio(str1,str2) == fuzz.token_set_ratio(str2,str1))
+
+def assertTSortRatioSwap(str1,str2):
+  print "Token Sort Ratio ",str1,",",str2
+  assert (fuzz.token_sort_ratio(str1,str2) == fuzz.token_sort_ratio(str2,str1))
+
+#check partial_ratio for strings of different length
+  
+@>
+
+pool: <str1> 1
+pool: <str2> 1
+pool: <str3> 1
+pool: <str4> 2
+pool: <str5> 1
+pool: <str6> 1
+
+pool: <word> 2
+pool: <ascii> 1
+pool: <common> 1
+pool: <index> 1
+
+#just capital letters for now
+<ascii> := <[65..90]> 
+<str1> := chr(<ascii>)
+<str1> += chr(<ascii>)
+<str1> += ' '
+
+<str2> := chr(<ascii>)
+<str2> += chr(<ascii>)
+<str2> += ' '
+
+#To test partial_ratio, we need a common word to be contained in both the strings, partial_ratio for which is always 100
+<common> := "COMMON"
+<word> := chr(<ascii>)
+<word> += chr(<ascii>)
+<str3> := <word> + ' ' + <common>
+<str3> += ' ' + <word>
+
+<str4> := <word> + ' ' + <common>
+<str4> += ' ' + <word>
+
+#To test token sort, generate 2 string with same set of words jumbled, i.e., after sorting both these strings become equal
+<index> := <[1,2,3]>
+<str5> := <word> + ' ' + <word> + ' ' + <word>
+
+
+#Empty strings edit distance is zero 
+assert (fuzz.ratio("","") == 0)
+
+#compare same strings
+
+assert (fuzz.ratio(<str1>,<str1,1>) == 100)
+
+assert (fuzz.partial_ratio(<str1>,<str1,1>) == 100)
+
+assert (fuzz.token_sort_ratio(<str1>,<str1,1>) == 100)
+
+assert (fuzz.token_set_ratio(<str1>,<str1,1>) == 100)
+
+# swap the strings. (It shouldnt matter by the commutative property of edit distance d i.e., d(a, b) = d(b, a) )
+
+assertRatioSwap(<str1>,<str2>)
+
+assertPartialRatioSwap(<str1>,<str2>)
+
+assertTSortRatioSwap(<str1>,<str2>)
+
+assertTSetRatioSwap(<str1>,<str2>)
+
+#check if fuzz.ratio() behaves like ratio() of SequenceMatcher
+#tested. Commenting because the matcher library has been changed from difflib to Levenshteinf
+
+#assert (fuzz.ratio(<str1>,<str2>) == seqMatcherRatio(<str1,1>,<str2,1>))
+
+#check if fuzz.ratio() behaves like ratio() of Levenshtein Lib
+assert (fuzz.ratio(<str1>,<str2>) == lvsMatcherRatio(<str1,1>,<str2,1>))
+
+#partial ratio of strings containing a common word is always 100
+
+assert(fuzz.partial_ratio(<common>,<str4>) == 100)
+len(<str4>) != len(<str4>) -> (fuzz.partial_ratio(<str4,1>,<str4,2>) == 100)
+
+#token sort ratio of 2 strings containing same set of words but in different sequence
+
+#trying randomize the indices as well. But doesnt seem to work
+#assert(fuzz.token_sort_ratio(<word>+' '+<word>+' '+<word>, <word, <index> >+' '+<word, <index> >+' '+<word, <index> >) == 100)
+#assert(fuzz.token_sort_ratio(<word>+' '+<word>+' '+<word>, <word, <index> >+' '+<word, <index> >+' '+<word, <index> >) >= fuzz.token_sort_ratio(<word>+' '+<word>+' '+<word>, <word, <index> >)
+#above statements translates to assert(fuzz.token_sort_ratio(self.p_word[0]+' '+self.p_word[0]+' '+self.p_word[0], <word,<index>>+' '+<word,<index>>+' '+<word,<index>>) == 100). So can we not use a variable as index?
+
+
+assert(fuzz.token_sort_ratio(<word>+' '+<word>,<word,2>+' '+<word,1>) == 100)
+assert(fuzz.token_sort_ratio(<word>+' '+<word>+' '+<word>, <word,3>+' '+<word,2>+' '+<word,1>) == 100)
+assert(fuzz.token_sort_ratio(<word>+' '+<word>+' '+<word>, <word,2>+' '+<word,1>+' '+<word,3>) == 100)
+
+
+#token set ratio is 100 if the second string consists of atleast one of the words in first string
+
+assert(fuzz.token_set_ratio(<word>+' '+<word>+' '+<word>, <word,3>+' '+<word,2>+' '+<word,1>) == 100)
+assert(fuzz.token_set_ratio(<word>+' '+<word>+' '+<word>, <word,1>) == 100)
+assert(fuzz.token_set_ratio(<word>+' '+<word>+' '+<word>, <word,2>) == 100)
+assert(fuzz.token_set_ratio(<word>+' '+<word>+' '+<word>, <word,3>) == 100)
+
+#token set ratio is 100 if both the strings have one common word
+
+assert(fuzz.token_set_ratio(<word>+' '+<word>, <word,1>+' '+<word>) ==100)
+assert(fuzz.token_set_ratio(<word>+' '+<word>, <word>+' '+<word,1>) ==100)
+assert(fuzz.token_set_ratio(<word>+' '+<word>, <word,2>+' '+<word>) ==100)
+assert(fuzz.token_set_ratio(<word>+' '+<word>, <word>+' '+<word,2>) ==100)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
