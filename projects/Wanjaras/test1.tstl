@@ -1,0 +1,14 @@
+@import binary_search_tree
+ 
+pools:
+	<value> 4
+	<key> 4
+	<btree> 2
+
+actions:
+	<value> := <[0..10]>
+	<keys>  := <[0..10]>
+	<btree> := binary_search_tree.BinarySearchTree()
+	<btree>.put(<key>,<value>) ; <btree,1>.delete(<key,1>) => (<btree,1>.is_empty() == True)
+ 
+
