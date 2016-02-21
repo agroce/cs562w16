@@ -1,0 +1,38 @@
+@from bintrees import BinaryTree
+@import myDict
+@import math
+@import time
+
+log: 1 %BINARYTREE%
+
+pool: %INT% 20
+pool: %BINARYTREE% 2 REF
+pool: <ascii> 2
+pool: <letter> 2
+
+<ascii> := <[65..91]>
+<letter> := chr(<ascii>)
+
+%INT% := %[1..20]%
+%BINARYTREE% := BinaryTree()
+~%BINARYTREE%.insert(<letter>, %INT%)
+~%BINARYTREE%.get(<letter>)
+~%BINARYTREE%.__len__()
+~%BINARYTREE%.__len__() > 0 -> ~%BINARYTREE%.__max__()
+~%BINARYTREE%.__len__() > 0 -> ~%BINARYTREE%.__min__()
+~%BINARYTREE%.remove_items(<letter>)
+
+print %BINARYTREE%,
+
+reference: BinaryTree ==> myDict.Dict
+reference: insert ==> add
+reference: get ==> get
+reference: __len__() ==> getSize
+reference: __max__() ==> getMax
+reference: __min__() ==> getMin
+reference: remove_items() ==> remove
+
+compare: get
+compare: __len__
+compare: __max__
+compare: __min__
