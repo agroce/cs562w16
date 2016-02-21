@@ -1,0 +1,29 @@
+@from fuzzywuzzy import fuzz
+@from fuzzywuzzy import process
+pool: <string> 3
+pool: <char> 20
+pool: <list> 2
+#initialize variables
+<string> := " this "
+
+<string> := " test "
+
+<char> :=<['a'..'z']>
+
+<list> := ["test case", "it is a test", "this is an example", "this tesi is good"]
+
+#test the performence of function partial ratio
+~<string> := <string>+" this is a test "; print "partial ratio",fuzz.partial_ratio(<string,1>, "this is a test")
+
+
+~<string> := " this is a test "+<string>; print "partial ratio",fuzz.partial_ratio(<string,1>, "this is a test")
+
+#test the performence of function set ratio
+~<string> := <string>+<string>; print "token set ratio",fuzz.token_set_ratio(<string,1>, "this test") 
+
+#test the performence of function process.extractOne
+~<list> := [<string>, <string>, <string>]; print "extractOne",process.extractOne("test", <list,1>) 
+
+ 
+#test the performence of function process.extractOne
+~<list> := [<string>, <string>, <string>]; print "extractOne",process.extractOne("test", <list,1>) 
