@@ -27,67 +27,113 @@ def test_after_reduce(sut):
 # source for code coverage
 source: sqlparse.py
 
-# pools
-pool: <sep>    3
+# common pools
+pool: <space> 3
+pool: <name1> 3
+pool: <name2> 3
 
-pool: <name>   3
-pool: <col>    3
-pool: <alias>  3
+# DDL pools
+pool: <type> 1
+pool: <const> 1
+pool: <def-col> 3
+pool: <def> 1
+pool: <ddl> 1
 
-pool: <num>    3
-pool: <val>    3
-pool: <expr>   3
-
-pool: <cols>   3
-pool: <which>  3
-pool: <tab>    3
-
-pool: <select> 1
-pool: <parsed> 1
+# DML pools
+pool: <num> 3
+pool: <str> 3
+pool: <bool> 1
+pool: <row-op> 1
+pool: <pred-op> 1
+pool: <row> 3
+pool: <pred> 3
+pool: <sel-col> 3
+pool: <tab> 3
+pool: <where> 1
+pool: <sel> 3
+pool: <dml> 1
 
 # properties
-property: <parsed>.get_type() == 'SELECT' 
+property: <ddl>.get_type() == 'CREATE' 
+property: <dml>.get_type() == 'SELECT' 
 
 # logging
-log: POST 1 pretty(<parsed>)
+log: POST 1 pretty(<def>)
+log: POST 1 pretty(<sel>)
 
-<sep>     := <[' ', '\t', '\n', '\r']> 
-<sep>     := '/*' + <sep> + '*/' 
-~<sep>    += <sep>
+# actions
+<space> := <[' ', '\t', '\n', '\r']> 
+<space> := '/*' + <space> + '*/' 
+~<space> += <space>
 
-<name>    := <['a'..'c']> 
-<name>    := <['A'..'C']> 
-~<name>   += <name>
-<col>     := <name>
-<col>     := <name> + '.' + <name>
-<alias>   := '' 
-<alias>   := 'AS' + <sep> + <name>
+<name1> := <['a'..'d']> 
+<name1> := <['A'..'D']> 
+~<name1> += <name1>
 
-<num>     := <['0'..'9']> 
+<name2> := <name1>
+<name2> := <name1> + '.' + <name1>
+
+<num> := <['0'..'9']> 
 <num,1> [0] != '0' -> ~<num> += <num>
-<val>     := 'NULL' 
-<val>     := '\"' + <name> + '\"' 
-<val>     := <num>
-<val>     := <col>
-<expr>    := <val> + ' == ' + <val>
-<expr>    := <val> + ' <> ' + <val>
-<expr>    := 'NOT ' + <expr>
-~<expr>   += ' AND ' + <expr>
-~<expr>   += ' OR ' + <expr>
 
-<cols>    := '*' 
-<cols>    := <col> + <sep> + <alias>
-<cols,2> [0] != '*' -> ~<cols> += ',' + <sep> + <cols>
+<type> := 'VARCHAR(' + <num> + ')' 
+<type> := 'INT' 
+<type> := 'FLOAT' 
 
-<tab>     := <name>
+<const> := <['NOT NULL', 'UNIQUE', 'PRIMARY KEY']> 
+
+<def-col1> := <name1>
+<def-col1> := <name1> + <space> + <type>
+<def-col1> := <name1> + <space> + <type> + <space> + <const>
+
+<def-col2> := <def-col1>
+~<def-col2> += ',' + <space> + <def-col2>
+
+<def> := 'CREATE TABLE' + <space> + <name2> + <space> + '(' + <space> + <def-col2> + <space> + ')'
 # removing this guard can lead to an assertion error
-<select,1> [-1] != ';' -> <tab> := '(' + <sep> + <select> + <sep> + ')' 
-~<tab>    += <tab> + <sep> + <alias>
+<def,1> [-1] != ';' -> ~<def> += <space> + ';' 
 
-<select>  := 'SELECT' + <sep> + <cols> + <sep> + 'FROM' + <sep> + <tab> + 'WHERE' + <sep> + <expr>
-<select>  := 'SELECT' + <sep> + <cols> + <sep> + 'FROM' + <sep> + <tab>
+<str> := '\"' + <name1> + '\"' 
+
+<row> := <name2>
+<row> := <num>
+<row> := <str>
+
+<bool> := <['TRUE', 'FALSE', 'UNKNOWN']> 
+
+<row-op> := '=' 
+<row-op> := '<>' 
+
+<pred-op> := 'AND' 
+<pred-op> := 'OR' 
+
+<rel> := 'IS' 
+~<rel> += <space> + 'NOT' 
+
+<pred> := <row> + <space> + <row-op> + <space> + <row>
+<pred> := <row> + <space> + <rel> + <space> + 'NULL' 
+<pred> = <pred> + <space> + <rel> + <space> + <bool>
+<pred> = <pred> + <space> + <pred-op> + <space> + <pred>
+<pred> = 'NOT' + <space> + <pred>
+<pred> = '(' + <space> + <pred> + <space> + ')' 
+
+<where> := ''
+<where> := 'WHERE' + <space> + <pred>
+
+<sel-col> := '*' 
+<sel-col> := <name2>
+<sel-col,1> != '*' and <sel-col,2> != '*' -> ~<sel-col> += ',' + <space> + <sel-col>
+
+<tab> := <name2>
 # removing this guard can lead to an assertion error
-<select,1> [-1] != ';' -> ~<select> += ';' 
+<sel,1> [-1] != ';' -> <tab> := '(' + <space> + <sel> + <space> + ')' 
+
+<sel> := 'SELECT' + <space> + <sel-col> + <space> + 'FROM' + <space> + <tab> + <space> + <where>
+# removing this guard can lead to an assertion error
+<sel,1> [-1] != ';' -> ~<sel> += <space> + ';' 
 
 # after action, check that parse tree equals statement string
-<parsed>  := sqlparse.parse(<select>)[0] => compat.u(<parsed,1>) == <select,1>
+<ddl> := sqlparse.parse(<def>)[0] => compat.u(<ddl,1>) == <def,1>
+
+# after action, check that parse tree equals statement string
+<dml> := sqlparse.parse(<sel>)[0] => compat.u(<dml,1>) == <sel,1>
