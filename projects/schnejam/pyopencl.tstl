@@ -20,6 +20,8 @@ def compare_zip(arr, func):
     if not success: print(arr)
     assert success
     return cpu_result
+
+def compare_predicates
 @>
 
 pool: <seed> 3
@@ -34,3 +36,4 @@ pool: <length> 3
 
 <array,1> = compare_fold(<array>, <func>)
 <array,1> = compare_zip(<array>, <func>)
+
