@@ -22,7 +22,7 @@ actions:
     <compnum> := '(' + str(~<realnum>) + '+' + str(~<realnum>) + 'j' + ')'
 
     #operators
-    <edoe> := <['+','-','*','/','^']>
+    <edoe> := <['+','-','*','#']>
 
     <doe>  := <['sin','cos']>
 
@@ -31,13 +31,9 @@ actions:
     <expr> := str(<realnum>)
     <expr> := <compnum>
 
-    <expr,2> != <expr,3> -> <expr> = <expr> + <edoe> + <expr>
+    <expr,2> != <expr,3>, <expr,3> != 0, <expr,3> !=0+0j -> <expr> = <expr> + <edoe> + <expr>
     <expr> = <doe> + '(' + <expr> + ')'
-
-    #<string> := '"' + <compnum> + '"' + ',' + "[" + "'x0','x1','x2','x3','x4','x5','x6','x7','x8','x9'" + "]"
 
     #if the expression is wrong, there should be an typeerror(I have test some incorrect code. And the expression should never be enterpreted as NONE)
     assert( Expression(str(<expr>),["x0","x1","x2","x3","x4","x5","x6","x7","x8","x9"]) != "")
-
-    print Expression(str(<expr>),["x0","x1","x2","x3","x4","x5","x6","x7","x8","x9"])
 
