@@ -5,27 +5,31 @@
 @import numpy as np
 
 <@
+def evaluate(success, arr):
+    if not success: print(arr)
+    assert success
+
 def compare_fold(arr, func):
     gpu_result = red.pyopencl_fold_with(arr, func)
     cpu_result = red.python_fold_with(arr, func)
     success = gpu_result == cpu_result
-    if not success: print(arr)
-    assert success
+    evaluate(success, arr)
     return np.arange(cpu_result, dtype=np.int32)
 
 def compare_zip(arr, func):
     gpu_result = red.pyopencl_zip_with(arr, func)
     cpu_result = red.python_zip_with(arr, func)
     success = (gpu_result == cpu_result).all()
-    if not success: print(arr)
-    assert success
+    evaluate(success, arr)
     return cpu_result
 
 def compare_predicates(arr, func):
-    assert red.pyopencl_filter(arr, func)
+    success = red.pyopencl_filter(arr, func)
+    evaluate(success, arr)
 
 def compare_unique(arr):
-    assert red.pyopencl_unique(arr)
+    success = red.pyopencl_unique(arr)
+    evaluate(success, arr)
 @>
 
 pool: <seed> 3
