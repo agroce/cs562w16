@@ -105,19 +105,19 @@ sequence of these actions. If the tests are being generated randomly, then the
 probability of generating such a sequence could be low.
 
 I used two approaches to ensure efficient test generation:
+
 1. **Changes to the test harness definition.** For example, sometimes it is
    useful to specify that an action does not count as a pool "use". As another
    example, sometimes the total number of pools can be reduced by increasing
    redundancy in some parts of some actions.
 2. **Changes to the object language definition.** For example, removing optional
    syntax from a statement can lead to fewer actions and pools.
+
 A drawback of the first approach is that it can be difficult to know if a change
 to the test harness definition will effect the possible statements that can be
 generated. Another drawback of the first approach is that it can lead to code
 duplication in the actions. A drawback of the second approach is that it can
 lead to a "worse" test harness.
-
-**TODO:** finish bug report.
 
 ### Grammar
 
