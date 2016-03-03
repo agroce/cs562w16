@@ -21,15 +21,11 @@ The value used in the filter is the first value in the array, which means in bot
 The steps to recreate the test were:
 
 ```FINAL VERSION OF TEST, WITH LOGGED REPLAY:
-seed2 = 20                                                               # STEP 0
-
-length1 = int(red.array_len(10))                                         # STEP 1
-
-array1 = red.get_cpu_data(seed=seed2, min_endpoint=-10, max_endpoint=10, length=length1)  # STEP 2
-
-ufunc1 =  "ary[i] < val"                                                 # STEP 3
-
-compare_predicates(array1, ufunc1)                                       # STEP 4 ```
+seed2 = 20                                                               # STEP 0  
+length1 = int(red.array_len(10))                                         # STEP 1  
+array1 = red.get_cpu_data(seed=seed2, min_endpoint=-10, max_endpoint=10, length=length1)  # STEP 2  
+ufunc1 =  "ary[i] < val"                                                 # STEP 3  
+compare_predicates(array1, ufunc1)                                       # STEP 4  ```
 
 This failure merits further investigation so that it can be discussed in the final report.
 
