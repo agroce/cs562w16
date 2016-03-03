@@ -1,0 +1,68 @@
+# Probably using them on datastructures module.
+
+@from algorithms.searching import binary_search
+@from algorithms.searching import bmh_search
+@from algorithms.searching import breadth_first_search
+@from algorithms.searching import depth_first_search
+@from algorithms.searching import kmp_search
+@from algorithms.searching import rabinkarp_search
+
+
+pools:
+        <int> 5
+        <str> 5
+        <word> 5
+        <char> 5
+        <map> 4
+        <list> 4
+
+
+actions:
+        <int> := <[1..50]>
+        <char> := <['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']>
+        # take long time to compile tstl when add 5 characters
+        <str> := ''
+        ~<str> += <char>
+        <word> := ''
+        ~<word> += <char>
+        #<map> := dict()
+        #~<map>[<char>] = []
+        #(<char> in <map>) and (<char> != <char,1>) -> (~<map,1>)[(<char,1>)].append(<char,2>)
+        
+        #<list> := []
+        #~<list>.append(<int>)
+
+        #####################################################################################################
+        #no specification said binary_search need to take a sorted list which is failed on unsorted array   #
+        #####################################################################################################
+        
+        #~<list>.sort(); idx = binary_search.search(<list,1>, <int>); print "int:{}, list:{}, idx:{}".format(<int,1>,<list,1>,idx); => (idx == False and <int,1> not in <list,1>) or <int,1> in <list,1> 
+        
+
+        #########################################################################################
+        #This algorithms has a bug, it does not support that text appears consecutive pattern.  #
+        #For example, if str = "adadad", word = "ad", program will fail.                        #
+        #########################################################################################
+        
+        #bmh_search.search(~<str>,~<word>); print "str:{} , word:{}".format(<str,1>,<word,1>)  
+        
+        #########################################################################################################
+        # Error got: TypeError("unsupported operand type(s) for -: 'list' and 'set'",)                          #
+        # If there is a path found, function will not successfully return the path if we ignore TypeError here  #
+        # #######################################################################################################
+        #{TypeError} <char> in <map> -> print "map:\n{}".format(<map,1>); print "start:{}".format(<char,1>);visited = breadth_first_search.bfs(<map,1>, <char,1>); print(visited)
+        
+
+
+        #########################################################################
+        # Error got: TypeError: argument of type 'NoneType' is not iterable     #
+        # Cannot return correct result even if there is a path for give start   #
+        # #######################################################################
+        
+        #{TypeError} <char> in <map> ->  print "map:{}".format(<map,1>); print "start:{}".format(<char,1>);\
+        #path = depth_first_search.dfs(<map>, <char>, []); print "path:{}".format(path)
+        
+        #(len(<str>) > len(<word>)) and (<word,1> != '') -> offsets = kmp_search.search(<str,1>,<word,1>); print offsets
+        
+        #(len(<str>) > len(<word>)) and (<word,1> != '') ->  offsets = rabinkarp_search.search(<str,1>, <word,1>); print offsets
+
