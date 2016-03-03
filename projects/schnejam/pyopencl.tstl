@@ -21,19 +21,31 @@ def compare_zip(arr, func):
     assert success
     return cpu_result
 
-def compare_predicates
+def compare_predicates(arr, func):
+    red.pyopencl_filter(arr, func)
+
+def compare_unique(arr):
+    red.pyopencl_unique(arr)
 @>
 
 pool: <seed> 3
-pool: <func> 3
 pool: <array> 3
 pool: <length> 3
+pool: <afunc> 3
+pool: <ufunc> 3
 
 <seed> := <[1..20]>
-<func> := <["a+b","a*b"]> #valid GPU operations for folding must be associative
-<array> := red.get_cpu_data(seed=<seed>, min_endpoint=-10, max_endpoint=10, length=<length>)
 <length> := int(red.array_len(<[1..13]>))
+<array> := red.get_cpu_data(seed=<seed>, min_endpoint=-10, max_endpoint=10, length=<length>)
 
-<array,1> = compare_fold(<array>, <func>)
-<array,1> = compare_zip(<array>, <func>)
+#valid GPU operations for folding must be associative
+<afunc> := "a+b"  # "a*b" results in overflow for even small values
 
+#valid GPU comparison operations
+<ufunc> := <["ary[i] > val", "ary[i] < val", "ary[i] >= val", "ary[i] <= val", "ary[i] == val"]>
+
+
+<array,1> = compare_fold(<array>, <afunc>)
+<array,1> = compare_zip(<array>, <afunc>)
+compare_predicates(<array>, <ufunc>)
+compare_unique(<array>)
