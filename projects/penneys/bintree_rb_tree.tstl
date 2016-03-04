@@ -1,4 +1,4 @@
-@from bintrees import BinaryTree
+@from bintrees import RBTree
 @import myDict
 @import math
 @import time
@@ -8,10 +8,10 @@ def traversal(k, v):
 	print k, v
 @>
 
-log: 1 <binarytree>
+log: 1 <rbtree>
 
 pool: <int> 20
-pool: <binarytree> 2 REF
+pool: <rbtree> 2 REF
 pool: <ascii> 2
 pool: <letter> 2
 
@@ -20,19 +20,19 @@ pool: <letter> 2
 <letter> := chr(<ascii>)
 <int> := <[1..20]>
 
-<binarytree> := BinaryTree()
-~<binarytree>.insert(<letter>, <int>)
-~<binarytree>.get(<letter>)
-~<binarytree>.__len__()
-~<binarytree>.__len__() > 0 -> ~<binarytree>.__max__()
-~<binarytree>.__len__() > 0 -> ~<binarytree>.__min__()
-~<binarytree>.get(<letter>) > 0 -> ~<binarytree>.remove_items(<letter>)
-~<binarytree>.is_empty()
-~<binarytree>.clear()
-~<binarytree>.__len__() > 0 -> ~<binarytree>.foreach(traversal, 0)
+<rbtree> := RBTree()
+~<rbtree>.insert(<letter>, <int>)
+~<rbtree>.get(<letter>)
+~<rbtree>.__len__()
+~<rbtree>.__len__() > 0 -> ~<rbtree>.__max__()
+~<rbtree>.__len__() > 0 -> ~<rbtree>.__min__()
+~<rbtree>.get(<letter>) > 0 -> ~<rbtree>.remove_items(<letter>)
+~<rbtree>.is_empty()
+~<rbtree>.clear()
+~<rbtree>.__len__() > 0 -> ~<rbtree>.foreach(traversal, 0)
 
 
-reference: BinaryTree ==> myDict.Dict
+reference: RBTree ==> myDict.Dict
 reference: insert ==> add
 reference: get ==> get
 reference: __len__() ==> getSize
