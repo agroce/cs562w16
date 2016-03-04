@@ -14,14 +14,11 @@ def pretty(parsed):
   return '\n' + helper(parsed)
 
 if __name__ == '__main__':
-  stmt1 = 'select * from foo where bar = "baz";'
-  stmt2 = 'select A.a, A.b from A;'
-  stmt3 = 'select a, b from (select * from A where c < 1);'
+  stmt1 = 'SELECT * FROM Foo WHERE bar = "baz";'
+  stmt2 = 'CREATE TABLE Foo (bar INT PRIMARY KEY, baz FLOAT NOT NULL);'
   parsed1 = sqlparse.parse(stmt1)[0]
   parsed2 = sqlparse.parse(stmt2)[0]
-  parsed3 = sqlparse.parse(stmt3)[0]
   print pretty(parsed1)
   print pretty(parsed2)
-  print pretty(parsed3)
-  print compat.u(parsed1) == stmt1
-  print parsed1.get_type() == 'SELECT'
+  print parsed1.get_type()
+  print parsed2.get_type()

@@ -1,0 +1,86 @@
+@import linklist
+@import math
+@import time
+
+<@
+def length(self):
+        length = 1
+        p = self.head
+        while p.next:
+            length += 1
+            p = p.next
+        return length
+@>
+
+
+
+<@
+def checklength(self,b):
+		if (b == True and len(self) == 0) or (b == False and len(self) > 0):
+			return True
+		else:
+			return False
+
+@>
+
+
+<@
+def checkgetbyindex(b,d):
+		#if (c>len(self))and (b == False):
+		#	return True
+
+		if  (b == d):
+			return True
+		else:
+			return False
+
+@>
+
+
+source: linklist.py
+
+pool: <INT> 10
+pool: <LIST> 1
+pool: <LINKED> 3
+
+
+#This is the bug of python file because it doesn't allow to insert null list.
+#<LIST>:=[] 
+
+#if using this list, it can work.
+<LIST>:=[1,2]  
+
+
+~<LIST>.append(<INT>)
+
+<INT>:=<[3..5]>
+
+<LINKED>:=linklist.LinkList()
+
+
+
+
+
+~<LINKED>.create_by_head(<LIST>) => (length(<LINKED,1>) == PRE<(len(<LIST>))>) and (<LINKED,1>.head.data != <LIST>[0])
+
+~<LINKED>.create_by_tail(<LIST>) => (length(<LINKED,1>) == PRE<(len(<LIST>))>) and (<LINKED,1>.head.data == <LIST>[0])
+
+~<LINKED>.clear() => (length(<LINKED,1>) == 1)
+
+a = ~<LINKED>.is_empty() => (checklength(<LINKED,1>,a) == True)
+
+#testing using new list
+
+
+~<LINKED>.create_by_tail(<LIST>);c= (len(<LIST>)-2); d=<LIST>[c]; b = ~<LINKED,1>.getData_by_index(c) => checkgetbyindex(b,d) == True
+
+
+~<LINKED>.create_by_tail(<LIST>);c= (len(<LIST>)+2); b = ~<LINKED,1>.getData_by_index(c) => b== False
+
+
+#print <LIST>, len(<LIST>), <LINKED> , len(<LINKED,1>) 
+
+
+
+
+

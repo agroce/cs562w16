@@ -1,0 +1,33 @@
+@from algorithms.sorting import bogo_sort
+@from algorithms.sorting import bubble_sort
+@from algorithms.sorting import cocktail_sort
+@from algorithms.sorting import comb_sort
+@from algorithms.sorting import gnome_sort
+@from algorithms.sorting import heap_sort
+@from algorithms.sorting import insertion_sort
+@from algorithms.sorting import merge_sort
+@from algorithms.sorting import quick_sort
+@from algorithms.sorting import quick_sort_in_place
+@from algorithms.sorting import selection_sort
+@from algorithms.sorting import shell_sort
+@from algorithms.sorting import strand_sort
+
+pools:
+        <int> 10
+        <list> 3
+
+
+logs:
+        1 <list>
+        POST 1 <list>
+
+
+actions:
+
+        <int> := <[1..100]>
+        <list> := []
+        ~<list>.append(<int>) => len(<list,1>) == pre<(len(<list,1>))>+1
+        bogo_sort.sort(~<list>); print(~<list,1>) => bogo_sort.is_sorted(<list,1>)
+
+
+
