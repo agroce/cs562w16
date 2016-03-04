@@ -1,0 +1,43 @@
+@from bintrees import RBTree
+@import myDict
+@import math
+@import time
+
+<@
+def insertResults(inserttime, numinsertcalls):
+	if numinsertcalls > 0:
+		print "INSERT AVG:", inserttime / numinsertcalls,
+	else:
+		print "INSERT AVG: N/A",
+		
+@>
+
+log: 1 <rbtree>
+
+pool: <int> 20
+pool: <rbtree> 2 REF
+pool: <ascii> 2
+pool: <letter> 2
+pool: <inserttotaltime> 1
+pool: <insertcalls> 1
+
+
+<inserttotaltime> := 0
+<insertcalls> := 0
+
+<ascii> := <[65..91]>
+<letter> := chr(<ascii>)
+<int> := <[1..20]>
+
+<rbtree> := RBTree()
+<insertcalls> += 1; start = time.time(); ~<rbtree>.insert(<letter>, <int>); <inserttotaltime> = <inserttotaltime> + (time.time() - start);
+print insertResults(<inserttotaltime>, <insertcalls>)
+
+
+
+reference: RBTree ==> myDict.Dict
+reference: insert ==> add
+
+
+
+
