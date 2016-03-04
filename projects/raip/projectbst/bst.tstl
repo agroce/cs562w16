@@ -1,9 +1,8 @@
-@import time
-
 @import binary_search_tree
-
 <@
 
+def printbst(tree):
+	print tree.inorder()
 
 def checktreeBST(tree):
 	p = tree.inorder()
@@ -33,43 +32,83 @@ def inorder(self):
 	self.__nodes = []
      	return self._inorder(self.root)
 
-
-
+def checktreelength(treenew,treeold):
+	p = treenew.inorder()
+	q = treeold.inorder()
+	print(p)
+	print(q)
+	if len(p) == (len(q) + 1):
+		return True
 def checkroot(self):
 	if self.root == None:
 		return 0
 	else:
 		return 1
+
+def checkmax(tree,key):
+	
+		t = tree.inorder()
+		if key > t[-1]:
+			return True
+
+def checkmin(tree,key):
+
+                t = tree.inorder()
+                if key < t[0]:
+                        return True
+
+def checkkeys(tree):
+	t = tree.inorder()
+	return sorted(tree.keys()) == t
+		
 	
 
 @>
 
 source: binary_search_tree.py
 
-logs:
+logs:	1 printbst(<bst>)
+	POST 1 printbst(<bst>)
 	1 <int>		
 	
 pools:
 	<int> 2
-	<bst> 2
+	<bst> 1
 	<key> 2
 
 
 actions:
-	<key>:= <[0..10]>
+	<key>:= <[0..100]>
 	
-	<int>:= <[0..10]>
+	<int>:= <[0..100]>
 	
-	<bst>:= binary_search_tree.BinarySearchTree() 
+	~<bst>:= binary_search_tree.BinarySearchTree() 
 	
 	~<bst>.put(~<key>,<int>) => <bst,1>.contains(<key,1>) and checktreeBST(<bst,1>)
 	
-	(<bst>.contains(<key>) == False) -> <bst,1>.put(<key,1>,<int>) => (pre<(<bst,1>.size())> + 1) == <bst,1>.size() and checktreeBST(<bst,1>)     
+	(<bst>.contains(<key>) == False) -> ~<bst,1>.put(<key,1>,<int>) => (pre<(~<bst,1>.size())> + 1) == ~<bst,1>.size() and checktreeBST(~<bst,1>)     
 	
-	<bst>.contains(<key>) -> <bst,1>.delete(<key,1>) => (pre<(<bst,1>.size())>  == <bst,1>.size() + 1) and (<bst,1>.contains(<key,1>) == False)  
+	~<bst>.contains(<key>) -> ~<bst,1>.delete(<key,1>) => (pre<(~<bst,1>.size())>  == ~<bst,1>.size() + 1) and (~<bst,1>.contains(<key,1>) == False)  
 	
-	(checkroot(<bst>) == 0) -> <bst,1>.delete(<key>) => <bst,1>.is_empty() 
+	(checkroot(~<bst>) == -1) -> ~<bst,1>.delete(<key>) => ~<bst,1>.is_empty() 
 	
-	(<bst>.contains(<key>) == True) -> <bst,1>.put(<key,1>,<int>) => (pre<(<bst,1>.size())> ) == <bst,1>.size() and checktreeBST(<bst,1>)
+	(<bst>.contains(~<key>) == True) -> ~<bst,1>.put(<key,1>,<int>) => (pre<(~<bst,1>.size())> ) == ~<bst,1>.size() and checktreeBST(~<bst,1>)
 		
+	(~<bst>.is_empty() == False) and checkmax(~<bst,1>,<key>) -> ~<bst,1>.put(<key,1>,<int>) => ~<bst,1>.max_key() == <key,1>	
+	
+	~<bst>.is_empty() == True -> checkmax = ~<bst,1>.max_key() == None => checkmax == True
+	
+	(~<bst>.is_empty() == False) and checkmin(~<bst,1>,<key>) -> ~<bst,1>.put(<key,1>,<int>) => ~<bst,1>.min_key() == <key,1>
+
+        ~<bst>.is_empty() == True -> checkmin = ~<bst,1>.min_key() == None  => checkmin == True
+
+	checkkeys(~<bst>); print printbst(~<bst>) 
 		
+	
+	
+	
+
+	
+
+
+	

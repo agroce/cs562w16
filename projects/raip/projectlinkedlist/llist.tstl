@@ -1,0 +1,40 @@
+@import singly_linked_listmodified
+
+<@
+
+def display(self):
+        list = []
+        node = self.head
+        while node != None :
+                list.append(node.data)
+                node = node.next
+        return list
+
+
+def whileempty(link):
+	if link.head == None:
+		return True
+	else:
+		return False
+
+@>
+
+pool:	<int> 2
+pool:	<slist> 1
+
+	
+<slist> := singly_linked_listmodified.SinglyLinkedList()
+	
+	
+<int> := <[0..500]>
+
+	
+~<slist,1>.search(<int,1>) == False -> ~<slist>.add(<int>) => pre<(<slist,1>.length())> + 1 == ~<slist,1>.length() and ~<slist,1>.search(<int,1>) == True
+
+~<slist,1>.search(<int,1>) == True -> ~<slist>.remove(<int>) => pre<(~<slist,1>.length())> - 1 == ~<slist,1>.length() and ~<slist,1>.search(<int,1>) == False
+
+whileempty(<slist,1>) -> checkval = ~<slist>.remove(<int>) => checkval == None
+
+whileempty(<slist,1>) -> checkval = ~<slist>.search(<int>) => checkval == False	
+
+~<slist>.length() > 10 -> print "Length of List:", ~<slist,1>.length()
