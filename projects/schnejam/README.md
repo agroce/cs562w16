@@ -28,6 +28,8 @@ ufunc1 =  "ary[i] < val"                                                 # STEP 
 compare_predicates(array1, ufunc1)                                       # STEP 4  ```
 
 This failure merits further investigation so that it can be discussed in the final report.
+I currently have a one-off test for this error, but it does not yiled the runtime error.
+This might mean that some of the other tests aren't being properly cleaned up and will allow for easier targeting of the issue in further iterations.
 
 #### Testing progress and improvements ####
 The improvements made to the test suite include the addition of several more algorithms including the PyOpenCL filter and unique methods.
