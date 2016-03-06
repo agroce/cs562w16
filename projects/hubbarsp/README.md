@@ -79,7 +79,14 @@ The fact that no bugs have been found indicates that the quality of the parser
 is high with respect to the simplified version of standard SQL that is tested,
 i.e., the object language. It is likely that the parser was designed for a
 variant of SQL similar to the object language being tested. The quality of the
-parser for other variants of SQL is unknown. 
+parser for other variants of SQL is unknown.
+
+I was unable to record code coverage and I do not understand why. Please see
+`coverage.out` for more details. I added `source` definitions to
+`mysqlparse.tstl` but `Coverage.py` printed warnings about not importing files
+when I ran the random tester. A possible reason why I was unable to record
+coverage is that I installed the module from the repository, see instructions
+above.
 
 Originally, the testing harness was designed for testing `SELECT` statements.
 The testing harness has been redesigned for testing both `SELECT` and
