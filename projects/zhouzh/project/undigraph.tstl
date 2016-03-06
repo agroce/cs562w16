@@ -10,6 +10,6 @@ actions:
         <src> := <[0..20]>
         <dest> := <[0..20]>
         <graph> := undirected_graph.Undirected_Graph()
-        ~<graph>.add_edge(src, dest); print <graph,1>=> (<graph,1>.edge_count()) == (pre<(<graph,1>.edge_count())>+1) 
+        ~<graph>.add_edge(<src>, <dest>); print <graph,1> => (<graph,1>.edge_count()) == (pre<(<graph,1>.edge_count())>+1) 
 
 

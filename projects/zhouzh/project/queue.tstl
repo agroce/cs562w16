@@ -7,6 +7,6 @@ pools:
 actions:
         <int> := <[0..50]>
         <queue> := queue.Queue()
-        ~<queue>.add(<int>)
-        not ~<queue>.is_empty() -> ~<queue,1>.remove()
+        ~<queue>.add(<int>) => <queue,1>.size() == PRE<(<queue,1>.size())>+1
+        not ~<queue>.is_empty() -> ~<queue,1>.remove() => <queue,1>.size() == PRE<(<queue,1>.size())>-1
 

@@ -25,18 +25,18 @@ actions:
         ~<str> += <char>
         <word> := ''
         ~<word> += <char>
-        #<map> := dict()
-        #~<map>[<char>] = []
-        #(<char> in <map>) and (<char> != <char,1>) -> (~<map,1>)[(<char,1>)].append(<char,2>)
+        <map> := dict()
+        ~<map>[<char>] = []
+        (<char> in <map>) and (<char> != <char,1>) -> (~<map,1>)[(<char,1>)].append(<char,2>)
         
-        #<list> := []
-        #~<list>.append(<int>)
+        <list> := []
+        ~<list>.append(<int>)
 
         #####################################################################################################
         #no specification said binary_search need to take a sorted list which is failed on unsorted array   #
         #####################################################################################################
         
-        #~<list>.sort(); idx = binary_search.search(<list,1>, <int>); print "int:{}, list:{}, idx:{}".format(<int,1>,<list,1>,idx); => (idx == False and <int,1> not in <list,1>) or <int,1> in <list,1> 
+        ~<list>.sort(); idx = binary_search.search(<list,1>, <int>); print "int:{}, list:{}, idx:{}".format(<int,1>,<list,1>,idx); => (idx == False and <int,1> not in <list,1>) or <int,1> in <list,1> 
         
 
         #########################################################################################
@@ -44,13 +44,13 @@ actions:
         #For example, if str = "adadad", word = "ad", program will fail.                        #
         #########################################################################################
         
-        #bmh_search.search(~<str>,~<word>); print "str:{} , word:{}".format(<str,1>,<word,1>)  
+        bmh_search.search(~<str>,~<word>); print "str:{} , word:{}".format(<str,1>,<word,1>)  
         
         #########################################################################################################
         # Error got: TypeError("unsupported operand type(s) for -: 'list' and 'set'",)                          #
         # If there is a path found, function will not successfully return the path if we ignore TypeError here  #
         # #######################################################################################################
-        #{TypeError} <char> in <map> -> print "map:\n{}".format(<map,1>); print "start:{}".format(<char,1>);visited = breadth_first_search.bfs(<map,1>, <char,1>); print(visited)
+        {TypeError} <char> in <map> -> print "map:\n{}".format(<map,1>); print "start:{}".format(<char,1>);visited = breadth_first_search.bfs(<map,1>, <char,1>); print(visited)
         
 
 
@@ -59,10 +59,10 @@ actions:
         # Cannot return correct result even if there is a path for give start   #
         # #######################################################################
         
-        #{TypeError} <char> in <map> ->  print "map:{}".format(<map,1>); print "start:{}".format(<char,1>);\
-        #path = depth_first_search.dfs(<map>, <char>, []); print "path:{}".format(path)
+        {TypeError} <char> in <map> ->  print "map:{}".format(<map,1>); print "start:{}".format(<char,1>);\
+        path = depth_first_search.dfs(<map>, <char>, []); print "path:{}".format(path)
         
-        #(len(<str>) > len(<word>)) and (<word,1> != '') -> offsets = kmp_search.search(<str,1>,<word,1>); print offsets
+        (len(<str>) > len(<word>)) and (<word,1> != '') -> offsets = kmp_search.search(<str,1>,<word,1>); print offsets
         
-        #(len(<str>) > len(<word>)) and (<word,1> != '') ->  offsets = rabinkarp_search.search(<str,1>, <word,1>); print offsets
+        (len(<str>) > len(<word>)) and (<word,1> != '') ->  offsets = rabinkarp_search.search(<str,1>, <word,1>); print offsets
 
