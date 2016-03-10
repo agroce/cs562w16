@@ -11,8 +11,10 @@ actions:
         <tree>.put(<key>,<val>) ; <tree,1>.contains(<key,1>) => (<tree,1>.is_empty() == False)
         (<tree>.is_empty() == True) -> <tree,1>.put(<key>,<val>) ; <tree,1>.delete(<key,1>) => (<tree,1>.is_empty() == True)
         <tree>.put(<key>,<val>) ; <tree,1>.contains(<key,1>) == True ; <tree,1>.delete(<key,1>) => (<tree,1>.contains(<key,1>) == False)
-#       <tree>.put(<key>,<val>); val = (<tree,1>.max_key())  ; max = (<tree,1>.delete_max())  => (max == val)
-
+	<tree>.put(<key>,<val>) ; l = <tree,1>.min_key() ; j = <tree,1>._min_node() ; l == j.key
+        <tree>.put(<key>,<val>) ; ((<tree,1>._min_node().key) == (<tree,1>.min_key()))	
+	<tree>.put(<key>,<val>) ; ((<tree,1>._max_node().key) == (<tree,1>.max_key()))
+	<tree>.put(<key>,<val>) ; i = <tree,1>.min_key() ; j =  <tree,1>.delete_min(); i == j
 
 
  
