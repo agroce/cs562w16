@@ -1,0 +1,15 @@
+Name                                                 Stmts   Miss Branch BrPart  Cover   Missing
+------------------------------------------------------------------------------------------------
+C:\Users\hubba\git\sqlparse\sqlparse\__init__.py        27     27      0      0     0%   6-77
+C:\Users\hubba\git\sqlparse\sqlparse\compat.py          20     20      4      0     0%   11-42
+C:\Users\hubba\git\sqlparse\sqlparse\exceptions.py       2      2      0      0     0%   6-9
+C:\Users\hubba\git\sqlparse\sqlparse\filters.py        476    476    212      0     0%   3-728
+C:\Users\hubba\git\sqlparse\sqlparse\formatter.py       87     87     50      0     0%   6-137
+C:\Users\hubba\git\sqlparse\sqlparse\functions.py       22     22      4      0     0%   9-44
+C:\Users\hubba\git\sqlparse\sqlparse\keywords.py         3      3      0      0     0%   1-532
+C:\Users\hubba\git\sqlparse\sqlparse\lexer.py          195    195     92      0     0%   8-367
+C:\Users\hubba\git\sqlparse\sqlparse\sql.py            372    372    212      0     0%   3-678
+C:\Users\hubba\git\sqlparse\sqlparse\tokens.py          52     52      4      0     0%   10-83
+C:\Users\hubba\git\sqlparse\sqlparse\utils.py           44     44     14      0     0%   7-115
+------------------------------------------------------------------------------------------------
+TOTAL                                                 1300   1300    592      0     0%
