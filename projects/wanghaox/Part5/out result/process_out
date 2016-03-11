@@ -1,0 +1,70 @@
+Random testing using config=Config(verbose=False, failedLogging=None, maxtests=-1, greedyStutter=False, seed=None, generalize=False, uncaught=False, speed='FAST', internal=False, normalize=False, replayable=False, essentials=False, quickTests=False, coverfile='coverage.out', ignoreprops=False, total=False, noreassign=False, full=False, multiple=False, stutter=None, running=False, nocover=False, gendepth=None, logging=None, html=None, keep=False, depth=100, timeout=20, output=None)
+
+Choices: ['%ioDc %ioDc', '%i C', '%i C', '%ioDc %ioDc', '%i C']
+Extract Goal: %ioDc %ioDc
+Limit: 2
+Result for Extract = [('%ioDc %ioDc', 100), ('%ioDc %ioDc', 100)]
+Result for ExtractOne = ('%ioDc %ioDc', 100)
+
+Choices: ['%i C', '%ioDc %ioDc', '%i C', 'XG %ioDc', '%i C']
+Extract Goal: %ioDc %ioDc
+Limit: 2
+Result for Extract = [('%ioDc %ioDc', 100), ('XG %ioDc', 95)]
+Result for ExtractOne = ('%ioDc %ioDc', 100)
+
+Choices: ['yG yG', 'yG yG', 'y y', 'yG yG', 'y y']
+Extract Goal: yG yG
+Limit: 1
+Result for Extract = [('yG yG', 100)]
+Result for ExtractOne = ('yG yG', 100)
+
+Choices: ['++++ ++++', '++++ ++++', '++++ ++++', '++++ ++++', '++++ ++++']
+Extract Goal: ++++ ++++
+Limit: 3
+Result for Extract = [('++++ ++++', 0), ('++++ ++++', 0), ('++++ ++++', 0)]
+Result for ExtractOne = ('++++ ++++', 0)
+
+Choices: ['SO!T SO!T*', 'SO!T SO!T*', 'SO SO!T', 'SO SO!T', 'SO!T SO!T*']
+Extract Goal: SO!T*e SO!T*N
+Limit: 5
+Result for Extract = [('SO!T*e SO!T*N', 100), ('SO!T*e SO!T*N', 100), ('SO!T*e SO!T*N', 100), ('SO!T*e SO!T*N', 100), ('SO!T SO!T*', 95)]
+Result for ExtractOne = ('SO!T SO!T*', 95)
+
+Choices: ['qq a', 'a n', 'a n', 'qq a', 'qq a']
+Extract Goal: qq a
+Limit: 3
+Result for Extract = [('qq a', 100), ('qq a', 100), ('qq a', 100)]
+Result for ExtractOne = ('qq a', 100)
+
+Choices: ['RqOV RqO$', 'RqOV RqO$', 'RqOV RqO$', 'it it', 'it it']
+Extract Goal: RqO$n RqO$n
+Limit: 3
+Result for Extract = [('RqOV RqO$', 74), ('RqOV RqO$', 74), ('RqOV RqO$', 74)]
+Result for ExtractOne = ('RqOV RqO$', 74)
+
+Choices: ['u ~~', '~ ~', '~ ~', 'u ~~', '~ ~']
+Extract Goal: ~ ~
+Limit: 2
+Result for Extract = [('u ~~', 0), ('~ ~', 0)]
+Result for ExtractOne = ('~ ~', 0)
+
+Choices: ['P P', 'j $P', 'P P', 'P j', 'P j']
+Extract Goal: $P P
+Limit: 1
+Result for Extract = [('P P', 100)]
+Result for ExtractOne = ('P P', 100)
+
+STOPPING TEST DUE TO TIMEOUT, TERMINATED AT LENGTH 83
+STOPPING TESTING DUE TO TIMEOUT
+0.0 PERCENT COVERED
+20.05301404 TOTAL RUNTIME
+148 EXECUTED
+14783 TOTAL TEST OPERATIONS
+15.0272202492 TIME SPENT EXECUTING TEST OPERATIONS
+4.76869010925 TIME SPENT EVALUATING GUARDS AND CHOOSING ACTIONS
+0.0291841030121 TIME SPENT CHECKING PROPERTIES
+15.0564043522 TOTAL TIME SPENT RUNNING SUT
+0.0160291194916 TIME SPENT RESTARTING
+0.0 TIME SPENT REDUCING TEST CASES
+0 BRANCHES COVERED
+0 STATEMENTS COVERED

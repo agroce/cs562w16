@@ -1,0 +1,51 @@
+Random testing using config=Config(verbose=False, failedLogging=None, maxtests=-1, greedyStutter=False, seed=None, generalize=False, uncaught=False, speed='FAST', internal=False, normalize=False, replayable=False, essentials=False, quickTests=False, coverfile='coverage.out', ignoreprops=False, total=False, noreassign=False, full=False, multiple=False, stutter=None, running=False, nocover=False, gendepth=None, logging=None, html=None, keep=False, depth=100, timeout=10, output=None)
+String #1: v/v/vvv/
+String #2: vvvvv/v/
+Result for Ratio = 50
+Result for Token Sort Ratio = 71
+
+String #1:  VV%% @HvHvHv %o%o%oVd
+String #2:  %V%% %o%o%oVd @HvHvHv
+Result for Ratio = 59
+Result for Token Sort Ratio = 97
+
+String #1: &&&&
+String #2: XXX&
+Result for Ratio = 25
+Result for Token Sort Ratio = 0
+
+String #1: pplp
+String #2: ppll
+Result for Ratio = 75
+Result for Token Sort Ratio = 75
+
+String #1: ~~##
+String #2: ##~#
+Result for Ratio = 50
+Result for Token Sort Ratio = 0
+
+String #1: ~~~~
+String #2: ~G~G
+Result for Ratio = 50
+Result for Token Sort Ratio = 0
+
+String #1:  FFFcc ccIccImccI ccIpccIpccIpccI
+String #2:  ccccFF ccIpccIpccIpccI ccIccImccI
+Result for Ratio = 63
+Result for Token Sort Ratio = 80
+
+String #1: L+++L+L+++L+
+String #2: L+++L+L+++L+++
+Result for Ratio = 92
+Result for Token Sort Ratio = 100
+
+String #1:  tcct tctttc tctftctc
+String #2:  cccc tctftctc tctttc
+Result for Ratio = 67
+Result for Token Sort Ratio = 90
+
+String #1: ##+#
+String #2: ##+#
+Result for Ratio = 100
+Result for Token Sort Ratio = 0
+

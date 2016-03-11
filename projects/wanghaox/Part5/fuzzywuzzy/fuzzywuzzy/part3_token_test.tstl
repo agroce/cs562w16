@@ -1,0 +1,30 @@
+@from fuzzywuzzy import fuzz
+
+source: fuzz.py
+
+pool: <string> 4
+pool: <strput1> 1
+pool: <strput2> 1
+pool: <tempstr> 1
+pool: <stringA> 1
+pool: <stringB> 1
+pool: <char> 3
+
+<char> := <['a'..'z']>
+<char> := <['A'..'Z']>
+<char> := <['!','@','#','$','%','^','&','*','-','+','/','~']>
+
+<string> := <char>
+~<string> = ~<string> + <char>
+
+<strput1> := <string> + <string> + <string> + <string>
+<strput2> := <string> + <string> + <string> + <string>
+
+<tempstr> := ~<strput1>; <strput1> = ~<strput2>; <strput2> = ~<tempstr>
+
+<stringA> := <strput1>
+<stringB> := <strput2>
+
+<stringA> = ' ' + <stringA> + ' ' + <strput1> + ' ' + <strput2>; <stringB> = ' ' + <stringB> + ' ' + <strput2> + ' ' + <strput1>
+
+print "String #1:", <stringA>; print "String #2:", <stringB>; print "Result for Ratio =", fuzz.ratio(<stringA>,<stringB>); print "Result for Token Sort Ratio =", fuzz.token_sort_ratio(<stringA>,<stringB>); print '\n'
