@@ -1,0 +1,75 @@
+@import calculator
+
+<@
+from random import random, randint, choice
+
+class Expression:
+    pass
+
+class Number(Expression):
+    def __init__(self, num):
+        self.num = num
+
+    def __str__(self):
+        return str(self.num)
+
+class BinaryExpression(Expression):
+    def __init__(self, left, op, right):
+        self.left = left
+        self.op = op
+        self.right = right
+
+    def __str__(self):
+        return str(self.left) + " " + self.op + " "  + str(self.right)
+
+class ParenthesizedExpression(Expression):
+    def __init__(self, exp):
+        self.exp = exp
+
+    def __str__(self):
+        return "(" + str(self.exp) + ")"
+
+
+
+def randomExpression(prob):
+    p = random()
+    if p > prob:
+        return Number(randint(1, 1000))
+    elif randint(0, 1) == 0:
+        return ParenthesizedExpression(randomExpression(prob / 1.2))
+    else:
+        left = randomExpression(prob / 1.1)
+        op = choice(["+", "-", "*", "/"])
+        right = randomExpression(prob / 1.1)
+        return BinaryExpression(left, op, right)
+
+def generate():
+	op = []
+	listExpr=''
+	for i in range(10):
+		t = randomExpression(1)
+		op.append(t)
+	for e in op:
+		listExpr+=unicode(str(e))+", "
+
+	listExpr+="quit"	
+	return listExpr 
+
+	
+@>
+
+source: calculator.py
+
+pool: <calc> 1 REF
+pool: <list> 1
+pool: <string> 1
+
+<list> := 'a+3, e+1-a, pi*3+c, f+c-2,g*8, p+e-3, quit'
+
+
+<calc> := calculator.sample()
+
+actions:
+
+	print <calc>.defineGrammar(<list>)
+

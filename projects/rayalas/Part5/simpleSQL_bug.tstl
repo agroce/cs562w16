@@ -1,0 +1,13 @@
+@import simpleSQL
+
+source: simpleSQL.py
+
+pool: <str> 2
+pool: <parser> 1 REF
+
+<parser> := simpleSQL.SQLToken()
+
+<str> := "UPDATE ABC SET A='1'"
+
+print <parser>.display(<str>)
+
