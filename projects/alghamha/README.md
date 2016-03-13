@@ -38,7 +38,7 @@ python randomtester.py -t Number
 
 All [Astropy Table Functions] can be found in the this [URL] with breif descriptions of each:
 
-[URL]: http://docs.astropy.org/en/stable/api/astropy.table.html#astropy.table.Table.info
+[URL]: http://docs.astropy.org/en/stable/api/astropy.table.Table.html
 
 ```
 1- Adding Columns
@@ -57,8 +57,8 @@ All [Astropy Table Functions] can be found in the this [URL] with breif descript
 
 ### Functions will not be Tested ###
 
-The following fucntions are not part of the scope as they are meant for printing, reading or writing to a file.
-Although, some of them have been partialy used in testing:
+The following fucntions are not part of the scope as they are meant for printing, reading or writing to a file. Someother functions can only work with python 3.
+However, some of these have been partialy used in testing:
  
 ```
 1- Field
@@ -70,8 +70,8 @@ Although, some of them have been partialy used in testing:
 7- Read
 8- Show in browser
 9- Write
-10- 
-11-
+10- convert_bytestring_to_unicode - python3 only
+11- convert_unicode_to_bytestring - python3 only
 
 ```
 ### Project-Part5 Files ###
