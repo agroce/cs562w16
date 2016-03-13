@@ -28,7 +28,7 @@ source: /usr/lib64/python2.7/site-packages/astropy/table/table.py
 
 All Table Functions can be found in the following URL with breif descriptions of each:
 
-` https://astropy.readthedocs.org/en/v0.3/api/astropy.table.table.Table.html#astropy.table.table.Table `
+[Astropy]: https://astropy.readthedocs.org/en/v0.3/api/astropy.table.table.Table.html#astropy.table.table.Table
 
 ```
 1- Adding Columns
@@ -40,9 +40,9 @@ All Table Functions can be found in the following URL with breif descriptions of
 7- Rename Column
 8- Reverse Order
 9- Sort
-10 - Remove Rows
-11 - As Array returns a copy of the table as np
-12 - keep Columns
+10- Remove Rows
+11- As Array returns a copy of the table as np
+12- keep Columns
 ```
 
 ### Function will not be Tested ###
@@ -59,5 +59,5 @@ Although, some of them have been partialy used in testing:
 6- pprint
 7- Read
 8- Show in browser
-9 - Write(*args, **kwargs) 
+9- Write(*args, **kwargs) 
 ```
