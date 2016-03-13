@@ -9,9 +9,9 @@ You can install Astropy using the following commands:
 
 For this project we are using:
 
-`Python 2.7.5`
-`# coverage --version`
-`Coverage.py, version 4.0.3.`
+```Python 2.7.5
+# coverage --version`
+Coverage.py, version 4.0.3.```
 
 Note: Astropy uses numpy library, therefore it is required for this project
 
@@ -44,10 +44,10 @@ All Table Functions can be found in the following URL with breif descriptions of
 12 - keep Columns
 ```
 
-### Function will not be Tested ###   
+### Function will not be Tested ###
 
 The following fucntions are not part of the scope as they are meant for printing, reading or writing to a file.
-Although, some pf them have partialy tested:
+Although, some of them have been partialy used in testing:
  
 ```
 1- Field
@@ -55,7 +55,7 @@ Although, some pf them have partialy tested:
 3- More
 4- Next
 5- Pformat
-6- Pprint
+6- pprint
 7- Read
 8- Show in browser
 9 - Write(*args, **kwargs) 
