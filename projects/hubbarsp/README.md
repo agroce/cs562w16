@@ -26,8 +26,36 @@ Another way to install the module is by using pip:
 $ pip install git+https://github.com/andialbrecht/sqlparse.git
 ```
 
-Note that the version of the module installed using pip might be older and
-incompatible with the version targeted by the test harness.
+Note that module had to be installed using the second method in order to record
+code coverage.
+
+### Using Test Harness
+
+A simple test harness for the `sqlparse` module is defined by `mysqlparse.tstl`.
+The test harness is generated using TSTL:
+
+```bash
+$ rm sut.*
+$ tstl mysqlparse.tstl
+```
+
+These commands will generate the test harness (with code coverage) named
+`sut.py` and `sut.pyc`. Before generating the test harness, the path to source
+code on lines 28--38 in `mysqlparse.tstl` should be replaced. For the next two
+commands, the path to the random tester and model checker should be replaced. An
+example run of the random tester:
+
+```bash
+$ python ../../../tstl/generators/randomtester.py --nocover --maxtest=100 --depth=50
+```
+
+An example run of the breadth first search (BFS) model checker:
+
+```bash
+$ python ../../../tstl/generators/bfsmodelchecker.py --nocover --forget=0.5 --depth=50
+```
+
+Note that model checker has not actually run on the test harness.
 
 ## Test Goal
 
@@ -92,34 +120,6 @@ Concrete syntax specific to DML statements is given by the following grammar:
 
 <dml>     ::= <sel> ;
 ```
-
-### Using Test Harness
-
-A simple test harness for the `sqlparse` module is defined by `mysqlparse.tstl`.
-The test harness is generated using TSTL:
-
-```bash
-$ rm sut.*
-$ tstl --nocover mysqlparse.tstl
-```
-
-These commands will generate the test harness (without coverage) named `sut.py`
-and `sut.pyc`.
-
-For the next two commands, the path to the random tester and model checker
-should be replaced. An example run of the random tester:
-
-```bash
-$ python ../../../tstl/generators/randomtester.py --nocover --maxtest=100 --depth=50
-```
-
-An example run of the breadth first search (BFS) model checker:
-
-```bash
-$ python ../../../tstl/generators/bfsmodelchecker.py --nocover --forget=0.5 --depth=50
-```
-
-Note that model checker has not actually run on the test harness.
 
 ## Results
 
