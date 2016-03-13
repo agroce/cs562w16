@@ -1,27 +1,37 @@
 
 
 ## CS 562 Project - Alghamha ##
-### Astropy Installation Requirements ###
+### Astropy Installation and Usage Instructions ###
 
+#### Installation ####
 You can install Astropy using the following commands:
 
 `pip install astropy” OR “pip install --no-deps astropy`
 
 For this project we are using:
 
-```
+```bash
 Python version 2.7.5
 coverage version 4.0.3
 ```
 
 Note: Astropy uses numpy library, therefore it is required for this project
 
-### Code Coverage ###
+#### Code Coverage ####
 
 To enable Code Coverage you must use the directory where astropy folder is located. In my case I did the following:
 
 ```bash
 source: /usr/lib64/python2.7/site-packages/astropy/table/table.py
+```
+
+#### Running the Files ####
+
+To run the file you need to use the following commands. Pay attention to the comments in each file:
+
+```bash
+tstl FileName.tstl
+python randomtester.py -t Number
 ```
 
 ### Function To be Tested ###
