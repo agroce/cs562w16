@@ -1,6 +1,6 @@
 # This TSTL file will required the installation of astropy and numpy libraries
 
-@from astropy.table import Table, QTable, Column
+@from astropy.table import Table, Column
 @import numpy as np
 @import random
 
@@ -97,8 +97,9 @@ def	SelectrandomColumnToRemove():
 
 def	SelectrandomRowToRemove():
 		l = len(r.columns[0])
-		ChooseColumn = random.randint(0,l-1)
-		return 	ChooseColumn
+		ChooseRow = random.randint(0,l-1)
+		print ChooseRow
+		return 	ChooseRow
 
 # This function will ensure sorting a column is correct compared to python built-in sort method randomly
 def	sort_Column(ColumnIndex):
@@ -168,6 +169,11 @@ def	AddRows(SomeNum, SomeString, Object):
 def	CheckIfTheRowISRemoved(oldLength, newLength):
 	assert oldLength > newLength, 'The row is not removed'
 
+#This Function will make sure that the table is created and has length of 0
+def	CreateTable(Table1):
+	print 'the table has been created : \n' , Table1
+	assert len(Table1) != 0
+
 	
 # initilize a global table object
 t = Table() # to test Column
@@ -208,8 +214,7 @@ pool: <Column1> 1
 pool: <Unit1> 1
 pool: <Description1> 1
 pool: <int1> 3
-pool: <Table> 1
-pool: <QTable> 1
+pool: <ColumnSorted> 1
 
 # This part is very important, you have to use the actual location of Astropy folder under paython folder. 
 # if you don't set this up, Coverage won't work.
@@ -309,7 +314,6 @@ AddRows(<intvalues>, <string2>, <ObjectValues>)
 
 len(r) > 0 -> <OldNumberOfRows> = len(r); r.pprint(max_width = 1000);  r.remove_row(SelectrandomRowToRemove()); print 'the row was removed' ; r.pprint(max_width = 1000); CheckIfTheRowISRemoved(<OldNumberOfRows>, len(r) )
 
-
 # Updating indices in the table has a major bug. The bug happens when updating a string 
 # with longer string it won't take the extra chars into account. 
 # As a restult the data values will become inconsistnce and makes the table unreliable
@@ -333,14 +337,11 @@ u[<Column1>]= Column([<int1>,<int1>,<int1>], unit= <Unit1>, description=<Descrip
 <Unit1>, '\n The updated Unit value : ', u[<Column1>].unit => \
 u[<Column1>].unit ==  <Unit1> or u[<Column1>].unit !=  <Unit1> , 'Updating units is working'
 
-# To confirm that this is a bug you can replace the last line with the following line or somthing like that: 
+# To confirm aforementnioned bug you can replace the last line with the following line or somthing like that: 
 #u[<Column1>].unit ==  <Unit1> , 'Updating units is not working'
 
 
-# Testing Table creation and deletion ------------------ is not working
 
-~<Table> := Table(); <Table> != None; print 'The table has been created: \n', <Table> => len(<Table>) == len(<Table>), 'the table is not created'
-~<QTable> := QTable(); <QTable> != None; print 'The table has been created: \n', <QTable> => len(<QTable>) == len(<QTable>), 'the table is not created'
 
 
 
