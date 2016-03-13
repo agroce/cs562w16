@@ -40,20 +40,20 @@ All [Astropy Table Functions] can be found in the following URL with breif descr
 
 [Astropy Table Functions]: https://astropy.readthedocs.org/en/v0.3/api/astropy.table.table.Table.html#astropy.table.table.Table
 
-
-1. Adding Columns
-2. Adding Rows
-3. Copy Table
-4. Column Index
-5. Remove Columns
-6. Group By
-7. Rename Column
-8. Reverse Order
-9. Sort
-10. Remove Rows
-11. As Array returns a copy of the table as np
-12. keep Columns
-
+```
+1- Adding Columns
+2- Adding Rows
+3- Copy Table
+4- Column Index
+5- Remove Columns
+6- Group By
+7- Rename Column
+8- Reverse Order
+9- Sort
+10- Remove Rows
+11- As Array returns a copy of the table as np
+12- keep Columns
+```
 
 ### Function will not be Tested ###
 
@@ -61,15 +61,15 @@ The following fucntions are not part of the scope as they are meant for printing
 Although, some of them have been partialy used in testing:
  
 ```
-1. Field
-2. Filled
-3. More
-4. Next
-5. Pformat
-6. pprint
-7. Read
-8. Show in browser
-9. Write(*args, **kwargs) 
+1- Field
+2- Filled
+3- More
+4- Next
+5- Pformat
+6- pprint
+7- Read
+8- Show in browser
+9- Write
 ```
 ### Project-Part5 Files ###
 #### Bug_1.tstl ####
