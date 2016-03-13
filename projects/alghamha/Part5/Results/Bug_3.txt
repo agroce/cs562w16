@@ -1,0 +1,3751 @@
+Random testing using config=Config(verbose=False, failedLogging=None, maxtests=-1, greedyStutter=False, seed=None, generalize=False, uncaught=False, speed='FAST', internal=False, normalize=False, replayable=False, essentials=False, quickTests=False, coverfile='coverage.out', ignoreprops=False, total=False, noreassign=False, full=False, multiple=False, stutter=None, running=False, nocover=False, gendepth=None, logging=None, html=None, keep=False, depth=100, timeout=3600, output=None)
+
+ The Column:      BC   
+Prercent%
+---------
+       -7
+       -7
+       -8 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  Prercent%
+
+ The Column:      BC   
+Prercent%
+---------
+      -10
+       -7
+       -7 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  Prercent%
+
+ The Column:      BC   
+Prercent%
+---------
+       -9
+        8
+        8 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  Prercent%
+a column was added normally
+ jk
+---
+  0
+  2
+  0
+
+ The Column:      GH   
+Prercent%
+---------
+      -10
+        9
+      -10 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  Prercent%
+
+ The Column:      BC   
+Prercent%
+---------
+       -7
+       -8
+      -10 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+a column was added normally
+ jk  ef
+--- ---
+  0   6
+  2  -8
+  0   6
+a column was duplicated but with new name
+ jk  ef ef_1
+--- --- ----
+  0   6   -8
+  2  -8   -8
+  0   6   -3
+a column was duplicated but with new name
+ jk  ef ef_1 ef_2
+--- --- ---- ----
+  0   6   -8    3
+  2  -8   -8    3
+  0   6   -3   -8
+a column was added normally
+ jk  ef ef_1 ef_2  lm
+--- --- ---- ---- ---
+  0   6   -8    3   7
+  2  -8   -8    3  -8
+  0   6   -3   -8   9
+a column was duplicated but with new name
+ jk  ef ef_1 ef_2  lm lm_1
+--- --- ---- ---- --- ----
+  0   6   -8    3   7    7
+  2  -8   -8    3  -8    7
+  0   6   -3   -8   9    7
+
+ The Column:      BC   
+Prercent%
+---------
+       -7
+       -7
+       -7 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+a column was added normally
+ jk  ef ef_1 ef_2  lm lm_1  rs
+--- --- ---- ---- --- ---- ---
+  0   6   -8    3   7    7   9
+  2  -8   -8    3  -8    7   9
+  0   6   -3   -8   9    7  -8
+
+ The Column:      BC   
+Prercent%
+---------
+        2
+        2
+       -9 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+a column was duplicated but with new name
+ jk  ef ef_1 ef_2  lm lm_1  rs rs_1
+--- --- ---- ---- --- ---- --- ----
+  0   6   -8    3   7    7   9    9
+  2  -8   -8    3  -8    7   9    8
+  0   6   -3   -8   9    7  -8    8
+the row has been added: 
+[2, 2, 'cbcbbbb', 'cbcbbbb', 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555L]
+ A   B              C                  D                                                      E                                               
+--- --- ------------------------- ------------ -----------------------------------------------------------------------------------------------
+1.0 1.0                         a            1                                                                                               1
+2.0 2.0             aaaaaaaaaaaaa aaaaaaaaaaaa                       2222222222222222222222222222222222222222222222222222222222222222222222222
+3.0 3.0 aaaaaaaaaaaaaaaaaaaaaaaaa            3                                                                                               3
+2.0 2.0                   cbcbbbb      cbcbbbb 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+
+ The Column:      BC   
+Prercent%
+---------
+        7
+        2
+       -9 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+
+ The Column:      BC   
+Prercent%
+---------
+        7
+        2
+       -9 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+
+ The Column:      BC   
+Prercent%
+---------
+        2
+        2
+        7 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+The column we want keep: 
+<TableColumns names=('jk','ef','ef_1','ef_2','lm','lm_1','rs','rs_1')>
+The new Table: 
+ jk  ef ef_1 ef_2  lm lm_1
+--- --- ---- ---- --- ----
+  0   6   -8    3   7    7
+  2  -8   -8    3  -8    7
+  0   6   -3   -8   9    7
+
+ The Column:    FG 
+2^p^2
+-----
+    2
+    2
+   -9 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  2^p^2
+a column was added normally
+ jk  ef ef_1 ef_2  lm lm_1  rs
+--- --- ---- ---- --- ---- ---
+  0   6   -8    3   7    7  -7
+  2  -8   -8    3  -8    7  -7
+  0   6   -3   -8   9    7   6
+
+ The Column:    FG 
+2^p^2
+-----
+    2
+    2
+   -9 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  2^p^2
+
+ The Column:    FG 
+2^p^2
+-----
+   -9
+   -9
+    2 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  2^p^2
+
+ The Column:    HI 
+2^p^2
+-----
+   -7
+   -7
+   -7 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  2^p^2
+a column was added normally
+ jk  ef ef_1 ef_2  lm lm_1  rs  hi
+--- --- ---- ---- --- ---- --- ---
+  0   6   -8    3   7    7  -7  -8
+  2  -8   -8    3  -8    7  -7  -7
+  0   6   -3   -8   9    7   6  -8
+a column was added normally
+ jk  ef ef_1 ef_2  lm lm_1  rs  hi  kl
+--- --- ---- ---- --- ---- --- --- ---
+  0   6   -8    3   7    7  -7  -8 -10
+  2  -8   -8    3  -8    7  -7  -7 -10
+  0   6   -3   -8   9    7   6  -8  -9
+a column was duplicated but with new name
+ jk  ef ef_1 ef_2  lm lm_1  rs  hi  kl kl_1
+--- --- ---- ---- --- ---- --- --- --- ----
+  0   6   -8    3   7    7  -7  -8 -10  -10
+  2  -8   -8    3  -8    7  -7  -7 -10  -10
+  0   6   -3   -8   9    7   6  -8  -9   -9
+a column was added normally
+ jk  ef ef_1 ef_2  lm lm_1  rs  hi  kl kl_1  ij
+--- --- ---- ---- --- ---- --- --- --- ---- ---
+  0   6   -8    3   7    7  -7  -8 -10  -10 -10
+  2  -8   -8    3  -8    7  -7  -7 -10  -10 -10
+  0   6   -3   -8   9    7   6  -8  -9   -9 -10
+a column was duplicated but with new name
+ jk  ef ef_1 ef_2  lm lm_1  rs  hi  kl kl_1  ij kl_2
+--- --- ---- ---- --- ---- --- --- --- ---- --- ----
+  0   6   -8    3   7    7  -7  -8 -10  -10 -10   -8
+  2  -8   -8    3  -8    7  -7  -7 -10  -10 -10    2
+  0   6   -3   -8   9    7   6  -8  -9   -9 -10   -8
+a column was duplicated but with new name
+ jk  ef ef_1 ef_2  lm lm_1  rs  hi  kl kl_1  ij kl_2 ij_1
+--- --- ---- ---- --- ---- --- --- --- ---- --- ---- ----
+  0   6   -8    3   7    7  -7  -8 -10  -10 -10   -8  -10
+  2  -8   -8    3  -8    7  -7  -7 -10  -10 -10    2    7
+  0   6   -3   -8   9    7   6  -8  -9   -9 -10   -8   -7
+a column was duplicated but with new name
+ jk  ef ef_1 ef_2  lm lm_1  rs  hi  kl kl_1  ij kl_2 ij_1 ij_2
+--- --- ---- ---- --- ---- --- --- --- ---- --- ---- ---- ----
+  0   6   -8    3   7    7  -7  -8 -10  -10 -10   -8  -10  -10
+  2  -8   -8    3  -8    7  -7  -7 -10  -10 -10    2    7    7
+  0   6   -3   -8   9    7   6  -8  -9   -9 -10   -8   -7  -10
+14 column was removed and the new length is 13
+Table Reverse:  [0, 2, 0]
+Python Reverse:  [0, 2, 0]
+the row has been added: 
+[6, 6, 'crs', 'crs', 200000000000000000000000000000L]
+ A   B              C                  D                                                      E                                               
+--- --- ------------------------- ------------ -----------------------------------------------------------------------------------------------
+1.0 1.0                         a            1                                                                                               1
+2.0 2.0             aaaaaaaaaaaaa aaaaaaaaaaaa                       2222222222222222222222222222222222222222222222222222222222222222222222222
+3.0 3.0 aaaaaaaaaaaaaaaaaaaaaaaaa            3                                                                                               3
+2.0 2.0                   cbcbbbb      cbcbbbb 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+6.0 6.0                       crs          crs                                                                  200000000000000000000000000000
+a column was added normally
+ jk  ef ef_1 ef_2  lm lm_1  rs  hi  kl kl_1 kl_2 ij_1 ij_2  mn
+--- --- ---- ---- --- ---- --- --- --- ---- ---- ---- ---- ---
+  0   6   -3   -8   9    7   6  -8  -9   -9   -8   -7  -10   8
+  2  -8   -8    3  -8    7  -7  -7 -10  -10    2    7    7   3
+  0   6   -8    3   7    7  -7  -8 -10  -10   -8  -10  -10   2
+14 column was removed and the new length is 13
+a column was added normally
+ jk  ef ef_2  lm lm_1  rs  hi  kl kl_1 kl_2 ij_1 ij_2  mn  de
+--- --- ---- --- ---- --- --- --- ---- ---- ---- ---- --- ---
+  0   6   -8   9    7   6  -8  -9   -9   -8   -7  -10   8   8
+  2  -8    3  -8    7  -7  -7 -10  -10    2    7    7   3   8
+  0   6    3   7    7  -7  -8 -10  -10   -8  -10  -10   2   8
+the row has been added: 
+[0, 0, 'cef', 'cef', 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555L]
+ A   B              C                  D                                                      E                                               
+--- --- ------------------------- ------------ -----------------------------------------------------------------------------------------------
+1.0 1.0                         a            1                                                                                               1
+2.0 2.0             aaaaaaaaaaaaa aaaaaaaaaaaa                       2222222222222222222222222222222222222222222222222222222222222222222222222
+3.0 3.0 aaaaaaaaaaaaaaaaaaaaaaaaa            3                                                                                               3
+2.0 2.0                   cbcbbbb      cbcbbbb 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+6.0 6.0                       crs          crs                                                                  200000000000000000000000000000
+0.0 0.0                       cef          cef 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+The index returned is for column:  5
+a column was duplicated but with new name
+ jk  ef ef_2  lm lm_1  rs  hi  kl kl_1 kl_2 ij_1 ij_2  mn  de de_1
+--- --- ---- --- ---- --- --- --- ---- ---- ---- ---- --- --- ----
+  0   6   -8   9    7   6  -8  -9   -9   -8   -7  -10   8   8    2
+  2  -8    3  -8    7  -7  -7 -10  -10    2    7    7   3   8    8
+  0   6    3   7    7  -7  -8 -10  -10   -8  -10  -10   2   8    2
+
+ The Column:     LM   
+FeetFeet
+--------
+       2
+       3
+      -1 
+ We would like to update the Unit value to:  FeetFeet 
+ The updated Unit value :  FeetFeet
+a column was added normally
+ jk  ef ef_2  lm lm_1  rs  hi  kl kl_1 kl_2 ij_1 ij_2  mn  de de_1  qr
+--- --- ---- --- ---- --- --- --- ---- ---- ---- ---- --- --- ---- ---
+  0   6   -8   9    7   6  -8  -9   -9   -8   -7  -10   8   8    2  -9
+  2  -8    3  -8    7  -7  -7 -10  -10    2    7    7   3   8    8   5
+  0   6    3   7    7  -7  -8 -10  -10   -8  -10  -10   2   8    2  -9
+
+ The Column:    CD  
+MMMMMM
+------
+    10
+    10
+    10 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMMMMM
+
+ The Column:    CD  
+MMMMMM
+------
+    10
+    -1
+    -1 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMMMMM
+a column was duplicated but with new name
+ jk  ef ef_2  lm lm_1  rs  hi  kl kl_1 kl_2 ij_1 ij_2  mn  de de_1  qr qr_1
+--- --- ---- --- ---- --- --- --- ---- ---- ---- ---- --- --- ---- --- ----
+  0   6   -8   9    7   6  -8  -9   -9   -8   -7  -10   8   8    2  -9   -3
+  2  -8    3  -8    7  -7  -7 -10  -10    2    7    7   3   8    8   5   -9
+  0   6    3   7    7  -7  -8 -10  -10   -8  -10  -10   2   8    2  -9   -3
+
+ The Column:    CD  
+MMMMMM
+------
+     2
+     2
+     8 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMMMMM
+
+ The Column:    CD  
+MMMMMM
+------
+     2
+     2
+     2 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMMMMM
+
+ The Column:    CD  
+MMMMMM
+------
+    -9
+    -1
+     2 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMMMMM
+the column was renamed
+The column we want keep: 
+<TableColumns names=('jk','ef','ef_2','lm','lm_1','rs','hi','kl','kl_1','kl_2','ij_1','cef','mn','de','de_1','qr','qr_1')>
+The new Table: 
+ jk  ef ef_2  lm lm_1  rs
+--- --- ---- --- ---- ---
+  0   6   -8   9    7   6
+  2  -8    3  -8    7  -7
+  0   6    3   7    7  -7
+a column was added normally
+ jk  ef ef_2  lm lm_1  rs  qr
+--- --- ---- --- ---- --- ---
+  0   6   -8   9    7   6  10
+  2  -8    3  -8    7  -7  -5
+  0   6    3   7    7  -7   9
+Table Reverse:  [0, 2, 0]
+Python Reverse:  [0, 2, 0]
+a column was duplicated but with new name
+ jk  ef ef_2  lm lm_1  rs  qr qr_1
+--- --- ---- --- ---- --- --- ----
+  0   6    3   7    7  -7   9   -1
+  2  -8    3  -8    7  -7  -5   -1
+  0   6   -8   9    7   6  10    2
+a column was duplicated but with new name
+ jk  ef ef_2  lm lm_1  rs  qr qr_1 qr_2
+--- --- ---- --- ---- --- --- ---- ----
+  0   6    3   7    7  -7   9   -1   -1
+  2  -8    3  -8    7  -7  -5   -1    8
+  0   6   -8   9    7   6  10    2    8
+a column was duplicated but with new name
+ jk  ef ef_2  lm lm_1  rs  qr qr_1 qr_2 qr_3
+--- --- ---- --- ---- --- --- ---- ---- ----
+  0   6    3   7    7  -7   9   -1   -1   -1
+  2  -8    3  -8    7  -7  -5   -1    8    8
+  0   6   -8   9    7   6  10    2    8   -1
+a column was duplicated but with new name
+ jk  ef ef_2  lm lm_1  rs  qr qr_1 qr_2 qr_3 qr_4
+--- --- ---- --- ---- --- --- ---- ---- ---- ----
+  0   6    3   7    7  -7   9   -1   -1   -1   -8
+  2  -8    3  -8    7  -7  -5   -1    8    8   -4
+  0   6   -8   9    7   6  10    2    8   -1   -4
+The column we want keep: 
+<TableColumns names=('jk','ef','ef_2','lm','lm_1','rs','qr','qr_1','qr_2','qr_3','qr_4')>
+The new Table: 
+ jk  ef ef_2  lm lm_1  rs
+--- --- ---- --- ---- ---
+  0   6    3   7    7  -7
+  2  -8    3  -8    7  -7
+  0   6   -8   9    7   6
+a column was added normally
+ jk  ef ef_2  lm lm_1  rs  qr
+--- --- ---- --- ---- --- ---
+  0   6    3   7    7  -7   9
+  2  -8    3  -8    7  -7   9
+  0   6   -8   9    7   6  -4
+a column was duplicated but with new name
+ jk  ef ef_2  lm lm_1  rs  qr qr_1
+--- --- ---- --- ---- --- --- ----
+  0   6    3   7    7  -7   9   -4
+  2  -8    3  -8    7  -7   9   10
+  0   6   -8   9    7   6  -4   10
+a column was duplicated but with new name
+ jk  ef ef_2  lm lm_1  rs  qr qr_1 qr_2
+--- --- ---- --- ---- --- --- ---- ----
+  0   6    3   7    7  -7   9   -4   -4
+  2  -8    3  -8    7  -7   9   10   -4
+  0   6   -8   9    7   6  -4   10   -4
+a column was duplicated but with new name
+ jk  ef ef_2  lm lm_1  rs  qr qr_1 qr_2 qr_3
+--- --- ---- --- ---- --- --- ---- ---- ----
+  0   6    3   7    7  -7   9   -4   -4   10
+  2  -8    3  -8    7  -7   9   10   -4   10
+  0   6   -8   9    7   6  -4   10   -4   10
+Table Sort:  [7, 7, 7]
+Python Sort:  [7, 7, 7]
+a column was duplicated but with new name
+ jk  ef ef_2  lm lm_1  rs  qr qr_1 qr_2 qr_3 qr_4
+--- --- ---- --- ---- --- --- ---- ---- ---- ----
+  0   6    3   7    7  -7   9   -4   -4   10    0
+  2  -8    3  -8    7  -7   9   10   -4   10    0
+  0   6   -8   9    7   6  -4   10   -4   10    5
+a column was added normally
+ jk  ef ef_2  lm lm_1  rs  qr qr_1 qr_2 qr_3 qr_4  mn
+--- --- ---- --- ---- --- --- ---- ---- ---- ---- ---
+  0   6    3   7    7  -7   9   -4   -4   10    0  10
+  2  -8    3  -8    7  -7   9   10   -4   10    0   0
+  0   6   -8   9    7   6  -4   10   -4   10    5  10
+a column was duplicated but with new name
+ jk  ef ef_2  lm lm_1  rs  qr qr_1 qr_2 qr_3 qr_4  mn mn_1
+--- --- ---- --- ---- --- --- ---- ---- ---- ---- --- ----
+  0   6    3   7    7  -7   9   -4   -4   10    0  10    5
+  2  -8    3  -8    7  -7   9   10   -4   10    0   0   10
+  0   6   -8   9    7   6  -4   10   -4   10    5  10   10
+
+ The Column:      BC   
+Prercent%
+---------
+       -7
+       -7
+       -1 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  Prercent%
+
+ The Column:      BC   
+Prercent%
+---------
+       -4
+       -4
+       -4 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  Prercent%
+
+ The Column:      BC   
+Prercent%
+---------
+       -8
+       -4
+       -4 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  Prercent%
+
+ The Column:      BC   
+Prercent%
+---------
+       -7
+       -7
+       -4 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  Prercent%
+
+ The Column:      BC   
+Prercent%
+---------
+       -8
+       -4
+       -8 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  Prercent%
+
+ The Column:      BC   
+Prercent%
+---------
+       -7
+       -7
+       -4 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  Prercent%
+
+ The Column:      BC   
+Prercent%
+---------
+       -7
+       -4
+       -7 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  Prercent%
+
+ The Column:      BC   
+Prercent%
+---------
+       -7
+       -1
+       -7 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  Prercent%
+
+ The Column:      BC   
+Prercent%
+---------
+       -8
+       -9
+       -9 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  Prercent%
+a column was added normally
+ jk  ef ef_2  lm lm_1  rs  qr qr_1 qr_2 qr_3 qr_4  mn mn_1  cd
+--- --- ---- --- ---- --- --- ---- ---- ---- ---- --- ---- ---
+  0   6    3   7    7  -7   9   -4   -4   10    0  10    5  -3
+  2  -8    3  -8    7  -7   9   10   -4   10    0   0   10   4
+  0   6   -8   9    7   6  -4   10   -4   10    5  10   10  -3
+a column was duplicated but with new name
+ jk  ef ef_2  lm lm_1  rs  qr qr_1 qr_2 qr_3 qr_4  mn mn_1  cd mn_2
+--- --- ---- --- ---- --- --- ---- ---- ---- ---- --- ---- --- ----
+  0   6    3   7    7  -7   9   -4   -4   10    0  10    5  -3   -3
+  2  -8    3  -8    7  -7   9   10   -4   10    0   0   10   4   -3
+  0   6   -8   9    7   6  -4   10   -4   10    5  10   10  -3   -3
+a column was duplicated but with new name
+ jk  ef ef_2  lm lm_1  rs  qr qr_1 qr_2 qr_3 qr_4  mn mn_1  cd mn_2 mn_3
+--- --- ---- --- ---- --- --- ---- ---- ---- ---- --- ---- --- ---- ----
+  0   6    3   7    7  -7   9   -4   -4   10    0  10    5  -3   -3    2
+  2  -8    3  -8    7  -7   9   10   -4   10    0   0   10   4   -3    2
+  0   6   -8   9    7   6  -4   10   -4   10    5  10   10  -3   -3    4
+a column was duplicated but with new name
+ jk  ef ef_2  lm lm_1  rs  qr qr_1 qr_2 qr_3 qr_4  mn mn_1  cd mn_2 mn_3 mn_4
+--- --- ---- --- ---- --- --- ---- ---- ---- ---- --- ---- --- ---- ---- ----
+  0   6    3   7    7  -7   9   -4   -4   10    0  10    5  -3   -3    2    2
+  2  -8    3  -8    7  -7   9   10   -4   10    0   0   10   4   -3    2    2
+  0   6   -8   9    7   6  -4   10   -4   10    5  10   10  -3   -3    4    2
+a column was added normally
+ jk  ef ef_2  lm lm_1  rs  qr qr_1 qr_2 ... qr_4  mn mn_1  cd mn_2 mn_3 mn_4  ij
+--- --- ---- --- ---- --- --- ---- ---- ... ---- --- ---- --- ---- ---- ---- ---
+  0   6    3   7    7  -7   9   -4   -4 ...    0  10    5  -3   -3    2    2   2
+  2  -8    3  -8    7  -7   9   10   -4 ...    0   0   10   4   -3    2    2   5
+  0   6   -8   9    7   6  -4   10   -4 ...    5  10   10  -3   -3    4    2   2
+a column was duplicated but with new name
+ jk  ef ef_2  lm lm_1  rs  qr qr_1 qr_2 ...  mn mn_1  cd mn_2 mn_3 mn_4  ij ij_1
+--- --- ---- --- ---- --- --- ---- ---- ... --- ---- --- ---- ---- ---- --- ----
+  0   6    3   7    7  -7   9   -4   -4 ...  10    5  -3   -3    2    2   2   -5
+  2  -8    3  -8    7  -7   9   10   -4 ...   0   10   4   -3    2    2   5    6
+  0   6   -8   9    7   6  -4   10   -4 ...  10   10  -3   -3    4    2   2    6
+
+ The Column:     IJ   
+KMMMMMMM
+--------
+       9
+       6
+       6 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  KMMMMMMM
+a column was added normally
+ jk  ef ef_2  lm lm_1  rs  qr qr_1 qr_2 ... mn_1  cd mn_2 mn_3 mn_4  ij ij_1  fg
+--- --- ---- --- ---- --- --- ---- ---- ... ---- --- ---- ---- ---- --- ---- ---
+  0   6    3   7    7  -7   9   -4   -4 ...    5  -3   -3    2    2   2   -5   1
+  2  -8    3  -8    7  -7   9   10   -4 ...   10   4   -3    2    2   5    6  -8
+  0   6   -8   9    7   6  -4   10   -4 ...   10  -3   -3    4    2   2    6  -5
+the column was renamed
+
+ The Column:     IJ   
+KMMMMMMM
+--------
+       6
+       4
+       6 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  KMMMMMMM
+Table Sort:  [5, 10, 10]
+Python Sort:  [5, 10, 10]
+a column was duplicated but with new name
+ jk  ef ef_2  lm lm_1  rs cbcbbbb qr_1 ...  cd mn_2 mn_3 mn_4  ij ij_1  fg jk_1
+--- --- ---- --- ---- --- ------- ---- ... --- ---- ---- ---- --- ---- --- ----
+  0   6    3   7    7  -7       9   -4 ...  -3   -3    2    2   2   -5   1    4
+  2  -8    3  -8    7  -7       9   10 ...   4   -3    2    2   5    6  -8    9
+  0   6   -8   9    7   6      -4   10 ...  -3   -3    4    2   2    6  -5   -6
+a column was duplicated but with new name
+ jk  ef ef_2  lm lm_1  rs cbcbbbb qr_1 ... mn_2 mn_3 mn_4  ij ij_1  fg jk_1 jk_2
+--- --- ---- --- ---- --- ------- ---- ... ---- ---- ---- --- ---- --- ---- ----
+  0   6    3   7    7  -7       9   -4 ...   -3    2    2   2   -5   1    4    4
+  2  -8    3  -8    7  -7       9   10 ...   -3    2    2   5    6  -8    9   -6
+  0   6   -8   9    7   6      -4   10 ...   -3    4    2   2    6  -5   -6   -6
+
+ The Column:    FG 
+2^p^2
+-----
+    1
+    5
+    1 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  2^p^2
+a column was duplicated but with new name
+ jk  ef ef_2  lm lm_1  rs cbcbbbb qr_1 ... mn_3 mn_4  ij ij_1  fg jk_1 jk_2 rs_1
+--- --- ---- --- ---- --- ------- ---- ... ---- ---- --- ---- --- ---- ---- ----
+  0   6    3   7    7  -7       9   -4 ...    2    2   2   -5   1    4    4   -4
+  2  -8    3  -8    7  -7       9   10 ...    2    2   5    6  -8    9   -6   -8
+  0   6   -8   9    7   6      -4   10 ...    4    2   2    6  -5   -6   -6   -4
+The column we want keep: 
+<TableColumns names=('jk','ef','ef_2','lm','lm_1','rs','cbcbbbb','qr_1','qr_2','qr_3','qr_4','mn','mn_1','cd','mn_2','mn_3','mn_4','ij','ij_1','fg','jk_1','jk_2','rs_1')>
+The new Table: 
+ jk  ef ef_2  lm lm_1  rs
+--- --- ---- --- ---- ---
+  0   6    3   7    7  -7
+  2  -8    3  -8    7  -7
+  0   6   -8   9    7   6
+
+ The Column:    FG 
+2^p^2
+-----
+    5
+    5
+   -8 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  2^p^2
+a column was added normally
+ jk  ef ef_2  lm lm_1  rs  ab
+--- --- ---- --- ---- --- ---
+  0   6    3   7    7  -7  -8
+  2  -8    3  -8    7  -7  -8
+  0   6   -8   9    7   6   0
+
+ The Column:    FG 
+2^p^2
+-----
+   -4
+    5
+   -4 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  2^p^2
+a column was added normally
+ jk  ef ef_2  lm lm_1  rs  ab  no
+--- --- ---- --- ---- --- --- ---
+  0   6    3   7    7  -7  -8  -8
+  2  -8    3  -8    7  -7  -8  -8
+  0   6   -8   9    7   6   0  -8
+a column was added normally
+ jk  ef ef_2  lm lm_1  rs  ab  no  bc
+--- --- ---- --- ---- --- --- --- ---
+  0   6    3   7    7  -7  -8  -8  -8
+  2  -8    3  -8    7  -7  -8  -8  -8
+  0   6   -8   9    7   6   0  -8   6
+
+ The Column:    FG 
+2^p^2
+-----
+    8
+    8
+   -6 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  2^p^2
+9 column was removed and the new length is 8
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1
+--- --- --- ---- --- --- --- --- ----
+  0   6   7    7  -7  -8  -8  -8   -7
+  2  -8  -8    7  -7  -8  -8  -8   -7
+  0   6   9    7   6   0  -8   6   -7
+Table Sort:  [-7, -7, -7]
+Python Sort:  [-7, -7, -7]
+
+ The Column:    FG 
+2^p^2
+-----
+    6
+    1
+    8 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  2^p^2
+
+ The Column:    FG 
+2^p^2
+-----
+    1
+    8
+    8 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  2^p^2
+
+ The Column:    FG 
+2^p^2
+-----
+    8
+   -6
+   -6 
+ We would like to update the Unit value to:  FeetFeet 
+ The updated Unit value :  2^p^2
+a column was added normally
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1  hi
+--- --- --- ---- --- --- --- --- ---- ---
+  0   6   7    7  -7  -8  -8  -8   -7  -2
+  2  -8  -8    7  -7  -8  -8  -8   -7   6
+  0   6   9    7   6   0  -8   6   -7   6
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1  hi hi_1
+--- --- --- ---- --- --- --- --- ---- --- ----
+  0   6   7    7  -7  -8  -8  -8   -7  -2    6
+  2  -8  -8    7  -7  -8  -8  -8   -7   6    6
+  0   6   9    7   6   0  -8   6   -7   6   -3
+
+ The Column:    FG 
+2^p^2
+-----
+    6
+    3
+    3 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  2^p^2
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1  hi hi_1 hi_2
+--- --- --- ---- --- --- --- --- ---- --- ---- ----
+  0   6   7    7  -7  -8  -8  -8   -7  -2    6   -6
+  2  -8  -8    7  -7  -8  -8  -8   -7   6    6    2
+  0   6   9    7   6   0  -8   6   -7   6   -3    4
+
+ The Column:    FG 
+2^p^2
+-----
+    3
+   -6
+   -6 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  2^p^2
+this is the first Table
+ a   b   c   d   e 
+--- --- --- --- ---
+  2   2   2   2   2
+  3   1   3   4   3
+  5   1   4   1   1
+  a   b   c   d   f
+
+ this is the second table
+ a   b   c   d   e 
+--- --- --- --- ---
+  2   2   2   2   2
+  3   1   3   4   3
+  5   1   4   1   1
+  a   b   c   d   f
+
+ The Column:     RS   
+FeetFeet
+--------
+       3
+      -6
+       0 
+ We would like to update the Unit value to:  FeetFeet 
+ The updated Unit value :  FeetFeet
+
+ The Column:     RS   
+FeetFeet
+--------
+      -6
+      -6
+       3 
+ We would like to update the Unit value to:  FeetFeet 
+ The updated Unit value :  FeetFeet
+a column was added normally
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1  hi hi_1 hi_2  pq
+--- --- --- ---- --- --- --- --- ---- --- ---- ---- ---
+  0   6   7    7  -7  -8  -8  -8   -7  -2    6   -6   2
+  2  -8  -8    7  -7  -8  -8  -8   -7   6    6    2   4
+  0   6   9    7   6   0  -8   6   -7   6   -3    4   4
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1  hi hi_1 hi_2  pq pq_1
+--- --- --- ---- --- --- --- --- ---- --- ---- ---- --- ----
+  0   6   7    7  -7  -8  -8  -8   -7  -2    6   -6   2    4
+  2  -8  -8    7  -7  -8  -8  -8   -7   6    6    2   4    2
+  0   6   9    7   6   0  -8   6   -7   6   -3    4   4   -5
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1  hi hi_1 hi_2  pq pq_1 ab_1
+--- --- --- ---- --- --- --- --- ---- --- ---- ---- --- ---- ----
+  0   6   7    7  -7  -8  -8  -8   -7  -2    6   -6   2    4    4
+  2  -8  -8    7  -7  -8  -8  -8   -7   6    6    2   4    2    4
+  0   6   9    7   6   0  -8   6   -7   6   -3    4   4   -5    2
+
+ The Column:     TT   
+FeetFeet
+--------
+       1
+       9
+       1 
+ We would like to update the Unit value to:  FeetFeet 
+ The updated Unit value :  FeetFeet
+
+ The Column:     TT   
+FeetFeet
+--------
+       3
+       1
+       1 
+ We would like to update the Unit value to:  FeetFeet 
+ The updated Unit value :  FeetFeet
+
+ The Column:      EF   
+Prercent%
+---------
+       10
+       10
+       10 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  Prercent%
+a column was added normally
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1  hi hi_1 hi_2  pq pq_1 ab_1  ij
+--- --- --- ---- --- --- --- --- ---- --- ---- ---- --- ---- ---- ---
+  0   6   7    7  -7  -8  -8  -8   -7  -2    6   -6   2    4    4 -10
+  2  -8  -8    7  -7  -8  -8  -8   -7   6    6    2   4    2    4  -1
+  0   6   9    7   6   0  -8   6   -7   6   -3    4   4   -5    2  -1
+
+ The Column:    FG 
+2^p^2
+-----
+    7
+    7
+    7 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  2^p^2
+16 column was removed and the new length is 15
+
+ The Column:    FG 
+2^p^2
+-----
+    7
+    8
+    7 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  2^p^2
+
+ The Column:    FG 
+2^p^2
+-----
+    1
+    1
+    1 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  2^p^2
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1  hi hi_1 hi_2  pq pq_1  ij ef_1
+--- --- --- ---- --- --- --- --- ---- --- ---- ---- --- ---- --- ----
+  0   6   7    7  -7  -8  -8  -8   -7  -2    6   -6   2    4 -10  -10
+  2  -8  -8    7  -7  -8  -8  -8   -7   6    6    2   4    2  -1  -10
+  0   6   9    7   6   0  -8   6   -7   6   -3    4   4   -5  -1   -1
+
+ The Column:    FG 
+2^p^2
+-----
+    1
+    1
+   -2 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  2^p^2
+Table Sort:  [-8, -8, 0]
+Python Sort:  [-8, -8, 0]
+a column was added normally
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1  hi hi_1 hi_2  pq pq_1  ij ef_1  cd
+--- --- --- ---- --- --- --- --- ---- --- ---- ---- --- ---- --- ---- ---
+  0   6   7    7  -7  -8  -8  -8   -7  -2    6   -6   2    4 -10  -10 -10
+  2  -8  -8    7  -7  -8  -8  -8   -7   6    6    2   4    2  -1  -10   8
+  0   6   9    7   6   0  -8   6   -7   6   -3    4   4   -5  -1   -1  -8
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1  hi hi_1 hi_2  pq pq_1  ij ef_1  cd cd_1
+--- --- --- ---- --- --- --- --- ---- --- ---- ---- --- ---- --- ---- --- ----
+  0   6   7    7  -7  -8  -8  -8   -7  -2    6   -6   2    4 -10  -10 -10  -10
+  2  -8  -8    7  -7  -8  -8  -8   -7   6    6    2   4    2  -1  -10   8    8
+  0   6   9    7   6   0  -8   6   -7   6   -3    4   4   -5  -1   -1  -8    8
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1 ... hi_2  pq pq_1  ij ef_1  cd cd_1 cd_2
+--- --- --- ---- --- --- --- --- ---- ... ---- --- ---- --- ---- --- ---- ----
+  0   6   7    7  -7  -8  -8  -8   -7 ...   -6   2    4 -10  -10 -10  -10   -8
+  2  -8  -8    7  -7  -8  -8  -8   -7 ...    2   4    2  -1  -10   8    8  -10
+  0   6   9    7   6   0  -8   6   -7 ...    4   4   -5  -1   -1  -8    8  -10
+
+ The Column:      BC   
+Prercent%
+---------
+        1
+       -2
+       -2 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  Prercent%
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1 ...  pq pq_1  ij ef_1  cd cd_1 cd_2 cd_3
+--- --- --- ---- --- --- --- --- ---- ... --- ---- --- ---- --- ---- ---- ----
+  0   6   7    7  -7  -8  -8  -8   -7 ...   2    4 -10  -10 -10  -10   -8   -8
+  2  -8  -8    7  -7  -8  -8  -8   -7 ...   4    2  -1  -10   8    8  -10   -8
+  0   6   9    7   6   0  -8   6   -7 ...   4   -5  -1   -1  -8    8  -10  -10
+
+ The Column:      BC   
+Prercent%
+---------
+       -3
+        0
+       -3 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  Prercent%
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1 ... pq_1  ij ef_1  cd cd_1 cd_2 cd_3 cd_4
+--- --- --- ---- --- --- --- --- ---- ... ---- --- ---- --- ---- ---- ---- ----
+  0   6   7    7  -7  -8  -8  -8   -7 ...    4 -10  -10 -10  -10   -8   -8    9
+  2  -8  -8    7  -7  -8  -8  -8   -7 ...    2  -1  -10   8    8  -10   -8   -6
+  0   6   9    7   6   0  -8   6   -7 ...   -5  -1   -1  -8    8  -10  -10   -6
+
+ The Column:    MN  
+MMMMMM
+------
+     0
+    -4
+    -3 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMMMMM
+ A  
+----
+   a
+ aaa
+aaaa
+
+aaa 
+
+
+cno 
+cno 
+ this is the value tuple
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1 ...  ij ef_1  cd cd_1 cd_2 cd_3 cd_4 cd_5
+--- --- --- ---- --- --- --- --- ---- ... --- ---- --- ---- ---- ---- ---- ----
+  0   6   7    7  -7  -8  -8  -8   -7 ... -10  -10 -10  -10   -8   -8    9   -9
+  2  -8  -8    7  -7  -8  -8  -8   -7 ...  -1  -10   8    8  -10   -8   -6   -6
+  0   6   9    7   6   0  -8   6   -7 ...  -1   -1  -8    8  -10  -10   -6   -9
+
+ The Column:    DE  
+MMMMMM
+------
+    10
+    10
+    10 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMMMMM
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1 ... ef_1  cd cd_1 cd_2 cd_3 cd_4 cd_5 cd_6
+--- --- --- ---- --- --- --- --- ---- ... ---- --- ---- ---- ---- ---- ---- ----
+  0   6   7    7  -7  -8  -8  -8   -7 ...  -10 -10  -10   -8   -8    9   -9   -4
+  2  -8  -8    7  -7  -8  -8  -8   -7 ...  -10   8    8  -10   -8   -6   -6    6
+  0   6   9    7   6   0  -8   6   -7 ...   -1  -8    8  -10  -10   -6   -9    6
+
+ The Column:    DE  
+MMMMMM
+------
+     1
+    -7
+     1 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMMMMM
+
+ The Column:    DE  
+MMMMMM
+------
+    -4
+     2
+    -4 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMMMMM
+
+ The Column:    DE  
+MMMMMM
+------
+     2
+     2
+     2 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMMMMM
+this is the first Table
+ a   b   c   d   e 
+--- --- --- --- ---
+  2   2   2   2   2
+  3   1   3   4   3
+  5   1   4   1   1
+  a   b   c   d   f
+
+ this is the second table
+ a   b   c   d   e 
+--- --- --- --- ---
+  2   2   2   2   2
+  3   1   3   4   3
+  5   1   4   1   1
+  a   b   c   d   f
+a column was added normally
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1 ...  cd cd_1 cd_2 cd_3 cd_4 cd_5 cd_6  gh
+--- --- --- ---- --- --- --- --- ---- ... --- ---- ---- ---- ---- ---- ---- ---
+  0   6   7    7  -7  -8  -8  -8   -7 ... -10  -10   -8   -8    9   -9   -4   4
+  2  -8  -8    7  -7  -8  -8  -8   -7 ...   8    8  -10   -8   -6   -6    6   7
+  0   6   9    7   6   0  -8   6   -7 ...  -8    8  -10  -10   -6   -9    6   0
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1 ... cd_1 cd_2 cd_3 cd_4 cd_5 cd_6  gh cd_7
+--- --- --- ---- --- --- --- --- ---- ... ---- ---- ---- ---- ---- ---- --- ----
+  0   6   7    7  -7  -8  -8  -8   -7 ...  -10   -8   -8    9   -9   -4   4   -9
+  2  -8  -8    7  -7  -8  -8  -8   -7 ...    8  -10   -8   -6   -6    6   7   10
+  0   6   9    7   6   0  -8   6   -7 ...    8  -10  -10   -6   -9    6   0   -2
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1 ... cd_2 cd_3 cd_4 cd_5 cd_6  gh cd_7 cd_8
+--- --- --- ---- --- --- --- --- ---- ... ---- ---- ---- ---- ---- --- ---- ----
+  0   6   7    7  -7  -8  -8  -8   -7 ...   -8   -8    9   -9   -4   4   -9   -2
+  2  -8  -8    7  -7  -8  -8  -8   -7 ...  -10   -8   -6   -6    6   7   10   -9
+  0   6   9    7   6   0  -8   6   -7 ...  -10  -10   -6   -9    6   0   -2   10
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1 ... cd_3 cd_4 cd_5 cd_6  gh cd_7 cd_8 cd_9
+--- --- --- ---- --- --- --- --- ---- ... ---- ---- ---- ---- --- ---- ---- ----
+  0   6   7    7  -7  -8  -8  -8   -7 ...   -8    9   -9   -4   4   -9   -2    7
+  2  -8  -8    7  -7  -8  -8  -8   -7 ...   -8   -6   -6    6   7   10   -9    7
+  0   6   9    7   6   0  -8   6   -7 ...  -10   -6   -9    6   0   -2   10    7
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc ... cd_4 cd_5 cd_6  gh cd_7 cd_8 cd_9 cd_10
+--- --- --- ---- --- --- --- --- ... ---- ---- ---- --- ---- ---- ---- -----
+  0   6   7    7  -7  -8  -8  -8 ...    9   -9   -4   4   -9   -2    7     7
+  2  -8  -8    7  -7  -8  -8  -8 ...   -6   -6    6   7   10   -9    7     3
+  0   6   9    7   6   0  -8   6 ...   -6   -9    6   0   -2   10    7     1
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc ... cd_5 cd_6  gh cd_7 cd_8 cd_9 cd_10 cd_11
+--- --- --- ---- --- --- --- --- ... ---- ---- --- ---- ---- ---- ----- -----
+  0   6   7    7  -7  -8  -8  -8 ...   -9   -4   4   -9   -2    7     7    -4
+  2  -8  -8    7  -7  -8  -8  -8 ...   -6    6   7   10   -9    7     3    -4
+  0   6   9    7   6   0  -8   6 ...   -9    6   0   -2   10    7     1     1
+a column was added normally
+ jk  ef  lm lm_1  rs  ab  no  bc ... cd_6  gh cd_7 cd_8 cd_9 cd_10 cd_11  mn
+--- --- --- ---- --- --- --- --- ... ---- --- ---- ---- ---- ----- ----- ---
+  0   6   7    7  -7  -8  -8  -8 ...   -4   4   -9   -2    7     7    -4   7
+  2  -8  -8    7  -7  -8  -8  -8 ...    6   7   10   -9    7     3    -4   6
+  0   6   9    7   6   0  -8   6 ...    6   0   -2   10    7     1     1   6
+
+ The Column:     TT   
+FeetFeet
+--------
+      -9
+      -1
+      -9 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  FeetFeet
+a column was added normally
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1 ...  gh cd_7 cd_8 cd_9 cd_10 cd_11  mn  kl
+--- --- --- ---- --- --- --- --- ---- ... --- ---- ---- ---- ----- ----- --- ---
+  0   6   7    7  -7  -8  -8  -8   -7 ...   4   -9   -2    7     7    -4   7  -2
+  2  -8  -8    7  -7  -8  -8  -8   -7 ...   7   10   -9    7     3    -4   6  -4
+  0   6   9    7   6   0  -8   6   -7 ...   0   -2   10    7     1     1   6  -2
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc ... cd_7 cd_8 cd_9 cd_10 cd_11  mn  kl kl_1
+--- --- --- ---- --- --- --- --- ... ---- ---- ---- ----- ----- --- --- ----
+  0   6   7    7  -7  -8  -8  -8 ...   -9   -2    7     7    -4   7  -2   -4
+  2  -8  -8    7  -7  -8  -8  -8 ...   10   -9    7     3    -4   6  -4   -2
+  0   6   9    7   6   0  -8   6 ...   -2   10    7     1     1   6  -2   -4
+
+ The Column:     TT   
+FeetFeet
+--------
+      -1
+      -9
+      -1 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  FeetFeet
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc ... cd_8 cd_9 cd_10 cd_11  mn  kl kl_1 gh_1
+--- --- --- ---- --- --- --- --- ... ---- ---- ----- ----- --- --- ---- ----
+  0   6   7    7  -7  -8  -8  -8 ...   -2    7     7    -4   7  -2   -4    3
+  2  -8  -8    7  -7  -8  -8  -8 ...   -9    7     3    -4   6  -4   -2   -8
+  0   6   9    7   6   0  -8   6 ...   10    7     1     1   6  -2   -4    3
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc ... cd_9 cd_10 cd_11  mn  kl kl_1 gh_1 gh_2
+--- --- --- ---- --- --- --- --- ... ---- ----- ----- --- --- ---- ---- ----
+  0   6   7    7  -7  -8  -8  -8 ...    7     7    -4   7  -2   -4    3    3
+  2  -8  -8    7  -7  -8  -8  -8 ...    7     3    -4   6  -4   -2   -8   -5
+  0   6   9    7   6   0  -8   6 ...    7     1     1   6  -2   -4    3    3
+
+ The Column:    QR 
+2^p^2
+-----
+   -3
+   -3
+   -3 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  2^p^2
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc ... cd_10 cd_11  mn  kl kl_1 gh_1 gh_2 gh_3
+--- --- --- ---- --- --- --- --- ... ----- ----- --- --- ---- ---- ---- ----
+  0   6   7    7  -7  -8  -8  -8 ...     7    -4   7  -2   -4    3    3   -5
+  2  -8  -8    7  -7  -8  -8  -8 ...     3    -4   6  -4   -2   -8   -5   -5
+  0   6   9    7   6   0  -8   6 ...     1     1   6  -2   -4    3    3   -4
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1 ... cd_11  mn  kl kl_1 gh_1 gh_2 gh_3 gh_4
+--- --- --- ---- --- --- --- --- ---- ... ----- --- --- ---- ---- ---- ---- ----
+  0   6   7    7  -7  -8  -8  -8   -7 ...    -4   7  -2   -4    3    3   -5   -5
+  2  -8  -8    7  -7  -8  -8  -8   -7 ...    -4   6  -4   -2   -8   -5   -5   -5
+  0   6   9    7   6   0  -8   6   -7 ...     1   6  -2   -4    3    3   -4   -4
+
+ The Column:      GH   
+Prercent%
+---------
+       -4
+       -6
+       -6 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1 ...  mn  kl kl_1 gh_1 gh_2 gh_3 gh_4 gh_5
+--- --- --- ---- --- --- --- --- ---- ... --- --- ---- ---- ---- ---- ---- ----
+  0   6   7    7  -7  -8  -8  -8   -7 ...   7  -2   -4    3    3   -5   -5    1
+  2  -8  -8    7  -7  -8  -8  -8   -7 ...   6  -4   -2   -8   -5   -5   -5   -4
+  0   6   9    7   6   0  -8   6   -7 ...   6  -2   -4    3    3   -4   -4   -4
+
+ The Column:      GH   
+Prercent%
+---------
+        4
+       -6
+        4 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1 ...  kl kl_1 gh_1 gh_2 gh_3 gh_4 gh_5 gh_6
+--- --- --- ---- --- --- --- --- ---- ... --- ---- ---- ---- ---- ---- ---- ----
+  0   6   7    7  -7  -8  -8  -8   -7 ...  -2   -4    3    3   -5   -5    1   -4
+  2  -8  -8    7  -7  -8  -8  -8   -7 ...  -4   -2   -8   -5   -5   -5   -4   -5
+  0   6   9    7   6   0  -8   6   -7 ...  -2   -4    3    3   -4   -4   -4   -4
+
+ The Column:      GH   
+Prercent%
+---------
+        4
+        9
+        9 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  Prercent%
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc ... kl_1 gh_1 gh_2 gh_3 gh_4 gh_5 gh_6 gh_7
+--- --- --- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- ---- ----
+  0   6   7    7  -7  -8  -8  -8 ...   -4    3    3   -5   -5    1   -4   -5
+  2  -8  -8    7  -7  -8  -8  -8 ...   -2   -8   -5   -5   -5   -4   -5    0
+  0   6   9    7   6   0  -8   6 ...   -4    3    3   -4   -4   -4   -4    0
+a column was duplicated but with new name
+ jk  ef  lm lm_1  rs  ab  no  bc ... gh_1 gh_2 gh_3 gh_4 gh_5 gh_6 gh_7 gh_8
+--- --- --- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- ---- ----
+  0   6   7    7  -7  -8  -8  -8 ...    3    3   -5   -5    1   -4   -5   -7
+  2  -8  -8    7  -7  -8  -8  -8 ...   -8   -5   -5   -5   -4   -5    0   -4
+  0   6   9    7   6   0  -8   6 ...    3    3   -4   -4   -4   -4    0   -6
+a column was added normally
+ jk  ef  lm lm_1  rs  ab  no  bc bc_1 ... gh_2 gh_3 gh_4 gh_5 gh_6 gh_7 gh_8  de
+--- --- --- ---- --- --- --- --- ---- ... ---- ---- ---- ---- ---- ---- ---- ---
+  0   6   7    7  -7  -8  -8  -8   -7 ...    3   -5   -5    1   -4   -5   -7  -4
+  2  -8  -8    7  -7  -8  -8  -8   -7 ...   -5   -5   -5   -4   -5    0   -4  -4
+  0   6   9    7   6   0  -8   6   -7 ...    3   -4   -4   -4   -4    0   -6  -4
+
+ The Column:      EF   
+Prercent%
+---------
+        4
+       10
+       10 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  Prercent%
+
+ The Column:      EF   
+Prercent%
+---------
+        4
+       10
+       10 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  Prercent%
+
+ The Column:      EF   
+Prercent%
+---------
+        2
+        4
+        4 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  Prercent%
+
+ The Column:      EF   
+Prercent%
+---------
+        4
+        2
+       10 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  Prercent%
+41 column was removed and the new length is 40
+The column we want keep: 
+<TableColumns names=('jk','ef','lm','lm_1','rs','ab','no','bc','bc_1','hi','hi_1','hi_2','pq','pq_1','ij','ef_1','cd_1','cd_2','cd_3','cd_4','cd_5','cd_6','gh','cd_7','cd_8','cd_9','cd_10','cd_11','mn','kl','kl_1','gh_1','gh_2','gh_3','gh_4','gh_5','gh_6','gh_7','gh_8','de')>
+The new Table: 
+ jk  ef  lm lm_1  rs  ab
+--- --- --- ---- --- ---
+  0   6   7    7  -7  -8
+  2  -8  -8    7  -7  -8
+  0   6   9    7   6   0
+a column was added normally
+ jk  ef  lm lm_1  rs  ab  pq
+--- --- --- ---- --- --- ---
+  0   6   7    7  -7  -8   6
+  2  -8  -8    7  -7  -8   6
+  0   6   9    7   6   0   1
+
+ The Column:      GH   
+Prercent%
+---------
+        9
+        9
+        3 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  Prercent%
+
+ The Column:      GH   
+Prercent%
+---------
+        3
+        3
+        3 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  Prercent%
+the column was renamed
+
+ The Column:      GH   
+Prercent%
+---------
+        3
+       -1
+        7 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  Prercent%
+a column was added normally
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd
+------- --- --- ---- --- --- --- ---
+      0   6   7    7  -7  -8   6 -10
+      2  -8  -8    7  -7  -8   6   3
+      0   6   9    7   6   0   1   1
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ab_1
+------- --- --- ---- --- --- --- --- ----
+      0   6   7    7  -7  -8   6 -10    1
+      2  -8  -8    7  -7  -8   6   3    4
+      0   6   9    7   6   0   1   1    4
+
+ The Column:      EF   
+Prercent%
+---------
+       -8
+        7
+        2 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+a column was added normally
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ab_1  fg
+------- --- --- ---- --- --- --- --- ---- ---
+      0   6   7    7  -7  -8   6 -10    1   8
+      2  -8  -8    7  -7  -8   6   3    4   1
+      0   6   9    7   6   0   1   1    4   3
+a column was added normally
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ab_1  fg  kl
+------- --- --- ---- --- --- --- --- ---- --- ---
+      0   6   7    7  -7  -8   6 -10    1   8   8
+      2  -8  -8    7  -7  -8   6   3    4   1   1
+      0   6   9    7   6   0   1   1    4   3   1
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ab_1  fg  kl kl_1
+------- --- --- ---- --- --- --- --- ---- --- --- ----
+      0   6   7    7  -7  -8   6 -10    1   8   8   -3
+      2  -8  -8    7  -7  -8   6   3    4   1   1   -6
+      0   6   9    7   6   0   1   1    4   3   1    9
+Table Sort:  [1, 6, 6]
+Python Sort:  [1, 6, 6]
+
+ The Column:    QR 
+2^p^2
+-----
+   10
+   10
+    5 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  2^p^2
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ab_1  fg  kl kl_1 kl_2
+------- --- --- ---- --- --- --- --- ---- --- --- ---- ----
+      0   6   9    7   6   0   1   1    4   3   1    9   -3
+      0   6   7    7  -7  -8   6 -10    1   8   8   -3   -3
+      2  -8  -8    7  -7  -8   6   3    4   1   1   -6   -3
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ab_1  fg  kl kl_1 kl_2 kl_3
+------- --- --- ---- --- --- --- --- ---- --- --- ---- ---- ----
+      0   6   9    7   6   0   1   1    4   3   1    9   -3   -3
+      0   6   7    7  -7  -8   6 -10    1   8   8   -3   -3   -4
+      2  -8  -8    7  -7  -8   6   3    4   1   1   -6   -3   -4
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ab_1  fg  kl kl_1 kl_2 kl_3 kl_4
+------- --- --- ---- --- --- --- --- ---- --- --- ---- ---- ---- ----
+      0   6   9    7   6   0   1   1    4   3   1    9   -3   -3   -3
+      0   6   7    7  -7  -8   6 -10    1   8   8   -3   -3   -4   -3
+      2  -8  -8    7  -7  -8   6   3    4   1   1   -6   -3   -4   -3
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ab_1  fg  kl kl_1 kl_2 kl_3 kl_4 kl_5
+------- --- --- ---- --- --- --- --- ---- --- --- ---- ---- ---- ---- ----
+      0   6   9    7   6   0   1   1    4   3   1    9   -3   -3   -3    6
+      0   6   7    7  -7  -8   6 -10    1   8   8   -3   -3   -4   -3  -10
+      2  -8  -8    7  -7  -8   6   3    4   1   1   -6   -3   -4   -3   -8
+ A   B              C                  D                                                      E                                               
+--- --- ------------------------- ------------ -----------------------------------------------------------------------------------------------
+1.0 1.0                         a            1                                                                                               1
+2.0 2.0             aaaaaaaaaaaaa aaaaaaaaaaaa                       2222222222222222222222222222222222222222222222222222222222222222222222222
+3.0 3.0 aaaaaaaaaaaaaaaaaaaaaaaaa            3                                                                                               3
+2.0 2.0                   cbcbbbb      cbcbbbb 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+6.0 6.0                       crs          crs                                                                  200000000000000000000000000000
+0.0 0.0                       cef          cef 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+4
+the row was removed
+ A   B              C                  D                                                      E                                               
+--- --- ------------------------- ------------ -----------------------------------------------------------------------------------------------
+1.0 1.0                         a            1                                                                                               1
+2.0 2.0             aaaaaaaaaaaaa aaaaaaaaaaaa                       2222222222222222222222222222222222222222222222222222222222222222222222222
+3.0 3.0 aaaaaaaaaaaaaaaaaaaaaaaaa            3                                                                                               3
+2.0 2.0                   cbcbbbb      cbcbbbb 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+0.0 0.0                       cef          cef 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ab_1  fg  kl kl_1 kl_2 kl_3 kl_4 kl_5 kl_6
+------- --- --- ---- --- --- --- --- ---- --- --- ---- ---- ---- ---- ---- ----
+      0   6   9    7   6   0   1   1    4   3   1    9   -3   -3   -3    6    4
+      0   6   7    7  -7  -8   6 -10    1   8   8   -3   -3   -4   -3  -10   -3
+      2  -8  -8    7  -7  -8   6   3    4   1   1   -6   -3   -4   -3   -8    4
+
+ The Column:    KL 
+2^p^2
+-----
+  -10
+   -3
+   -3 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  2^p^2
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ...  kl kl_1 kl_2 kl_3 kl_4 kl_5 kl_6 kl_7
+------- --- --- ---- --- --- --- --- ... --- ---- ---- ---- ---- ---- ---- ----
+      0   6   9    7   6   0   1   1 ...   1    9   -3   -3   -3    6    4   -5
+      0   6   7    7  -7  -8   6 -10 ...   8   -3   -3   -4   -3  -10   -3   -3
+      2  -8  -8    7  -7  -8   6   3 ...   1   -6   -3   -4   -3   -8    4   -3
+
+ The Column:    KL 
+2^p^2
+-----
+    9
+  -10
+    9 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  2^p^2
+
+ The Column:    KL 
+2^p^2
+-----
+  -10
+    9
+  -10 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  2^p^2
+
+ The Column:      BC   
+Prercent%
+---------
+       -7
+       -6
+       -7 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ... kl_1 kl_2 kl_3 kl_4 kl_5 kl_6 kl_7 rs_1
+------- --- --- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- ---- ----
+      0   6   9    7   6   0   1   1 ...    9   -3   -3   -3    6    4   -5    0
+      0   6   7    7  -7  -8   6 -10 ...   -3   -3   -4   -3  -10   -3   -3   -1
+      2  -8  -8    7  -7  -8   6   3 ...   -6   -3   -4   -3   -8    4   -3   -1
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ... kl_2 kl_3 kl_4 kl_5 kl_6 kl_7 rs_1 rs_2
+------- --- --- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- ---- ----
+      0   6   9    7   6   0   1   1 ...   -3   -3   -3    6    4   -5    0    3
+      0   6   7    7  -7  -8   6 -10 ...   -3   -4   -3  -10   -3   -3   -1    3
+      2  -8  -8    7  -7  -8   6   3 ...   -3   -4   -3   -8    4   -3   -1   -1
+
+ The Column:      EF   
+Prercent%
+---------
+        4
+        4
+        4 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+a column was added normally
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ... kl_3 kl_4 kl_5 kl_6 kl_7 rs_1 rs_2  hi
+------- --- --- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- ---- ---
+      0   6   9    7   6   0   1   1 ...   -3   -3    6    4   -5    0    3   3
+      0   6   7    7  -7  -8   6 -10 ...   -4   -3  -10   -3   -3   -1    3   3
+      2  -8  -8    7  -7  -8   6   3 ...   -4   -3   -8    4   -3   -1   -1   3
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ... kl_4 kl_5 kl_6 kl_7 rs_1 rs_2  hi hi_1
+------- --- --- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- --- ----
+      0   6   9    7   6   0   1   1 ...   -3    6    4   -5    0    3   3   -3
+      0   6   7    7  -7  -8   6 -10 ...   -3  -10   -3   -3   -1    3   3    0
+      2  -8  -8    7  -7  -8   6   3 ...   -3   -8    4   -3   -1   -1   3   -3
+
+ The Column:    PQ 
+2^p^2
+-----
+   -6
+   -6
+    2 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  2^p^2
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ... kl_5 kl_6 kl_7 rs_1 rs_2  hi hi_1 hi_2
+------- --- --- ---- --- --- --- --- ... ---- ---- ---- ---- ---- --- ---- ----
+      0   6   9    7   6   0   1   1 ...    6    4   -5    0    3   3   -3    0
+      0   6   7    7  -7  -8   6 -10 ...  -10   -3   -3   -1    3   3    0   10
+      2  -8  -8    7  -7  -8   6   3 ...   -8    4   -3   -1   -1   3   -3    0
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ... kl_6 kl_7 rs_1 rs_2  hi hi_1 hi_2 hi_3
+------- --- --- ---- --- --- --- --- ... ---- ---- ---- ---- --- ---- ---- ----
+      0   6   9    7   6   0   1   1 ...    4   -5    0    3   3   -3    0    4
+      0   6   7    7  -7  -8   6 -10 ...   -3   -3   -1    3   3    0   10   -9
+      2  -8  -8    7  -7  -8   6   3 ...    4   -3   -1   -1   3   -3    0    4
+this is the first Table
+ a   b   c   d   e 
+--- --- --- --- ---
+  5   1   4   1   1
+  2   2   2   2   2
+  3   1   3   4   3
+  a   b   c   d   f
+
+ this is the second table
+ a   b   c   d   e 
+--- --- --- --- ---
+  5   1   4   1   1
+  2   2   2   2   2
+  3   1   3   4   3
+  a   b   c   d   f
+a column was added normally
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ... kl_7 rs_1 rs_2  hi hi_1 hi_2 hi_3  mn
+------- --- --- ---- --- --- --- --- ... ---- ---- ---- --- ---- ---- ---- ---
+      0   6   9    7   6   0   1   1 ...   -5    0    3   3   -3    0    4   4
+      0   6   7    7  -7  -8   6 -10 ...   -3   -1    3   3    0   10   -9   4
+      2  -8  -8    7  -7  -8   6   3 ...   -3   -1   -1   3   -3    0    4  -9
+a column was added normally
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ... rs_1 rs_2  hi hi_1 hi_2 hi_3  mn  op
+------- --- --- ---- --- --- --- --- ... ---- ---- --- ---- ---- ---- --- ---
+      0   6   9    7   6   0   1   1 ...    0    3   3   -3    0    4   4  -9
+      0   6   7    7  -7  -8   6 -10 ...   -1    3   3    0   10   -9   4  -3
+      2  -8  -8    7  -7  -8   6   3 ...   -1   -1   3   -3    0    4  -9  -9
+
+ The Column:    JK 
+2^p^2
+-----
+    0
+    6
+    0 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  2^p^2
+
+ The Column:    JK 
+2^p^2
+-----
+    0
+    0
+    0 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  2^p^2
+
+ The Column:    JK 
+2^p^2
+-----
+    5
+   -2
+    6 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  2^p^2
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ... rs_2  hi hi_1 hi_2 hi_3  mn  op cd_1
+------- --- --- ---- --- --- --- --- ... ---- --- ---- ---- ---- --- --- ----
+      0   6   9    7   6   0   1   1 ...    3   3   -3    0    4   4  -9   -9
+      0   6   7    7  -7  -8   6 -10 ...    3   3    0   10   -9   4  -3    7
+      2  -8  -8    7  -7  -8   6   3 ...   -1   3   -3    0    4  -9  -9   -6
+
+ The Column:    JK 
+2^p^2
+-----
+   -3
+    5
+    5 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  2^p^2
+
+ The Column:    JK 
+2^p^2
+-----
+    6
+    5
+    5 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  2^p^2
+Table Sort:  [-3, 4, 4]
+Python Sort:  [-3, 4, 4]
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ...  hi hi_1 hi_2 hi_3  mn  op cd_1 cd_2
+------- --- --- ---- --- --- --- --- ... --- ---- ---- ---- --- --- ---- ----
+      0   6   7    7  -7  -8   6 -10 ...   3    0   10   -9   4  -3    7   -8
+      0   6   9    7   6   0   1   1 ...   3   -3    0    4   4  -9   -9   -9
+      2  -8  -8    7  -7  -8   6   3 ...   3   -3    0    4  -9  -9   -6   -9
+
+ The Column:     LM   
+FeetFeet
+--------
+       5
+       5
+       6 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  FeetFeet
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ... hi_1 hi_2 hi_3  mn  op cd_1 cd_2 cd_3
+------- --- --- ---- --- --- --- --- ... ---- ---- ---- --- --- ---- ---- ----
+      0   6   7    7  -7  -8   6 -10 ...    0   10   -9   4  -3    7   -8   -9
+      0   6   9    7   6   0   1   1 ...   -3    0    4   4  -9   -9   -9   -8
+      2  -8  -8    7  -7  -8   6   3 ...   -3    0    4  -9  -9   -6   -9   -8
+
+ The Column:     LM   
+FeetFeet
+--------
+     -10
+       3
+     -10 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  FeetFeet
+the row has been added: 
+[1, 1, 'cbcbbbb', 'cbcbbbb', 200]
+ A   B              C                  D                                                      E                                               
+--- --- ------------------------- ------------ -----------------------------------------------------------------------------------------------
+1.0 1.0                         a            1                                                                                               1
+2.0 2.0             aaaaaaaaaaaaa aaaaaaaaaaaa                       2222222222222222222222222222222222222222222222222222222222222222222222222
+3.0 3.0 aaaaaaaaaaaaaaaaaaaaaaaaa            3                                                                                               3
+2.0 2.0                   cbcbbbb      cbcbbbb 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+0.0 0.0                       cef          cef 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+1.0 1.0                   cbcbbbb      cbcbbbb                                                                                             200
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1  rs  ab  pq  cd ... hi_2 hi_3  mn  op cd_1 cd_2 cd_3 rs_3
+------- --- --- ---- --- --- --- --- ... ---- ---- --- --- ---- ---- ---- ----
+      0   6   7    7  -7  -8   6 -10 ...   10   -9   4  -3    7   -8   -9   -8
+      0   6   9    7   6   0   1   1 ...    0    4   4  -9   -9   -9   -8   -8
+      2  -8  -8    7  -7  -8   6   3 ...    0    4  -9  -9   -6   -9   -8   -8
+
+ The Column:     LM   
+FeetFeet
+--------
+      -5
+       7
+      -8 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  FeetFeet
+
+ The Column:    DE  
+MMMMMM
+------
+    -5
+    -8
+     7 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  MMMMMM
+30 column was removed and the new length is 29
+
+ The Column:    KL 
+2^p^2
+-----
+    0
+   -3
+   -3 
+ We would like to update the Unit value to:  FeetFeet 
+ The updated Unit value :  2^p^2
+
+ The Column:    KL 
+2^p^2
+-----
+   -1
+   -3
+   -1 
+ We would like to update the Unit value to:  FeetFeet 
+ The updated Unit value :  2^p^2
+the row has been added: 
+[3, 3, 'cno', 'cno', 200000000000000000000000000000L]
+ A   B              C                  D                                                      E                                               
+--- --- ------------------------- ------------ -----------------------------------------------------------------------------------------------
+1.0 1.0                         a            1                                                                                               1
+2.0 2.0             aaaaaaaaaaaaa aaaaaaaaaaaa                       2222222222222222222222222222222222222222222222222222222222222222222222222
+3.0 3.0 aaaaaaaaaaaaaaaaaaaaaaaaa            3                                                                                               3
+2.0 2.0                   cbcbbbb      cbcbbbb 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+0.0 0.0                       cef          cef 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+1.0 1.0                   cbcbbbb      cbcbbbb                                                                                             200
+3.0 3.0                       cno          cno                                                                  200000000000000000000000000000
+
+ The Column:    CD  
+MMMMMM
+------
+    -3
+    -3
+    -3 
+ We would like to update the Unit value to:  FeetFeet 
+ The updated Unit value :  MMMMMM
+
+ The Column:    CD  
+MMMMMM
+------
+    -3
+     0
+    -1 
+ We would like to update the Unit value to:  FeetFeet 
+ The updated Unit value :  MMMMMM
+
+ The Column:    CD  
+MMMMMM
+------
+    -1
+     9
+    -1 
+ We would like to update the Unit value to:  FeetFeet 
+ The updated Unit value :  MMMMMM
+The column we want keep: 
+<TableColumns names=('cbcbbbb','ef','lm','lm_1','rs','ab','pq','cd','ab_1','fg','kl','kl_2','kl_3','kl_4','kl_5','kl_6','kl_7','rs_1','rs_2','hi','hi_1','hi_2','hi_3','mn','op','cd_1','cd_2','cd_3','rs_3')>
+The new Table: 
+cbcbbbb  ef  lm lm_1  rs  ab
+------- --- --- ---- --- ---
+      0   6   7    7  -7  -8
+      0   6   9    7   6   0
+      2  -8  -8    7  -7  -8
+the column was renamed
+
+ The Column:    CD  
+MMMMMM
+------
+     1
+     1
+    -8 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  MMMMMM
+
+ The Column:     OP   
+MileMile
+--------
+      -8
+      -8
+       1 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  MileMile
+
+ The Column:     OP   
+MileMile
+--------
+      -8
+       1
+      10 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  MileMile
+
+ The Column:    MN  
+MMMMMM
+------
+    -8
+    -5
+    -8 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  MMMMMM
+
+ The Column:    MN  
+MMMMMM
+------
+     8
+    -5
+    -5 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  MMMMMM
+
+ The Column:    FG 
+2^p^2
+-----
+    8
+    8
+    8 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  2^p^2
+a column was added normally
+cbcbbbb  ef  lm lm_1 cij  ab  pq
+------- --- --- ---- --- --- ---
+      0   6   7    7  -7  -8   9
+      0   6   9    7   6   0  -8
+      2  -8  -8    7  -7  -8  -8
+
+ The Column:    FG 
+2^p^2
+-----
+    5
+    8
+    5 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  2^p^2
+
+ The Column:    DE  
+MMMMMM
+------
+     8
+     8
+     8 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  MMMMMM
+
+ The Column:    DE  
+MMMMMM
+------
+     8
+     8
+     8 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  MMMMMM
+a column was added normally
+cbcbbbb  ef  lm lm_1 cij  ab  pq  de
+------- --- --- ---- --- --- --- ---
+      0   6   7    7  -7  -8   9  -7
+      0   6   9    7   6   0  -8  -4
+      2  -8  -8    7  -7  -8  -8  -1
+
+ The Column:    KL 
+2^p^2
+-----
+    8
+    8
+    8 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  2^p^2
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  ab  pq  de de_1
+------- --- --- ---- --- --- --- --- ----
+      0   6   7    7  -7  -8   9  -7   -1
+      0   6   9    7   6   0  -8  -4   -7
+      2  -8  -8    7  -7  -8  -8  -1   -7
+The column we want keep: 
+<TableColumns names=('cbcbbbb','ef','lm','lm_1','cij','ab','pq','de','de_1')>
+The new Table: 
+cbcbbbb  ef  lm lm_1 cij  ab
+------- --- --- ---- --- ---
+      0   6   7    7  -7  -8
+      0   6   9    7   6   0
+      2  -8  -8    7  -7  -8
+
+ The Column:    KL 
+2^p^2
+-----
+   -5
+   -8
+   -5 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  2^p^2
+a column was added normally
+cbcbbbb  ef  lm lm_1 cij  ab  jk
+------- --- --- ---- --- --- ---
+      0   6   7    7  -7  -8   8
+      0   6   9    7   6   0   8
+      2  -8  -8    7  -7  -8  -8
+a column was added normally
+cbcbbbb  ef  lm lm_1 cij  ab  jk  gh
+------- --- --- ---- --- --- --- ---
+      0   6   7    7  -7  -8   8  -8
+      0   6   9    7   6   0   8   2
+      2  -8  -8    7  -7  -8  -8   8
+
+ The Column:    DE  
+MMMMMM
+------
+    -9
+    -9
+   -10 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  MMMMMM
+
+ The Column:    DE  
+MMMMMM
+------
+    -3
+    -3
+    -9 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  MMMMMM
+the colomn cannot be renamed because it is already in the table
+
+ The Column:    DE  
+MMMMMM
+------
+    -3
+   -10
+   -10 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  MMMMMM
+
+ The Column:     AB   
+MileMile
+--------
+       2
+       6
+       6 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  MileMile
+
+ The Column:     AB   
+MileMile
+--------
+       6
+       6
+       2 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  MileMile
+
+ The Column:     AB   
+MileMile
+--------
+       6
+       6
+       6 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  MileMile
+
+ The Column:     AB   
+MileMile
+--------
+       2
+       6
+       2 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  MileMile
+
+ The Column:     AB   
+MileMile
+--------
+       3
+       3
+       3 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  MileMile
+8 column was removed and the new length is 7
+
+ The Column:     AB   
+MileMile
+--------
+       2
+       2
+       5 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  MileMile
+The column we want keep: 
+<TableColumns names=('cbcbbbb','ef','lm','lm_1','cij','jk','gh')>
+The new Table: 
+cbcbbbb  ef  lm lm_1 cij  jk
+------- --- --- ---- --- ---
+      0   6   7    7  -7   8
+      0   6   9    7   6   8
+      2  -8  -8    7  -7  -8
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk jk_1
+------- --- --- ---- --- --- ----
+      0   6   7    7  -7   8   -3
+      0   6   9    7   6   8   -3
+      2  -8  -8    7  -7  -8   -6
+
+ The Column:    MN  
+MMMMMM
+------
+    -2
+    -2
+     3 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  MMMMMM
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk jk_1 jk_2
+------- --- --- ---- --- --- ---- ----
+      0   6   7    7  -7   8   -3   -2
+      0   6   9    7   6   8   -3   -2
+      2  -8  -8    7  -7  -8   -6   -2
+
+ The Column:    MN  
+MMMMMM
+------
+    -2
+    -3
+    -3 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  MMMMMM
+
+ The Column:    QR 
+2^p^2
+-----
+    3
+    4
+    3 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  2^p^2
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk jk_1 jk_2 jk_3
+------- --- --- ---- --- --- ---- ---- ----
+      0   6   7    7  -7   8   -3   -2    9
+      0   6   9    7   6   8   -3   -2    9
+      2  -8  -8    7  -7  -8   -6   -2    8
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk jk_1 jk_2 jk_3 jk_4
+------- --- --- ---- --- --- ---- ---- ---- ----
+      0   6   7    7  -7   8   -3   -2    9    8
+      0   6   9    7   6   8   -3   -2    9    0
+      2  -8  -8    7  -7  -8   -6   -2    8    8
+Table Sort:  [-8, 8, 8]
+Python Sort:  [-8, 8, 8]
+
+ The Column:    QR 
+2^p^2
+-----
+    6
+    6
+    4 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  2^p^2
+
+ The Column:    CD  
+MMMMMM
+------
+     6
+     6
+     6 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  MMMMMM
+
+ The Column:      GH   
+Prercent%
+---------
+        6
+        6
+        6 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  Prercent%
+
+ The Column:      GH   
+Prercent%
+---------
+        0
+        0
+        0 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  Prercent%
+
+ The Column:      GH   
+Prercent%
+---------
+        9
+       -7
+        9 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  Prercent%
+
+ The Column:      GH   
+Prercent%
+---------
+        0
+        0
+        9 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  Prercent%
+a column was added normally
+cbcbbbb  ef  lm lm_1 cij  jk jk_1 jk_2 jk_3 jk_4  kl
+------- --- --- ---- --- --- ---- ---- ---- ---- ---
+      2  -8  -8    7  -7  -8   -6   -2    8    8   8
+      0   6   7    7  -7   8   -3   -2    9    8   6
+      0   6   9    7   6   8   -3   -2    9    0   8
+a column was added normally
+cbcbbbb  ef  lm lm_1 cij  jk jk_1 jk_2 jk_3 jk_4  kl  pq
+------- --- --- ---- --- --- ---- ---- ---- ---- --- ---
+      2  -8  -8    7  -7  -8   -6   -2    8    8   8   6
+      0   6   7    7  -7   8   -3   -2    9    8   6   3
+      0   6   9    7   6   8   -3   -2    9    0   8   6
+
+ The Column:      GH   
+Prercent%
+---------
+        7
+       -8
+       -8 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk jk_1 jk_2 jk_3 jk_4  kl  pq pq_1
+------- --- --- ---- --- --- ---- ---- ---- ---- --- --- ----
+      2  -8  -8    7  -7  -8   -6   -2    8    8   8   6    3
+      0   6   7    7  -7   8   -3   -2    9    8   6   3    3
+      0   6   9    7   6   8   -3   -2    9    0   8   6   -1
+
+ The Column:      GH   
+Prercent%
+---------
+       -8
+      -10
+       -2 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk jk_1 jk_2 jk_3 jk_4  kl  pq pq_1 pq_2
+------- --- --- ---- --- --- ---- ---- ---- ---- --- --- ---- ----
+      2  -8  -8    7  -7  -8   -6   -2    8    8   8   6    3    2
+      0   6   7    7  -7   8   -3   -2    9    8   6   3    3    2
+      0   6   9    7   6   8   -3   -2    9    0   8   6   -1    2
+
+ The Column:      GH   
+Prercent%
+---------
+        7
+        7
+       -8 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+The column we want keep: 
+<TableColumns names=('cbcbbbb','ef','lm','lm_1','cij','jk','jk_1','jk_2','jk_3','jk_4','kl','pq','pq_1','pq_2')>
+The new Table: 
+cbcbbbb  ef  lm lm_1 cij  jk
+------- --- --- ---- --- ---
+      2  -8  -8    7  -7  -8
+      0   6   7    7  -7   8
+      0   6   9    7   6   8
+Table Sort:  [7, 7, 7]
+Python Sort:  [7, 7, 7]
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk jk_1
+------- --- --- ---- --- --- ----
+      2  -8  -8    7  -7  -8   -7
+      0   6   7    7  -7   8   -7
+      0   6   9    7   6   8    7
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk jk_1 jk_2
+------- --- --- ---- --- --- ---- ----
+      2  -8  -8    7  -7  -8   -7   -7
+      0   6   7    7  -7   8   -7   -7
+      0   6   9    7   6   8    7   -7
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk jk_1 jk_2 jk_3
+------- --- --- ---- --- --- ---- ---- ----
+      2  -8  -8    7  -7  -8   -7   -7   -7
+      0   6   7    7  -7   8   -7   -7    9
+      0   6   9    7   6   8    7   -7    7
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk jk_1 jk_2 jk_3 jk_4
+------- --- --- ---- --- --- ---- ---- ---- ----
+      2  -8  -8    7  -7  -8   -7   -7   -7    9
+      0   6   7    7  -7   8   -7   -7    9    9
+      0   6   9    7   6   8    7   -7    7    9
+10 column was removed and the new length is 9
+a column was added normally
+cbcbbbb  ef  lm lm_1 cij  jk jk_2 jk_3 jk_4  bc
+------- --- --- ---- --- --- ---- ---- ---- ---
+      2  -8  -8    7  -7  -8   -7   -7    9   9
+      0   6   7    7  -7   8   -7    9    9   1
+      0   6   9    7   6   8   -7    7    9   1
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk jk_2 jk_3 jk_4  bc bc_1
+------- --- --- ---- --- --- ---- ---- ---- --- ----
+      2  -8  -8    7  -7  -8   -7   -7    9   9   -9
+      0   6   7    7  -7   8   -7    9    9   1   -9
+      0   6   9    7   6   8   -7    7    9   1    8
+
+ The Column:     AB   
+MileMile
+--------
+      -3
+      -3
+      -3 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  MileMile
+
+ The Column:     AB   
+MileMile
+--------
+      -8
+      -6
+      -5 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  MileMile
+a column was added normally
+cbcbbbb  ef  lm lm_1 cij  jk jk_2 jk_3 jk_4  bc bc_1  kl
+------- --- --- ---- --- --- ---- ---- ---- --- ---- ---
+      2  -8  -8    7  -7  -8   -7   -7    9   9   -9   8
+      0   6   7    7  -7   8   -7    9    9   1   -9  -2
+      0   6   9    7   6   8   -7    7    9   1    8   8
+a column was added normally
+cbcbbbb  ef  lm lm_1 cij  jk jk_2 jk_3 jk_4  bc bc_1  kl  pq
+------- --- --- ---- --- --- ---- ---- ---- --- ---- --- ---
+      2  -8  -8    7  -7  -8   -7   -7    9   9   -9   8  -7
+      0   6   7    7  -7   8   -7    9    9   1   -9  -2  -2
+      0   6   9    7   6   8   -7    7    9   1    8   8  -7
+
+ The Column:    DE  
+MMMMMM
+------
+    -5
+     6
+     6 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  MMMMMM
+
+ The Column:    DE  
+MMMMMM
+------
+     2
+     6
+     2 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  MMMMMM
+this is the first Table
+ a   b   c   d   e 
+--- --- --- --- ---
+  2   2   2   2   2
+  3   1   3   4   3
+  5   1   4   1   1
+  a   b   c   d   f
+
+ this is the second table
+ a   b   c   d   e 
+--- --- --- --- ---
+  2   2   2   2   2
+  3   1   3   4   3
+  5   1   4   1   1
+  a   b   c   d   f
+a column was added normally
+cbcbbbb  ef  lm lm_1 cij  jk jk_2 jk_3 jk_4  bc bc_1  kl  pq  qr
+------- --- --- ---- --- --- ---- ---- ---- --- ---- --- --- ---
+      2  -8  -8    7  -7  -8   -7   -7    9   9   -9   8  -7  -7
+      0   6   7    7  -7   8   -7    9    9   1   -9  -2  -2  -8
+      0   6   9    7   6   8   -7    7    9   1    8   8  -7  -7
+
+ The Column:    JK 
+2^p^2
+-----
+    6
+   -5
+    4 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  2^p^2
+
+ The Column:    FG 
+2^p^2
+-----
+   -5
+    4
+    6 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  2^p^2
+
+ The Column:    FG 
+2^p^2
+-----
+    6
+    6
+    7 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  2^p^2
+
+ The Column:      BC   
+Prercent%
+---------
+        5
+        7
+        5 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  Prercent%
+a column was added normally
+cbcbbbb  ef  lm lm_1 cij  jk jk_2 jk_3 jk_4  bc bc_1  kl  pq  qr  cd
+------- --- --- ---- --- --- ---- ---- ---- --- ---- --- --- --- ---
+      2  -8  -8    7  -7  -8   -7   -7    9   9   -9   8  -7  -7  -8
+      0   6   7    7  -7   8   -7    9    9   1   -9  -2  -2  -8 -10
+      0   6   9    7   6   8   -7    7    9   1    8   8  -7  -7  -8
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk jk_2 jk_3 jk_4  bc bc_1  kl  pq  qr  cd cd_1
+------- --- --- ---- --- --- ---- ---- ---- --- ---- --- --- --- --- ----
+      2  -8  -8    7  -7  -8   -7   -7    9   9   -9   8  -7  -7  -8  -10
+      0   6   7    7  -7   8   -7    9    9   1   -9  -2  -2  -8 -10   -8
+      0   6   9    7   6   8   -7    7    9   1    8   8  -7  -7  -8  -10
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk jk_2 jk_3 jk_4  bc bc_1  kl  pq  qr  cd cd_1 lm_2
+------- --- --- ---- --- --- ---- ---- ---- --- ---- --- --- --- --- ---- ----
+      2  -8  -8    7  -7  -8   -7   -7    9   9   -9   8  -7  -7  -8  -10    8
+      0   6   7    7  -7   8   -7    9    9   1   -9  -2  -2  -8 -10   -8    8
+      0   6   9    7   6   8   -7    7    9   1    8   8  -7  -7  -8  -10    8
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk jk_2 jk_3 ... bc_1  kl  pq  qr  cd cd_1 lm_2 lm_3
+------- --- --- ---- --- --- ---- ---- ... ---- --- --- --- --- ---- ---- ----
+      2  -8  -8    7  -7  -8   -7   -7 ...   -9   8  -7  -7  -8  -10    8    8
+      0   6   7    7  -7   8   -7    9 ...   -9  -2  -2  -8 -10   -8    8  -10
+      0   6   9    7   6   8   -7    7 ...    8   8  -7  -7  -8  -10    8   -8
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk jk_2 jk_3 ...  kl  pq  qr  cd cd_1 lm_2 lm_3 pq_1
+------- --- --- ---- --- --- ---- ---- ... --- --- --- --- ---- ---- ---- ----
+      2  -8  -8    7  -7  -8   -7   -7 ...   8  -7  -7  -8  -10    8    8    3
+      0   6   7    7  -7   8   -7    9 ...  -2  -2  -8 -10   -8    8  -10   -7
+      0   6   9    7   6   8   -7    7 ...   8  -7  -7  -8  -10    8   -8    3
+a column was added normally
+cbcbbbb  ef  lm lm_1 cij  jk jk_2 jk_3 ...  pq  qr  cd cd_1 lm_2 lm_3 pq_1  hi
+------- --- --- ---- --- --- ---- ---- ... --- --- --- ---- ---- ---- ---- ---
+      2  -8  -8    7  -7  -8   -7   -7 ...  -7  -7  -8  -10    8    8    3  -7
+      0   6   7    7  -7   8   -7    9 ...  -2  -8 -10   -8    8  -10   -7  -7
+      0   6   9    7   6   8   -7    7 ...  -7  -7  -8  -10    8   -8    3   7
+The column we want keep: 
+<TableColumns names=('cbcbbbb','ef','lm','lm_1','cij','jk','jk_2','jk_3','jk_4','bc','bc_1','kl','pq','qr','cd','cd_1','lm_2','lm_3','pq_1','hi')>
+The new Table: 
+cbcbbbb  ef  lm lm_1 cij  jk
+------- --- --- ---- --- ---
+      2  -8  -8    7  -7  -8
+      0   6   7    7  -7   8
+      0   6   9    7   6   8
+
+ The Column:      EF   
+Prercent%
+---------
+        5
+        2
+        5 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  Prercent%
+
+ The Column:      EF   
+Prercent%
+---------
+       -6
+       -6
+       -6 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  Prercent%
+a column was added normally
+cbcbbbb  ef  lm lm_1 cij  jk  qr
+------- --- --- ---- --- --- ---
+      2  -8  -8    7  -7  -8   3
+      0   6   7    7  -7   8  -8
+      0   6   9    7   6   8   3
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk  qr qr_1
+------- --- --- ---- --- --- --- ----
+      2  -8  -8    7  -7  -8   3    2
+      0   6   7    7  -7   8  -8   -8
+      0   6   9    7   6   8   3   -8
+
+ The Column:      EF   
+Prercent%
+---------
+        0
+        0
+        7 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  Prercent%
+
+ The Column:      EF   
+Prercent%
+---------
+        7
+        7
+        7 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  Prercent%
+a column was added normally
+cbcbbbb  ef  lm lm_1 cij  jk  qr qr_1  ij
+------- --- --- ---- --- --- --- ---- ---
+      2  -8  -8    7  -7  -8   3    2  -9
+      0   6   7    7  -7   8  -8   -8  -9
+      0   6   9    7   6   8   3   -8  -8
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk  qr qr_1  ij ij_1
+------- --- --- ---- --- --- --- ---- --- ----
+      2  -8  -8    7  -7  -8   3    2  -9    2
+      0   6   7    7  -7   8  -8   -8  -9    0
+      0   6   9    7   6   8   3   -8  -8    0
+
+ The Column:      GH   
+Prercent%
+---------
+       -2
+        6
+        0 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  Prercent%
+
+ The Column:      GH   
+Prercent%
+---------
+        6
+        6
+        6 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  Prercent%
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk  qr qr_1  ij ij_1 ij_2
+------- --- --- ---- --- --- --- ---- --- ---- ----
+      2  -8  -8    7  -7  -8   3    2  -9    2    0
+      0   6   7    7  -7   8  -8   -8  -9    0    2
+      0   6   9    7   6   8   3   -8  -8    0    9
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk  qr qr_1  ij ij_1 ij_2 ij_3
+------- --- --- ---- --- --- --- ---- --- ---- ---- ----
+      2  -8  -8    7  -7  -8   3    2  -9    2    0    9
+      0   6   7    7  -7   8  -8   -8  -9    0    2    0
+      0   6   9    7   6   8   3   -8  -8    0    9    9
+
+ The Column:      GH   
+Prercent%
+---------
+       -2
+        6
+       -2 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  Prercent%
+
+ The Column:      GH   
+Prercent%
+---------
+       -2
+       -2
+        0 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  Prercent%
+
+ The Column:      GH   
+Prercent%
+---------
+       -2
+        6
+        6 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  Prercent%
+
+ The Column:      GH   
+Prercent%
+---------
+       10
+        6
+       -2 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  Prercent%
+a column was added normally
+cbcbbbb  ef  lm lm_1 cij  jk  qr qr_1  ij ij_1 ij_2 ij_3  gh
+------- --- --- ---- --- --- --- ---- --- ---- ---- ---- ---
+      2  -8  -8    7  -7  -8   3    2  -9    2    0    9  -8
+      0   6   7    7  -7   8  -8   -8  -9    0    2    0  -8
+      0   6   9    7   6   8   3   -8  -8    0    9    9  -8
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk  qr qr_1  ij ij_1 ij_2 ij_3  gh gh_1
+------- --- --- ---- --- --- --- ---- --- ---- ---- ---- --- ----
+      2  -8  -8    7  -7  -8   3    2  -9    2    0    9  -8   -8
+      0   6   7    7  -7   8  -8   -8  -9    0    2    0  -8   -8
+      0   6   9    7   6   8   3   -8  -8    0    9    9  -8   -8
+
+ The Column:      GH   
+Prercent%
+---------
+        4
+        4
+        1 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  Prercent%
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk  qr qr_1  ij ij_1 ij_2 ij_3  gh gh_1 gh_2
+------- --- --- ---- --- --- --- ---- --- ---- ---- ---- --- ---- ----
+      2  -8  -8    7  -7  -8   3    2  -9    2    0    9  -8   -8   -6
+      0   6   7    7  -7   8  -8   -8  -9    0    2    0  -8   -8   -8
+      0   6   9    7   6   8   3   -8  -8    0    9    9  -8   -8   -6
+ A  
+----
+   a
+ cno
+aaaa
+
+cno 
+
+
+chi 
+chi 
+ this is the value tuple
+Table Sort:  [0, 0, 2]
+Python Sort:  [0, 0, 2]
+
+ The Column:    FG 
+2^p^2
+-----
+    6
+   -8
+   -8 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  2^p^2
+a column was added normally
+cbcbbbb  ef  lm lm_1 cij  jk  qr qr_1  ij ij_1 ij_2 ij_3  gh gh_1 gh_2  hi
+------- --- --- ---- --- --- --- ---- --- ---- ---- ---- --- ---- ---- ---
+      0   6   7    7  -7   8  -8   -8  -9    0    2    0  -8   -8   -8   6
+      0   6   9    7   6   8   3   -8  -8    0    9    9  -8   -8   -6  -8
+      2  -8  -8    7  -7  -8   3    2  -9    2    0    9  -8   -8   -6   3
+this is the first Table
+ a   b   c   d   e 
+--- --- --- --- ---
+  5   1   4   1   1
+  2   2   2   2   2
+  3   1   3   4   3
+  a   b   c   d   f
+
+ this is the second table
+ a   b   c   d   e 
+--- --- --- --- ---
+  5   1   4   1   1
+  2   2   2   2   2
+  3   1   3   4   3
+  a   b   c   d   f
+
+ The Column:     AB   
+MileMile
+--------
+       8
+      -7
+       8 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MileMile
+
+ The Column:     AB   
+MileMile
+--------
+       8
+      -4
+       7 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MileMile
+Table Reverse:  [2, 0, 0]
+Python Reverse:  [2, 0, 0]
+a column was added normally
+cbcbbbb  ef  lm lm_1 cij  jk  qr qr_1  ij ij_1 ij_2 ij_3  gh gh_1 gh_2  hi  fg
+------- --- --- ---- --- --- --- ---- --- ---- ---- ---- --- ---- ---- --- ---
+      2  -8  -8    7  -7  -8   3    2  -9    2    0    9  -8   -8   -6   3   6
+      0   6   9    7   6   8   3   -8  -8    0    9    9  -8   -8   -6  -8  -8
+      0   6   7    7  -7   8  -8   -8  -9    0    2    0  -8   -8   -8   6  -8
+17 column was removed and the new length is 16
+this is the first Table
+ a   b   c   d   e 
+--- --- --- --- ---
+  2   2   2   2   2
+  3   1   3   4   3
+  5   1   4   1   1
+  a   b   c   d   f
+
+ this is the second table
+ a   b   c   d   e 
+--- --- --- --- ---
+  2   2   2   2   2
+  3   1   3   4   3
+  5   1   4   1   1
+  a   b   c   d   f
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk  qr qr_1  ij ij_1 ij_2  gh gh_1 gh_2  hi  fg hi_1
+------- --- --- ---- --- --- --- ---- --- ---- ---- --- ---- ---- --- --- ----
+      2  -8  -8    7  -7  -8   3    2  -9    2    0  -8   -8   -6   3   6    2
+      0   6   9    7   6   8   3   -8  -8    0    9  -8   -8   -6  -8  -8    9
+      0   6   7    7  -7   8  -8   -8  -9    0    2  -8   -8   -8   6  -8    6
+
+ The Column:      GH   
+Prercent%
+---------
+        1
+        0
+        0 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  Prercent%
+The column we want keep: 
+<TableColumns names=('cbcbbbb','ef','lm','lm_1','cij','jk','qr','qr_1','ij','ij_1','ij_2','gh','gh_1','gh_2','hi','fg','hi_1')>
+The new Table: 
+cbcbbbb  ef  lm lm_1 cij  jk
+------- --- --- ---- --- ---
+      2  -8  -8    7  -7  -8
+      0   6   9    7   6   8
+      0   6   7    7  -7   8
+a column was added normally
+cbcbbbb  ef  lm lm_1 cij  jk  rs
+------- --- --- ---- --- --- ---
+      2  -8  -8    7  -7  -8   7
+      0   6   9    7   6   8   9
+      0   6   7    7  -7   8   4
+
+ The Column:      GH   
+Prercent%
+---------
+       -8
+       -8
+        0 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  Prercent%
+
+ The Column:    DE  
+MMMMMM
+------
+     0
+    -9
+     0 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMMMMM
+a column was added normally
+cbcbbbb  ef  lm lm_1 cij  jk  rs  gh
+------- --- --- ---- --- --- --- ---
+      2  -8  -8    7  -7  -8   7   9
+      0   6   9    7   6   8   9   7
+      0   6   7    7  -7   8   4   7
+a column was duplicated but with new name
+cbcbbbb  ef  lm lm_1 cij  jk  rs  gh gh_1
+------- --- --- ---- --- --- --- --- ----
+      2  -8  -8    7  -7  -8   7   9   -9
+      0   6   9    7   6   8   9   7    7
+      0   6   7    7  -7   8   4   7    7
+
+ The Column:    DE  
+MMMMMM
+------
+     9
+    -9
+    -2 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMMMMM
+the column was renamed
+
+ The Column:    DE  
+MMMMMM
+------
+     9
+     9
+     9 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMMMMM
+a column was added normally
+cbcbbbb cef  lm lm_1 cij  jk  rs  gh gh_1  hi
+------- --- --- ---- --- --- --- --- ---- ---
+      2  -8  -8    7  -7  -8   7   9   -9  -7
+      0   6   9    7   6   8   9   7    7  -5
+      0   6   7    7  -7   8   4   7    7  -7
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij  jk  rs  gh gh_1  hi hi_1
+------- --- --- ---- --- --- --- --- ---- --- ----
+      2  -8  -8    7  -7  -8   7   9   -9  -7   -7
+      0   6   9    7   6   8   9   7    7  -5   -5
+      0   6   7    7  -7   8   4   7    7  -7   -5
+a column was added normally
+cbcbbbb cef  lm lm_1 cij  jk  rs  gh gh_1  hi hi_1  bc
+------- --- --- ---- --- --- --- --- ---- --- ---- ---
+      2  -8  -8    7  -7  -8   7   9   -9  -7   -7  -5
+      0   6   9    7   6   8   9   7    7  -5   -5  -7
+      0   6   7    7  -7   8   4   7    7  -7   -5  -7
+the colomn cannot be renamed because it is already in the table
+
+ The Column:      GH   
+Prercent%
+---------
+        9
+       -9
+       -9 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  Prercent%
+
+ The Column:     LM   
+FeetFeet
+--------
+       9
+       9
+       9 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  FeetFeet
+12 column was removed and the new length is 11
+
+ The Column:    DE  
+MMMMMM
+------
+     8
+     9
+     8 
+ We would like to update the Unit value to:  FeetFeet 
+ The updated Unit value :  MMMMMM
+
+ The Column:    DE  
+MMMMMM
+------
+     2
+     2
+     2 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  MMMMMM
+a column was added normally
+cbcbbbb cef  lm lm_1 cij  jk  rs gh_1  hi hi_1  bc  ef
+------- --- --- ---- --- --- --- ---- --- ---- --- ---
+      2  -8  -8    7  -7  -8   7   -9  -7   -7  -5  -4
+      0   6   9    7   6   8   9    7  -5   -5  -7  -4
+      0   6   7    7  -7   8   4    7  -7   -5  -7   3
+
+ The Column:    DE  
+MMMMMM
+------
+    -7
+     8
+     8 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  MMMMMM
+
+ The Column:      GH   
+Prercent%
+---------
+        8
+       -2
+        8 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+
+ The Column:      GH   
+Prercent%
+---------
+        8
+       -2
+       -7 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+
+ The Column:     OP   
+MileMile
+--------
+       4
+       4
+      -7 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  MileMile
+The Table was copied as is
+a column was added normally
+cbcbbbb cef  lm lm_1 cij  jk  rs gh_1  hi hi_1  bc  ef  no
+------- --- --- ---- --- --- --- ---- --- ---- --- --- ---
+      2  -8  -8    7  -7  -8   7   -9  -7   -7  -5  -4  -2
+      0   6   9    7   6   8   9    7  -5   -5  -7  -4  -3
+      0   6   7    7  -7   8   4    7  -7   -5  -7   3  -2
+
+ The Column:    FG 
+2^p^2
+-----
+   -8
+   -7
+   -8 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  2^p^2
+
+ The Column:    FG 
+2^p^2
+-----
+   -8
+   -8
+   -8 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  2^p^2
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij  jk  rs gh_1  hi hi_1  bc  ef  no no_1
+------- --- --- ---- --- --- --- ---- --- ---- --- --- --- ----
+      2  -8  -8    7  -7  -8   7   -9  -7   -7  -5  -4  -2   10
+      0   6   9    7   6   8   9    7  -5   -5  -7  -4  -3   -2
+      0   6   7    7  -7   8   4    7  -7   -5  -7   3  -2   10
+
+ The Column:    QR 
+2^p^2
+-----
+  -10
+   -8
+   -8 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  2^p^2
+
+ The Column:    QR 
+2^p^2
+-----
+  -10
+   -7
+  -10 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  2^p^2
+a column was added normally
+cbcbbbb cef  lm lm_1 cij  jk  rs gh_1  hi hi_1  bc  ef  no no_1  ij
+------- --- --- ---- --- --- --- ---- --- ---- --- --- --- ---- ---
+      2  -8  -8    7  -7  -8   7   -9  -7   -7  -5  -4  -2   10   1
+      0   6   9    7   6   8   9    7  -5   -5  -7  -4  -3   -2  -2
+      0   6   7    7  -7   8   4    7  -7   -5  -7   3  -2   10   1
+
+ The Column:    CD  
+MMMMMM
+------
+    -7
+    -7
+    -8 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  MMMMMM
+
+ The Column:    CD  
+MMMMMM
+------
+    -7
+    -7
+    -7 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  MMMMMM
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij  jk  rs gh_1  hi hi_1  bc  ef  no no_1  ij ij_1
+------- --- --- ---- --- --- --- ---- --- ---- --- --- --- ---- --- ----
+      2  -8  -8    7  -7  -8   7   -9  -7   -7  -5  -4  -2   10   1   -8
+      0   6   9    7   6   8   9    7  -5   -5  -7  -4  -3   -2  -2   10
+      0   6   7    7  -7   8   4    7  -7   -5  -7   3  -2   10   1   -8
+the column was renamed
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk  rs gh_1  hi hi_1  bc  ef  no no_1  ij ij_1 ij_2
+------- --- --- ---- --- --- --- ---- --- ---- --- --- --- ---- --- ---- ----
+      2  -8  -8    7  -7  -8   7   -9  -7   -7  -5  -4  -2   10   1   -8   10
+      0   6   9    7   6   8   9    7  -5   -5  -7  -4  -3   -2  -2   10   10
+      0   6   7    7  -7   8   4    7  -7   -5  -7   3  -2   10   1   -8   10
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk  rs gh_1 ...  bc  ef  no no_1  ij ij_1 ij_2 ij_3
+------- --- --- ---- --- --- --- ---- ... --- --- --- ---- --- ---- ---- ----
+      2  -8  -8    7  -7  -8   7   -9 ...  -5  -4  -2   10   1   -8   10   -5
+      0   6   9    7   6   8   9    7 ...  -7  -4  -3   -2  -2   10   10   -8
+      0   6   7    7  -7   8   4    7 ...  -7   3  -2   10   1   -8   10   -5
+
+ The Column:     RS   
+FeetFeet
+--------
+       5
+      -6
+       3 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  FeetFeet
+a column was added normally
+cbcbbbb cef  lm lm_1 cij cjk  rs gh_1 ...  ef  no no_1  ij ij_1 ij_2 ij_3  jk
+------- --- --- ---- --- --- --- ---- ... --- --- ---- --- ---- ---- ---- ---
+      2  -8  -8    7  -7  -8   7   -9 ...  -4  -2   10   1   -8   10   -5  -9
+      0   6   9    7   6   8   9    7 ...  -4  -3   -2  -2   10   10   -8  -9
+      0   6   7    7  -7   8   4    7 ...   3  -2   10   1   -8   10   -5  -9
+
+ The Column:     RS   
+FeetFeet
+--------
+      -6
+       5
+       5 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  FeetFeet
+
+ The Column:     RS   
+FeetFeet
+--------
+      -6
+      -6
+       3 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  FeetFeet
+
+ The Column:     RS   
+FeetFeet
+--------
+       2
+      -6
+       2 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  FeetFeet
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk  rs gh_1 ...  no no_1  ij ij_1 ij_2 ij_3  jk jk_1
+------- --- --- ---- --- --- --- ---- ... --- ---- --- ---- ---- ---- --- ----
+      2  -8  -8    7  -7  -8   7   -9 ...  -2   10   1   -8   10   -5  -9    0
+      0   6   9    7   6   8   9    7 ...  -3   -2  -2   10   10   -8  -9    0
+      0   6   7    7  -7   8   4    7 ...  -2   10   1   -8   10   -5  -9   -9
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk  rs gh_1 ... no_1  ij ij_1 ij_2 ij_3  jk jk_1 ij_4
+------- --- --- ---- --- --- --- ---- ... ---- --- ---- ---- ---- --- ---- ----
+      2  -8  -8    7  -7  -8   7   -9 ...   10   1   -8   10   -5  -9    0   -9
+      0   6   9    7   6   8   9    7 ...   -2  -2   10   10   -8  -9    0   -9
+      0   6   7    7  -7   8   4    7 ...   10   1   -8   10   -5  -9   -9    0
+
+ The Column:     RS   
+FeetFeet
+--------
+      -9
+      -9
+       2 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  FeetFeet
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk  rs gh_1 ...  ij ij_1 ij_2 ij_3  jk jk_1 ij_4 ij_5
+------- --- --- ---- --- --- --- ---- ... --- ---- ---- ---- --- ---- ---- ----
+      2  -8  -8    7  -7  -8   7   -9 ...   1   -8   10   -5  -9    0   -9   -6
+      0   6   9    7   6   8   9    7 ...  -2   10   10   -8  -9    0   -9   -6
+      0   6   7    7  -7   8   4    7 ...   1   -8   10   -5  -9   -9    0   -6
+
+ The Column:     RS   
+FeetFeet
+--------
+       2
+      -9
+       8 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  FeetFeet
+
+ The Column:     RS   
+FeetFeet
+--------
+       8
+       8
+       8 
+ We would like to update the Unit value to:  Prercent% 
+ The updated Unit value :  FeetFeet
+
+ The Column:      EF   
+Prercent%
+---------
+        3
+       -3
+       -3 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+
+ The Column:      EF   
+Prercent%
+---------
+        7
+       -3
+        7 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+
+ The Column:      EF   
+Prercent%
+---------
+        6
+        3
+        7 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+
+ The Column:    CD  
+MMMMMM
+------
+    -2
+    -2
+    -2 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  MMMMMM
+
+ The Column:    CD  
+MMMMMM
+------
+    -2
+    -6
+     9 
+ We would like to update the Unit value to:  CMMMM 
+ The updated Unit value :  MMMMMM
+a column was added normally
+cbcbbbb cef  lm lm_1 cij cjk  rs gh_1 ... ij_1 ij_2 ij_3  jk jk_1 ij_4 ij_5  kl
+------- --- --- ---- --- --- --- ---- ... ---- ---- ---- --- ---- ---- ---- ---
+      2  -8  -8    7  -7  -8   7   -9 ...   -8   10   -5  -9    0   -9   -6   6
+      0   6   9    7   6   8   9    7 ...   10   10   -8  -9    0   -9   -6   6
+      0   6   7    7  -7   8   4    7 ...   -8   10   -5  -9   -9    0   -6   6
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk  rs gh_1 ... ij_2 ij_3  jk jk_1 ij_4 ij_5  kl kl_1
+------- --- --- ---- --- --- --- ---- ... ---- ---- --- ---- ---- ---- --- ----
+      2  -8  -8    7  -7  -8   7   -9 ...   10   -5  -9    0   -9   -6   6    6
+      0   6   9    7   6   8   9    7 ...   10   -8  -9    0   -9   -6   6    6
+      0   6   7    7  -7   8   4    7 ...   10   -5  -9   -9    0   -6   6  -10
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk  rs gh_1 ... ij_3  jk jk_1 ij_4 ij_5  kl kl_1 kl_2
+------- --- --- ---- --- --- --- ---- ... ---- --- ---- ---- ---- --- ---- ----
+      2  -8  -8    7  -7  -8   7   -9 ...   -5  -9    0   -9   -6   6    6  -10
+      0   6   9    7   6   8   9    7 ...   -8  -9    0   -9   -6   6    6    6
+      0   6   7    7  -7   8   4    7 ...   -5  -9   -9    0   -6   6  -10    6
+
+ The Column:      GH   
+Prercent%
+---------
+        4
+        2
+       -1 
+ We would like to update the Unit value to:  CMMMM 
+ The updated Unit value :  Prercent%
+
+ The Column:      GH   
+Prercent%
+---------
+        2
+       -1
+        2 
+ We would like to update the Unit value to:  CMMMM 
+ The updated Unit value :  Prercent%
+Table Sort:  [-8, 6, 6]
+Python Sort:  [-8, 6, 6]
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk  rs gh_1 ...  jk jk_1 ij_4 ij_5  kl kl_1 kl_2 kl_3
+------- --- --- ---- --- --- --- ---- ... --- ---- ---- ---- --- ---- ---- ----
+      2  -8  -8    7  -7  -8   7   -9 ...  -9    0   -9   -6   6    6  -10    5
+      0   6   9    7   6   8   9    7 ...  -9    0   -9   -6   6    6    6    5
+      0   6   7    7  -7   8   4    7 ...  -9   -9    0   -6   6  -10    6    5
+26 column was removed and the new length is 25
+
+ The Column:      GH   
+Prercent%
+---------
+        3
+        3
+       -8 
+ We would like to update the Unit value to:  FeetFeet 
+ The updated Unit value :  Prercent%
+
+ The Column:      BC   
+Prercent%
+---------
+       -8
+       -4
+        3 
+ We would like to update the Unit value to:  FeetFeet 
+ The updated Unit value :  Prercent%
+The index returned is for column:  23
+Table Sort:  [-8, 8, 8]
+Python Sort:  [-8, 8, 8]
+The Table was copied as np array
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... jk_1 ij_4 ij_5  kl kl_1 kl_2 kl_3 kl_4
+------- --- --- ---- --- --- ---- --- ... ---- ---- ---- --- ---- ---- ---- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...    0   -9   -6   6    6  -10    5   -1
+      0   6   9    7   6   8    7  -5 ...    0   -9   -6   6    6    6    5    7
+      0   6   7    7  -7   8    7  -7 ...   -9    0   -6   6  -10    6    5    7
+
+ The Column:      BC   
+Prercent%
+---------
+       -1
+       -8
+       -1 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+a column was added normally
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... ij_4 ij_5  kl kl_1 kl_2 kl_3 kl_4  mn
+------- --- --- ---- --- --- ---- --- ... ---- ---- --- ---- ---- ---- ---- ---
+      2  -8  -8    7  -7  -8   -9  -7 ...   -9   -6   6    6  -10    5   -1  -3
+      0   6   9    7   6   8    7  -5 ...   -9   -6   6    6    6    5    7  -1
+      0   6   7    7  -7   8    7  -7 ...    0   -6   6  -10    6    5    7 -10
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... ij_5  kl kl_1 kl_2 kl_3 kl_4  mn ef_1
+------- --- --- ---- --- --- ---- --- ... ---- --- ---- ---- ---- ---- --- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...   -6   6    6  -10    5   -1  -3   -1
+      0   6   9    7   6   8    7  -5 ...   -6   6    6    6    5    7  -1  -10
+      0   6   7    7  -7   8    7  -7 ...   -6   6  -10    6    5    7 -10    7
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ...  kl kl_1 kl_2 kl_3 kl_4  mn ef_1 ef_2
+------- --- --- ---- --- --- ---- --- ... --- ---- ---- ---- ---- --- ---- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...   6    6  -10    5   -1  -3   -1   -1
+      0   6   9    7   6   8    7  -5 ...   6    6    6    5    7  -1  -10   -1
+      0   6   7    7  -7   8    7  -7 ...   6  -10    6    5    7 -10    7  -10
+
+ The Column:      BC   
+Prercent%
+---------
+       -8
+       -1
+       -1 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  Prercent%
+
+ The Column:    FG 
+2^p^2
+-----
+    3
+    3
+    3 
+ We would like to update the Unit value to:  FeetFeet 
+ The updated Unit value :  2^p^2
+
+ The Column:    PQ 
+2^p^2
+-----
+   -4
+   -4
+    3 
+ We would like to update the Unit value to:  FeetFeet 
+ The updated Unit value :  2^p^2
+a column was added normally
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... kl_1 kl_2 kl_3 kl_4  mn ef_1 ef_2  rs
+------- --- --- ---- --- --- ---- --- ... ---- ---- ---- ---- --- ---- ---- ---
+      2  -8  -8    7  -7  -8   -9  -7 ...    6  -10    5   -1  -3   -1   -1   1
+      0   6   9    7   6   8    7  -5 ...    6    6    5    7  -1  -10   -1  -3
+      0   6   7    7  -7   8    7  -7 ...  -10    6    5    7 -10    7  -10   1
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... kl_2 kl_3 kl_4  mn ef_1 ef_2  rs jk_2
+------- --- --- ---- --- --- ---- --- ... ---- ---- ---- --- ---- ---- --- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...  -10    5   -1  -3   -1   -1   1    0
+      0   6   9    7   6   8    7  -5 ...    6    5    7  -1  -10   -1  -3    0
+      0   6   7    7  -7   8    7  -7 ...    6    5    7 -10    7  -10   1   -1
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... kl_3 kl_4  mn ef_1 ef_2  rs jk_2 jk_3
+------- --- --- ---- --- --- ---- --- ... ---- ---- --- ---- ---- --- ---- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...    5   -1  -3   -1   -1   1    0    0
+      0   6   9    7   6   8    7  -5 ...    5    7  -1  -10   -1  -3    0   -1
+      0   6   7    7  -7   8    7  -7 ...    5    7 -10    7  -10   1   -1   -5
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... kl_4  mn ef_1 ef_2  rs jk_2 jk_3 ij_6
+------- --- --- ---- --- --- ---- --- ... ---- --- ---- ---- --- ---- ---- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...   -1  -3   -1   -1   1    0    0   -7
+      0   6   9    7   6   8    7  -5 ...    7  -1  -10   -1  -3    0   -1   -8
+      0   6   7    7  -7   8    7  -7 ...    7 -10    7  -10   1   -1   -5   -7
+
+ The Column:     IJ   
+KMMMMMMM
+--------
+       1
+       1
+       5 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  KMMMMMMM
+
+ The Column:     IJ   
+KMMMMMMM
+--------
+       5
+      -3
+      -3 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  KMMMMMMM
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ...  mn ef_1 ef_2  rs jk_2 jk_3 ij_6 bc_1
+------- --- --- ---- --- --- ---- --- ... --- ---- ---- --- ---- ---- ---- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...  -3   -1   -1   1    0    0   -7    7
+      0   6   9    7   6   8    7  -5 ...  -1  -10   -1  -3    0   -1   -8   -7
+      0   6   7    7  -7   8    7  -7 ... -10    7  -10   1   -1   -5   -7   -7
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... ef_1 ef_2  rs jk_2 jk_3 ij_6 bc_1 bc_2
+------- --- --- ---- --- --- ---- --- ... ---- ---- --- ---- ---- ---- ---- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...   -1   -1   1    0    0   -7    7   -7
+      0   6   9    7   6   8    7  -5 ...  -10   -1  -3    0   -1   -8   -7   -7
+      0   6   7    7  -7   8    7  -7 ...    7  -10   1   -1   -5   -7   -7    7
+the row has been added: 
+[8, 8, 'cef', 'cef', 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555L]
+ A   B              C                  D                                                      E                                               
+--- --- ------------------------- ------------ -----------------------------------------------------------------------------------------------
+1.0 1.0                         a            1                                                                                               1
+2.0 2.0             aaaaaaaaaaaaa aaaaaaaaaaaa                       2222222222222222222222222222222222222222222222222222222222222222222222222
+3.0 3.0 aaaaaaaaaaaaaaaaaaaaaaaaa            3                                                                                               3
+2.0 2.0                   cbcbbbb      cbcbbbb 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+0.0 0.0                       cef          cef 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+1.0 1.0                   cbcbbbb      cbcbbbb                                                                                             200
+3.0 3.0                       cno          cno                                                                  200000000000000000000000000000
+8.0 8.0                       cef          cef 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+a column was added normally
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... ef_2  rs jk_2 jk_3 ij_6 bc_1 bc_2  cd
+------- --- --- ---- --- --- ---- --- ... ---- --- ---- ---- ---- ---- ---- ---
+      2  -8  -8    7  -7  -8   -9  -7 ...   -1   1    0    0   -7    7   -7  -3
+      0   6   9    7   6   8    7  -5 ...   -1  -3    0   -1   -8   -7   -7  -6
+      0   6   7    7  -7   8    7  -7 ...  -10   1   -1   -5   -7   -7    7  -3
+
+ The Column:    JK 
+2^p^2
+-----
+    1
+    4
+    1 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  2^p^2
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ...  rs jk_2 jk_3 ij_6 bc_1 bc_2  cd cd_1
+------- --- --- ---- --- --- ---- --- ... --- ---- ---- ---- ---- ---- --- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...   1    0    0   -7    7   -7  -3   -6
+      0   6   9    7   6   8    7  -5 ...  -3    0   -1   -8   -7   -7  -6   -6
+      0   6   7    7  -7   8    7  -7 ...   1   -1   -5   -7   -7    7  -3   -6
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... jk_2 jk_3 ij_6 bc_1 bc_2  cd cd_1 cd_2
+------- --- --- ---- --- --- ---- --- ... ---- ---- ---- ---- ---- --- ---- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...    0    0   -7    7   -7  -3   -6    2
+      0   6   9    7   6   8    7  -5 ...    0   -1   -8   -7   -7  -6   -6    6
+      0   6   7    7  -7   8    7  -7 ...   -1   -5   -7   -7    7  -3   -6    2
+
+ The Column:    PQ 
+2^p^2
+-----
+    4
+    4
+    2 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  2^p^2
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... jk_3 ij_6 bc_1 bc_2  cd cd_1 cd_2 lm_2
+------- --- --- ---- --- --- ---- --- ... ---- ---- ---- ---- --- ---- ---- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...    0   -7    7   -7  -3   -6    2    2
+      0   6   9    7   6   8    7  -5 ...   -1   -8   -7   -7  -6   -6    6    6
+      0   6   7    7  -7   8    7  -7 ...   -5   -7   -7    7  -3   -6    2   -3
+
+ The Column:     AB   
+MileMile
+--------
+      -7
+      -7
+      -4 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  MileMile
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... ij_6 bc_1 bc_2  cd cd_1 cd_2 lm_2 lm_3
+------- --- --- ---- --- --- ---- --- ... ---- ---- ---- --- ---- ---- ---- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...   -7    7   -7  -3   -6    2    2    6
+      0   6   9    7   6   8    7  -5 ...   -8   -7   -7  -6   -6    6    6   -3
+      0   6   7    7  -7   8    7  -7 ...   -7   -7    7  -3   -6    2   -3    6
+the column was renamed
+
+ The Column:     AB   
+MileMile
+--------
+       5
+       5
+      -7 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  MileMile
+
+ The Column:     AB   
+MileMile
+--------
+      -9
+      -7
+      -9 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  MileMile
+
+ The Column:     IJ   
+KMMMMMMM
+--------
+      -9
+      -8
+      -8 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  KMMMMMMM
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... bc_1 bc_2  cd cd_1 cd_2 lm_2 lm_3 lm_4
+------- --- --- ---- --- --- ---- --- ... ---- ---- --- ---- ---- ---- ---- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...    7   -7  -3   -6    2    2    6   -3
+      0   6   9    7   6   8    7  -5 ...   -7   -7  -6   -6    6    6   -3    6
+      0   6   7    7  -7   8    7  -7 ...   -7    7  -3   -6    2   -3    6   -3
+
+ The Column:     IJ   
+KMMMMMMM
+--------
+       7
+       7
+      -9 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  KMMMMMMM
+the column was renamed
+Table Sort:  [7, 7, 7]
+Python Sort:  [7, 7, 7]
+
+ The Column:    MN  
+MMMMMM
+------
+    -9
+    -9
+    -5 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  MMMMMM
+41 column was removed and the new length is 40
+
+ The Column:    MN  
+MMMMMM
+------
+     2
+     6
+     6 
+ We would like to update the Unit value to:  2^p^2 
+ The updated Unit value :  MMMMMM
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... bc_1 bc_2  cd cd_1 cd_2 lm_2 lm_3 kl_5
+------- --- --- ---- --- --- ---- --- ... ---- ---- --- ---- ---- ---- ---- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...    7   -7  -3   -6    2    2    6    7
+      0   6   9    7   6   8    7  -5 ...   -7   -7  -6   -6    6    6   -3   -7
+      0   6   7    7  -7   8    7  -7 ...   -7    7  -3   -6    2   -3    6   -9
+
+ The Column:    PQ 
+2^p^2
+-----
+   -1
+   -1
+   -1 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  2^p^2
+
+ The Column:    PQ 
+2^p^2
+-----
+    0
+   -1
+   -1 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  2^p^2
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... bc_2  cd cd_1 cd_2 lm_2 lm_3 kl_5 kl_6
+------- --- --- ---- --- --- ---- --- ... ---- --- ---- ---- ---- ---- ---- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...   -7  -3   -6    2    2    6    7    7
+      0   6   9    7   6   8    7  -5 ...   -7  -6   -6    6    6   -3   -7   -7
+      0   6   7    7  -7   8    7  -7 ...    7  -3   -6    2   -3    6   -9    7
+
+ The Column:    PQ 
+2^p^2
+-----
+    0
+   -5
+    0 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  2^p^2
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ...  cd cd_1 cd_2 lm_2 lm_3 kl_5 kl_6 kl_7
+------- --- --- ---- --- --- ---- --- ... --- ---- ---- ---- ---- ---- ---- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...  -3   -6    2    2    6    7    7    2
+      0   6   9    7   6   8    7  -5 ...  -6   -6    6    6   -3   -7   -7    2
+      0   6   7    7  -7   8    7  -7 ...  -3   -6    2   -3    6   -9    7    2
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... cd_2 lm_2 lm_3 kl_5 kl_6 kl_7 kl_8
+------- --- --- ---- --- --- ---- --- ... ---- ---- ---- ---- ---- ---- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...    2    2    6    7    7    2    2
+      0   6   9    7   6   8    7  -5 ...    6    6   -3   -7   -7    2    9
+      0   6   7    7  -7   8    7  -7 ...    2   -3    6   -9    7    2    9
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... lm_2 lm_3 kl_5 kl_6 kl_7 kl_8 kl_9
+------- --- --- ---- --- --- ---- --- ... ---- ---- ---- ---- ---- ---- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...    2    6    7    7    2    2    7
+      0   6   9    7   6   8    7  -5 ...    6   -3   -7   -7    2    9    7
+      0   6   7    7  -7   8    7  -7 ...   -3    6   -9    7    2    9    7
+the column was renamed
+
+ The Column:    DE  
+MMMMMM
+------
+    -5
+    -4
+    -7 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  MMMMMM
+
+ The Column:    DE  
+MMMMMM
+------
+    -5
+    -4
+    -4 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  MMMMMM
+
+ The Column:    DE  
+MMMMMM
+------
+    -4
+    -4
+    -5 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  MMMMMM
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... lm_3 kl_5 kl_6 kl_7 kl_8 kl_9 no_2
+------- --- --- ---- --- --- ---- --- ... ---- ---- ---- ---- ---- ---- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...    6    7    7    2    2    7   -3
+      0   6   9    7   6   8    7  -5 ...   -3   -7   -7    2    9    7    9
+      0   6   7    7  -7   8    7  -7 ...    6   -9    7    2    9    7   -3
+
+ The Column:    CD  
+MMMMMM
+------
+    -4
+    -4
+    -5 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  MMMMMM
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... kl_5 kl_6 kl_7 kl_8 kl_9 no_2 no_3
+------- --- --- ---- --- --- ---- --- ... ---- ---- ---- ---- ---- ---- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...    7    7    2    2    7   -3  -10
+      0   6   9    7   6   8    7  -5 ...   -7   -7    2    9    7    9    8
+      0   6   7    7  -7   8    7  -7 ...   -9    7    2    9    7   -3   -9
+a column was added normally
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... kl_5 kl_6 kl_7 kl_8 kl_9 no_2 no_3  pq
+------- --- --- ---- --- --- ---- --- ... ---- ---- ---- ---- ---- ---- ---- ---
+      2  -8  -8    7  -7  -8   -9  -7 ...    7    7    2    2    7   -3  -10   8
+      0   6   9    7   6   8    7  -5 ...   -7   -7    2    9    7    9    8  -9
+      0   6   7    7  -7   8    7  -7 ...   -9    7    2    9    7   -3   -9   8
+
+ The Column:     RS   
+FeetFeet
+--------
+      -2
+      -5
+     -10 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  FeetFeet
+
+ The Column:     RS   
+FeetFeet
+--------
+      -5
+      -8
+      -8 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  FeetFeet
+
+ The Column:     RS   
+FeetFeet
+--------
+      -1
+      -5
+      -1 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  FeetFeet
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... kl_6 kl_7 kl_8 kl_9 no_2 no_3  pq bc_3
+------- --- --- ---- --- --- ---- --- ... ---- ---- ---- ---- ---- ---- --- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...    7    2    2    7   -3  -10   8    7
+      0   6   9    7   6   8    7  -5 ...   -7    2    9    7    9    8  -9    7
+      0   6   7    7  -7   8    7  -7 ...    7    2    9    7   -3   -9   8    7
+
+ The Column:    FG 
+2^p^2
+-----
+   -1
+    2
+   -1 
+ We would like to update the Unit value to:  KMMMMMMM 
+ The updated Unit value :  2^p^2
+a column was added normally
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... kl_7 kl_8 kl_9 no_2 no_3  pq bc_3  ef
+------- --- --- ---- --- --- ---- --- ... ---- ---- ---- ---- ---- --- ---- ---
+      2  -8  -8    7  -7  -8   -9  -7 ...    2    2    7   -3  -10   8    7  -8
+      0   6   9    7   6   8    7  -5 ...    2    9    7    9    8  -9    7  -8
+      0   6   7    7  -7   8    7  -7 ...    2    9    7   -3   -9   8    7  -8
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk gh_1  hi ... kl_8 kl_9 no_2 no_3  pq bc_3  ef ef_3
+------- --- --- ---- --- --- ---- --- ... ---- ---- ---- ---- --- ---- --- ----
+      2  -8  -8    7  -7  -8   -9  -7 ...    2    7   -3  -10   8    7  -8    7
+      0   6   9    7   6   8    7  -5 ...    9    7    9    8  -9    7  -8   -8
+      0   6   7    7  -7   8    7  -7 ...    9    7   -3   -9   8    7  -8   -2
+The column we want keep: 
+<TableColumns names=('cbcbbbb','cef','lm','lm_1','cij','cjk','gh_1','hi','hi_1','bc','cab','no','no_1','ij','ij_1','ij_2','crs','jk','jk_1','cdebbbb','ij_5','kl','kl_1','kl_2','kl_3','kl_4','mn','ef_1','ef_2','rs','jk_2','jk_3','ij_6','bc_1','bc_2','cd','cd_1','cd_2','lm_2','lm_3','kl_5','kl_6','kl_7','kl_8','kl_9','no_2','no_3','pq','bc_3','ef','ef_3')>
+The new Table: 
+cbcbbbb cef  lm lm_1 cij cjk
+------- --- --- ---- --- ---
+      2  -8  -8    7  -7  -8
+      0   6   9    7   6   8
+      0   6   7    7  -7   8
+a column was added normally
+cbcbbbb cef  lm lm_1 cij cjk  fg
+------- --- --- ---- --- --- ---
+      2  -8  -8    7  -7  -8  -7
+      0   6   9    7   6   8  -7
+      0   6   7    7  -7   8  -7
+
+ The Column:    KL 
+2^p^2
+-----
+   -6
+   -6
+  -10 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  2^p^2
+
+ The Column:    KL 
+2^p^2
+-----
+   -5
+   -6
+  -10 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  2^p^2
+
+ The Column:    KL 
+2^p^2
+-----
+   -5
+   -5
+   -5 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  2^p^2
+the colomn cannot be renamed because it is already in the table
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk  fg fg_1
+------- --- --- ---- --- --- --- ----
+      2  -8  -8    7  -7  -8  -7   -7
+      0   6   9    7   6   8  -7   -7
+      0   6   7    7  -7   8  -7   10
+
+ The Column:    KL 
+2^p^2
+-----
+   -6
+   -5
+   -6 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  2^p^2
+The Table was copied as np array
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk  fg fg_1 fg_2
+------- --- --- ---- --- --- --- ---- ----
+      2  -8  -8    7  -7  -8  -7   -7    7
+      0   6   9    7   6   8  -7   -7    3
+      0   6   7    7  -7   8  -7   10   -7
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk  fg fg_1 fg_2 fg_3
+------- --- --- ---- --- --- --- ---- ---- ----
+      2  -8  -8    7  -7  -8  -7   -7    7   -7
+      0   6   9    7   6   8  -7   -7    3   -7
+      0   6   7    7  -7   8  -7   10   -7    3
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk  fg fg_1 fg_2 fg_3 fg_4
+------- --- --- ---- --- --- --- ---- ---- ---- ----
+      2  -8  -8    7  -7  -8  -7   -7    7   -7    7
+      0   6   9    7   6   8  -7   -7    3   -7    3
+      0   6   7    7  -7   8  -7   10   -7    3    7
+
+ The Column:    KL 
+2^p^2
+-----
+   10
+   10
+    8 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  2^p^2
+a column was added normally
+cbcbbbb cef  lm lm_1 cij cjk  fg fg_1 fg_2 fg_3 fg_4  no
+------- --- --- ---- --- --- --- ---- ---- ---- ---- ---
+      2  -8  -8    7  -7  -8  -7   -7    7   -7    7   3
+      0   6   9    7   6   8  -7   -7    3   -7    3   3
+      0   6   7    7  -7   8  -7   10   -7    3    7   7
+a column was added normally
+cbcbbbb cef  lm lm_1 cij cjk  fg fg_1 fg_2 fg_3 fg_4  no  ef
+------- --- --- ---- --- --- --- ---- ---- ---- ---- --- ---
+      2  -8  -8    7  -7  -8  -7   -7    7   -7    7   3   6
+      0   6   9    7   6   8  -7   -7    3   -7    3   3   7
+      0   6   7    7  -7   8  -7   10   -7    3    7   7   3
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk  fg fg_1 fg_2 fg_3 fg_4  no  ef ef_1
+------- --- --- ---- --- --- --- ---- ---- ---- ---- --- --- ----
+      2  -8  -8    7  -7  -8  -7   -7    7   -7    7   3   6    6
+      0   6   9    7   6   8  -7   -7    3   -7    3   3   7    7
+      0   6   7    7  -7   8  -7   10   -7    3    7   7   3    7
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk  fg fg_1 fg_2 fg_3 fg_4  no  ef ef_1 ef_2
+------- --- --- ---- --- --- --- ---- ---- ---- ---- --- --- ---- ----
+      2  -8  -8    7  -7  -8  -7   -7    7   -7    7   3   6    6    6
+      0   6   9    7   6   8  -7   -7    3   -7    3   3   7    7    6
+      0   6   7    7  -7   8  -7   10   -7    3    7   7   3    7    7
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk  fg fg_1 fg_2 fg_3 fg_4  no  ef ef_1 ef_2 ef_3
+------- --- --- ---- --- --- --- ---- ---- ---- ---- --- --- ---- ---- ----
+      2  -8  -8    7  -7  -8  -7   -7    7   -7    7   3   6    6    6    9
+      0   6   9    7   6   8  -7   -7    3   -7    3   3   7    7    6    3
+      0   6   7    7  -7   8  -7   10   -7    3    7   7   3    7    7    3
+
+ The Column:    CD  
+MMMMMM
+------
+    -7
+    -7
+     7 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  MMMMMM
+
+ The Column:    CD  
+MMMMMM
+------
+     1
+     7
+    -7 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  MMMMMM
+16 column was removed and the new length is 15
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk  fg fg_1 fg_2 fg_3 fg_4  no ef_1 ef_2 ef_3 lm_2
+------- --- --- ---- --- --- --- ---- ---- ---- ---- --- ---- ---- ---- ----
+      2  -8  -8    7  -7  -8  -7   -7    7   -7    7   3    6    6    9    4
+      0   6   9    7   6   8  -7   -7    3   -7    3   3    7    6    3    4
+      0   6   7    7  -7   8  -7   10   -7    3    7   7    7    7    3    9
+
+ The Column:      EF   
+Prercent%
+---------
+        7
+        7
+        7 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  Prercent%
+a column was duplicated but with new name
+cbcbbbb cef  lm lm_1 cij cjk  fg fg_1 ... fg_3 fg_4  no ef_1 ef_2 ef_3 lm_2 lm_3
+------- --- --- ---- --- --- --- ---- ... ---- ---- --- ---- ---- ---- ---- ----
+      2  -8  -8    7  -7  -8  -7   -7 ...   -7    7   3    6    6    9    4   -3
+      0   6   9    7   6   8  -7   -7 ...   -7    3   3    7    6    3    4    8
+      0   6   7    7  -7   8  -7   10 ...    3    7   7    7    7    3    9   -3
+
+ The Column:     AB   
+MileMile
+--------
+      -5
+      -5
+      -5 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  MileMile
+
+ The Column:     AB   
+MileMile
+--------
+      -2
+      -2
+      -5 
+ We would like to update the Unit value to:  MileMile 
+ The updated Unit value :  MileMile
+The Table was copied as np array
+
+ The Column:      GH   
+Prercent%
+---------
+       -5
+       -5
+       -5 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  Prercent%
+
+ The Column:      GH   
+Prercent%
+---------
+       -2
+      -10
+      -10 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  Prercent%
+The column we want keep: 
+<TableColumns names=('cbcbbbb','cef','lm','lm_1','cij','cjk','fg','fg_1','fg_2','fg_3','fg_4','no','ef_1','ef_2','ef_3','lm_2','lm_3')>
+The new Table: 
+cbcbbbb cef  lm lm_1 cij cjk
+------- --- --- ---- --- ---
+      2  -8  -8    7  -7  -8
+      0   6   9    7   6   8
+      0   6   7    7  -7   8
+ A  
+----
+   a
+ chi
+aaaa
+
+aaaa 
+
+
+cklhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh 
+cklh 
+ this is the value tuple
+UNCAUGHT EXCEPTION
+ERROR: (<type 'exceptions.AssertionError'>, AssertionError('Updating the tuple or indices is not working',), <traceback object at 0x38b1248>)
+TRACEBACK:
+Original test has 22 steps
+REDUCING...
+ A  
+----
+   a
+ chi
+cklh
+
+cklh 
+
+
+cklhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh 
+cklh 
+ this is the value tuple
+ A  
+----
+   a
+ chi
+cklh
+
+cklh 
+
+
+cklhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh 
+cklh 
+ this is the value tuple
+ A  
+----
+   a
+ chi
+cklh
+
+cklh 
+
+
+cklhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh 
+cklh 
+ this is the value tuple
+ A  
+----
+   a
+ chi
+cklh
+
+cklh 
+
+
+cklhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh 
+cklh 
+ this is the value tuple
+ A  
+----
+   a
+ chi
+cklh
+
+cklh 
+
+
+cklhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh 
+cklh 
+ this is the value tuple
+ A  
+----
+   a
+ chi
+cklh
+
+cklh 
+
+
+cklhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh 
+cklh 
+ this is the value tuple
+ A  
+----
+   a
+ chi
+cklh
+
+cklh 
+
+
+cklhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh 
+cklh 
+ this is the value tuple
+ A  
+----
+   a
+ chi
+cklh
+
+cklh 
+
+
+cklhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh 
+cklh 
+ this is the value tuple
+ A  
+----
+   a
+ chi
+cklh
+
+cklh 
+
+
+cklhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh 
+cklh 
+ this is the value tuple
+ A  
+----
+   a
+ chi
+cklh
+
+cklh 
+
+
+cklhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh 
+cklh 
+ this is the value tuple
+ A  
+----
+   a
+ chi
+cklh
+
+cklh 
+
+
+cklhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh 
+cklh 
+ this is the value tuple
+ A  
+----
+   a
+ chi
+cklh
+
+cklh 
+
+
+cklhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh 
+cklh 
+ this is the value tuple
+Reduced test has 3 steps
+REDUCED IN 0.181031942368 SECONDS
+chooseRow0 = 2                                                           # STEP 0
+string20 = 'cklhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh'                         # STEP 1
+Tuple.pprint(max_width = 1000); print '
+',  Tuple.columns[0][chooseRow0], '
+'; Tuple.columns[0][chooseRow0] = string20; print '
+', string20, '
+', Tuple.columns[0][chooseRow0], '
+ this is the value tuple'   # STEP 2
+
+FINAL VERSION OF TEST, WITH LOGGED REPLAY:
+chooseRow0 = 2                                                           # STEP 0
+string20 = 'cklhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh'                         # STEP 1
+Tuple.pprint(max_width = 1000); print '
+',  Tuple.columns[0][chooseRow0], '
+'; Tuple.columns[0][chooseRow0] = string20; print '
+', string20, '
+', Tuple.columns[0][chooseRow0], '
+ this is the value tuple'   # STEP 2
+ A  
+----
+   a
+ chi
+cklh
+
+cklh 
+
+
+cklhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh 
+cklh 
+ this is the value tuple
+ERROR: (<type 'exceptions.AssertionError'>, AssertionError('Updating the tuple or indices is not working',), <traceback object at 0x388acf8>)
+TRACEBACK:
+STOPPING TESTING DUE TO FAILED TEST
+36.8382352941 PERCENT COVERED
+37.1874201298 TOTAL RUNTIME
+19 EXECUTED
+1822 TOTAL TEST OPERATIONS
+35.0094773769 TIME SPENT EXECUTING TEST OPERATIONS
+0.0444164276123 TIME SPENT EVALUATING GUARDS AND CHOOSING ACTIONS
+1.77615261078 TIME SPENT CHECKING PROPERTIES
+36.7856299877 TOTAL TIME SPENT RUNNING SUT
+0.0201880931854 TIME SPENT RESTARTING
+0.181155920029 TIME SPENT REDUCING TEST CASES
+460 BRANCHES COVERED
+331 STATEMENTS COVERED

@@ -1,0 +1,384 @@
+# This TSTL file requires the installation of astropy and numpy libraries
+
+@from astropy.table import Table, Column
+@import numpy as np
+@import random
+
+<@
+
+# To check the number of columns (width)
+def	CheckColumnNumber(table):
+		table1= table
+		columnsNumber = len(table1.columns)
+		return columnsNumber
+# To check the number of rows (height)
+def	CheckRowNumber(table):
+		table1= table	
+		rowsNumber = len(table1)
+		return rowsNumber
+
+# This function will insert a column randomly and catches a bug 
+
+def	AddColumn(NewColumn):
+		c= NewColumn
+		columnNumber = len(t.columns)
+		t.add_column(c, rename_duplicate = True)
+		#check if the column was inserted
+		assert columnNumber+1 == len(t.columns)
+		print(t)
+
+# This function will fix the inserttion of a column randomly problem to avoid the bug also it will duoble check if the collumn was inserted
+
+def	AddColumnFix( NewColumn, ColumnName):
+		#tableop= TableOp
+		c= NewColumn
+		cn = ColumnName
+		columnNumber = len(t.columns)
+		if ( (ColumnName in t.columns) == True):
+			t.add_column( NewColumn, rename_duplicate = True )
+			#check if the column was inserted
+			assert columnNumber+1 == len(t.columns)
+			print 'a column was duplicated but with new name\n', t 
+		else:
+			t.add_column(NewColumn)
+			#check if the column was inserted
+			assert columnNumber+1 == len(t.columns)
+			print 'a column was added normally\n', t 
+
+# This Function will rename a column randomly in a table and check if it's been renamed
+def	Rename_Column(oldname,newname):
+		if (t.columns[oldname].name != newname):
+			try:
+				t.rename_column(t.columns[oldname].name, newname)
+				assert t.columns[newname].name == newname
+				print 'the column was renamed'
+			except KeyError:
+				print 'the colomn cannot be renamed because it is already in the table'
+		else:
+			print 'the clumn cannot be renamed'
+
+
+# This function will randomly pick a column and return its index within the table limits to rename it
+def	SelectrandomColumnToRename():
+		l = len(t.columns)
+		l = l - 1
+		ChooseColumn = random.randint(0,l)
+		if (ChooseColumn < len(t.columns)) and (ChooseColumn > 0):
+			return ChooseColumn
+			print ChooseColumn, 'the column we want to Rename'
+		else:
+			return 	0
+
+# This function will randomly pick a column and return its index within the table limits to sort it
+def	SelectrandomColumn():
+	try:
+		l = len(t.columns)
+		l = l - 1
+		ChooseColumn = random.randint(0,l)
+		if (ChooseColumn < len(t.columns)) and (ChooseColumn > 0):
+			return ChooseColumn
+			print ChooseColumn, 'the column we want to sort'
+		else:
+			return 	0
+	except KeyError:
+		print 'the random range number of the list index is out of range' 
+
+# This function will randomly pick a column and return its index within the table limits to remove it
+def	SelectrandomColumnToRemove():
+	try:
+		l = len(t.columns)
+		l = l - 1
+		ChooseColumn = random.randint(0,l)
+		if (ChooseColumn < len(t.columns)) and (ChooseColumn > 0):
+			return ChooseColumn
+			print ChooseColumn, 'the column we want to Remove'
+		else:
+			return 	0
+	except KeyError:
+		print 'the random range number of the list index is out of range' 
+
+# This Function will rednomly Select a row to be removed
+def	SelectrandomRowToRemove():
+		l = len(r.columns[0])
+		ChooseRow = random.randint(0,l-1)
+		print ChooseRow
+		return 	ChooseRow
+
+# This function will ensure sorting a column is correct compared to python built-in sort method randomly
+def	sort_Column(ColumnIndex):
+		ColumnValues = []
+		ColumnValuesSorted = []
+		try:
+			# Sort the column's tuples using normal python sort function
+			for tuble in t[t.columns[ColumnIndex].name]:
+				ColumnValues.append(tuble)
+			ColumnValues.sort()
+			# Sort the column's tuples using Table sort function
+			ColumnSort = t.sort(t.columns[ColumnIndex].name)
+			# Adding the values to a list for comparison
+			for tuble in t[t.columns[ColumnIndex].name]:
+				ColumnValuesSorted.append(tuble)
+			print 'Table Sort: ' , ColumnValuesSorted			
+			print 'Python Sort: ' , ColumnValues
+			assert ColumnValuesSorted == ColumnValues
+		except KeyError:
+			print 'The column is empty'
+
+# This function will ensure reverse table is correct compared to python built in sort method
+def	reverse_Table_Columns():
+		ColumnValues = []
+		ColumnValuesReverse = []
+		try:
+			# Reverse the columns' tuples using normal python reverse function
+			for tuble in t[t.columns[0].name]:
+				ColumnValues.append(tuble)
+			ColumnValues.reverse()
+			# Sort the columns' tuples using Table reverse function
+			ColumnReverse = t.reverse()
+			# Adding the values to a list for comparison
+			for tuble in t[t.columns[0].name]:
+				ColumnValuesReverse.append(tuble)
+			print 'Table Reverse: ' , ColumnValuesReverse			
+			print 'Python Reverse: ' , ColumnValues
+			assert ColumnValuesReverse == ColumnValues
+		except KeyError:
+			print 'The column is empty'
+
+# This function will remove columns randolmy and duoble check for their removal
+def	remove_Column(Columnindex):
+		OldColumn = t.columns[Columnindex].name
+		t.remove_column(OldColumn)
+		assert OldColumn != t.columns[Columnindex].name, 'The column was not removed'
+		print OldColumn, 'column was removed and the index was changed to', t.columns[Columnindex].name	
+
+# This function will remove columns randolmy and duoble check for their removal
+def	remove_Column2(Columnindex):
+		lengthOfColumnsBefor = len(t.columns)
+		t.remove_column(t.columns[Columnindex].name)
+		assert lengthOfColumnsBefor != len(t.columns)-1 , 'The column was not removed'
+		print lengthOfColumnsBefor, 'column was removed and the new length is', len(t.columns)
+
+# This funtion will test adding row to a table
+def	AddRows(SomeNum, SomeString, Object):
+		Columns = r.columns
+		numberOfRows = len(r)
+		row = []
+		for Column in Columns:
+			if (r.columns[Column].dtype.str[1] == 'S'):
+				row.append(SomeString)
+			elif ((r.columns[Column].dtype == 'int64') or (r.columns[Column].dtype == 'float64')):
+				row.append(SomeNum)
+			else:
+				row.append(Object)
+		r.add_row(row)
+		assert len(r.columns[0]) == numberOfRows +1, 'Adding rows is not working'
+		print 'the row has been added: \n', row
+		r.pprint(max_width = 1000)  
+
+#This function will check if the row has been removed
+def	CheckIfTheRowISRemoved(oldLength, newLength):
+		assert oldLength > newLength, 'The row is not removed'
+
+# Testing Keep_Columns Function
+def	keep_columns():
+		if (len(t.columns) > 6):
+			ColumnsToKeep = [t.columns[0].name, t.columns[1].name, t.columns[2].name, t.columns[3].name, t.columns[4].name, t.columns[5].name]
+			print 'The column we want keep: \n' , t.columns
+			t.keep_columns(ColumnsToKeep)
+			print 'The new Table: \n', t
+			assert len(t.columns) > 5 , 'Keep Columns is not working'
+
+	
+# initilize a global table objects
+t = Table() # to test Column
+# Table to test rows
+r = Table()
+r['A'] = [1,2.0,3]
+r['B'] = [1.0,2.0,3.0]
+r['C'] = ['a','aaaaaaaaaaaaa','aaaaaaaaaaaaaaaaaaaaaaaaa']
+r['D'] = [1,'aaaaaaaaaaaa',3]
+r['E'] = [1,2222222222222222222222222222222222222222222222222222222222222222222222222,3]
+
+# Table to test Units
+u=Table()
+
+# Table To test tuples or indeces update
+Tuple = Table() 
+Tuple['A'] = ['a','aaa','aaaa']
+
+# Tables for group_by Comparsion
+groupTable1 = Table()
+groupTable1['a'] = [5,2,3,'a']
+groupTable1['b'] = [1,2,1,'b']
+groupTable1['c'] = [4,2,3,'c']
+groupTable1['d'] = [1,2,4,'d']
+groupTable1['e'] = [1,2,3,'f']
+
+groupTable2 = Table()
+groupTable2['a'] = [5,2,3,'a']
+groupTable2['b'] = [1,2,1,'b']
+groupTable2['c'] = [4,2,3,'c']
+groupTable2['d'] = [1,2,4,'d']
+groupTable2['e'] = [1,2,3,'f']
+
+@>
+
+# Defining pools
+
+
+pool: <Column> 1
+pool: <int> 3
+pool: <string> 1
+pool: <string2> 1
+pool: <columnIndex> 1
+pool: <AsArray> 1
+pool: <CopyTable> 1
+pool: <GetColumnIndex> 1
+pool: <RandomColumnIndex> 1
+pool: <intvalues> 1 
+pool: <Stringvalues> 1
+pool: <ObjectValues> 1
+pool: <OldNumberOfRows> 1
+pool: <chooseRow> 1
+pool: <Column1> 1
+pool: <Unit1> 1
+pool: <Description1> 1
+pool: <int1> 3
+pool: <ColumnSorted> 1
+pool: <groupColumns> 1
+pool: <groupColumns1> 1
+pool: <groupColumns2> 1
+# This part is very important, you have to use the actual location of Astropy folder under paython folder. 
+# if you don't set this up, Coverage won't work.
+source: /usr/lib64/python2.7/site-packages/astropy/table/table.py
+
+# This  property is nothing but it just breaks the testing when columns insertion exceeded a 1000000
+property: CheckColumnNumber(t) < 10000000
+
+# This property will ensure that we don't exceed 3 number of rows. it will break testing when 
+# the number of rows unexpecedly exceeded 3 as defined
+property: CheckRowNumber(t) < 4
+
+#This property will ensure that we don't exceed 5 number of columns. it will break testing when 
+# the number of rows unexpecedly exceeded 5 as defined
+property: CheckColumnNumber(r) < 6
+
+# This  property is nothing but it just breaks the testing when rows insertion exceeded a 1000000
+property: CheckRowNumber(r) < 1000000
+
+# pools initilization
+~<intvalues> := <[0..10]>
+~<Stringvalues> := <['ab','bc','cd','de','ef','fg','gh','hi','ij','jk','kl','lm','mn','no','op','pq','qr','rs']>
+<int> := <[-10..10]> 
+~<string> := <['ab','bc','cd','de','ef','fg','gh','hi','ij','jk','kl','lm','mn','no','op','pq','qr','rs']>
+~<string2> := <['cab','cbcbbbb','ccd','cdebbbb','cef','fcg','cghbbbbbbbbbbbbbbbbbbb','chi','cij','cjk','cklhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh','clm','cmn','cno','cop','cpq','cqr','crs']>
+~<ObjectValues> := <[1,200,200000000000000000000000000000,55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555]>
+~<AsArray> := t.as_array()
+~<CopyTable> := Table()
+~<GetColumnIndex> := 0 # ...................... the problem might be here
+~<RandomColumnIndex>:= 0
+~<OldNumberOfRows>:= 0
+~<chooseRow> := <[0..2]>
+~<groupColumns> := <['a','b','c','d','e']>
+~<groupColumns1> := <['a','b','c','d','e']>
+~<groupColumns2> := <['a','b','c','d','e']>
+# Note: (') is not working with TSTL logging while (") does work
+# The values below are randomly going to be used to fill the column in the Table
+<int1> := <[-10..10]>
+<Column1> := <['AB','BC','CD','DE','EF','FG','GH','HI','IJ','JK','KL','LM','MN','TT','OP','PQ','QR','RS']>
+<Unit1> := <['CMMMM','MMMMMM','KMMMMMMM', 'MileMile','InchInch','FeetFeet','Prercent%','2^p^2']>
+<Description1> := <['ab','bc','cd','de','ef','fg','gh','hi','ij','jk','kl','lm','mn','no','op','pq','qr','rs']>
+
+
+
+# Assigning random Column values
+
+~<Column> := Column(name=<string>, data = [<int>,<int>,<int>])
+
+#This will test inserting a new column but an error "local variable 'new_name' referenced before assignment" will be reaised due to bad API
+<Column> = Column(name=<string>, data = [<int>,<int>,<int>]); AddColumn(<Column>)
+
+# To avoid aforementioned bug and continue adding infint number of columns randomly to check for other errors,
+# I used the following command
+
+#~<Column> = Column(name=<string>, data = [<int>,<int>,<int>]); AddColumnFix(<Column>, <string>)
+
+
+# Test renaming a column in the table randomly
+
+len(t.columns) > 1 -> Rename_Column(SelectrandomColumnToRename(),<string2>)
+
+# The syntax is not accpeted when using a funcion for the upper bound in initilizing a list of some types. Ex. <columnIndex> := <[1..foolen()]>
+# initial value of column
+
+# Test removing columns randomly from the table (I have an error here need to be fixed)
+
+len(t.columns) > 1 -> remove_Column2(SelectrandomColumnToRemove())
+
+
+# Test sorting a column in the table randomly
+
+len(t.columns) > 1 -> sort_Column(SelectrandomColumn())
+
+# Test as_array function which returns a copy of the table as np
+
+~<AsArray> = t.as_array(); print 'The Table was copied as np array'  => ((len(<AsArray>[0]) == len(t.columns)) and (len(<AsArray>) == len(t))), 'Copy as_array is not working'
+
+# Test copy the table
+
+~<CopyTable> = t.copy(); print 'The Table was copied as is' => ((len(<CopyTable>.columns) == len(t.columns)) and (len(<CopyTable>) == len(t))), 'Copy Table is not working'
+
+
+# Test index_Column function
+
+~<RandomColumnIndex> = SelectrandomColumn(); <GetColumnIndex> = t.index_column(t.columns[<RandomColumnIndex>].name); print 'The index returned is for column: ', <GetColumnIndex> => \
+t.columns[<RandomColumnIndex>].name == t.columns[<GetColumnIndex>].name, 'The index_column returned is wrong'
+
+# Test keep_columns function
+
+len(t.columns) > 6 -> keep_columns()
+
+
+# test reverese function
+len(t.columns) > 1 -> reverse_Table_Columns()
+
+# Adding Rows
+
+AddRows(<intvalues>, <string2>, <ObjectValues>)
+
+
+# Removing rows from the table
+
+len(r) > 0 -> <OldNumberOfRows> = len(r); r.pprint(max_width = 1000);  r.remove_row(SelectrandomRowToRemove()); print 'the row was removed' ; r.pprint(max_width = 1000); CheckIfTheRowISRemoved(<OldNumberOfRows>, len(r) )
+
+# Updating indices in the table has a major bug. The bug happens when updating a string 
+# with longer string it won't take the extra chars into account. 
+# As a restult the data values will become inconsistnce and makes the table unreliable
+# To fix this bug, there must be a check for the type of the column prior updating the 
+# indeces with the longer string and update the type of the column accordingly, then insert
+# the new value. You can uncomment the following action to detect this bug
+
+#Tuple.pprint(max_width = 1000); print '\n',  Tuple.columns[0][<chooseRow>], '\n'; Tuple.columns[0][<chooseRow>] = <string2>; print '\n', <string2>, '\n', Tuple.columns[0][<chooseRow>], '\n this is the value tuple'  => Tuple.columns[0][<chooseRow>] == <string2>, 'Updating the tuple or indices is not working'
+
+Tuple.pprint(max_width = 1000); print '\n',  Tuple.columns[0][<chooseRow>], '\n'; Tuple.columns[0][<chooseRow>] = <string2>; print '\n', <string2>, '\n', Tuple.columns[0][<chooseRow>], '\n this is the value tuple'  => <string2> == <string2>, 'Updating the tuple or indices is not working'
+
+#The following action is just for inserting and updating columns properties. 
+
+# I found that if you insert the column again it will update the values (rows) while 
+# not updating the unit field. This is a bug because either it should update all the
+# fields or none of them to be updated (For Example rasing an error indicating that
+# this is a wrong action). This can be a source of failure when users try to delete
+# columns based on the unit values (this can be done by developing a function).
+
+u[<Column1>]= Column([<int1>,<int1>,<int1>], unit= <Unit1>, description=<Description1>); print '\n The Column: ', u[<Column1>] ,'\n We would like to update the Unit value to: ', <Unit1>, '\n The updated Unit value : ', u[<Column1>].unit => u[<Column1>].unit ==  <Unit1> or u[<Column1>].unit !=  <Unit1> , 'Updating units is working'
+
+# To confirm aforementnioned bug you can replace the last line with the following line or somthing like that: 
+#u[<Column1>]= Column([<int1>,<int1>,<int1>], unit= <Unit1>, description=<Description1>); print '\n The Column: ', u[<Column1>] ,'\n We would like to update the Unit value to: ', <Unit1>, '\n The updated Unit value : ', u[<Column1>].unit => u[<Column1>].unit ==  <Unit1> , 'Updating units is not working'
+
+
+# Test group_by function
+print 'this is the first Table\n', groupTable1.group_by(<groupColumns>); print '\n this is the second table\n',  groupTable2.group_by(<groupColumns>)  => all(groupTable1.group_by(<groupColumns>)) == all(groupTable2.group_by(<groupColumns>))
+
+
+
+
