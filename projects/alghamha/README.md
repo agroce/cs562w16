@@ -34,11 +34,11 @@ tstl FileName.tstl
 python randomtester.py -t Number
 ```
 
-### Function To be Tested ###
+### Functions To be Tested ###
 
-All [Astropy Table Functions] can be found in the following URL with breif descriptions of each:
+All [Astropy Table Functions] can be found in the this [URL] with breif descriptions of each:
 
-[Astropy Table Functions]: https://astropy.readthedocs.org/en/v0.3/api/astropy.table.table.Table.html#astropy.table.table.Table
+[URL]: http://docs.astropy.org/en/stable/api/astropy.table.html#astropy.table.Table.info
 
 ```
 1- Adding Columns
@@ -55,7 +55,7 @@ All [Astropy Table Functions] can be found in the following URL with breif descr
 12- keep Columns
 ```
 
-### Function will not be Tested ###
+### Functions will not be Tested ###
 
 The following fucntions are not part of the scope as they are meant for printing, reading or writing to a file.
 Although, some of them have been partialy used in testing:
@@ -70,6 +70,9 @@ Although, some of them have been partialy used in testing:
 7- Read
 8- Show in browser
 9- Write
+10- 
+11-
+
 ```
 ### Project-Part5 Files ###
 #### Bug_1.tstl ####
