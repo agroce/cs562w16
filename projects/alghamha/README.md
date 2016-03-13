@@ -10,8 +10,9 @@ You can install Astropy using the following commands:
 For this project we are using:
 
 ```Python 2.7.5
-# coverage --version`
-Coverage.py, version 4.0.3.```
+# coverage --version
+Coverage.py, version 4.0.3.
+```
 
 Note: Astropy uses numpy library, therefore it is required for this project
 
