@@ -1,0 +1,218 @@
+@import LinkedList_Single 
+@import math
+@import time
+
+<@
+
+
+def length(head):
+    p = head
+    size = 0
+    while p:
+        size += 1
+        p = p.next
+    return size
+
+def appendTest(head):
+	p = head
+	size = length(head)
+	while size > 1:
+		size -= 1
+		p = p.next
+	return p.data
+
+def printValue(head):
+    pointer = head
+    size = length(head)
+    while size > 0:
+        print head.data,
+        head = head.next
+        size = size - 1 
+
+def printFirstValue(head):
+    p = head
+    return p.data
+
+def searchIndexValue(head,x):
+    p = head 
+    size = length(head)
+    currentIndex=0
+    if (x < size):
+        while ( currentIndex < x):
+            currentIndex = currentIndex + 1                 
+            p = p.next
+        return p.data    
+    else:
+        return None
+
+def deleteIndexTest(self, list, I):
+    p1 = self.head
+    p2 = list.head
+    index = 0;
+
+    while (p1 and p2):
+        if(index == I):
+            p2 = p2.next
+
+        if(p1.data == p2.data):
+            p1 = p1.next
+            p2 = p2.next
+            index = index + 1
+        else:
+            return False
+
+    return True
+
+def deleteAllDataTest(self, list, data):
+    p1 = self.head
+    p2 = list.head
+ 
+    while (p1 and p2):
+        while (p2.data == data):
+            p2 = p2.next
+
+        if(p1.data == p2.data):
+            p1 = p1.next
+            p2 = p2.next
+        else:
+            return False
+
+    return True
+
+def returnValueIndex(head, data):
+        p = head
+        index = 0
+
+        while p:
+            if (p.data == data):
+                return index
+            p = p.next
+            index = index + 1
+        return -1
+
+def returnNumberofValue(head, data):
+        p = head
+        number = 0
+        while (p):
+            if(p.data == data):
+                number += 1
+            p = p.next
+        return number
+
+def insertAfterEveryDataTest(head,v, data):
+        p = head
+        while(p):
+            if(p.data == v):
+                p = p.next
+                if (p.data == data):
+                    p = p.next
+                else:
+                    return False
+            else:
+                p = p.next
+        return True
+
+    
+@>
+
+source: LinkedList_Single.py
+
+
+pools:
+	<INT> 1
+	<LIST> 1
+	<VALUE> 1 
+	<VALUE2> 1
+
+
+actions:
+	<INT>:=<[1..40]>
+	<VALUE> := <[50..80]>
+	<VALUE2> := <[1..40]>
+
+	<LIST>:=LinkedList_Single.LinkedList()
+
+	####### insert
+	~<LIST>.insert(<INT>) => (length(<LIST,1>.head) == PRE<(length(<LIST,1>.head))>+1) and (searchIndexValue(<LIST,1>.head, 0) == <INT>)
+
+	####### append
+	~<LIST>.append(<INT>) => (length(<LIST,1>.head) == PRE<(length(<LIST,1>.head))>+1) and (<INT> == appendTest(<LIST,1>.head))
+	
+	####### returnIndex
+	TEMP = ~<LIST>.returnIndex(<VALUE>) => ( TEMP == None )
+	
+	~<LIST>.insert(<INT>); TEMP = ~<LIST>.returnIndex(<INT>) => ( TEMP == 0 )
+
+
+	####### updateIndex
+	~<LIST>.insert(<VALUE>); ~<LIST>.updateIndex(0,<INT>) => ( searchIndexValue(<LIST,1>.head, 0) != <VALUE> )
+
+	~<LIST>.append(<VALUE>); TEMP = ( length(<LIST>.head) - 1) ; ~<LIST>.updateIndex(TEMP,<INT>) => ( searchIndexValue(<LIST,1>.head, 0) != <VALUE> )
+
+
+	####### deleteIndex
+	
+	<INT> < length(~<LIST,1>.head) -> list = ~<LIST>.copyList(); TEMP = ~<LIST>.deleteIndex(<INT>) => ( TEMP == True ) \
+											and (length(<LIST,1>.head) == PRE<(length(<LIST,1>.head))>-1) \
+											and (deleteIndexTest(~<LIST>, list, <INT>) == True)
+
+	<INT> >= length(~<LIST,1>.head) -> TEMP = ~<LIST>.deleteIndex(<INT>) => ( TEMP == False) 
+	
+	####### insertBeforeIndex
+
+	<INT> <= length(~<LIST,1>.head) -> TEMP = ~<LIST>.insertBeforeIndex(<INT>, <VALUE2>) => (TEMP == True) \
+											and (length(<LIST,1>.head) == PRE<(length(<LIST,1>.head))>+1) \
+											and (searchIndexValue(<LIST,1>.head, <INT>) == <VALUE2>)
+	
+	<INT> > length(~<LIST,1>.head) -> TEMP = ~<LIST>.insertBeforeIndex(<INT>, <VALUE2>) => ( TEMP == False) 
+
+	####### insertAfterIndex
+
+	<INT> < length(~<LIST,1>.head) -> TEMP = ~<LIST>.insertAfterIndex(<INT>, <VALUE2>) => (TEMP == True) \
+											and (length(<LIST,1>.head) == PRE<(length(<LIST,1>.head))>+1) \
+											and (searchIndexValue(<LIST,1>.head, <INT>+1) == <VALUE2>)
+    
+
+    <INT> >= length(~<LIST,1>.head) -> TEMP = ~<LIST>.insertAfterIndex(<INT>, <VALUE2>) => ( TEMP == False)
+
+    ####### deleteData
+
+    returnValueIndex(~<LIST>.head, <INT>) != -1 -> list = ~<LIST>.copyList(); TEMP = returnValueIndex(<LIST>.head, <INT>); ~<LIST>.deleteData(<INT>) => \
+    													(length(<LIST,1>.head) == PRE<(length(<LIST,1>.head))>-1) and \
+    													(deleteIndexTest(~<LIST>, list, TEMP) == True) 
+    returnValueIndex(~<LIST>.head, <INT>) == -1 -> TEMP = ~<LIST>.deleteData(<INT>) => (TEMP == False) \
+    											     and (length(<LIST,1>.head) == PRE<(length(<LIST,1>.head))>)
+   	######## deleteAllData
+
+	returnValueIndex(~<LIST>.head, <INT>) != -1 -> list = ~<LIST>.copyList(); TEMP = ~<LIST>.deleteAllData(<INT>) => \
+   													(TEMP == True) and \
+   													(deleteAllDataTest(~<LIST,1>, list, <INT>) == True) 
+   													
+
+    returnValueIndex(~<LIST>.head, <INT>) == -1 -> TEMP = ~<LIST>.deleteAllData(<INT>) => (TEMP == False)
+
+
+    ######## insertAfterEveryData
+    returnValueIndex(~<LIST>.head, <INT>) != -1 -> TEMP = ~<LIST>.insertAfterEveryData(<INT>, <VALUE2>) => \
+    										(TEMP == True) and \
+    										(insertAfterEveryDataTest(~<LIST>.head, <INT>, <VALUE2>) == True)
+   	returnValueIndex(<LIST>.head, <INT>) == -1 -> TEMP = ~<LIST>.insertAfterEveryData(<INT>, <VALUE2>) => (TEMP == False)
+
+   	######## insertBeforeEveryData
+   	returnValueIndex(~<LIST>.head, <INT>) != -1 -> N=returnNumberofValue(~<LIST>.head, <INT>);TEMP = ~<LIST>.insertBeforeEveryData(<INT>, <VALUE2>) => \
+   													(TEMP == True) and \
+   													(length(<LIST,1>.head) == PRE<(length(<LIST,1>.head))>+N) 
+   	returnValueIndex(<LIST>.head, <INT>) == -1 -> TEMP = ~<LIST>.insertBeforeEveryData(<INT>, <VALUE2>) => (TEMP == False)
+
+
+   	######## deleteList
+
+   	~<LIST>.deleteList() => (length(<LIST,1>.head) == 0)
+
+   	######## findMthToLastNode
+
+   	<INT> <= length(~<LIST>.head) ->  INDEX = length(<LIST>.head) - <INT>; TEMP = ~<LIST>.findMthToLastNode(<INT>) => \
+									    ( searchIndexValue(<LIST,1>.head, INDEX) == TEMP)
+	<INT> > length(~<LIST>.head) -> TEMP = ~<LIST>.findMthToLastNode(<INT>) => (TEMP == None)
+
+# name of pools' values can not named as _
