@@ -36,6 +36,7 @@ python randomtester.py -t Number
 
 ### Functions To be Tested ###
 
+In this project, the following functions have been tested. There are some functions embedded under these functions and doesn't need to be tested individually. 
 All [Astropy Table Functions] can be found in the this [URL] with breif descriptions of each:
 
 [URL]: http://docs.astropy.org/en/stable/api/astropy.table.Table.html
@@ -58,7 +59,7 @@ All [Astropy Table Functions] can be found in the this [URL] with breif descript
 ### Functions will not be Tested ###
 
 The following fucntions are not part of the scope as they are meant for printing, reading or writing to a file. Someother functions can only work with python 3.
-However, some of these have been partialy used in testing:
+However, some of these functions have been partialy used in testing:
  
 ```
 1- Field
@@ -72,6 +73,7 @@ However, some of these have been partialy used in testing:
 9- Write
 10- convert_bytestring_to_unicode - python3 only
 11- convert_unicode_to_bytestring - python3 only
+12- To_Pandas
 
 ```
 ### Project-Part5 Files ###
