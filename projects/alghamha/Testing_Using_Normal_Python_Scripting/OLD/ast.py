@@ -18,60 +18,12 @@ def	check_unit():
 		else:
 			print Random_column_Unit, '!=', t[Random_column_Name].unit
 
-		assert Random_column_Unit == t[Random_column_Name].unit, "they are not equal"
+		assert Random_column_Unit == t[Random_column_Name].unit
 
 		print(t)
 	
 		print 'Pass test for adding column: ', t[Random_column_Name]
 	return 
-
-def	addingcol():
-	t=Table()
-	t.add_column(Column(data = [1,2,3], name = 'ssdsd' ), rename_duplicate = True)
-	while True:
-		Random_column_Unit=(''.join(random.choice(ascii_uppercase) for i in range(1)))
-		Random_column_Name=(''.join(random.choice(ascii_uppercase) for i in range(1)))
-		Random_description= (''.join(random.choice(ascii_uppercase) for i in range(1)))
-		random_int= random.randint(0,9)
-		random_int2= random.randint(0,9)
-		random_int3= random.randint(0,9)
-		
-		t.add_column( Column(data = [random_int,random_int2,random_int3], name = Random_column_Name ) )
-		
-		print(t)
-	
-		print 'Pass test for adding column: ', t[Random_column_Name]
-	return 
-
-t=Table()
-
-def	addingcolfix():
-
-	#t.add_column(Column(data = [1,2,3], name = 'ssdsd' ), rename_duplicate = True)
-	for i in range(1,10):
-		Random_column_Unit=(''.join(random.choice(ascii_uppercase) for i in range(1)))
-		Random_column_Name=(''.join(random.choice(ascii_uppercase) for i in range(1)))
-		Random_description= (''.join(random.choice(ascii_uppercase) for i in range(1)))
-		random_int= random.randint(0,9)
-		random_int2= random.randint(0,9)
-		random_int3= random.randint(0,9)
-		if ( (Random_column_Name in t.columns) == True):
-			t.add_column( Column(data = [random_int,random_int2,random_int3], name = Random_column_Name ), rename_duplicate = True )
-			print(t)
-		else:
-			t.add_column( Column(data = [random_int,random_int2,random_int3], name = Random_column_Name ))
-			print(t)
-
-		print 'Pass test for adding column: ', t[Random_column_Name]
-	
-
-def	GetColumnsNames():
-	listofcolumnsnames = []
-	list_of_columns = t.columns
-	for column in t.columns:
-		listofcolumnsnames.append(column)
-		print listofcolumnsnames
-
 
 def	check_description():
 	t=Table()
@@ -167,35 +119,10 @@ def	check_description_unsing_offical_method():
 		print 'Pass test for adding column: ', t[Random_column_Name]
 	return 
 
-
-def	check_unit_tstl(t):
-
-	Random_column_Unit=(''.join(random.choice(ascii_uppercase) for i in range(1)))
-	Random_column_Name=(''.join(random.choice(ascii_uppercase) for i in range(2)))
-	Random_description= (''.join(random.choice(ascii_uppercase) for i in range(12)))
-	random_int= random.randint(0,9)
-	random_int2= random.randint(0,9)
-	random_int3= random.randint(0,9)
-	t[Random_column_Name]= Column([random_int,random_int2,random_int3], unit= Random_column_Unit, description=Random_description)
-
-
-	assert Random_column_Unit == t[Random_column_Name].unit
-
-	print(t)
-	
-	print 'Pass test for adding column: ', t[Random_column_Name]
-	return t[Random_column_Name].unit
 		
 #check_unit()   # this action is allowed but it is not updating the field. My point of veiw, It should at least show an error but it is not it baisically accept the command.
 #check_description() # this action is allowed but it is not updating the field. My point of veiw, It should at least show an error but it is not it baisically accept the command.
 #check_value() # this action is allowed and updating the field of the same culomn. My point of veiw it should either updates all the feilds or none of them
 #check_unit_unsing_offical_method() # this has not indicated to be the only way of updating unit in astropy decomentation
-#check_description_unsing_offical_method() # this has not indicated to be the only way of updating description in astropy decomentation
-#t= Table()
-#check_unit_tstl(t)
-#addingcol()
-
-
-addingcolfix()
-GetColumnsNames()
+check_description_unsing_offical_method() # this has not indicated to be the only way of updating description in astropy decomentation
 
