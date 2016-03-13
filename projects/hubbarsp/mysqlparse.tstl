@@ -25,17 +25,17 @@ def test_after_reduce(sut):
 @>
 
 # source for code coverage (change path and uncomment)
-#source: C:\Users\hubba\git\sqlparse\sqlparse\__init__.py
-#source: C:\Users\hubba\git\sqlparse\sqlparse\compat.py
-#source: C:\Users\hubba\git\sqlparse\sqlparse\exceptions.py
-#source: C:\Users\hubba\git\sqlparse\sqlparse\filters.py
-#source: C:\Users\hubba\git\sqlparse\sqlparse\formatter.py
-#source: C:\Users\hubba\git\sqlparse\sqlparse\functions.py
-#source: C:\Users\hubba\git\sqlparse\sqlparse\keywords.py
-#source: C:\Users\hubba\git\sqlparse\sqlparse\lexer.py
-#source: C:\Users\hubba\git\sqlparse\sqlparse\sql.py
-#source: C:\Users\hubba\git\sqlparse\sqlparse\tokens.py
-#source: C:\Users\hubba\git\sqlparse\sqlparse\utils.py
+#source: C:\Users\hubba\cs562test\Lib\site-packages\sqlparse\__init__.py
+source: C:\Users\hubba\cs562test\Lib\site-packages\sqlparse\compat.py
+#source: C:\Users\hubba\cs562test\Lib\site-packages\sqlparse\exceptions.py
+#source: C:\Users\hubba\cs562test\Lib\site-packages\sqlparse\filters.py
+#source: C:\Users\hubba\cs562test\Lib\site-packages\sqlparse\formatter.py
+#source: C:\Users\hubba\cs562test\Lib\site-packages\sqlparse\functions.py
+#source: C:\Users\hubba\cs562test\Lib\site-packages\sqlparse\keywords.py
+source: C:\Users\hubba\cs562test\Lib\site-packages\sqlparse\lexer.py
+source: C:\Users\hubba\cs562test\Lib\site-packages\sqlparse\sql.py
+#source: C:\Users\hubba\cs562test\Lib\site-packages\sqlparse\tokens.py
+#source: C:\Users\hubba\cs562test\Lib\site-packages\sqlparse\utils.py
 
 # common pools
 pool: <space> 3
