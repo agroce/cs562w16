@@ -46,13 +46,13 @@ commands, the path to the random tester and model checker should be replaced. An
 example run of the random tester:
 
 ```bash
-$ python ../../../tstl/generators/randomtester.py --nocover --maxtest=100 --depth=50
+$ python ../../../tstl/generators/randomtester.py --maxtest=100 --depth=50
 ```
 
 An example run of the breadth first search (BFS) model checker:
 
 ```bash
-$ python ../../../tstl/generators/bfsmodelchecker.py --nocover --forget=0.5 --depth=50
+$ python ../../../tstl/generators/bfsmodelchecker.py --forget=0.5 --depth=50
 ```
 
 Note that model checker has not actually run on the test harness.
