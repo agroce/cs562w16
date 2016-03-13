@@ -26,9 +26,9 @@ source: /usr/lib64/python2.7/site-packages/astropy/table/table.py
 
 ### Function To be Tested ###
 
-All Table Functions can be found in the following URL with breif descriptions of each:
+All [Astropy Table Functions] can be found in the following URL with breif descriptions of each:
 
-[Astropy]: https://astropy.readthedocs.org/en/v0.3/api/astropy.table.table.Table.html#astropy.table.table.Table
+[Astropy Table Functions]: https://astropy.readthedocs.org/en/v0.3/api/astropy.table.table.Table.html#astropy.table.table.Table
 
 ```
 1- Adding Columns
@@ -61,3 +61,14 @@ Although, some of them have been partialy used in testing:
 8- Show in browser
 9- Write(*args, **kwargs) 
 ```
+### Project-Part5 Files ###
+#### Bug_1.tstl ####
+##### Updating Columns’ Unit Field Bug #####
+This bug occurs when inserting a column at least twice to update its values. The library will update the values (tuples) of a column but the unit field will not get the new updates. This might cause a devastating damage to the table’s data when for example a user has a loop to remove the tables based on their units’ values. Based on user’s assumption that the update should be implemented and further actions can be applied. As a result, this will eventually results in data inconsistency.  Someone, could argue that this might be a part of the design. However, this kind of argument cannot be taken into account and this can be considered as a bad design because the designer should expect users’ unexpected behaviors. Therefore, a good design could be, either updating all the values including the unit field or not updating the values at all and raising an exception error or at least documenting this kind of action is not accepted and may results in data inconsistency.
+#### Bug_2.tstl ####
+##### Local variable 'new_name' referenced before assignment #####
+This exception occurs when inserting a column randomly to the table while the rename_duplicate option is enabled and the column is not exist in the table. This bug is impractical as it shows some API weaknesses that may lower user’s overall satisfaction.  Usually, user’s expectations when adding a column to a table with the option rename-duplicate enabled, the column will be added no matter what, and even if it is not exist in the table it will be at least inserted with the same name. A proper action for a such situation is checking for the column existence first and based on that apply an action such as inserting the column with the same name if it is not exist otherwise rename_duplicate when the column is exist.
+#### Bug_3.tstl ####
+##### Updating Tuples (Indices) of Type (String) Bug #####
+This bug occurs when updating a tuple value of type (string). In Astropy.table library, there are different types of columns including Integers, float, string, object, etc. String type was interesting to test because it uses the length of the first insertion of columns’ tuples and hard coded the longest string length as a type. For example, if you have ‘Hafed’ as the longest string tuple, then the corresponding type of column would be S5. This was an interesting technique to test and a bug was detected when updating the tuples after normal columns insertion. The detected bug appears when updating a tuple with longer string after normal column insertion where the updated tuple will only have a portion of the new string. Apparently, it is only updating the field based on the original column type when it was first inserted, ignoring that it can be updated with longer strings which in turn results in table inconsistency and unreliable data. This is a major bug because the user is expecting the field to be updated with the new string value but in reality it is not, because of this column type string specification.
+##### Astropy_Testing.tstl ####
