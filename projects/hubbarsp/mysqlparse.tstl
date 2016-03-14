@@ -24,7 +24,7 @@ def test_after_reduce(sut):
 
 @>
 
-# source for code coverage (change path and uncomment)
+# source for code coverage (change path)
 #source: C:\Users\hubba\cs562test\Lib\site-packages\sqlparse\__init__.py
 source: C:\Users\hubba\cs562test\Lib\site-packages\sqlparse\compat.py
 #source: C:\Users\hubba\cs562test\Lib\site-packages\sqlparse\exceptions.py

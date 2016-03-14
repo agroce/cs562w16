@@ -2,10 +2,10 @@
 
 The purpose of this project is to use the Template Scripting Testing Language
 ([TSTL][tstl]) to define a test harness for the `sqlparse` Python module. The
-module provides a parser for SQL statements. The parser takes a string for a SQL
-statement and returns an object for the parse tree of the SQL statement. The
-module also provides classes and methods for analyzing parse trees of SQL
-statements.
+module provides a parser for statements in the structured query language (SQL).
+The parser takes a string for a SQL statement and returns an object for the
+parse tree of the SQL statement. The module also provides classes and methods
+for analyzing parse trees of SQL statements.
 
 ### Installing Module
 
@@ -14,25 +14,25 @@ project page and repository for the module is located [here][sqlparse]. There
 are several ways to install the module.
 
 One way to install the module is by cloning the [repository][sqlparse] and then
-running the setup script:
+running the setup script.
 
 ```bash
 $ python setup.py install
 ```
 
-Another way to install the module is by using pip:
+Another way to install the module is by using pip.
 
 ```bash
 $ pip install git+https://github.com/andialbrecht/sqlparse.git
 ```
 
-Note that module had to be installed using the second method in order to record
-code coverage.
+Note that the second method is preferable for recording code coverage.
 
 ### Using Test Harness
 
 A simple test harness for the `sqlparse` module is defined by `mysqlparse.tstl`.
-The test harness is generated using TSTL:
+Before generating the test harness, the path to source code on lines 28--38 of
+`mysqlparse.tstl` should be replaced. The test harness is generated using TSTL.
 
 ```bash
 $ rm sut.*
@@ -40,38 +40,39 @@ $ tstl mysqlparse.tstl
 ```
 
 These commands will generate the test harness (with code coverage) named
-`sut.py` and `sut.pyc`. Before generating the test harness, the path to source
-code on lines 28--38 in `mysqlparse.tstl` should be replaced. For the next two
-commands, the path to the random tester and model checker should be replaced. An
-example run of the random tester:
+`sut.py` and `sut.pyc`.
+
+For the next two commands, the path to the random tester and model checker
+should be replaced. An example run of the random tester is given by the
+following command.
 
 ```bash
 $ python ../../../tstl/generators/randomtester.py --maxtest=100 --depth=50
 ```
 
-An example run of the breadth first search (BFS) model checker:
+An example run of the breadth first search (BFS) model checker is given by the
+following command.
 
 ```bash
 $ python ../../../tstl/generators/bfsmodelchecker.py --forget=0.5 --depth=50
 ```
 
-Note that model checker has not actually run on the test harness.
+Note that I did not run the model checker on the test harness.
 
 ## Test Goal
 
-The parser provided by the `sqlparse` module will be tested for correctness on
-the simplified version of SQL, which I will call the "object language". Note
-that the object language is defined by the grammars below. The parser is
+The parser provided by the `sqlparse` module was tested for correctness on a
+simplified version of SQL defined by the grammars below. I will sometimes refer
+to this simplified version of SQL as the "object language". The parser is
 considered "correct" if the returned object represents the parse tree of the
-input statement, for any statement in the object language. The XML example from
-[TSTL][tstl] will be used to guide the initial design.
+input statement, for any statement in the object language.
 
 ### Grammar
 
-The structured query language (SQL) consists of two sublanguages: the data
-definition language (DDL) and the data manipulation language (DML). The object
-language will consist of simplified DDL and DML statements. Concrete syntax
-common to both DDL and DML statements is given by the following grammar:
+SQL consists of two sublanguages: the data definition language (DDL) and the
+data manipulation language (DML). The object language consist of simplified DDL
+and DML statements. Concrete syntax common to both DDL and DML statements is
+given by the following grammar.
 
 ```
 <name>       ::= (any name not a keyword)
@@ -79,8 +80,9 @@ common to both DDL and DML statements is given by the following grammar:
 <qual-names> ::= <qual-name> [, <qual-name>]
 ```
 
-DDL statements in the object language are simplified `CREATE` statements.
-Concrete syntax specific to DDL statements is given by the following grammar:
+DDL statements in the object language consist of simplified `CREATE TABLE`
+statements. Concrete syntax specific to DDL statements is given by the following
+grammar.
 
 ```
 <type>  ::= INT | FLOAT | VARCHAR ( <len> )
@@ -93,8 +95,8 @@ Concrete syntax specific to DDL statements is given by the following grammar:
 <ddl>   ::= CREATE TABLE <qual-name> ( <cols> ) ;
 ```
 
-DML statements in the object language are simplified `SELECT` statements.
-Concrete syntax specific to DML statements is given by the following grammar:
+DML statements in the object language consist of simplified `SELECT` statements.
+Concrete syntax specific to DML statements is given by the following grammar.
 
 ```
 <num>     ::= (any number)
@@ -149,38 +151,39 @@ results for a recent run of the random tester is given in the following table.
 | sql.py    |  379 |  282 |    218 |     19 |   29% |
 
 Only one function of `compat.py` was used in the main assertion for detecting
-bugs. So, the low coverage percentage for that file is to be expected.
-Considering that only two kinds of statements in a simplified version of
-standard SQL were tested, the other coverage results are impressive. The parts
-of `lexer.py` that were not covered seemed to be concerned with syntactic
-categories that were not included in the object language, e.g., aggregation
-functions.
+bugs. So, the low coverage percentage for that file is to be expected. However,
+the low amount of code coverage for `lexer.py` and `sql.py` are not as easily
+justified.  The lines of `lexer.py` that were not covered by the random tester
+were inspected manually and they seem to be concerned with syntactic categories
+that were not part of the object language, e.g., aggregation functions. This
+suggests that the low coverage for `lexer.py` and `sql.py` is related to the
+simplifications of the object language.
 
-## TSTL Experience
+## Remarks on TSTL
 
 Originally, the testing harness was designed for testing only `SELECT`
-statements. The testing harness was redesigned for testing both `SELECT`
+statements. The testing harness was later redesigned for testing both `SELECT`
 and `CREATE TABLE` statements. To accommodate testing both `SELECT` and
 `CREATE TABLE` statements with the same test harness, the grammar defining
-`SELECT` statements was simplified further and the grammar defining
-`CREATE TABLE` statements was added, see grammars above. This means that both
-pools and actions had to be changed in the test harness definition. However, the
-main assertion used for detecting bugs was not changed because it is both simple
-and accurate.
+`SELECT` statements was further simplified and the grammar defining
+`CREATE TABLE` statements was added. This means that both pools and actions had
+to be changed in the test harness definition. However, the main assertion used
+for detecting bugs was not changed because it is both simple and accurate.
 
-I believe that the decision to design the test harness for testing complete
-SQL statements was a mistake and that it should have been designed for testing
-smaller syntactic categories in SQL. In principle, TSTL should be suitable for
-defining a test harness that builds and tests complete SQL statements. However,
-it can be difficult to define the pools and actions necessary for efficient test
-generation.
+In hindsight, I believe that the decision to design the test harness for testing
+complete SQL statements was a mistake. I believe that running the random tester
+on a test harness that was designed for testing smaller syntactic categories in
+SQL would have lead to higher code coverage.
 
-Complete SQL statements are syntactically complicated. This means a test harness
-that builds and tests complete SQL statements must have many different actions
-that correspond to production rules in the grammar, which means any test
-generated by the test harness must consist of a correctly ordered
-sequence of these actions. If the tests are being generated randomly, then the
-probability of generating such a sequence could be low.
+In principle, TSTL should be suitable for defining a test harness that builds
+and tests complete SQL statements. However, it can be difficult to define the
+pools and actions necessary for efficient test generation. Complete SQL
+statements are syntactically complicated. This means a test harness that builds
+and tests complete SQL statements must have many different actions that
+correspond to production rules in the grammar, which means any test generated by
+the test harness must consist of a correctly ordered sequence of these actions.
+If the tests are being generated randomly, then the probability of generating
+such a sequence could be low.
 
 I used two approaches to ensure efficient test generation:
 
@@ -196,7 +199,7 @@ A drawback of the first approach is that it can be difficult to know if a change
 to the test harness definition will effect the possible statements that can be
 generated. Another drawback of the first approach is that it can lead to code
 duplication in the actions. A drawback of the second approach is that it can
-lead to a "worse" test harness.
+lead to a "worse" test harness, i.e., low code coverage.
 
 [tstl]: https://github.com/agroce/tstl
 [sqlparse]: https://github.com/andialbrecht/sqlparse
