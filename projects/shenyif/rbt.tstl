@@ -1,13 +1,147 @@
 @import red
 
+
+<@
+#define a function to test number of black nodes along each branch.
+
+def colorOk(self,node,value):
+
+#result array is to save all the numbers of black nodes of each branch
+
+	result = [ ]
+
+#define a recursive function to calculate the number of black nodes.
+
+ 	def dfs(self, node, value):
+		if node == None :
+			return
+		if node.color == False:
+			value +=1
+		if node.left==None and node.right==None:
+ 			result.append(value)
+			return
+		dfs(self,node.left, value)
+		dfs(self,node.right, value)
+	dfs(self,node,value)
+	#print(value)
+
+#judge whether all the number of black nodes are the same
+
+	if result.sort() ==result.sort(reverse =True):
+		return True
+	else:
+		return False
+
+#define a function to test the value of a node and its predecessor and successor
+
+def valueOk(self,tree, node):
+	isMinimum = True
+ 	isMaximum = True
+	isBiggerPre = True
+	isSmallSuc = True
+	if tree.size == 1:
+	   return True
+	if tree.predecessor(x=node).key == None or tree.successor(x=node).key == None:
+
+#if a node does not have predecessor, it means this node is the smallest node in the tree
+
+	  if tree.predecessor(x=node).key == None:
+		isMinium = (node.key == tree.minimum().key)
+
+#if a node does not have successor, it means this node is the biggest node in the tree
+
+	  if tree.successor(x=node).key == None:
+		isMaximum = (node.key == tree.maximum().key) 
+    	else:
+
+#if a node has predecessor and successor, it should bigger than the predecessor and smaller than the successor.
+	  if tree.predecessor(x=node).key != None and tree.predecessor(x=node).key > node.key:
+		isBiggerPre = False
+	  if tree.successor(x=node).key != None and tree.successor(x=node).key < node.key:
+		isSmallSuc = True
+		print false
+
+	isOk = isMinimum and isMaximum and isBiggerPre and isSmallSuc
+	if isOk == True:
+		return True
+	else:
+		return False
+
+
+#define a function to test the value of a node its children.
+
+def parentOk(self,tree, node):
+
+#if the tree has no node or one node, we should return true.
+
+	if tree.size == 0 or tree.size == 1:
+		return True
+
+#this is the situation of the leaf node
+
+	if node.left.key == None and node.right.key == None:
+		return True
+
+#these two are the situation that one node just has one child
+
+	if node.left.key != None and node.right.key == None:
+		if node.left.key > node.key:
+			return False
+		if parentOk(self,tree=tree,node=node.left) == True:
+            		return True
+		else:
+			return False
+	if node.left.key == None and node.right.key != None:
+		if node.right.key < node.key:
+			return False
+		if parentOk(self,tree=tree,node=node.right) == True:
+            		return True
+		else:
+			return False
+
+#this is the situation that one node has two  children
+
+	if node.left.key != None and node.right.key!= None:
+           	if node.left.key > node.key or node.right.key < node.key:
+              		return False
+           	if parentOk(self,tree=tree,node=node.left)==True and parentOk(self,tree=tree,node=node.right) == True:
+			return True
+	   	else:
+			return False
+
+
+
+@>                
+
+
+
 pool: <INT> 4
 pool: <TREE> 1
 
 property: <TREE>.size >= <TREE>.black_height()
-property: <TREE>.size < 5
 
+#we just set a requirement, the size of tree smaller than 25
+
+property: <TREE>.size < 25
+
+#check the color character
+
+property: colorOk(self,node =<TREE>.root,value=0) 
+
+#check the value character 
+
+property: parentOk(self, tree=<TREE> , node=<TREE>.root)
+
+
+<TREE>:=red.RedBlackTree( ) 
 <INT>:=<[1..20]>
-<TREE>:=red.RedBlackTree( )
-<TREE>.add(<INT>) =>  ((<TREE,1>.size) == PRE<(<TREE,1>.size)>+1) ; print <TREE>
+~<TREE>.add(<INT>) =>  \
+ ((~<TREE>.size) == PRE<(~<TREE>.size)>+1) \
+ and ~<TREE>.is_empty() == False \
+ and valueOk(self, ~<TREE>, node=~<TREE>.search(<INT,1>));\
+ print(<TREE>)
+
+~<TREE>.add(<INT>) -> ~<TREE>.delete(<TREE>.search(~<INT,1>))\
+ => ((~<TREE>.size) < PRE<(~<TREE>.size)>); 
 
 
