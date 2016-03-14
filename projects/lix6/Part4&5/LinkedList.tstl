@@ -1,0 +1,224 @@
+@import LinkedList
+@import math
+@import time
+
+<@
+def length(self):
+        ptr = self.head
+        count = 0
+        while ptr:
+            count = count + 1
+            ptr = ptr.next
+        return count
+
+def empty(self):
+	if (length(self) == 0):
+		return True
+	else :
+		return False
+		
+def checkInsert(self, D):
+    ptr = self.head
+    if (ptr == None):
+        return False
+    if(D == ptr.data):
+        return True
+    else:
+        return False
+
+
+def checkAppend(self, D):
+        ptr = self.head
+        if(ptr == None):
+            return False
+        else:
+            while ptr.next:
+                ptr=ptr.next
+            if (ptr.data == D):
+            	return True
+            else:
+            	return False
+
+def returnValue(self, I):
+        ptr = self.head
+        while I > 0:
+            ptr = ptr.next
+            I = I - 1
+        return ptr.data
+
+
+def valueInlist(self, D):
+        ptr = self.head
+
+        while ptr:
+            if (ptr.data == D):
+                return True
+            ptr = ptr.next
+        return False
+
+def NumvalueInlist(self, D):
+        ptr = self.head
+        count = 0
+        while ptr:
+            if (ptr.data == D):
+                count += 1
+            ptr = ptr.next
+        return count
+
+def compTwoList(self, l):
+		if(length(self) != length(l)):
+			return False
+
+		#ptr1 = self.head
+		#ptr2 = l.head
+
+		#while (ptr1 and ptr2):
+		#	if (ptr1.data == ptr2.data):
+		#		ptr1 = ptr1.next
+		#		ptr2 = ptr2.next
+		#	else:
+		#		return False 
+		return True
+
+
+@>
+
+source: LinkedList.py
+
+pool: %INT% 1
+pool: %LINKEDLIST% 1
+pool: %VALUE% 1
+pool: %NEGTIVE% 1
+pool: %OVERFLOW% 1
+pool: %INDEX% 1
+pool: %TEST% 1
+pool: %TLINK% 1
+
+%INT%:=%[1..20]%
+%VALUE%:=%[1..20]%
+%NEGTIVE% := %[-4..-2]%
+%OVERFLOW% := %[25 .. 100]%
+%INDEX% := %[-10..50]%
+
+
+%LINKEDLIST%:=LinkedList.LinkedList()
+%TLINK% := LinkedList.LinkedList()
+#insert() function
+~%LINKEDLIST%.insert(%INT%) => (length(%LINKEDLIST,1%) == PRE%(length(%LINKEDLIST,1%))%+1) and (checkInsert(%LINKEDLIST,1%,%INT%) == True )
+
+#append() function
+~%LINKEDLIST%.append(%INT%) => (length(%LINKEDLIST,1%) == PRE%(length(%LINKEDLIST,1%))%+1) and (checkAppend(%LINKEDLIST,1%,%INT%) == True )
+
+#returnIndex() function
+a = %LINKEDLIST%.returnIndex(%OVERFLOW%) => ( a == None )
+
+~%LINKEDLIST%.insert(%INT%); a = ~%LINKEDLIST%.returnIndex(%INT%) => ( a == 0 ) 
+
+#updateIndex() function
+
+%INDEX% < 0 or %INDEX% >= length(~%LINKEDLIST%) -> a = ~%LINKEDLIST%.updateIndex(%INDEX%,%INT%) => \
+                                                ( length(%LINKEDLIST,1%) == PRE%(length(%LINKEDLIST,1%))% ) and (a == False)
+
+0 <= %INDEX% < length(~%LINKEDLIST%) -> a = ~%LINKEDLIST%.updateIndex(%INDEX%,%INT%) => \
+                                        (returnValue(%LINKEDLIST,1%, %INDEX%) == %INT% ) and (a == True)
+
+
+#deleteIndex() function
+%INDEX% >= length(%LINKEDLIST%) -> a = ~%LINKEDLIST%.deleteIndex(%INDEX%) => ( length(%LINKEDLIST,1%) == PRE%(length(%LINKEDLIST,1%))% ) and (a == False)
+
+0 <= %INDEX% < length(%LINKEDLIST%) -> a = ~%LINKEDLIST%.deleteIndex(%INDEX%) => \
+                        ( length(%LINKEDLIST,1%) + 1 == PRE%(length(%LINKEDLIST,1%))% ) and (a == True)
+
+%INDEX% < 0 -> a = ~%LINKEDLIST%.deleteIndex(%INDEX%) => ( length(%LINKEDLIST,1%) == PRE%(length(%LINKEDLIST,1%))% ) and (a == False)
+
+#insertBeforeIndex() function bug
+
+%INDEX% < 0 -> a = ~%LINKEDLIST%.insertBeforeIndex(%INDEX%, %INT%) => (length(%LINKEDLIST,1%) == PRE%(length(%LINKEDLIST,1%))%) and (a == False)
+
+
+%INDEX% > length(%LINKEDLIST%) -> a = ~%LINKEDLIST%.insertBeforeIndex(%INDEX%, %VALUE%) => (length(%LINKEDLIST,1%) == PRE%(length(%LINKEDLIST,1%))%) and (a == False)
+
+0 <= %INDEX% <= length(%LINKEDLIST%) -> a = ~%LINKEDLIST%.insertBeforeIndex(%INDEX%, %VALUE%) => \
+                                   (length(%LINKEDLIST,1%) - 1 == PRE%(length(%LINKEDLIST,1%))%) \
+                                    and (a == True) and ( returnValue(%LINKEDLIST%, %INDEX%) == %VALUE%)
+
+#insertAfterIndex() function bug
+
+a = ~%LINKEDLIST%.insertAfterIndex(%NEGTIVE%, %INT%) => (length(%LINKEDLIST,1%) == PRE%(length(%LINKEDLIST,1%))%) and (a == False)
+
+%INT% >= length(%LINKEDLIST%) -> a = ~%LINKEDLIST%.insertAfterIndex(%INT%, %VALUE%) => (length(%LINKEDLIST,1%) == PRE%(length(%LINKEDLIST,1%))%) and (a == False)
+
+ 0 <= %INT% < length(%LINKEDLIST%) -> a = ~%LINKEDLIST%.insertAfterIndex(%INT%, %VALUE%) => \
+ 									(length(%LINKEDLIST,1%) - 1 == PRE%(length(%LINKEDLIST,1%))%) \
+									#and (a == True)# and ( returnValue(%LINKEDLIST%, %INT%+1) == %VALUE%)
+
+a = ~%LINKEDLIST%.insertAfterIndex(-1, %VALUE%) => \
+ 									(length(%LINKEDLIST,1%) - 1 == PRE%(length(%LINKEDLIST,1%))%) \
+									and (a == True) and ( returnValue(%LINKEDLIST%, 0) == %VALUE%)
+
+#deleteData() function
+
+a = ~%LINKEDLIST%.deleteData(%OVERFLOW%) => (length(%LINKEDLIST,1%) == PRE%(length(%LINKEDLIST,1%))%) and (a == False)
+
+valueInlist(%LINKEDLIST%, %INT%) == False -> a = ~%LINKEDLIST%.deleteData(%INT%) => \
+									(length(%LINKEDLIST,1%) == PRE%(length(%LINKEDLIST,1%))%) and (a == False)
+
+
+
+valueInlist(%LINKEDLIST%, %INT%) == True -> a = ~%LINKEDLIST%.deleteData(%INT%) => \
+									(length(%LINKEDLIST,1%) + 1 == PRE%(length(%LINKEDLIST,1%))%) and (a == True)
+
+
+
+#deleteAllData() function
+
+a = ~%LINKEDLIST%.deleteAllData(%OVERFLOW%) => (length(%LINKEDLIST,1%) == PRE%(length(%LINKEDLIST,1%))%) and (a == False)
+
+
+a = NumvalueInlist(~%LINKEDLIST%, %INT%); ~%LINKEDLIST%.deleteAllData(~%INT%); b = valueInlist(%LINKEDLIST%, %INT%) => \
+										(length(%LINKEDLIST,1%) + a == PRE%(length(%LINKEDLIST,1%))%) and (b == False)
+
+
+
+#insertAfterEveryData() function
+
+a = ~%LINKEDLIST%.insertAfterEveryData(%OVERFLOW%,%INT%) => (length(%LINKEDLIST,1%) == PRE%(length(%LINKEDLIST,1%))%) and (a == False)
+
+a = NumvalueInlist(~%LINKEDLIST%, %INT%);  ~%LINKEDLIST%.insertAfterEveryData(%INT%, %VALUE%) => \
+												(length(%LINKEDLIST,1%) == PRE%(length(%LINKEDLIST,1%))% + a) \
+												and (NumvalueInlist(%LINKEDLIST,1%, %VALUE,1%) >= a)
+							
+#insertBeforeEveryData() function
+
+a = ~%LINKEDLIST%.insertBeforeEveryData(%OVERFLOW%,%INT%) => (length(%LINKEDLIST,1%) == PRE%(length(%LINKEDLIST,1%))%) and (a == False)
+
+a = NumvalueInlist(~%LINKEDLIST%, %INT%);  ~%LINKEDLIST%.insertBeforeEveryData(%INT%, %VALUE%) => \
+												(length(%LINKEDLIST,1%) == PRE%(length(%LINKEDLIST,1%))% + a) \
+												and (NumvalueInlist(%LINKEDLIST,1%, %VALUE,1%) >= a)
+
+
+#deleteList() function
+
+~%LINKEDLIST%.deleteList() => (empty(%LINKEDLIST%) == True)
+
+#copyList() function
+
+a = ~%LINKEDLIST%.copyList()  => (length(%LINKEDLIST,1%) == length(a)) \
+								and (compTwoList(~%LINKEDLIST%, a) == True)
+
+#findMthToLastNode() function
+
+a = ~%LINKEDLIST%.findMthToLastNode(%OVERFLOW%) => (a == None)
+
+%INDEX% > length(~%LINKEDLIST%)  or %INDEX% <= 0 -> a = ~%LINKEDLIST%.findMthToLastNode(%INDEX%) => (a == None)
+
+
+0< %INDEX% <= length(~%LINKEDLIST%) -> a = ~%LINKEDLIST%.findMthToLastNode(%INDEX%); b = length(%LINKEDLIST,1%) - %INDEX%; => \
+									    ( returnValue(%LINKEDLIST%, b) == a)
+
+
+
+
+
+
+
