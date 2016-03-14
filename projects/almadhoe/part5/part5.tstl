@@ -1,0 +1,93 @@
+#Eman Almadhoun - 932909951
+# @ refer to paython raw
+@from mininet import topo
+
+# Python functions which used in the test to find nodes, hosts and switches names in the topology and return true if the name is found
+<@
+def findNode(t, nodeName):
+    name = nodeName
+    topolo = t.nodes()
+    
+    return name in topolo
+
+def findSwitch(t, switchName):
+    name = switchName
+    topolo = t.switches()
+    
+    return name in topolo
+
+def findHost(t, hostName):
+    name = hostName
+    topolo = t.hosts()
+    
+    return name in topolo
+
+@>
+
+# The source code of the Python file which I am testing it
+source: topo.py
+
+# The pools are for declaring the variable
+pool: <topo> 1
+pool: <string> 1
+pool: <string1> 1
+pool: <string2> 1
+
+# Intilize the string values for nodes, hosts and switches
+<string> := <["N1","N2","N3","N4","N5","S6"]>
+<string1> := <["S1","S2","S3","S4","S5","S6"]>
+<string2> := <["H1","H2","H3","H4","H5","H6"]>
+
+# Intitialize an empty topo object
+<topo> := topo.Topo()
+
+# Some actions for testing
+# This action is for adding node name to the topology.
+# Print the node name.
+# Assert that the node is added to the topology. 
+<topo>.addNode(<string>); print <topo>.nodes() => \
+findNode(<topo>, <string>) == True
+
+# This action is for adding switch name to the topology.
+# Print the switch name.
+# Assert that the switch is added to the topology.
+<topo>.addSwitch(<string1>); print <topo>.switches() => \
+findSwitch(<topo>, <string1>) == True
+
+# This action is for adding host name to the topology.
+# Print the host name.
+# Assert that the host is added to the topology.
+<topo>.addHost(<string2>); print <topo>.hosts() => \
+findHost(<topo>, <string2>) == True
+
+# This action is for adding link between two nodes.
+# Print the nodes name.
+# Assert that the link is added to the topology.
+#<topo>.addLink(<string>,<string>); print <topo>.links() => \
+#findLink(<topo>, <string>, <string>) == True
+
+
+# This action is for adding port number between two switches.
+# Print the port number for source and destination switch.
+<topo>.addSwitch("S1"); <topo>.addSwitch("S2"); <topo>.addPort('S1','S2',sport=None, dport=None);print <topo>.port('S1','S2')
+#<topo>.addSwitch("S1"); <topo>.addSwitch("S2"); <topo>.addPort('S1','S2',sport=80, dport=21);print <topo>.port('S1','S2')
+#<topo>.addSwitch("S3"); <topo>.addSwitch("S4"); <topo>.addPort('S3','S4');print <topo>.port('S1','S2')
+
+
+# This action is for adding link between two switches.
+# Print the port number for source and destination.
+<topo>.addSwitch('H1'); <topo>.addSwitch('H2');<topo>.addLink('H1', 'H2', key=None);print <topo>.links(); print("links added");   
+#<topo>.addLink(s1, s2, ) 
+
+#This action for ensure that the node is added is switch.
+<topo>.addSwitch(<string1>); print("Switches added") => <topo>.isSwitch(<string1>)== True ;
+
+#This action for set link information between two node(src,des)
+<topo>.setlinkInfo('N1', 'N2',"Print Inforamtion"); print <topo>.linkInfo('N1', 'N2'),'N1','N2';
+
+#This action for set node information 
+#<topo>.setNodeInfo('N1', "Inforamtion"); print <topo>.nodeInfo('N1') 
+#<topo>.nodes()=='N1'; 
+
+#<topo>.iterLinks()
+#<topo>._linkEntry()
