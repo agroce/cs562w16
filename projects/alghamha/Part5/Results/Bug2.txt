@@ -1,0 +1,37 @@
+Random testing using config=Config(verbose=False, failedLogging=None, maxtests=-1, greedyStutter=False, seed=None, generalize=False, uncaught=False, speed='FAST', internal=False, normalize=False, replayable=False, essentials=False, quickTests=False, coverfile='coverage.out', ignoreprops=False, total=False, noreassign=False, full=False, multiple=False, stutter=None, running=False, nocover=False, gendepth=None, logging=None, html=None, keep=False, depth=100, timeout=1000, output=None)
+UNCAUGHT EXCEPTION
+ERROR: (<type 'exceptions.UnboundLocalError'>, UnboundLocalError("local variable 'new_name' referenced before assignment",), <traceback object at 0xc66b8c0>)
+TRACEBACK:
+Original test has 20 steps
+REDUCING...
+Reduced test has 6 steps
+REDUCED IN 0.42796587944 SECONDS
+string0 = 'ab'                                                           # STEP 0
+int0 = -10                                                               # STEP 1
+int1 = -9                                                                # STEP 2
+int2 = 7                                                                 # STEP 3
+Column0 = Column(name=string0, data = [int0,int2,int0])                  # STEP 4
+Column0 = Column(name=string0, data = [int2,int1,int0]); AddColumn(Column0)  # STEP 5
+
+FINAL VERSION OF TEST, WITH LOGGED REPLAY:
+string0 = 'ab'                                                           # STEP 0
+int0 = -10                                                               # STEP 1
+int1 = -9                                                                # STEP 2
+int2 = 7                                                                 # STEP 3
+Column0 = Column(name=string0, data = [int0,int2,int0])                  # STEP 4
+Column0 = Column(name=string0, data = [int2,int1,int0]); AddColumn(Column0)  # STEP 5
+ERROR: (<type 'exceptions.UnboundLocalError'>, UnboundLocalError("local variable 'new_name' referenced before assignment",), <traceback object at 0xa6a0ef0>)
+TRACEBACK:
+STOPPING TESTING DUE TO FAILED TEST
+2.94117647059 PERCENT COVERED
+0.603502035141 TOTAL RUNTIME
+1 EXECUTED
+20 TOTAL TEST OPERATIONS
+0.00668168067932 TIME SPENT EXECUTING TEST OPERATIONS
+0.00302386283875 TIME SPENT EVALUATING GUARDS AND CHOOSING ACTIONS
+0.00795412063599 TIME SPENT CHECKING PROPERTIES
+0.0146358013153 TOTAL TIME SPENT RUNNING SUT
+0.00176095962524 TIME SPENT RESTARTING
+0.428124904633 TIME SPENT REDUCING TEST CASES
+38 BRANCHES COVERED
+26 STATEMENTS COVERED

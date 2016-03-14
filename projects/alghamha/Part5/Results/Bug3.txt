@@ -1,0 +1,1478 @@
+Random testing using config=Config(verbose=False, failedLogging=None, maxtests=-1, greedyStutter=False, seed=None, generalize=False, uncaught=False, speed='FAST', internal=False, normalize=False, replayable=False, essentials=False, quickTests=False, coverfile='coverage.out', ignoreprops=False, total=False, noreassign=False, full=False, multiple=False, stutter=None, running=False, nocover=False, gendepth=None, logging=None, html=None, keep=False, depth=100, timeout=1000, output=None)
+a column was added normally
+ ef
+---
+ 10
+ 10
+  7
+a column was duplicated but with new name
+ ef ef_1
+--- ----
+ 10    7
+ 10    7
+  7    7
+a column was duplicated but with new name
+ ef ef_1 ef_2
+--- ---- ----
+ 10    7    7
+ 10    7   -6
+  7    7   -6
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3
+--- ---- ---- ----
+ 10    7    7   10
+ 10    7   -6    7
+  7    7   -6   -6
+a column was added normally
+ ef ef_1 ef_2 ef_3  cd
+--- ---- ---- ---- ---
+ 10    7    7   10   7
+ 10    7   -6    7   2
+  7    7   -6   -6   2
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cd_1
+--- ---- ---- ---- --- ----
+ 10    7    7   10   7    2
+ 10    7   -6    7   2   -6
+  7    7   -6   -6   2    7
+this is the first Table
+ a   b   c   d   e 
+--- --- --- --- ---
+  5   1   4   1   1
+  2   2   2   2   2
+  3   1   3   4   3
+  a   b   c   d   f
+
+ this is the second table
+ a   b   c   d   e 
+--- --- --- --- ---
+  5   1   4   1   1
+  2   2   2   2   2
+  3   1   3   4   3
+  a   b   c   d   f
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cd_1 cd_2
+--- ---- ---- ---- --- ---- ----
+ 10    7    7   10   7    2    7
+ 10    7   -6    7   2   -6    7
+  7    7   -6   -6   2    7    7
+Table Sort:  [2, 2, 7]
+Python Sort:  [2, 2, 7]
+a column was added normally
+ ef ef_1 ef_2 ef_3  cd cd_1 cd_2  lm
+--- ---- ---- ---- --- ---- ---- ---
+ 10    7   -6    7   2   -6    7   2
+  7    7   -6   -6   2    7    7   2
+ 10    7    7   10   7    2    7  -2
+a column was added normally
+ ef ef_1 ef_2 ef_3  cd cd_1 cd_2  lm  no
+--- ---- ---- ---- --- ---- ---- --- ---
+ 10    7   -6    7   2   -6    7   2  -4
+  7    7   -6   -6   2    7    7   2   2
+ 10    7    7   10   7    2    7  -2  -4
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cd_1 cd_2  lm  no no_1
+--- ---- ---- ---- --- ---- ---- --- --- ----
+ 10    7   -6    7   2   -6    7   2  -4   -4
+  7    7   -6   -6   2    7    7   2   2    2
+ 10    7    7   10   7    2    7  -2  -4   -4
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cd_1 cd_2  lm  no no_1 no_2
+--- ---- ---- ---- --- ---- ---- --- --- ---- ----
+ 10    7   -6    7   2   -6    7   2  -4   -4   -2
+  7    7   -6   -6   2    7    7   2   2    2    2
+ 10    7    7   10   7    2    7  -2  -4   -4    2
+
+ The Old column:   BC
+MMM
+---
+ -9
+ -9
+  5
+ the new column 
+ BC
+MMM
+---
+ -6
+ -9
+  5 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+ -9
+  5
+ -9
+ the new column 
+ BC
+MMM
+---
+ -6
+  5
+ -6 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+  5
+ -9
+  5
+ the new column 
+ BC
+MMM
+---
+  5
+  5
+ -6 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+ -6
+ -9
+  5
+ the new column 
+ BC
+MMM
+---
+ -9
+ -6
+  5 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+  3
+  5
+  5
+ the new column 
+ BC
+MMM
+---
+  3
+ -9
+ -9 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+  5
+  5
+  5
+ the new column 
+ BC
+MMM
+---
+ -9
+  5
+  3 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+ -9
+ -9
+  3
+ the new column 
+ BC
+MMM
+---
+ -9
+  3
+ -9 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+  3
+  3
+  5
+ the new column 
+ BC
+MMM
+---
+  3
+ -9
+  3 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+  3
+ -9
+ -9
+ the new column 
+ BC
+MMM
+---
+ -9
+ -9
+  3 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+  3
+ -9
+  3
+ the new column 
+ BC
+MMM
+---
+ -9
+ -9
+  3 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+ -9
+  3
+  5
+ the new column 
+ BC
+MMM
+---
+  3
+  5
+ -9 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+  5
+  5
+  3
+ the new column 
+ BC
+MMM
+---
+  3
+ -9
+ -9 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+ -9
+ -9
+  5
+ the new column 
+ BC
+MMM
+---
+ -9
+ -9
+ -9 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+  5
+  5
+  3
+ the new column 
+ BC
+MMM
+---
+ -9
+  3
+  5 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+ -9
+  3
+  3
+ the new column 
+ BC
+MMM
+---
+ -9
+ -9
+  3 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+  5
+  5
+  5
+ the new column 
+ BC
+MMM
+---
+  5
+ -9
+  5 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+  5
+  5
+  5
+ the new column 
+ BC
+MMM
+---
+ -9
+  5
+  3 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+ -9
+  5
+  5
+ the new column 
+ BC
+MMM
+---
+  5
+  5
+  5 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+ -7
+  5
+  5
+ the new column 
+ BC
+MMM
+---
+  5
+ -7
+  5 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+ -7
+ -7
+ -7
+ the new column 
+ BC
+MMM
+---
+  5
+  5
+ -9 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+  5
+ -7
+  5
+ the new column 
+ BC
+MMM
+---
+  5
+ -7
+ -7 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+ -8
+ -7
+ -7
+ the new column 
+ BC
+MMM
+---
+ -5
+ -8
+ -7 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+the column was renamed
+
+ The Old column:   BC
+MMM
+---
+ -5
+  2
+ -5
+ the new column 
+ BC
+MMM
+---
+ -5
+ -5
+  2 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+  2
+ -5
+ -7
+ the new column 
+ BC
+MMM
+---
+ -5
+  2
+  2 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+ -7
+ -7
+ -7
+ the new column 
+ BC
+MMM
+---
+ -7
+ -5
+ -7 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+  2
+  2
+  2
+ the new column 
+ BC
+MMM
+---
+ -7
+ -7
+ -7 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+ -5
+ -5
+ -7
+ the new column 
+ BC
+MMM
+---
+ -5
+ -7
+ -7 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+ -5
+ -5
+ -7
+ the new column 
+ BC
+MMM
+---
+ -5
+ -5
+  2 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+a column was added normally
+ ef ef_1 ef_2 ef_3  cd cmn cd_2  lm  no no_1 no_2  qr
+--- ---- ---- ---- --- --- ---- --- --- ---- ---- ---
+ 10    7   -6    7   2  -6    7   2  -4   -4   -2   2
+  7    7   -6   -6   2   7    7   2   2    2    2   2
+ 10    7    7   10   7   2    7  -2  -4   -4    2  -7
+
+ The Old column:   BC
+MMM
+---
+ -7
+  2
+ -7
+ the new column 
+ BC
+MMM
+---
+  2
+ -5
+ -7 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+ -1
+ 10
+ -1
+ the new column 
+ BC
+MMM
+---
+ -7
+ 10
+ 10 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+
+ The Old column:   BC
+MMM
+---
+ 10
+ -7
+ -7
+ the new column 
+ BC
+MMM
+---
+  5
+ -7
+ -7 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn cd_2  lm  no no_1 no_2  qr qr_1
+--- ---- ---- ---- --- --- ---- --- --- ---- ---- --- ----
+ 10    7   -6    7   2  -6    7   2  -4   -4   -2   2    0
+  7    7   -6   -6   2   7    7   2   2    2    2   2   -7
+ 10    7    7   10   7   2    7  -2  -4   -4    2  -7   -7
+
+ The Old column:   BC
+MMM
+---
+ -7
+  5
+  5
+ the new column 
+ BC
+MMM
+---
+ 10
+  5
+ 10 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  MMM
+a column was added normally
+ ef ef_1 ef_2 ef_3  cd cmn cd_2  lm  no no_1 no_2  qr qr_1  fg
+--- ---- ---- ---- --- --- ---- --- --- ---- ---- --- ---- ---
+ 10    7   -6    7   2  -6    7   2  -4   -4   -2   2    0  -4
+  7    7   -6   -6   2   7    7   2   2    2    2   2   -7  -4
+ 10    7    7   10   7   2    7  -2  -4   -4    2  -7   -7  -4
+a column was added normally
+ ef ef_1 ef_2 ef_3  cd cmn cd_2  lm  no no_1 no_2  qr qr_1  fg  hi
+--- ---- ---- ---- --- --- ---- --- --- ---- ---- --- ---- --- ---
+ 10    7   -6    7   2  -6    7   2  -4   -4   -2   2    0  -4   4
+  7    7   -6   -6   2   7    7   2   2    2    2   2   -7  -4   4
+ 10    7    7   10   7   2    7  -2  -4   -4    2  -7   -7  -4   4
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn cd_2  lm  no no_1 no_2  qr qr_1  fg  hi hi_1
+--- ---- ---- ---- --- --- ---- --- --- ---- ---- --- ---- --- --- ----
+ 10    7   -6    7   2  -6    7   2  -4   -4   -2   2    0  -4   4   -4
+  7    7   -6   -6   2   7    7   2   2    2    2   2   -7  -4   4    3
+ 10    7    7   10   7   2    7  -2  -4   -4    2  -7   -7  -4   4   -4
+a column was added normally
+ ef ef_1 ef_2 ef_3  cd cmn cd_2  lm  no no_1 no_2  qr qr_1  fg  hi hi_1  op
+--- ---- ---- ---- --- --- ---- --- --- ---- ---- --- ---- --- --- ---- ---
+ 10    7   -6    7   2  -6    7   2  -4   -4   -2   2    0  -4   4   -4   4
+  7    7   -6   -6   2   7    7   2   2    2    2   2   -7  -4   4    3   3
+ 10    7    7   10   7   2    7  -2  -4   -4    2  -7   -7  -4   4   -4  -4
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn cd_2  lm  no no_1 no_2  qr qr_1  fg  hi hi_1  op op_1
+--- ---- ---- ---- --- --- ---- --- --- ---- ---- --- ---- --- --- ---- --- ----
+ 10    7   -6    7   2  -6    7   2  -4   -4   -2   2    0  -4   4   -4   4    4
+  7    7   -6   -6   2   7    7   2   2    2    2   2   -7  -4   4    3   3    4
+ 10    7    7   10   7   2    7  -2  -4   -4    2  -7   -7  -4   4   -4  -4    4
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn cd_2  lm  no ...  qr qr_1  fg  hi hi_1  op op_1 op_2
+--- ---- ---- ---- --- --- ---- --- --- ... --- ---- --- --- ---- --- ---- ----
+ 10    7   -6    7   2  -6    7   2  -4 ...   2    0  -4   4   -4   4    4   -9
+  7    7   -6   -6   2   7    7   2   2 ...   2   -7  -4   4    3   3    4   -9
+ 10    7    7   10   7   2    7  -2  -4 ...  -7   -7  -4   4   -4  -4    4   -9
+The Table was copied as np array
+The Table was copied as np array
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn cd_2  lm  no ... qr_1  fg  hi hi_1  op op_1 op_2 cd_1
+--- ---- ---- ---- --- --- ---- --- --- ... ---- --- --- ---- --- ---- ---- ----
+ 10    7   -6    7   2  -6    7   2  -4 ...    0  -4   4   -4   4    4   -9    0
+  7    7   -6   -6   2   7    7   2   2 ...   -7  -4   4    3   3    4   -9    7
+ 10    7    7   10   7   2    7  -2  -4 ...   -7  -4   4   -4  -4    4   -9    0
+a column was added normally
+ ef ef_1 ef_2 ef_3  cd cmn cd_2  lm  no ...  fg  hi hi_1  op op_1 op_2 cd_1  mn
+--- ---- ---- ---- --- --- ---- --- --- ... --- --- ---- --- ---- ---- ---- ---
+ 10    7   -6    7   2  -6    7   2  -4 ...  -4   4   -4   4    4   -9    0   0
+  7    7   -6   -6   2   7    7   2   2 ...  -4   4    3   3    4   -9    7  -4
+ 10    7    7   10   7   2    7  -2  -4 ...  -4   4   -4  -4    4   -9    0   0
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn cd_2  lm  no ...  hi hi_1  op op_1 op_2 cd_1  mn mn_1
+--- ---- ---- ---- --- --- ---- --- --- ... --- ---- --- ---- ---- ---- --- ----
+ 10    7   -6    7   2  -6    7   2  -4 ...   4   -4   4    4   -9    0   0   -4
+  7    7   -6   -6   2   7    7   2   2 ...   4    3   3    4   -9    7  -4    0
+ 10    7    7   10   7   2    7  -2  -4 ...   4   -4  -4    4   -9    0   0    0
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn cd_2  lm ... hi_1  op op_1 op_2 cd_1  mn mn_1 mn_2
+--- ---- ---- ---- --- --- ---- --- ... ---- --- ---- ---- ---- --- ---- ----
+ 10    7   -6    7   2  -6    7   2 ...   -4   4    4   -9    0   0   -4   -4
+  7    7   -6   -6   2   7    7   2 ...    3   3    4   -9    7  -4    0   -4
+ 10    7    7   10   7   2    7  -2 ...   -4  -4    4   -9    0   0    0   -4
+ A  
+----
+   a
+ aaa
+aaaa
+The value we want to update: 
+a 
+
+The value we are updating to:  cmn 
+ The new value on the table:  cmn
+a column was added normally
+ ef ef_1 ef_2 ef_3  cd cmn cd_2  lm  no ...  op op_1 op_2 cd_1  mn mn_1 mn_2  gh
+--- ---- ---- ---- --- --- ---- --- --- ... --- ---- ---- ---- --- ---- ---- ---
+ 10    7   -6    7   2  -6    7   2  -4 ...   4    4   -9    0   0   -4   -4  -6
+  7    7   -6   -6   2   7    7   2   2 ...   3    4   -9    7  -4    0   -4  -8
+ 10    7    7   10   7   2    7  -2  -4 ...  -4    4   -9    0   0    0   -4  -6
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn cd_2  lm ... op_1 op_2 cd_1  mn mn_1 mn_2  gh gh_1
+--- ---- ---- ---- --- --- ---- --- ... ---- ---- ---- --- ---- ---- --- ----
+ 10    7   -6    7   2  -6    7   2 ...    4   -9    0   0   -4   -4  -6   10
+  7    7   -6   -6   2   7    7   2 ...    4   -9    7  -4    0   -4  -8   10
+ 10    7    7   10   7   2    7  -2 ...    4   -9    0   0    0   -4  -6   10
+this is the first Table
+ a   b   c   d   e 
+--- --- --- --- ---
+  5   1   4   1   1
+  2   2   2   2   2
+  3   1   3   4   3
+  a   b   c   d   f
+
+ this is the second table
+ a   b   c   d   e 
+--- --- --- --- ---
+  5   1   4   1   1
+  2   2   2   2   2
+  3   1   3   4   3
+  a   b   c   d   f
+The column we want keep: 
+<TableColumns names=('ef','ef_1','ef_2','ef_3','cd','cmn','cd_2','lm','no','no_1','no_2','qr','qr_1','fg','hi','hi_1','op','op_1','op_2','cd_1','mn','mn_1','mn_2','gh','gh_1')>
+The new Table: 
+ ef ef_1 ef_2 ef_3  cd cmn
+--- ---- ---- ---- --- ---
+ 10    7   -6    7   2  -6
+  7    7   -6   -6   2   7
+ 10    7    7   10   7   2
+a column was added normally
+ ef ef_1 ef_2 ef_3  cd cmn  pq
+--- ---- ---- ---- --- --- ---
+ 10    7   -6    7   2  -6  -5
+  7    7   -6   -6   2   7  -9
+ 10    7    7   10   7   2  -5
+a column was added normally
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl
+--- ---- ---- ---- --- --- --- ---
+ 10    7   -6    7   2  -6  -5  -4
+  7    7   -6   -6   2   7  -9  -4
+ 10    7    7   10   7   2  -5  -4
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl kl_1
+--- ---- ---- ---- --- --- --- --- ----
+ 10    7   -6    7   2  -6  -5  -4    2
+  7    7   -6   -6   2   7  -9  -4    4
+ 10    7    7   10   7   2  -5  -4    4
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl kl_1 kl_2
+--- ---- ---- ---- --- --- --- --- ---- ----
+ 10    7   -6    7   2  -6  -5  -4    2   10
+  7    7   -6   -6   2   7  -9  -4    4   -5
+ 10    7    7   10   7   2  -5  -4    4   10
+ A  
+----
+ cmn
+ aaa
+aaaa
+The value we want to update: 
+cmn 
+
+The value we are updating to:  cij 
+ The new value on the table:  cij
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl kl_1 kl_2 kl_3
+--- ---- ---- ---- --- --- --- --- ---- ---- ----
+ 10    7   -6    7   2  -6  -5  -4    2   10    4
+  7    7   -6   -6   2   7  -9  -4    4   -5    4
+ 10    7    7   10   7   2  -5  -4    4   10    2
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl kl_1 kl_2 kl_3 kl_4
+--- ---- ---- ---- --- --- --- --- ---- ---- ---- ----
+ 10    7   -6    7   2  -6  -5  -4    2   10    4    7
+  7    7   -6   -6   2   7  -9  -4    4   -5    4    2
+ 10    7    7   10   7   2  -5  -4    4   10    2    2
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl kl_1 kl_2 kl_3 kl_4 kl_5
+--- ---- ---- ---- --- --- --- --- ---- ---- ---- ---- ----
+ 10    7   -6    7   2  -6  -5  -4    2   10    4    7    2
+  7    7   -6   -6   2   7  -9  -4    4   -5    4    2   -7
+ 10    7    7   10   7   2  -5  -4    4   10    2    2   -7
+a column was added normally
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl kl_1 kl_2 kl_3 kl_4 kl_5  mn
+--- ---- ---- ---- --- --- --- --- ---- ---- ---- ---- ---- ---
+ 10    7   -6    7   2  -6  -5  -4    2   10    4    7    2   8
+  7    7   -6   -6   2   7  -9  -4    4   -5    4    2   -7   4
+ 10    7    7   10   7   2  -5  -4    4   10    2    2   -7   4
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl kl_1 kl_2 kl_3 kl_4 kl_5  mn ef_4
+--- ---- ---- ---- --- --- --- --- ---- ---- ---- ---- ---- --- ----
+ 10    7   -6    7   2  -6  -5  -4    2   10    4    7    2   8   -6
+  7    7   -6   -6   2   7  -9  -4    4   -5    4    2   -7   4   -6
+ 10    7    7   10   7   2  -5  -4    4   10    2    2   -7   4   -6
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl kl_1 kl_2 kl_3 kl_4 kl_5  mn ef_4 mn_1
+--- ---- ---- ---- --- --- --- --- ---- ---- ---- ---- ---- --- ---- ----
+ 10    7   -6    7   2  -6  -5  -4    2   10    4    7    2   8   -6    2
+  7    7   -6   -6   2   7  -9  -4    4   -5    4    2   -7   4   -6    5
+ 10    7    7   10   7   2  -5  -4    4   10    2    2   -7   4   -6    5
+a column was added normally
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl kl_1 kl_2 kl_3 kl_4 kl_5  mn ef_4 mn_1  hi
+--- ---- ---- ---- --- --- --- --- ---- ---- ---- ---- ---- --- ---- ---- ---
+ 10    7   -6    7   2  -6  -5  -4    2   10    4    7    2   8   -6    2 -10
+  7    7   -6   -6   2   7  -9  -4    4   -5    4    2   -7   4   -6    5  -7
+ 10    7    7   10   7   2  -5  -4    4   10    2    2   -7   4   -6    5 -10
+a column was added normally
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl kl_1 ... kl_3 kl_4 kl_5  mn ef_4 mn_1  hi  op
+--- ---- ---- ---- --- --- --- --- ---- ... ---- ---- ---- --- ---- ---- --- ---
+ 10    7   -6    7   2  -6  -5  -4    2 ...    4    7    2   8   -6    2 -10   3
+  7    7   -6   -6   2   7  -9  -4    4 ...    4    2   -7   4   -6    5  -7  -3
+ 10    7    7   10   7   2  -5  -4    4 ...    2    2   -7   4   -6    5 -10 -10
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl kl_1 ... kl_4 kl_5  mn ef_4 mn_1  hi  op op_1
+--- ---- ---- ---- --- --- --- --- ---- ... ---- ---- --- ---- ---- --- --- ----
+ 10    7   -6    7   2  -6  -5  -4    2 ...    7    2   8   -6    2 -10   3    3
+  7    7   -6   -6   2   7  -9  -4    4 ...    2   -7   4   -6    5  -7  -3    3
+ 10    7    7   10   7   2  -5  -4    4 ...    2   -7   4   -6    5 -10 -10    3
+Table Sort:  [-4, -4, -4]
+Python Sort:  [-4, -4, -4]
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl kl_1 ... kl_5  mn ef_4 mn_1  hi  op op_1 pq_1
+--- ---- ---- ---- --- --- --- --- ---- ... ---- --- ---- ---- --- --- ---- ----
+ 10    7   -6    7   2  -6  -5  -4    2 ...    2   8   -6    2 -10   3    3   -2
+  7    7   -6   -6   2   7  -9  -4    4 ...   -7   4   -6    5  -7  -3    3   -2
+ 10    7    7   10   7   2  -5  -4    4 ...   -7   4   -6    5 -10 -10    3    3
+a column was added normally
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl kl_1 ...  mn ef_4 mn_1  hi  op op_1 pq_1  lm
+--- ---- ---- ---- --- --- --- --- ---- ... --- ---- ---- --- --- ---- ---- ---
+ 10    7   -6    7   2  -6  -5  -4    2 ...   8   -6    2 -10   3    3   -2  -2
+  7    7   -6   -6   2   7  -9  -4    4 ...   4   -6    5  -7  -3    3   -2  -9
+ 10    7    7   10   7   2  -5  -4    4 ...   4   -6    5 -10 -10    3    3  -3
+a column was added normally
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl kl_1 ... ef_4 mn_1  hi  op op_1 pq_1  lm  qr
+--- ---- ---- ---- --- --- --- --- ---- ... ---- ---- --- --- ---- ---- --- ---
+ 10    7   -6    7   2  -6  -5  -4    2 ...   -6    2 -10   3    3   -2  -2  -2
+  7    7   -6   -6   2   7  -9  -4    4 ...   -6    5  -7  -3    3   -2  -9  -2
+ 10    7    7   10   7   2  -5  -4    4 ...   -6    5 -10 -10    3    3  -3   6
+Table Reverse:  [10, 7, 10]
+Python Reverse:  [10, 7, 10]
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl kl_1 ... mn_1  hi  op op_1 pq_1  lm  qr qr_1
+--- ---- ---- ---- --- --- --- --- ---- ... ---- --- --- ---- ---- --- --- ----
+ 10    7    7   10   7   2  -5  -4    4 ...    5 -10 -10    3    3  -3   6    6
+  7    7   -6   -6   2   7  -9  -4    4 ...    5  -7  -3    3   -2  -9  -2    6
+ 10    7   -6    7   2  -6  -5  -4    2 ...    2 -10   3    3   -2  -2  -2   -3
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl kl_1 ...  hi  op op_1 pq_1  lm  qr qr_1 qr_2
+--- ---- ---- ---- --- --- --- --- ---- ... --- --- ---- ---- --- --- ---- ----
+ 10    7    7   10   7   2  -5  -4    4 ... -10 -10    3    3  -3   6    6   -3
+  7    7   -6   -6   2   7  -9  -4    4 ...  -7  -3    3   -2  -9  -2    6   -3
+ 10    7   -6    7   2  -6  -5  -4    2 ... -10   3    3   -2  -2  -2   -3   -3
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl kl_1 ...  op op_1 pq_1  lm  qr qr_1 qr_2 qr_3
+--- ---- ---- ---- --- --- --- --- ---- ... --- ---- ---- --- --- ---- ---- ----
+ 10    7    7   10   7   2  -5  -4    4 ... -10    3    3  -3   6    6   -3    6
+  7    7   -6   -6   2   7  -9  -4    4 ...  -3    3   -2  -9  -2    6   -3    1
+ 10    7   -6    7   2  -6  -5  -4    2 ...   3    3   -2  -2  -2   -3   -3    6
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... op_1 pq_1  lm  qr qr_1 qr_2 qr_3 qr_4
+--- ---- ---- ---- --- --- --- --- ... ---- ---- --- --- ---- ---- ---- ----
+ 10    7    7   10   7   2  -5  -4 ...    3    3  -3   6    6   -3    6   -8
+  7    7   -6   -6   2   7  -9  -4 ...    3   -2  -9  -2    6   -3    1   -8
+ 10    7   -6    7   2  -6  -5  -4 ...    3   -2  -2  -2   -3   -3    6   -8
+a column was added normally
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl kl_1 ... pq_1  lm  qr qr_1 qr_2 qr_3 qr_4  fg
+--- ---- ---- ---- --- --- --- --- ---- ... ---- --- --- ---- ---- ---- ---- ---
+ 10    7    7   10   7   2  -5  -4    4 ...    3  -3   6    6   -3    6   -8  -5
+  7    7   -6   -6   2   7  -9  -4    4 ...   -2  -9  -2    6   -3    1   -8  -5
+ 10    7   -6    7   2  -6  -5  -4    2 ...   -2  -2  -2   -3   -3    6   -8  -5
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl kl_1 ...  lm  qr qr_1 qr_2 qr_3 qr_4  fg fg_1
+--- ---- ---- ---- --- --- --- --- ---- ... --- --- ---- ---- ---- ---- --- ----
+ 10    7    7   10   7   2  -5  -4    4 ...  -3   6    6   -3    6   -8  -5   -8
+  7    7   -6   -6   2   7  -9  -4    4 ...  -9  -2    6   -3    1   -8  -5   -8
+ 10    7   -6    7   2  -6  -5  -4    2 ...  -2  -2   -3   -3    6   -8  -5  -10
+ A  
+----
+ cij
+ aaa
+aaaa
+The value we want to update: 
+aaaa 
+
+The value we are updating to:  cbcbbbb 
+ The new value on the table:  cbcb
+UNCAUGHT EXCEPTION
+ERROR: (<type 'exceptions.AssertionError'>, AssertionError('Updating the tuple or indices is not working',), <traceback object at 0x9ea2b90>)
+TRACEBACK:
+Original test has 75 steps
+REDUCING...
+Table Sort:  [2, 4, 4]
+Python Sort:  [2, 4, 4]
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ...  qr qr_1 qr_2 qr_3 qr_4  fg fg_1 lm_1
+--- ---- ---- ---- --- --- --- --- ... --- ---- ---- ---- ---- --- ---- ----
+ 10    7    7   10   7   2  -5  -4 ...   6    6   -3    6   -8  -5   -8   -2
+  7    7   -6   -6   2   7  -9  -4 ...  -2    6   -3    1   -8  -5   -8   -9
+ 10    7   -6    7   2  -6  -5  -4 ...  -2   -3   -3    6   -8  -5  -10   -3
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_1 qr_2 qr_3 qr_4  fg fg_1 lm_1 qr_5
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ---- --- ---- ---- ----
+ 10    7    7   10   7   2  -5  -4 ...    6   -3    6   -8  -5   -8   -2   -2
+  7    7   -6   -6   2   7  -9  -4 ...    6   -3    1   -8  -5   -8   -9   -2
+ 10    7   -6    7   2  -6  -5  -4 ...   -3   -3    6   -8  -5  -10   -3    6
+Table Reverse:  [10, 7, 10]
+Python Reverse:  [10, 7, 10]
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_2 qr_3 qr_4  fg fg_1 lm_1 qr_5 qr_6
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- --- ---- ---- ---- ----
+ 10    7   -6    7   2  -6  -5  -4 ...   -3    6   -8  -5  -10   -3    6    6
+  7    7   -6   -6   2   7  -9  -4 ...   -3    1   -8  -5   -8   -9   -2    6
+ 10    7    7   10   7   2  -5  -4 ...   -3    6   -8  -5   -8   -2   -2   -3
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_3 qr_4  fg fg_1 lm_1 qr_5 qr_6 qr_7
+--- ---- ---- ---- --- --- --- --- ... ---- ---- --- ---- ---- ---- ---- ----
+ 10    7   -6    7   2  -6  -5  -4 ...    6   -8  -5  -10   -3    6    6   -3
+  7    7   -6   -6   2   7  -9  -4 ...    1   -8  -5   -8   -9   -2    6   -3
+ 10    7    7   10   7   2  -5  -4 ...    6   -8  -5   -8   -2   -2   -3   -3
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_4  fg fg_1 lm_1 qr_5 qr_6 qr_7 qr_8
+--- ---- ---- ---- --- --- --- --- ... ---- --- ---- ---- ---- ---- ---- ----
+ 10    7   -6    7   2  -6  -5  -4 ...   -8  -5  -10   -3    6    6   -3    6
+  7    7   -6   -6   2   7  -9  -4 ...   -8  -5   -8   -9   -2    6   -3    1
+ 10    7    7   10   7   2  -5  -4 ...   -8  -5   -8   -2   -2   -3   -3    6
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ...  fg fg_1 lm_1 qr_5 qr_6 qr_7 qr_8 qr_9
+--- ---- ---- ---- --- --- --- --- ... --- ---- ---- ---- ---- ---- ---- ----
+ 10    7   -6    7   2  -6  -5  -4 ...  -5  -10   -3    6    6   -3    6   -8
+  7    7   -6   -6   2   7  -9  -4 ...  -5   -8   -9   -2    6   -3    1   -8
+ 10    7    7   10   7   2  -5  -4 ...  -5   -8   -2   -2   -3   -3    6   -8
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... fg_1 lm_1 qr_5 qr_6 qr_7 qr_8 qr_9 fg_2
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- ---- ----
+ 10    7   -6    7   2  -6  -5  -4 ...  -10   -3    6    6   -3    6   -8   -5
+  7    7   -6   -6   2   7  -9  -4 ...   -8   -9   -2    6   -3    1   -8   -5
+ 10    7    7   10   7   2  -5  -4 ...   -8   -2   -2   -3   -3    6   -8   -5
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... lm_1 qr_5 qr_6 qr_7 qr_8 qr_9 fg_2 fg_3
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- ---- ----
+ 10    7   -6    7   2  -6  -5  -4 ...   -3    6    6   -3    6   -8   -5   -8
+  7    7   -6   -6   2   7  -9  -4 ...   -9   -2    6   -3    1   -8   -5   -8
+ 10    7    7   10   7   2  -5  -4 ...   -2   -2   -3   -3    6   -8   -5  -10
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_5 qr_6 qr_7 qr_8 qr_9 fg_2 fg_3 mn_2
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- ---- ----
+ 10    7   -6    7   2  -6  -5  -4 ...    6    6   -3    6   -8   -5   -8    2
+  7    7   -6   -6   2   7  -9  -4 ...   -2    6   -3    1   -8   -5   -8    5
+ 10    7    7   10   7   2  -5  -4 ...   -2   -3   -3    6   -8   -5  -10    5
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_6 qr_7 qr_8 qr_9 fg_2 fg_3 mn_2 hi_1
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- ---- ----
+ 10    7   -6    7   2  -6  -5  -4 ...    6   -3    6   -8   -5   -8    2  -10
+  7    7   -6   -6   2   7  -9  -4 ...    6   -3    1   -8   -5   -8    5   -7
+ 10    7    7   10   7   2  -5  -4 ...   -3   -3    6   -8   -5  -10    5  -10
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_7 qr_8 qr_9 fg_2 fg_3 mn_2 hi_1 op_2
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- ---- ----
+ 10    7   -6    7   2  -6  -5  -4 ...   -3    6   -8   -5   -8    2  -10    3
+  7    7   -6   -6   2   7  -9  -4 ...   -3    1   -8   -5   -8    5   -7   -3
+ 10    7    7   10   7   2  -5  -4 ...   -3    6   -8   -5  -10    5  -10  -10
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_8 qr_9 fg_2 fg_3 mn_2 hi_1 op_2 op_3
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- ---- ----
+ 10    7   -6    7   2  -6  -5  -4 ...    6   -8   -5   -8    2  -10    3    3
+  7    7   -6   -6   2   7  -9  -4 ...    1   -8   -5   -8    5   -7   -3    3
+ 10    7    7   10   7   2  -5  -4 ...    6   -8   -5  -10    5  -10  -10    3
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_9 fg_2 fg_3 mn_2 hi_1 op_2 op_3 op_4
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- ---- ----
+ 10    7   -6    7   2  -6  -5  -4 ...   -8   -5   -8    2  -10    3    3   -7
+  7    7   -6   -6   2   7  -9  -4 ...   -8   -5   -8    5   -7   -3    3   -3
+ 10    7    7   10   7   2  -5  -4 ...   -8   -5  -10    5  -10  -10    3  -10
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... fg_2 fg_3 mn_2 hi_1 op_2 op_3 op_4 op_5
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- ---- ----
+ 10    7   -6    7   2  -6  -5  -4 ...   -5   -8    2  -10    3    3   -7   -7
+  7    7   -6   -6   2   7  -9  -4 ...   -5   -8    5   -7   -3    3   -3   -7
+ 10    7    7   10   7   2  -5  -4 ...   -5  -10    5  -10  -10    3  -10   -7
+Table Sort:  [-3, 6, 6]
+Python Sort:  [-3, 6, 6]
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... fg_3 mn_2 hi_1 op_2 op_3 op_4 op_5 pq_2
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- ---- ----
+ 10    7    7   10   7   2  -5  -4 ...  -10    5  -10  -10    3  -10   -7   -2
+ 10    7   -6    7   2  -6  -5  -4 ...   -8    2  -10    3    3   -7   -7   -2
+  7    7   -6   -6   2   7  -9  -4 ...   -8    5   -7   -3    3   -3   -7   -7
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... mn_2 hi_1 op_2 op_3 op_4 op_5 pq_2 lm_2
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- ---- ----
+ 10    7    7   10   7   2  -5  -4 ...    5  -10  -10    3  -10   -7   -2   -2
+ 10    7   -6    7   2  -6  -5  -4 ...    2  -10    3    3   -7   -7   -2   -9
+  7    7   -6   -6   2   7  -9  -4 ...    5   -7   -3    3   -3   -7   -7   -3
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... hi_1 op_2 op_3 op_4 op_5 pq_2 lm_2 qr_10
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- ---- -----
+ 10    7    7   10   7   2  -5  -4 ...  -10  -10    3  -10   -7   -2   -2    -2
+ 10    7   -6    7   2  -6  -5  -4 ...  -10    3    3   -7   -7   -2   -9    -2
+  7    7   -6   -6   2   7  -9  -4 ...   -7   -3    3   -3   -7   -7   -3     6
+Table Reverse:  [7, 10, 10]
+Python Reverse:  [7, 10, 10]
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... op_2 op_3 op_4 op_5 pq_2 lm_2 qr_10 qr_11
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- ----- -----
+  7    7   -6   -6   2   7  -9  -4 ...   -3    3   -3   -7   -7   -3     6     6
+ 10    7   -6    7   2  -6  -5  -4 ...    3    3   -7   -7   -2   -9    -2     6
+ 10    7    7   10   7   2  -5  -4 ...  -10    3  -10   -7   -2   -2    -2    -3
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... op_4 op_5 pq_2 lm_2 qr_10 qr_11 qr_12
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ---- ----- ----- -----
+  7    7   -6   -6   2   7  -9  -4 ...   -3   -7   -7   -3     6     6    -3
+ 10    7   -6    7   2  -6  -5  -4 ...   -7   -7   -2   -9    -2     6    -3
+ 10    7    7   10   7   2  -5  -4 ...  -10   -7   -2   -2    -2    -3    -3
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... op_5 pq_2 lm_2 qr_10 qr_11 qr_12 qr_13
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ----- ----- ----- -----
+  7    7   -6   -6   2   7  -9  -4 ...   -7   -7   -3     6     6    -3     6
+ 10    7   -6    7   2  -6  -5  -4 ...   -7   -2   -9    -2     6    -3     1
+ 10    7    7   10   7   2  -5  -4 ...   -7   -2   -2    -2    -3    -3     6
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... pq_2 lm_2 qr_10 qr_11 qr_12 qr_13 qr_14
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ----- ----- ----- ----- -----
+  7    7   -6   -6   2   7  -9  -4 ...   -7   -3     6     6    -3     6    -8
+ 10    7   -6    7   2  -6  -5  -4 ...   -2   -9    -2     6    -3     1    -8
+ 10    7    7   10   7   2  -5  -4 ...   -2   -2    -2    -3    -3     6    -8
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... lm_2 qr_10 qr_11 qr_12 qr_13 qr_14 fg_4
+--- ---- ---- ---- --- --- --- --- ... ---- ----- ----- ----- ----- ----- ----
+  7    7   -6   -6   2   7  -9  -4 ...   -3     6     6    -3     6    -8   -5
+ 10    7   -6    7   2  -6  -5  -4 ...   -9    -2     6    -3     1    -8   -5
+ 10    7    7   10   7   2  -5  -4 ...   -2    -2    -3    -3     6    -8   -5
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_10 qr_11 qr_12 qr_13 qr_14 fg_4 fg_5
+--- ---- ---- ---- --- --- --- --- ... ----- ----- ----- ----- ----- ---- ----
+  7    7   -6   -6   2   7  -9  -4 ...     6     6    -3     6    -8   -5   -8
+ 10    7   -6    7   2  -6  -5  -4 ...    -2     6    -3     1    -8   -5   -8
+ 10    7    7   10   7   2  -5  -4 ...    -2    -3    -3     6    -8   -5  -10
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_11 qr_12 qr_13 qr_14 fg_4 fg_5 mn_3
+--- ---- ---- ---- --- --- --- --- ... ----- ----- ----- ----- ---- ---- ----
+  7    7   -6   -6   2   7  -9  -4 ...     6    -3     6    -8   -5   -8    2
+ 10    7   -6    7   2  -6  -5  -4 ...     6    -3     1    -8   -5   -8    5
+ 10    7    7   10   7   2  -5  -4 ...    -3    -3     6    -8   -5  -10    5
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_12 qr_13 qr_14 fg_4 fg_5 mn_3 lm_3
+--- ---- ---- ---- --- --- --- --- ... ----- ----- ----- ---- ---- ---- ----
+  7    7   -6   -6   2   7  -9  -4 ...    -3     6    -8   -5   -8    2    5
+ 10    7   -6    7   2  -6  -5  -4 ...    -3     1    -8   -5   -8    5    5
+ 10    7    7   10   7   2  -5  -4 ...    -3     6    -8   -5  -10    5    5
+Table Sort:  [4, 4, 8]
+Python Sort:  [4, 4, 8]
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_13 qr_14 fg_4 fg_5 mn_3 lm_3 pq_3
+--- ---- ---- ---- --- --- --- --- ... ----- ----- ---- ---- ---- ---- ----
+  7    7   -6   -6   2   7  -9  -4 ...     6    -8   -5   -8    2    5   -2
+ 10    7    7   10   7   2  -5  -4 ...     6    -8   -5  -10    5    5   -2
+ 10    7   -6    7   2  -6  -5  -4 ...     1    -8   -5   -8    5    5    5
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_13 qr_14 fg_4 fg_5 mn_3 lm_3 pq_3 lm_4
+--- ---- ---- ---- --- --- --- --- ... ----- ----- ---- ---- ---- ---- ---- ----
+  7    7   -6   -6   2   7  -9  -4 ...     6    -8   -5   -8    2    5   -2   -2
+ 10    7    7   10   7   2  -5  -4 ...     6    -8   -5  -10    5    5   -2   -9
+ 10    7   -6    7   2  -6  -5  -4 ...     1    -8   -5   -8    5    5    5   -3
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_14 fg_4 fg_5 mn_3 lm_3 pq_3 lm_4 qr_15
+--- ---- ---- ---- --- --- --- --- ... ----- ---- ---- ---- ---- ---- ---- -----
+  7    7   -6   -6   2   7  -9  -4 ...    -8   -5   -8    2    5   -2   -2    -2
+ 10    7    7   10   7   2  -5  -4 ...    -8   -5  -10    5    5   -2   -9    -2
+ 10    7   -6    7   2  -6  -5  -4 ...    -8   -5   -8    5    5    5   -3     6
+Table Reverse:  [10, 10, 7]
+Python Reverse:  [10, 10, 7]
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... fg_4 fg_5 mn_3 lm_3 pq_3 lm_4 qr_15 qr_16
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- ----- -----
+ 10    7   -6    7   2  -6  -5  -4 ...   -5   -8    5    5    5   -3     6     6
+ 10    7    7   10   7   2  -5  -4 ...   -5  -10    5    5   -2   -9    -2     6
+  7    7   -6   -6   2   7  -9  -4 ...   -5   -8    2    5   -2   -2    -2    -3
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... mn_3 lm_3 pq_3 lm_4 qr_15 qr_16 qr_17
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ---- ----- ----- -----
+ 10    7   -6    7   2  -6  -5  -4 ...    5    5    5   -3     6     6    -3
+ 10    7    7   10   7   2  -5  -4 ...    5    5   -2   -9    -2     6    -3
+  7    7   -6   -6   2   7  -9  -4 ...    2    5   -2   -2    -2    -3    -3
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... lm_3 pq_3 lm_4 qr_15 qr_16 qr_17 qr_18
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ----- ----- ----- -----
+ 10    7   -6    7   2  -6  -5  -4 ...    5    5   -3     6     6    -3     6
+ 10    7    7   10   7   2  -5  -4 ...    5   -2   -9    -2     6    -3     1
+  7    7   -6   -6   2   7  -9  -4 ...    5   -2   -2    -2    -3    -3     6
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... pq_3 lm_4 qr_15 qr_16 qr_17 qr_18 qr_19
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ----- ----- ----- ----- -----
+ 10    7   -6    7   2  -6  -5  -4 ...    5   -3     6     6    -3     6    -8
+ 10    7    7   10   7   2  -5  -4 ...   -2   -9    -2     6    -3     1    -8
+  7    7   -6   -6   2   7  -9  -4 ...   -2   -2    -2    -3    -3     6    -8
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... lm_4 qr_15 qr_16 qr_17 qr_18 qr_19 fg_6
+--- ---- ---- ---- --- --- --- --- ... ---- ----- ----- ----- ----- ----- ----
+ 10    7   -6    7   2  -6  -5  -4 ...   -3     6     6    -3     6    -8   -5
+ 10    7    7   10   7   2  -5  -4 ...   -9    -2     6    -3     1    -8   -5
+  7    7   -6   -6   2   7  -9  -4 ...   -2    -2    -3    -3     6    -8   -5
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_15 qr_16 qr_17 qr_18 qr_19 fg_6 fg_7
+--- ---- ---- ---- --- --- --- --- ... ----- ----- ----- ----- ----- ---- ----
+ 10    7   -6    7   2  -6  -5  -4 ...     6     6    -3     6    -8   -5   -8
+ 10    7    7   10   7   2  -5  -4 ...    -2     6    -3     1    -8   -5   -8
+  7    7   -6   -6   2   7  -9  -4 ...    -2    -3    -3     6    -8   -5  -10
+ A  
+----
+ cij
+ aaa
+cbcb
+The value we want to update: 
+cbcb 
+
+The value we are updating to:  cbcbbbb 
+ The new value on the table:  cbcb
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_16 qr_17 qr_18 qr_19 fg_6 fg_7 mn_4
+--- ---- ---- ---- --- --- --- --- ... ----- ----- ----- ----- ---- ---- ----
+ 10    7   -6    7   2  -6  -5  -4 ...     6    -3     6    -8   -5   -8    2
+ 10    7    7   10   7   2  -5  -4 ...     6    -3     1    -8   -5   -8    5
+  7    7   -6   -6   2   7  -9  -4 ...    -3    -3     6    -8   -5  -10    5
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_17 qr_18 qr_19 fg_6 fg_7 mn_4 lm_5
+--- ---- ---- ---- --- --- --- --- ... ----- ----- ----- ---- ---- ---- ----
+ 10    7   -6    7   2  -6  -5  -4 ...    -3     6    -8   -5   -8    2    5
+ 10    7    7   10   7   2  -5  -4 ...    -3     1    -8   -5   -8    5    5
+  7    7   -6   -6   2   7  -9  -4 ...    -3     6    -8   -5  -10    5    5
+Table Sort:  [-2, -2, 5]
+Python Sort:  [-2, -2, 5]
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_18 qr_19 fg_6 fg_7 mn_4 lm_5 pq_4
+--- ---- ---- ---- --- --- --- --- ... ----- ----- ---- ---- ---- ---- ----
+ 10    7    7   10   7   2  -5  -4 ...     1    -8   -5   -8    5    5   -2
+  7    7   -6   -6   2   7  -9  -4 ...     6    -8   -5  -10    5    5   -2
+ 10    7   -6    7   2  -6  -5  -4 ...     6    -8   -5   -8    2    5    5
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_18 qr_19 fg_6 fg_7 mn_4 lm_5 pq_4 lm_6
+--- ---- ---- ---- --- --- --- --- ... ----- ----- ---- ---- ---- ---- ---- ----
+ 10    7    7   10   7   2  -5  -4 ...     1    -8   -5   -8    5    5   -2   -2
+  7    7   -6   -6   2   7  -9  -4 ...     6    -8   -5  -10    5    5   -2   -9
+ 10    7   -6    7   2  -6  -5  -4 ...     6    -8   -5   -8    2    5    5   -3
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_19 fg_6 fg_7 mn_4 lm_5 pq_4 lm_6 qr_20
+--- ---- ---- ---- --- --- --- --- ... ----- ---- ---- ---- ---- ---- ---- -----
+ 10    7    7   10   7   2  -5  -4 ...    -8   -5   -8    5    5   -2   -2    -2
+  7    7   -6   -6   2   7  -9  -4 ...    -8   -5  -10    5    5   -2   -9    -2
+ 10    7   -6    7   2  -6  -5  -4 ...    -8   -5   -8    2    5    5   -3     6
+Table Reverse:  [10, 7, 10]
+Python Reverse:  [10, 7, 10]
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... fg_6 fg_7 mn_4 lm_5 pq_4 lm_6 qr_20 qr_21
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- ----- -----
+ 10    7   -6    7   2  -6  -5  -4 ...   -5   -8    2    5    5   -3     6     6
+  7    7   -6   -6   2   7  -9  -4 ...   -5  -10    5    5   -2   -9    -2     6
+ 10    7    7   10   7   2  -5  -4 ...   -5   -8    5    5   -2   -2    -2    -3
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... mn_4 lm_5 pq_4 lm_6 qr_20 qr_21 qr_22
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ---- ----- ----- -----
+ 10    7   -6    7   2  -6  -5  -4 ...    2    5    5   -3     6     6    -3
+  7    7   -6   -6   2   7  -9  -4 ...    5    5   -2   -9    -2     6    -3
+ 10    7    7   10   7   2  -5  -4 ...    5    5   -2   -2    -2    -3    -3
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... lm_5 pq_4 lm_6 qr_20 qr_21 qr_22 qr_23
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ----- ----- ----- -----
+ 10    7   -6    7   2  -6  -5  -4 ...    5    5   -3     6     6    -3     6
+  7    7   -6   -6   2   7  -9  -4 ...    5   -2   -9    -2     6    -3     1
+ 10    7    7   10   7   2  -5  -4 ...    5   -2   -2    -2    -3    -3     6
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... pq_4 lm_6 qr_20 qr_21 qr_22 qr_23 qr_24
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ----- ----- ----- ----- -----
+ 10    7   -6    7   2  -6  -5  -4 ...    5   -3     6     6    -3     6    -8
+  7    7   -6   -6   2   7  -9  -4 ...   -2   -9    -2     6    -3     1    -8
+ 10    7    7   10   7   2  -5  -4 ...   -2   -2    -2    -3    -3     6    -8
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... lm_6 qr_20 qr_21 qr_22 qr_23 qr_24 fg_8
+--- ---- ---- ---- --- --- --- --- ... ---- ----- ----- ----- ----- ----- ----
+ 10    7   -6    7   2  -6  -5  -4 ...   -3     6     6    -3     6    -8   -5
+  7    7   -6   -6   2   7  -9  -4 ...   -9    -2     6    -3     1    -8   -5
+ 10    7    7   10   7   2  -5  -4 ...   -2    -2    -3    -3     6    -8   -5
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_20 qr_21 qr_22 qr_23 qr_24 fg_8 fg_9
+--- ---- ---- ---- --- --- --- --- ... ----- ----- ----- ----- ----- ---- ----
+ 10    7   -6    7   2  -6  -5  -4 ...     6     6    -3     6    -8   -5   -8
+  7    7   -6   -6   2   7  -9  -4 ...    -2     6    -3     1    -8   -5   -8
+ 10    7    7   10   7   2  -5  -4 ...    -2    -3    -3     6    -8   -5  -10
+ A  
+----
+ cij
+ aaa
+cbcb
+The value we want to update: 
+cbcb 
+
+The value we are updating to:  cbcbbbb 
+ The new value on the table:  cbcb
+Table Reverse:  [10, 7, 10]
+Python Reverse:  [10, 7, 10]
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_21 qr_22 qr_23 qr_24 fg_8 fg_9 lm_7
+--- ---- ---- ---- --- --- --- --- ... ----- ----- ----- ----- ---- ---- ----
+ 10    7    7   10   7   2  -5  -4 ...    -3    -3     6    -8   -5  -10   -3
+  7    7   -6   -6   2   7  -9  -4 ...     6    -3     1    -8   -5   -8   -3
+ 10    7   -6    7   2  -6  -5  -4 ...     6    -3     6    -8   -5   -8   -3
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_22 qr_23 qr_24 fg_8 fg_9 lm_7 fg_10
+--- ---- ---- ---- --- --- --- --- ... ----- ----- ----- ---- ---- ---- -----
+ 10    7    7   10   7   2  -5  -4 ...    -3     6    -8   -5  -10   -3     6
+  7    7   -6   -6   2   7  -9  -4 ...    -3     1    -8   -5   -8   -3     6
+ 10    7   -6    7   2  -6  -5  -4 ...    -3     6    -8   -5   -8   -3     6
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_23 qr_24 fg_8 fg_9 lm_7 fg_10 fg_11
+--- ---- ---- ---- --- --- --- --- ... ----- ----- ---- ---- ---- ----- -----
+ 10    7    7   10   7   2  -5  -4 ...     6    -8   -5  -10   -3     6    -3
+  7    7   -6   -6   2   7  -9  -4 ...     1    -8   -5   -8   -3     6    -3
+ 10    7   -6    7   2  -6  -5  -4 ...     6    -8   -5   -8   -3     6   -10
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... qr_24 fg_8 fg_9 lm_7 fg_10 fg_11 mn_5
+--- ---- ---- ---- --- --- --- --- ... ----- ---- ---- ---- ----- ----- ----
+ 10    7    7   10   7   2  -5  -4 ...    -8   -5  -10   -3     6    -3    2
+  7    7   -6   -6   2   7  -9  -4 ...    -8   -5   -8   -3     6    -3    5
+ 10    7   -6    7   2  -6  -5  -4 ...    -8   -5   -8   -3     6   -10    5
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... fg_8 fg_9 lm_7 fg_10 fg_11 mn_5 lm_8
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ----- ----- ---- ----
+ 10    7    7   10   7   2  -5  -4 ...   -5  -10   -3     6    -3    2    5
+  7    7   -6   -6   2   7  -9  -4 ...   -5   -8   -3     6    -3    5    5
+ 10    7   -6    7   2  -6  -5  -4 ...   -5   -8   -3     6   -10    5    5
+Table Sort:  [-2, -2, 3]
+Python Sort:  [-2, -2, 3]
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... fg_8 fg_9 lm_7 fg_10 fg_11 mn_5 lm_8 pq_5
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ----- ----- ---- ---- ----
+  7    7   -6   -6   2   7  -9  -4 ...   -5   -8   -3     6    -3    5    5   -2
+ 10    7   -6    7   2  -6  -5  -4 ...   -5   -8   -3     6   -10    5    5   -2
+ 10    7    7   10   7   2  -5  -4 ...   -5  -10   -3     6    -3    2    5    5
+ A  
+----
+ cij
+ aaa
+cbcb
+The value we want to update: 
+cbcb 
+
+The value we are updating to:  cbcbbbb 
+ The new value on the table:  cbcb
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... fg_9 lm_7 fg_10 fg_11 mn_5 lm_8 pq_5 mn_6
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ----- ----- ---- ---- ---- ----
+  7    7   -6   -6   2   7  -9  -4 ...   -8   -3     6    -3    5    5   -2    2
+ 10    7   -6    7   2  -6  -5  -4 ...   -8   -3     6   -10    5    5   -2    5
+ 10    7    7   10   7   2  -5  -4 ...  -10   -3     6    -3    2    5    5    5
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... lm_7 fg_10 fg_11 mn_5 lm_8 pq_5 mn_6 lm_9
+--- ---- ---- ---- --- --- --- --- ... ---- ----- ----- ---- ---- ---- ---- ----
+  7    7   -6   -6   2   7  -9  -4 ...   -3     6    -3    5    5   -2    2    5
+ 10    7   -6    7   2  -6  -5  -4 ...   -3     6   -10    5    5   -2    5    5
+ 10    7    7   10   7   2  -5  -4 ...   -3     6    -3    2    5    5    5    5
+Table Sort:  [5, 5, 5]
+Python Sort:  [5, 5, 5]
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... fg_10 fg_11 mn_5 lm_8 pq_5 mn_6 lm_9 pq_6
+--- ---- ---- ---- --- --- --- --- ... ----- ----- ---- ---- ---- ---- ---- ----
+  7    7   -6   -6   2   7  -9  -4 ...     6    -3    5    5   -2    2    5   -2
+ 10    7   -6    7   2  -6  -5  -4 ...     6   -10    5    5   -2    5    5   -2
+ 10    7    7   10   7   2  -5  -4 ...     6    -3    2    5    5    5    5    5
+ A  
+----
+ cij
+ aaa
+cbcb
+The value we want to update: 
+cbcb 
+
+The value we are updating to:  cbcbbbb 
+ The new value on the table:  cbcb
+Table Sort:  [1, 6, 6]
+Python Sort:  [1, 6, 6]
+Table Sort:  [3, 3, 3]
+Python Sort:  [3, 3, 3]
+Table Sort:  [2, 5, 5]
+Python Sort:  [2, 5, 5]
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... fg_11 mn_5 lm_8 pq_5 mn_6 lm_9 pq_6 pq_7
+--- ---- ---- ---- --- --- --- --- ... ----- ---- ---- ---- ---- ---- ---- ----
+  7    7   -6   -6   2   7  -9  -4 ...    -3    5    5   -2    2    5   -2   -1
+ 10    7   -6    7   2  -6  -5  -4 ...   -10    5    5   -2    5    5   -2   -1
+ 10    7    7   10   7   2  -5  -4 ...    -3    2    5    5    5    5    5    5
+ A  
+----
+ cij
+ aaa
+cbcb
+The value we want to update: 
+cbcb 
+
+The value we are updating to:  cbcbbbb 
+ The new value on the table:  cbcb
+Table Sort:  [-2, -2, 3]
+Python Sort:  [-2, -2, 3]
+a column was duplicated but with new name
+ ef ef_1 ef_2 ef_3  cd cmn  pq  kl ... mn_5 lm_8 pq_5 mn_6 lm_9 pq_6 pq_7 pq_8
+--- ---- ---- ---- --- --- --- --- ... ---- ---- ---- ---- ---- ---- ---- ----
+  7    7   -6   -6   2   7  -9  -4 ...    5    5   -2    2    5   -2   -1   -1
+ 10    7   -6    7   2  -6  -5  -4 ...    5    5   -2    5    5   -2   -1   -1
+ 10    7    7   10   7   2  -5  -4 ...    2    5    5    5    5    5    5    5
+ A  
+----
+ cij
+ aaa
+cbcb
+The value we want to update: 
+cbcb 
+
+The value we are updating to:  cbcbbbb 
+ The new value on the table:  cbcb
+Table Sort:  [-5, -5, -5]
+Python Sort:  [-5, -5, -5]
+Table Sort:  [-3, 6, 6]
+Python Sort:  [-3, 6, 6]
+ A  
+----
+ cij
+ aaa
+cbcb
+The value we want to update: 
+cbcb 
+
+The value we are updating to:  cbcbbbb 
+ The new value on the table:  cbcb
+Table Sort:  [-10, -8, -8]
+Python Sort:  [-10, -8, -8]
+ A  
+----
+ cij
+ aaa
+cbcb
+The value we want to update: 
+cbcb 
+
+The value we are updating to:  cbcbbbb 
+ The new value on the table:  cbcb
+Table Sort:  [2, 5, 5]
+Python Sort:  [2, 5, 5]
+Table Sort:  [4, 4, 8]
+Python Sort:  [4, 4, 8]
+Table Sort:  [-4, -4, -4]
+Python Sort:  [-4, -4, -4]
+ A  
+----
+ cij
+ aaa
+cbcb
+The value we want to update: 
+cbcb 
+
+The value we are updating to:  cbcbbbb 
+ The new value on the table:  cbcb
+Table Sort:  [-10, -8, -8]
+Python Sort:  [-10, -8, -8]
+ A  
+----
+ cij
+ aaa
+cbcb
+The value we want to update: 
+cbcb 
+
+The value we are updating to:  cbcbbbb 
+ The new value on the table:  cbcb
+Table Sort:  [7, 7, 7]
+Python Sort:  [7, 7, 7]
+Table Sort:  [-2, -2, 3]
+Python Sort:  [-2, -2, 3]
+Table Sort:  [-9, -5, -5]
+Python Sort:  [-9, -5, -5]
+ A  
+----
+ cij
+ aaa
+cbcb
+The value we want to update: 
+cbcb 
+
+The value we are updating to:  cbcbbbb 
+ The new value on the table:  cbcb
+Table Sort:  [-10, -10, -7]
+Python Sort:  [-10, -10, -7]
+ A  
+----
+ cij
+ aaa
+cbcb
+The value we want to update: 
+cbcb 
+
+The value we are updating to:  cbcbbbb 
+ The new value on the table:  cbcb
+Table Sort:  [-10, -3, 3]
+Python Sort:  [-10, -3, 3]
+Table Sort:  [-10, -8, -8]
+Python Sort:  [-10, -8, -8]
+Table Sort:  [-9, -3, -2]
+Python Sort:  [-9, -3, -2]
+ A  
+----
+ cij
+ aaa
+cbcb
+The value we want to update: 
+cbcb 
+
+The value we are updating to:  cbcbbbb 
+ The new value on the table:  cbcb
+Table Sort:  [-2, -2, 3]
+Python Sort:  [-2, -2, 3]
+ A  
+----
+ cij
+ aaa
+cbcb
+The value we want to update: 
+cbcb 
+
+The value we are updating to:  cbcbbbb 
+ The new value on the table:  cbcb
+Table Sort:  [-2, -2, 5]
+Python Sort:  [-2, -2, 5]
+Table Sort:  [7, 10, 10]
+Python Sort:  [7, 10, 10]
+ A  
+----
+ cij
+ aaa
+cbcb
+The value we want to update: 
+cbcb 
+
+The value we are updating to:  cbcbbbb 
+ The new value on the table:  cbcb
+ A  
+----
+ cij
+ aaa
+cbcb
+The value we want to update: 
+cbcb 
+
+The value we are updating to:  cbcbbbb 
+ The new value on the table:  cbcb
+Reduced test has 3 steps
+REDUCED IN 5.7022151947 SECONDS
+string20 = 'cbcbbbb'                                                     # STEP 0
+chooseRow0 = 2                                                           # STEP 1
+Tuple.pprint(max_width = 1000); print 'The value we want to update: 
+',  Tuple.columns[0][chooseRow0], '
+'; Tuple.columns[0][chooseRow0] = string20; print 'The value we are updating to: ', string20, '
+ The new value on the table: ', Tuple.columns[0][chooseRow0]   # STEP 2
+
+FINAL VERSION OF TEST, WITH LOGGED REPLAY:
+string20 = 'cbcbbbb'                                                     # STEP 0
+chooseRow0 = 2                                                           # STEP 1
+Tuple.pprint(max_width = 1000); print 'The value we want to update: 
+',  Tuple.columns[0][chooseRow0], '
+'; Tuple.columns[0][chooseRow0] = string20; print 'The value we are updating to: ', string20, '
+ The new value on the table: ', Tuple.columns[0][chooseRow0]   # STEP 2
+ A  
+----
+ cij
+ aaa
+cbcb
+The value we want to update: 
+cbcb 
+
+The value we are updating to:  cbcbbbb 
+ The new value on the table:  cbcb
+ERROR: (<type 'exceptions.AssertionError'>, AssertionError('Updating the tuple or indices is not working',), <traceback object at 0x9fd7050>)
+TRACEBACK:
+STOPPING TESTING DUE TO FAILED TEST
+30.8823529412 PERCENT COVERED
+13.9167659283 TOTAL RUNTIME
+3 EXECUTED
+275 TOTAL TEST OPERATIONS
+7.76280760765 TIME SPENT EXECUTING TEST OPERATIONS
+0.0487849712372 TIME SPENT EVALUATING GUARDS AND CHOOSING ACTIONS
+0.253059625626 TIME SPENT CHECKING PROPERTIES
+8.01586723328 TOTAL TIME SPENT RUNNING SUT
+0.00400304794312 TIME SPENT RESTARTING
+5.70239901543 TIME SPENT REDUCING TEST CASES
+390 BRANCHES COVERED
+277 STATEMENTS COVERED

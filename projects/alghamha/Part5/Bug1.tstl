@@ -241,7 +241,8 @@ pool: <ObjectValues> 1
 pool: <OldNumberOfRows> 1
 pool: <chooseRow> 1
 pool: <Column1> 1
-pool: <Unit1> 1
+pool: <OldUnit> 1
+pool: <NewUnit> 1
 pool: <Description1> 1
 pool: <int1> 3
 pool: <ColumnSorted> 1
@@ -285,8 +286,9 @@ property: CheckRowNumber(r) < 1000000
 # Note: (') is not working with TSTL logging while (") does work
 # The values below are randomly going to be used to fill the column in the Table
 <int1> := <[-10..10]>
-<Column1> := <['AB','BC','CD','DE','EF','FG','GH','HI','IJ','JK','KL','LM','MN','TT','OP','PQ','QR','RS']>
-<Unit1> := <['CMMMM','MMMMMM','KMMMMMMM', 'MileMile','InchInch','FeetFeet','Prercent%','2^p^2']>
+<Column1> := <['AB','BC']>
+<OldUnit> := <['CM','MMM']>
+<NewUnit> := <['CMMMM','MMMMMM']>
 <Description1> := <['ab','bc','cd','de','ef','fg','gh','hi','ij','jk','kl','lm','mn','no','op','pq','qr','rs']>
 
 
@@ -296,11 +298,10 @@ property: CheckRowNumber(r) < 1000000
 ~<Column> := Column(name=<string>, data = [<int>,<int>,<int>])
 
 #This will test inserting a new column but an error "local variable 'new_name' referenced before assignment" will be reaised due to bad API
-#<Column> = Column(name=<string>, data = [<int>,<int>,<int>]); AddColumn(<Column>)
+#~<Column> = Column(name=<string>, data = [<int>,<int>,<int>]); AddColumn(<Column>)
 
-# To avoid aforementioned bug and continue adding infint number of columns randomly to check for other errors,
-# I used the following command
-
+# To avoid aforementioned bug and continue adding Infinite number of columns randomly to check for other errors,
+# you can use the following command
 ~<Column> = Column(name=<string>, data = [<int>,<int>,<int>]); AddColumnFix(<Column>, <string>)
 
 
@@ -352,17 +353,17 @@ AddRows(<intvalues>, <string2>, <ObjectValues>)
 len(r) > 0 -> <OldNumberOfRows> = len(r); r.pprint(max_width = 1000);  r.remove_row(SelectrandomRowToRemove()); print 'the row was removed' ; r.pprint(max_width = 1000); CheckIfTheRowISRemoved(<OldNumberOfRows>, len(r) )
 
 # Updating indices in the table has a major bug. The bug happens when updating a string 
-# with longer string it won't take the extra chars into account. 
+# with a longer string the library won't take the extra chars into account. 
 # As a restult the data values will become inconsistnce and makes the table unreliable
 # To fix this bug, there must be a check for the type of the column prior updating the 
 # indeces with the longer string and update the type of the column accordingly, then insert
 # the new value. You can uncomment the following action to detect this bug
 
-Tuple.pprint(max_width = 1000); print '\n',  Tuple.columns[0][<chooseRow>], '\n'; Tuple.columns[0][<chooseRow>] = <string2>; print '\n', <string2>, '\n', Tuple.columns[0][<chooseRow>], '\n this is the value tuple'  => Tuple.columns[0][<chooseRow>] == <string2>, 'Updating the tuple or indices is not working'
+#Tuple.pprint(max_width = 1000); print 'The value we want to update: \n',  Tuple.columns[0][<chooseRow>], '\n'; Tuple.columns[0][<chooseRow>] = <string2>; print 'The value we are updating to: ', <string2>, '\n The new value on the table: ', Tuple.columns[0][<chooseRow>]  => Tuple.columns[0][<chooseRow>] == <string2>, 'Updating the tuple or indices is not working'
 
-#Tuple.pprint(max_width = 1000); print '\n',  Tuple.columns[0][<chooseRow>], '\n'; Tuple.columns[0][<chooseRow>] = <string2>; print '\n', <string2>, '\n', Tuple.columns[0][<chooseRow>], '\n this is the value tuple'  => <string2> == <string2>, 'Updating the tuple or indices is not working'
+Tuple.pprint(max_width = 1000); print 'The value we want to update: \n',  Tuple.columns[0][<chooseRow>], '\n'; Tuple.columns[0][<chooseRow>] = <string2>; print 'The value we are updating to: ', <string2>, '\n The new value on the table: ', Tuple.columns[0][<chooseRow>]  => <string2> == <string2>, 'Updating the tuple or indices is working'
 
-#The following action is just for inserting and updating columns properties. 
+#The following action is to update the column properties
 
 # I found that if you insert the column again it will update the values (rows) while 
 # not updating the unit field. This is a bug because either it should update all the
@@ -370,11 +371,10 @@ Tuple.pprint(max_width = 1000); print '\n',  Tuple.columns[0][<chooseRow>], '\n'
 # this is a wrong action). This can be a source of failure when users try to delete
 # columns based on the unit values (this can be done by developing a function).
 
-u[<Column1>]= Column([<int1>,<int1>,<int1>], unit= <Unit1>, description=<Description1>); print '\n The Column: ', u[<Column1>] ,'\n We would like to update the Unit value to: ', <Unit1>, '\n The updated Unit value : ', u[<Column1>].unit => u[<Column1>].unit ==  <Unit1> or u[<Column1>].unit !=  <Unit1> , 'Updating units is working'
+#u[<Column1>]= Column([<int1>,<int1>,<int1>], unit= <OldUnit>, description=<Description1>); print '\n The Old column: ', u[<Column1>]; u[<Column1>]= Column([<int1>,<int1>,<int1>], unit= <NewUnit>, description=<Description1>); print ' the new column \n' , u[<Column1>], '\n We would like to update the Unit value to: ', <NewUnit>, '\n The updated Unit value : ', u[<Column1>].unit => <OldUnit> ==  u[<Column1>].unit or <OldUnit> !=  u[<Column1>].unit, 'The unit Update is working'
 
-# To confirm aforementnioned bug you can replace the last line with the following line or somthing like that: 
-#u[<Column1>]= Column([<int1>,<int1>,<int1>], unit= <Unit1>, description=<Description1>); print '\n The Column: ', u[<Column1>] ,'\n We would like to update the Unit value to: ', <Unit1>, '\n The updated Unit value : ', u[<Column1>].unit => u[<Column1>].unit ==  <Unit1> , 'Updating units is not working'
-
+# To confirm aforementnioned bug and capture it you can Comment the previous Line and Uncomment the following line: 
+u[<Column1>]= Column([<int1>,<int1>,<int1>], unit= <OldUnit>, description=<Description1>); print '\n The Old column: ', u[<Column1>]; u[<Column1>]= Column([<int1>,<int1>,<int1>], unit= <NewUnit>, description=<Description1>); print ' the new column \n' , u[<Column1>], '\n We would like to update the Unit value to: ', <NewUnit>, '\n The updated Unit value : ', u[<Column1>].unit => <OldUnit> ==  u[<Column1>].unit, 'The unit Update is not working'
 
 # Test group_by function
 print 'this is the first Table\n', groupTable1.group_by(<groupColumns>); print '\n this is the second table\n',  groupTable2.group_by(<groupColumns>)  => all(groupTable1.group_by(<groupColumns>)) == all(groupTable2.group_by(<groupColumns>))
