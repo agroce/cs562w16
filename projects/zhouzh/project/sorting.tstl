@@ -14,12 +14,7 @@
 
 pools:
         <int> 10
-        <list> 3
-
-
-logs:
-        1 <list>
-        POST 1 <list>
+        <list> 5
 
 
 actions:
@@ -27,7 +22,35 @@ actions:
         <int> := <[1..100]>
         <list> := []
         ~<list>.append(<int>) => len(<list,1>) == pre<(len(<list,1>))>+1
-        bogo_sort.sort(~<list>); print(~<list,1>) => bogo_sort.is_sorted(<list,1>)
 
 
+        ####################################################################
+        # Terrible sorting algorithm. Even can not be executed effectively.#
+        ####################################################################
+        #bogo_sort.sort(~<list>); print(<list,1>) => bogo_sort.is_sorted(<list,1>)
+
+        
+        bubble_sort.sort(~<list>); print(<list,1>) => bogo_sort.is_sorted(<list,1>)
+        
+        
+        cocktail_sort.sort(~<list>); print(<list,1>) => bogo_sort.is_sorted(<list,1>)
+
+        
+        comb_sort.sort(~<list>); print(<list,1>) => bogo_sort.is_sorted(<list,1>)
+
+        gnome_sort.sort(~<list>); print(<list,1>) => bogo_sort.is_sorted(<list,1>)
+
+        heap_sort.sort(~<list>); print(<list,1>) => bogo_sort.is_sorted(<list,1>)
+
+        insertion_sort.sort(~<list>); print(<list,1>) => bogo_sort.is_sorted(<list,1>)
+
+        newlist = merge_sort.sort(~<list>); print(newlist) => bogo_sort.is_sorted(newlist)
+        
+        newlist = quick_sort.sort(~<list>); print(newlist) => bogo_sort.is_sorted(newlist)
+
+        selection_sort.sort(~<list>); print(<list,1>) => bogo_sort.is_sorted(<list,1>)
+
+        shell_sort.sort(~<list>); print(<list,1>) => bogo_sort.is_sorted(<list,1>)
+        
+        newlist = strand_sort.sort(~<list>); print(newlist) => bogo_sort.is_sorted(newlist)
 
