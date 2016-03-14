@@ -11,4 +11,6 @@ actions:
 
 ~<sll>.push(~<data>) => (<data,1> in <sll,1>.stack)\
 and (<sll,1>.size() == pre<(<sll,1>.size())>+1)
-print ~<sll>.stack
+(not ~<sll>.isEmpty()) -> s = <sll,1>.stack; val = s[len(s)-1];\
+rem = ~<sll,1>.pop() => val == rem;\
+

@@ -9,6 +9,9 @@ actions:
 <data> := <[0..50]>
 <queue> := queue.Queue()
 
-~<queue>.enqueue(~<data>) => (<queue,1>.size() == pre<(<queue,1>.size())>+1)
-print ~<queue>.queue
+~<queue>.enqueue(~<data>) => (<queue,1>.size() == pre<(<queue,1>.size())>+1)\
+and (<data,1> in <queue,1>.queue)
+(not ~<queue>.isEmpty) -> q = <queue,1>.queue; val = q[0];\
+rem = ~<queue,1>.dequeue() => rem == val
+
 
