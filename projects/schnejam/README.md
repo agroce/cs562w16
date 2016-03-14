@@ -1,6 +1,7 @@
 ## CS 562 Project ##
 ###Table of Contents
 + Part 0: VirtualEnv Setup
++ Part 4: Final Report
 + Part 3: Progress Report
 + Part 1: Proposal
 
@@ -11,6 +12,21 @@ Setup a virtualenv using the requirements file like this:
 
 You may need to install PyOpenCL directly from it's repo like so:
 `pip install git+https://github.com/pyopencl/pyopencl.git`
+
+
+### Part 4: Final Report ###
+
+#### Accomplishments ####
+
+#### Bugs Found ####
+
+#### Efficacy of Tester ####
+
+#### Downsides of TSTL ####
+
+#### Upsides of TSTL ####
+
+
 
 
 ### Part 3: Progress Report ###
@@ -25,10 +41,11 @@ seed2 = 20                                                               # STEP 
 length1 = int(red.array_len(10))                                         # STEP 1  
 array1 = red.get_cpu_data(seed=seed2, min_endpoint=-10, max_endpoint=10, length=length1)  # STEP 2  
 ufunc1 =  "ary[i] < val"                                                 # STEP 3  
-compare_predicates(array1, ufunc1)                                       # STEP 4  ```
+compare_predicates(array1, ufunc1)                                       # STEP 4
+```
 
 This failure merits further investigation so that it can be discussed in the final report.
-I currently have a one-off test for this error, but it does not yiled the runtime error.
+I currently have a one-off test for this error, but it does not yield the runtime error.
 This might mean that some of the other tests aren't being properly cleaned up and will allow for easier targeting of the issue in further iterations.
 
 #### Testing progress and improvements ####
