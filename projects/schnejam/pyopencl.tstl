@@ -1,6 +1,6 @@
 #Instructions: SEE README ON HOW TO INSTALL pyopencl (into a virtualenv if you wish) using pip
 
-@from reductions import compare_zip, compare_fold, compare_filters, compare_unique, array_len, get_cpu_data
+@from pyopencltests import compare_zip, compare_fold, compare_filters, compare_unique, array_len, get_cpu_data
 @import math
 @import numpy as np
 
