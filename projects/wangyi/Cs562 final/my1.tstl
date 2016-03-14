@@ -1,0 +1,34 @@
+@import math
+@import time
+@import treap
+@import immutable_treap
+
+source: treap.py
+source: immutable_treap.py
+source: mutable_treap.py
+
+
+<@
+def NVC (node.left, node.right)
+if node.left.value > node.right.value:
+	return True
+else:
+	return False
+
+@>
+
+pools:
+	<treap> 2
+	<value> 4
+	<priority> 4
+	<treap1> 2
+	<lst> 1
+
+actions:
+	<value> := <[1..10]>
+	<priority> := <[1..10]>
+	<treap> := immutable_treap.ImmutableTreap()
+	~<treap>.insert(<value>) => (<treap1>.__contains(<value>) == True)
+	<treap>.__merge(<treap>,<treap1>) => (NVC(node.left, node.right) == True)
+	<lst> := <treap>.split(<treap>) 
+	print "lst" , <lst>;
