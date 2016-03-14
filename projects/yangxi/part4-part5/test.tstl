@@ -1,0 +1,88 @@
+@import math
+@import time
+@import Tree
+
+<@
+def test_helper1(self, Child):
+		if (self.data == None):
+			return False
+		if (Child.getParent().data == self.data):
+			return True
+		else:
+			return False
+
+def test_helper2(Child):
+		if (Node.data == None):
+			return True
+
+@>
+
+
+source: Tree.py
+
+pools:
+        <val> 5
+        <root> 1
+        <child01> 1
+        <child02> 1
+        <child11> 1
+	<child21> 1
+	<child111> 1
+	<rootR> 1
+	<childR1> 1
+	<childR2> 1
+	<childR11> 1
+         
+actions:
+        <val> := <[0..10]>
+        <char> := <['R']>
+        <root> := Tree.Tree('R')
+        <child01> := Tree.Tree(<val>)
+	<child02> := Tree.Tree(<val>)
+	<child11> := Tree.Tree(<val>)
+	<child21> := Tree.Tree(<val>)
+	<child111> := Tree.Tree(<val>)
+	<rootR> := <[‘R’]>
+	<childR1> := <[‘c01’]>
+	<childR2> := <[‘c02’]>
+	<childR11> := <[‘c11’]>
+	
+
+############ test addChildren #############
+	<root>.addChildren([<child01>, <child02>]) => (test_helper1(<root>, <child01>) == True) and (test_helper1(<root>, <child01>) == True)
+	
+############ test addChild    #############
+        <child01>.addChild(<child11>) => (test_helper1(<child01>, <child11>) == True)
+ 
+        <child02>.addChild(<child21>) => (test_helper1(<child02>, <child21>) == True)
+
+	<child11>.addChild(<child111>) => (test_helper1(<child11>, <child111>) == True)
+
+############ test getParent    #############
+        <root>.addChild(<child01>) => (test_helper1(<child01>.getParent(), <child01>) == True)
+
+############ test getChild     #############
+	<root>.addChild(<child01>) => (test_helper1(<root>, <root>.getChild(0)) == True)
+
+############ test getChildren  #############
+	<root>.addChildren([<child01>, <child02>]) => (test_helper1(<root>, <root>.getChildren()[0]) == True) and (test_helper1(<root>, <root>.getChildren()[1]) == True)
+
+############ test getNode      #############
+       <rootR>.addChildren([<childR1>, <childR2>] => (<rootR>.getNode(<[‘c01’]>) == <childR1>)
+
+############ test delChild     #############
+	<rootR>.addChildren([<childR1>, <childR2>])
+	~<rootR>.delChild(0) => (test_helper2(<root>.getChild(0)) == True)
+
+############ test delNode     #############
+	<rootR>.addChildren([<childR1>, <childR2>])
+	~<rootR>.delNode(<[‘c01’]>) => (test_helper2(<root>.getChild(0)) == True)
+
+############ test getRoot     #############
+	<rootR>.addChildren([<childR1>, <childR2>]) => (<childR1>.getParent() == <rootR>.getRoot())
+
+############ test isRoot     #############
+	<rootR>.addChildren([<childR1>, <childR2>]) => (<childR1>.isRoot() == False) and (<rootR>.isRoot() == True)
+
+############ test IsBranch     #############
+	<rootR>.addChildren([<childR1>, <childR2>]) => (<childR1>.isBranch() == True) and (<rootR>.isBranch() == False)
