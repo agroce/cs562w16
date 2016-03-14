@@ -1,45 +1,17 @@
 #Instructions: SEE README ON HOW TO INSTALL pyopencl (into a virtualenv if you wish) using pip
 
-@import reductions as red
+@from reductions import compare_zip, compare_fold, compare_filters, compare_unique, array_len, get_cpu_data
 @import math
 @import numpy as np
-
-<@
-def evaluate(success, arr):
-    if not success: print(arr)
-    assert success
-
-def compare_fold(arr, func):
-    gpu_result = red.pyopencl_fold_with(arr, func)
-    cpu_result = red.python_fold_with(arr, func)
-    success = gpu_result == cpu_result
-    evaluate(success, arr)
-    return np.arange(cpu_result, dtype=np.int32)
-
-def compare_zip(arr, func):
-    gpu_result = red.pyopencl_zip_with(arr, func)
-    cpu_result = red.python_zip_with(arr, func)
-    success = (gpu_result == cpu_result).all()
-    evaluate(success, arr)
-    return cpu_result
-
-def compare_predicates(arr, func):
-    success = red.pyopencl_filter(arr, func)
-    evaluate(success, arr)
-
-def compare_unique(arr):
-    success = red.pyopencl_unique(arr)
-    evaluate(success, arr)
-@>
 
 pool: <seed> 3
 <seed> := <[1..20]>
 
 pool: <length> 3
-<length> := int(red.array_len(<[1..13]>))
+<length> := int(array_len(<[1..13]>))
 
 pool: <array> 3
-<array> := red.get_cpu_data(seed=<seed>, min_endpoint=-10, max_endpoint=10, length=<length>)
+<array> := get_cpu_data(seed=<seed>, min_endpoint=-10, max_endpoint=10, length=<length>)
 
 #valid GPU operations for folding must be associative
 pool: <afunc> 3
@@ -49,8 +21,7 @@ pool: <afunc> 3
 pool: <ufunc> 3
 <ufunc> := <["ary[i] > val", "ary[i] < val", "ary[i] >= val", "ary[i] <= val", "ary[i] == val"]>
 
-
-<array,1> = compare_fold(<array>, <afunc>)
-<array,1> = compare_zip(<array>, <afunc>)
-compare_predicates(<array>, <ufunc>)
+compare_zip(<array>, <afunc>)
+compare_filters(<array>, <ufunc>)
+compare_fold(<array>, <afunc>)
 compare_unique(<array>)
