@@ -1,0 +1,120 @@
+@import BTreenew
+@import math
+@import time
+
+<@
+def elemNum(num):
+    return num
+
+def Find(node):
+    if (node==None):
+       return True
+    else:
+       return False
+@>
+
+source: BTreenew.py
+
+pool: <int> 3
+pool: <BT> 3
+pool: <SK> 3
+pool: <NODE> 3
+pool: <ND> 3
+pool: <LF> 3
+pool: <LIST> 3
+
+
+<LIST>:=[]
+~<LIST>.append(<int>)
+<int> := <[1..200]>
+
+<BT> := BTreenew.BTree()
+<SK> := BTreenew.Stack()
+<NODE> := BTreenew.Node(True, <LIST>)
+<ND> := BTreenew.Node(False, <LIST>)
+#<LF> := BTreenew._BPlusLeaf(<BT>)
+
+####################### test stack
+~<SK>.push(<int>) => \
+   ((<SK,1>.__len__()) == pre<((<SK,1>.__len__()))>+1)
+
+((<SK,1>.__len__()) == 5)  -> ~<SK>.pop() => \
+   ((<SK,1>.__len__()) == pre<((<SK,1>.__len__()))>-1)
+   
+((<SK,1>.__len__()) == 0)  -> ~<SK>.pop() => \
+   ((<SK,1>.pop()) == None)
+   
+((<SK,1>.__len__()) == 50)  -> ~<SK>.__len__() => \
+   ((<SK,1>.__len__()) == 50)
+
+((<SK,1>.__len__()) == 50)  -> ~<SK>.empty() => \
+   ((<SK,1>.empty()) == False)
+   
+((<SK,1>.__len__()) == 0)  -> ~<SK>.empty() => \
+   ((<SK,1>.empty()) == True)  
+
+####################### test node   
+~<NODE>.append(<int>) => \
+   ((<NODE,1>.__len__()) == pre<((<NODE,1>.__len__()))>+1)
+   
+~<ND>.append(<int>) => \
+   ((<ND,1>.__len__()) == pre<((<ND,1>.__len__()))>+1)
+
+((<NODE,1>.__len__()) == 50)  -> ~<NODE>.leaf_remove(<int>) => \
+   ((<NODE,1>.__len__()) == pre<((<NODE,1>.__len__()))>-1)
+   
+((<NODE,1>.__len__()) == 50)  -> ~<NODE>.__len__() => \
+   ((<NODE,1>.__len__()) == 50)
+   
+((<NODE,1>.__len__()) == 1)  -> ~<NODE>.search_child(<int>) => \
+   ((<NODE,1>.search_child(<int>)) == None)
+
+############ find bug   
+#((<NODE,1>.__len__()) == 1)  -> ~<ND>.leaf_remove(<int>) => \
+#   ((<NODE>.__len__()) == pre<((<NODE,1>.__len__()))>-1)
+
+####################### test Leaf
+#~<LF>.insert(<int>, <int>, <int>, <int>) => \
+#  (<LF,1>.__size__() == pre<(<LF,1>.__size__())>+1)
+
+####################### test tree   
+~<BT>.insert(<int>) => \
+   (len(<BT,1>.mid_order()) == pre<(len(<BT,1>.mid_order()))>+1)
+   
+(len(<BT,1>.mid_order()) == 50)  -> ~<BT>.insert(<int>) => \
+   (len(<BT,1>.mid_order()) == pre<(len(<BT,1>.mid_order()))>+1)
+   
+(len(<BT,1>.mid_order()) == 0)  -> ~<BT>.insert(<int>) => \
+   (len(<BT,1>.mid_order()) == pre<(len(<BT,1>.mid_order()))>+1)
+
+(len(<BT,1>.mid_order()) == 50)  -> ~<BT>.delete(<BT,1>.min()) => \
+   (len(<BT,1>.mid_order()) == pre<(len(<BT,1>.mid_order()))>-1)
+
+############ find bug    
+#(len(<BT,1>.mid_order()) == 1)  -> ~<BT>.delete(<BT,1>.min()) => \
+#   (len(<BT,1>.mid_order()) == 0) 
+   
+(len(<BT,1>.mid_order()) == 0)  -> ~<BT>.delete(<int>) => \
+   (len(<BT,1>.mid_order()) == pre<(len(<BT,1>.mid_order()))>) 
+  
+(len(<BT,1>.mid_order()) == 5) -> ~<BT>.min() => \
+   (min(<BT,1>.mid_order()) == (<BT,1>.min())) 
+   
+(len(<BT,1>.mid_order()) == 0) -> ~<BT>.min() => \
+   ((<BT,1>.min()) == None) 
+   
+(len(<BT,1>.mid_order()) == 5) -> ~<BT>.max() => \
+   (max(<BT,1>.mid_order()) == (<BT,1>.max())) 
+   
+(len(<BT,1>.mid_order()) == 0) -> ~<BT>.max() => \
+   ((<BT,1>.max()) == None) 
+
+(len(<BT,1>.mid_order()) == 0) -> ~<BT>.mid_order() => \
+   ((<BT,1>.mid_order()) == [])
+   
+(len(<BT,1>.mid_order()) == 1) -> ~<BT>.insert(<BT,1>.min()) => \
+   ((<BT,1>.mid_order()) == [<BT,1>.min(),<BT,1>.min()])
+    
+
+log: 1 <BT>.mid_order(<int>)
+log: POST 1 <BT>.mid_order(<int>)
