@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+@from xpinyin import Pinyin
+
+pool: <p> 1
+pool: <str1> 4
+
+
+
+<p> := Pinyin()
+
+<str1> := <[u"Hello 北京",u"上海 + 广州",u"深圳 = shenzhen",u"@天津"]>
+
+print <p>.get_pinyin(<str1>, show_tone_marks=True)
+print <p>.get_initials(<str1>)
+
+

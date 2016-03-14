@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+@from xpinyin import Pinyin
+
+pool: <p> 1
+pool: <str1> 3
+
+
+<p> := Pinyin()
+
+<str1> := <[u"嫑 = biao", u"砉然 = xu-ran", u"巭 = bu"]>
+
+print <p>.get_pinyin(<str1>, show_tone_marks=True)
+print <p>.get_initials(<str1>)
+
