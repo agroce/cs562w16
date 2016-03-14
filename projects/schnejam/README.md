@@ -17,6 +17,7 @@ You may need to install PyOpenCL directly from it's repo like so:
 ### Part 4: Final Report ###
 
 #### Accomplishments ####
+I s
 
 #### Bugs Found ####
 
@@ -36,7 +37,8 @@ It appears that I have found a runtime error, it appears that executing the filt
 The value used in the filter is the first value in the array, which means in both > and < cases should return false and >=, <=, and == should return true, not a runtime error.
 The steps to recreate the test were:
 
-```FINAL VERSION OF TEST, WITH LOGGED REPLAY:
+```python
+FINAL VERSION OF TEST, WITH LOGGED REPLAY:
 seed2 = 20                                                               # STEP 0  
 length1 = int(red.array_len(10))                                         # STEP 1  
 array1 = red.get_cpu_data(seed=seed2, min_endpoint=-10, max_endpoint=10, length=length1)  # STEP 2  
