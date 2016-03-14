@@ -1,0 +1,8 @@
+Name                                                    Stmts   Miss  Cover
+---------------------------------------------------------------------------
+/Library/Python/2.7/site-packages/examine/__init__.py       1      0   100%
+/Library/Python/2.7/site-packages/examine/examine.py      145      5    97%
+/private/var/root/tstl/generators/randomtester.py         582    442    24%
+/private/var/root/tstl/generators/sut.py                 4246    660    84%
+---------------------------------------------------------------------------
+TOTAL                                                    4974   1107    78%

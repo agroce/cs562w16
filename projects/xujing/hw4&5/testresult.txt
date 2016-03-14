@@ -1,0 +1,5097 @@
+Random testing using config=Config(verbose=False, failedLogging=None, maxtests=100, greedyStutter=False, seed=None, generalize=False, uncaught=False, speed='FAST', internal=False, normalize=False, replayable=False, essentials=False, quickTests=False, coverfile='coverage.out', ignoreprops=False, total=False, noreassign=False, full=False, multiple=False, stutter=None, running=False, nocover=True, gendepth=None, logging=None, html=None, keep=False, depth=100, timeout=3600, output=None)
+[]
+[NoneType]
+[dict]
+  list - <mixed-type>
+[dict]
+  list - <mixed-type>
+[(str, *int, <mixed-type>, *str)]
+(str, int)
+[(*str, *int)]
+[(*str, *int)]
+[(*str, *int)]
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  list - <mixed-type>
+dict
+[[[int]]]
+dict
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[*int]
+dict
+(str, int)
+(str, int)
+[[[int]]]
+[[[int]]]
+[[<mixed-type>]]
+[dict]
+  list - [int]
+dict
+[dict]
+  list - <mixed-type>
+[dict]
+  list - <mixed-type>
+[[<mixed-type>]]
+[dict]
+  list - <mixed-type>
+[[[int]]]
+[[<mixed-type>]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(str, *int, <mixed-type>, *str)]
+[str]
+dict
+[NoneType]
+[]
+[]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[]
+[dict]
+  *key1 - str
+  *key2 - str
+([], [], [], [])
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  *key1 - str
+  *key2 - str
+([], [], [], [])
+[(str, *int, <mixed-type>, *str)]
+[*int]
+([{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}])
+[(*str, *int)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+([{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}])
+([], [], [], [])
+[*int]
+[str]
+(str, int)
+[dict]
+  key - *str
+[dict]
+  key - *str
+[*int]
+dict
+([], [], [], [])
+[dict]
+  key - *str
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  *key1 - str
+  *key2 - str
+[[[int]]]
+([], [], [], [])
+[str]
+[dict]
+  key - *str
+[dict]
+  *key1 - str
+  *key2 - str
+[str]
+([{'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding'])
+dict
+[dict]
+  key - *str
+[dict]
+  *key1 - str
+  *key2 - str
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  *key1 - str
+  *key2 - str
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[(str, *int, <mixed-type>, *str)]
+[str]
+[str]
+[str]
+[*int]
+[str]
+[dict]
+  *key1 - str
+  *key2 - str
+[str]
+[str]
+[str]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+([], [], [], [])
+[str]
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  *key1 - str
+  *key2 - str
+[str]
+([], [], [], [])
+([], [], [], [])
+[str]
+[str]
+[*[[int]]]
+[NoneType]
+[str]
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  list - [int]
+[str]
+[[[int]]]
+[dict]
+  key - *str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[[int]]]
+(str, int)
+[[[int]]]
+[NoneType]
+[[[int]]]
+[*[[int]]]
+[*[[int]]]
+[dict]
+  list - <mixed-type>
+[]
+[[[int]]]
+[dict]
+  list - <mixed-type>
+[(*str, *int)]
+[]
+[[[int]]]
+[*[[int]]]
+[NoneType]
+dict
+[dict]
+  list - [int]
+[[[int]]]
+[*[[int]]]
+([], ['coding', 'snowboarding'], [], ['coding', 'snowboarding'])
+[dict]
+  list - [int]
+[dict]
+  key - *str
+[[<mixed-type>]]
+([], [], [], [])
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key - *str
+[NoneType]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[[int]]]
+(['coding', 'snowboarding'], [], ['coding', 'snowboarding'], [])
+[*int]
+[dict]
+  list - [int]
+[NoneType]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+(['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'])
+[]
+[[<mixed-type>]]
+[(str, *int, <mixed-type>, *str)]
+([], [], [], [])
+[[[int]]]
+([], [], [], [])
+[(str, *int, <mixed-type>, *str)]
+([], ['coding', 'snowboarding'], [], ['coding', 'snowboarding'])
+([], [], [], [])
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(str, *int, <mixed-type>, *str)]
+dict
+[[[int]]]
+(str, int)
+[[<mixed-type>]]
+[(*str, *int)]
+[str]
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  key - *str
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(*str, *int)]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  list - [int]
+[(str, *int, <mixed-type>, *str)]
+[[[int]]]
+[[[int]]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  list - <mixed-type>
+[]
+[<mixed-type>]
+[dict]
+  list - [int]
+[str]
+(str, int)
+[[[int]]]
+[*int]
+[dict]
+  key - *str
+dict
+([], [], [], [])
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[[int]]]
+[[[int]]]
+([{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'])
+dict
+[(str, *int, <mixed-type>, *str)]
+([{'key1': 'val1'}, 'coding', 'snowboarding', {'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding', {'key1': 'val1'}], [{'key1': 'val1'}])
+[[<mixed-type>]]
+[dict]
+  list - [int]
+([], [], [], [])
+(str, int)
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[[int]]]
+[dict]
+  key - *str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[<mixed-type>]
+[<mixed-type>]
+[dict]
+  key - *str
+dict
+[<mixed-type>]
+[<mixed-type>]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+([{'key1': 'val1'}, 'coding', 'snowboarding', {'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding', {'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding', {'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding', {'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding'])
+([{'key1': 'val1'}, 'coding', 'snowboarding', {'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding'], [{'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding', {'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding'], [{'key1': 'val1'}])
+(str, int)
+[dict]
+  *key1 - str
+  *key2 - str
+(str, int)
+[NoneType]
+([], [{'key1': 'val1'}, {'key1': 'val1'}], [], [{'key1': 'val1'}, {'key1': 'val1'}])
+[dict]
+  list - [int]
+[*int]
+[dict]
+  key - *str
+[dict]
+  key - *str
+([], [], [], [])
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+([], [{'key1': 'val1'}], [], [{'key1': 'val1'}])
+[str]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[*int]
+([{'key1': 'val1'}], ['coding', 'snowboarding'], [{'key1': 'val1'}], ['coding', 'snowboarding'])
+[str]
+[dict]
+  key - *str
+[str]
+[dict]
+  list - [int]
+[[<mixed-type>]]
+([{'key1': 'val1'}], ['coding', 'snowboarding', {'key1': 'val1'}], [{'key1': 'val1'}], ['coding', 'snowboarding', {'key1': 'val1'}])
+[[[int]]]
+[[[int]]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+([], [], [], [])
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  key - *str
+[*int]
+[[[int]]]
+(['coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}], ['coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}], ['coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}], ['coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}])
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[str]
+[str]
+[dict]
+  list - <mixed-type>
+(['coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}], ['coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}], ['coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}], ['coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}])
+(['coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}], ['coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}])
+[NoneType]
+[NoneType]
+[(*str, *int)]
+[dict]
+  key - *str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(*str, *int)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[]
+[[<mixed-type>]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  *key1 - str
+  *key2 - str
+[[<mixed-type>]]
+[(str, *int, <mixed-type>, *str)]
+[[[int]]]
+(str, int)
+[[<mixed-type>]]
+[dict]
+  key - *str
+[str]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[[int]]]
+[(str, *int, <mixed-type>, *str)]
+[str]
+(str, int)
+[]
+[dict]
+  list - [int]
+[str]
+[*int]
+[NoneType]
+[dict]
+  key - *str
+[[[int]]]
+[NoneType]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(str, *int, <mixed-type>, *str)]
+dict
+[(*str, *int)]
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+[*int]
+[str]
+[(str, *int, <mixed-type>, *str)]
+[NoneType]
+[(str, *int, <mixed-type>, *str)]
+[str]
+[str]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(*str, *int)]
+[str]
+[str]
+[str]
+([], [], [], [])
+([], [{'key1': 'val1'}, {'key1': 'val1'}], [], [{'key1': 'val1'}, {'key1': 'val1'}])
+[str]
+[str]
+[dict]
+  *key1 - str
+  *key2 - str
+dict
+[]
+[(str, *int, <mixed-type>, *str)]
+[*int]
+[str]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[*int]
+[]
+(str, int)
+[*int]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+([], [], [], [])
+[*[[int]]]
+[(*str, *int)]
+[(*str, *int)]
+[*int]
+[(*str, *int)]
+(str, int)
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+dict
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  list - <mixed-type>
+[dict]
+  list - [int]
+(['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'])
+(str, int)
+(str, int)
+[str]
+[dict]
+  list - [int]
+[[<mixed-type>]]
+[dict]
+  *key1 - str
+  *key2 - str
+[<mixed-type>]
+[[<mixed-type>]]
+[dict]
+  *key1 - str
+  *key2 - str
+[<mixed-type>]
+[str]
+[dict]
+  list - <mixed-type>
+(['coding', 'snowboarding'], ['coding', 'snowboarding', {'key1': 'val1'}], ['coding', 'snowboarding'], ['coding', 'snowboarding', {'key1': 'val1'}])
+[str]
+[<mixed-type>]
+[]
+dict
+[dict]
+  *key1 - str
+  *key2 - str
+[*[[int]]]
+[NoneType]
+[[[int]]]
+dict
+[]
+[dict]
+  *key1 - str
+  *key2 - str
+dict
+[dict]
+  list - [int]
+[NoneType]
+([], [], [], [])
+[NoneType]
+(str, int)
+[*[[int]]]
+[(*str, *int)]
+[*[[int]]]
+([], [], [], [])
+[(*str, *int)]
+[NoneType]
+[(*str, *int)]
+[]
+dict
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[<mixed-type>]]
+([], [], [], [])
+[NoneType]
+[dict]
+  list - <mixed-type>
+[dict]
+  *key1 - str
+  *key2 - str
+[str]
+[<mixed-type>]
+[<mixed-type>]
+([], [], [], [])
+(str, int)
+[]
+[*int]
+(str, int)
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  *key1 - str
+  *key2 - str
+[*[[int]]]
+[dict]
+  *key1 - str
+  *key2 - str
+[*int]
+[[<mixed-type>]]
+[(str, *int, <mixed-type>, *str)]
+(str, int)
+[dict]
+  list - <mixed-type>
+[*int]
+[dict]
+  list - <mixed-type>
+[dict]
+  list - <mixed-type>
+dict
+[[<mixed-type>]]
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  key - *str
+[*int]
+[*int]
+[[<mixed-type>]]
+[str]
+[*int]
+[dict]
+  list - [int]
+(str, int)
+[<mixed-type>]
+(str, int)
+[<mixed-type>]
+[<mixed-type>]
+[[<mixed-type>]]
+[str]
+[*int]
+[<mixed-type>]
+[dict]
+  *key1 - str
+  *key2 - str
+[*int]
+[NoneType]
+[str]
+[<mixed-type>]
+[dict]
+  list - [int]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  list - [int]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+dict
+[NoneType]
+[(str, *int, <mixed-type>, *str)]
+[*[[int]]]
+dict
+[[<mixed-type>]]
+[NoneType]
+[NoneType]
+[dict]
+  *key1 - str
+  *key2 - str
+dict
+[(str, *int, <mixed-type>, *str)]
+(str, int)
+[str]
+[dict]
+  key - *str
+[str]
+[dict]
+  list - [int]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[(*str, *int)]
+[str]
+[str]
+[[<mixed-type>]]
+[*int]
+[str]
+dict
+[*int]
+[<mixed-type>]
+([], [], [], [])
+[dict]
+  key - *str
+([], [], [], [])
+([], [], [], [])
+([], [{'key1': 'val1'}], [], [{'key1': 'val1'}])
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key - *str
+[NoneType]
+([{'key1': 'val1'}, {'key1': 'val1'}], [], [{'key1': 'val1'}, {'key1': 'val1'}], [])
+([{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}])
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[[int]]]
+[dict]
+  key - *str
+[dict]
+  list - <mixed-type>
+[dict]
+  *key1 - str
+  *key2 - str
+dict
+[[<mixed-type>]]
+(str, int)
+(str, int)
+[dict]
+  *key1 - str
+  *key2 - str
+([], [], [], [])
+[dict]
+  key - *str
+[NoneType]
+[<mixed-type>]
+(['coding', 'snowboarding'], [], ['coding', 'snowboarding'], [])
+[dict]
+  key - *str
+[<mixed-type>]
+[dict]
+  list - [int]
+[(*str, *int)]
+[[<mixed-type>]]
+[(*str, *int)]
+[(*str, *int)]
+[[[int]]]
+([], [], [], [])
+[*int]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+(str, int)
+(str, int)
+[[<mixed-type>]]
+[*[[int]]]
+[[[int]]]
+[*int]
+[dict]
+  list - [int]
+[]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[*int]
+[(str, *int, <mixed-type>, *str)]
+([], [], [], [])
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[*int]
+[]
+[str]
+[str]
+[str]
+[str]
+[str]
+[dict]
+  list - [int]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  key - *str
+[[<mixed-type>]]
+[(*str, *int)]
+[dict]
+  list - <mixed-type>
+dict
+[]
+[dict]
+  key - *str
+[[[int]]]
+[dict]
+  list - [int]
+dict
+[*int]
+([], [], [], [])
+([], [{'key1': 'val1'}], [], [{'key1': 'val1'}])
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  key - *str
+(str, int)
+[(*str, *int)]
+[dict]
+  *key1 - str
+  *key2 - str
+[*[[int]]]
+[NoneType]
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+(str, int)
+([{'key1': 'val1'}], [], [{'key1': 'val1'}], [])
+([{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}])
+[*[[int]]]
+[[[int]]]
+([{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}])
+[dict]
+  list - [int]
+([{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}])
+dict
+[*int]
+[dict]
+  key - *str
+[dict]
+  key - *str
+[dict]
+  key - *str
+([], [], [], [])
+[[<mixed-type>]]
+(str, int)
+[*[[int]]]
+dict
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  key - *str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key - *str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  list - [int]
+[dict]
+  key - *str
+([], [], [], [])
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  list - [int]
+[dict]
+  list - <mixed-type>
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  list - [int]
+[*[[int]]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[*[[int]]]
+[(str, *int, <mixed-type>, *str)]
+[(*str, *int)]
+(['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'])
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  *key1 - str
+  *key2 - str
+[]
+(str, int)
+[dict]
+  list - <mixed-type>
+(str, int)
+[str]
+(['coding', 'snowboarding', 'coding', 'snowboarding'], ['coding', 'snowboarding', 'coding', 'snowboarding'], ['coding', 'snowboarding', 'coding', 'snowboarding'], ['coding', 'snowboarding', 'coding', 'snowboarding'])
+[[<mixed-type>]]
+[dict]
+  list - [int]
+[*[[int]]]
+(['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}], [], ['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}], [])
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  *key1 - str
+  *key2 - str
+[str]
+[(*str, *int)]
+[str]
+[*[[int]]]
+dict
+[[[int]]]
+[]
+[NoneType]
+([], [], [], [])
+[dict]
+  key - *str
+[dict]
+  key - *str
+[]
+[dict]
+  list - [int]
+[str]
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  *key1 - str
+  *key2 - str
+[[[int]]]
+[[<mixed-type>]]
+[str]
+([], [{'key1': 'val1'}], [], [{'key1': 'val1'}])
+(str, int)
+[str]
+([{'key1': 'val1'}], [], [{'key1': 'val1'}], [])
+[]
+[dict]
+  *key1 - str
+  *key2 - str
+[*[[int]]]
+[*[[int]]]
+(str, int)
+[str]
+[dict]
+  *key1 - str
+  *key2 - str
+[[[int]]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[<mixed-type>]
+(str, int)
+[<mixed-type>]
+[<mixed-type>]
+dict
+[NoneType]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  list - [int]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[(str, *int, <mixed-type>, *str)]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+dict
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[str]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[*[[int]]]
+[[<mixed-type>]]
+[NoneType]
+[str]
+[dict]
+  key - *str
+[str]
+[str]
+[dict]
+  list - [int]
+[dict]
+  key - *str
+[[[int]]]
+dict
+[dict]
+  *key1 - str
+  *key2 - str
+[str]
+[*int]
+[dict]
+  list - [int]
+[str]
+[str]
+[str]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[<mixed-type>]]
+[dict]
+  *key1 - str
+  *key2 - str
+[(*str, *int)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key - *str
+[*int]
+[dict]
+  key - *str
+[dict]
+  list - <mixed-type>
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key - *str
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  list - <mixed-type>
+[dict]
+  list - [int]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[str]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[[<mixed-type>]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[[int]]]
+[dict]
+  *key1 - str
+  *key2 - str
+([], [], [], [])
+[*[[int]]]
+[dict]
+  *key1 - str
+  *key2 - str
+[[[int]]]
+([], [], [], [])
+[dict]
+  key - *str
+([], [], [], [])
+[[<mixed-type>]]
+[(str, *int, <mixed-type>, *str)]
+[<mixed-type>]
+[dict]
+  *key1 - str
+  *key2 - str
+[(*str, *int)]
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[*[[int]]]
+[*[[int]]]
+dict
+[dict]
+  key - *str
+[(*str, *int)]
+[*[[int]]]
+[]
+([{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}])
+[str]
+[NoneType]
+[str]
+[str]
+[str]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+(str, int)
+[str]
+(str, int)
+[str]
+([{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}])
+[[[int]]]
+[[<mixed-type>]]
+[str]
+[NoneType]
+[*int]
+[dict]
+  key - *str
+[]
+dict
+[NoneType]
+([], [], [], [])
+[dict]
+  key - *str
+([], [], [], [])
+dict
+[(str, *int, <mixed-type>, *str)]
+(str, int)
+([], [], [], [])
+[[<mixed-type>]]
+[dict]
+  key - *str
+[*[[int]]]
+([], [], [], [])
+[dict]
+  list - <mixed-type>
+[str]
+[dict]
+  *key1 - str
+  *key2 - str
+(str, int)
+([], [], [], [])
+([], [], [], [])
+[dict]
+  key - *str
+([], [{'key1': 'val1'}], [], [{'key1': 'val1'}])
+[dict]
+  list - <mixed-type>
+[[[int]]]
+[*[[int]]]
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  list - <mixed-type>
+[*[[int]]]
+[dict]
+  *key1 - str
+  *key2 - str
+[(str, *int, <mixed-type>, *str)]
+[str]
+[dict]
+  list - <mixed-type>
+[dict]
+  key - *str
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+([], [], [], [])
+([], [], [], [])
+[(*str, *int)]
+[[<mixed-type>]]
+([], [], [], [])
+[(str, *int, <mixed-type>, *str)]
+[[<mixed-type>]]
+[(str, *int, <mixed-type>, *str)]
+dict
+[str]
+dict
+([], [], [], [])
+[[<mixed-type>]]
+(str, int)
+[]
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[str]
+[dict]
+  list - [int]
+([{'key1': 'val1'}], [], [{'key1': 'val1'}], [])
+[[<mixed-type>]]
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[dict]
+  key - *str
+[[<mixed-type>]]
+[dict]
+  key - *str
+[str]
+(['coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'], ['coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'])
+[dict]
+  list - [int]
+([{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'])
+dict
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[NoneType]
+[[[int]]]
+[[<mixed-type>]]
+dict
+[(str, *int, <mixed-type>, *str)]
+(str, int)
+[*int]
+[[[int]]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+(str, int)
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  *key1 - str
+  *key2 - str
+[[<mixed-type>]]
+[(str, *int, <mixed-type>, *str)]
+[(*str, *int)]
+[[[int]]]
+[dict]
+  list - <mixed-type>
+[(*str, *int)]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[*[[int]]]
+[dict]
+  list - [int]
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  list - <mixed-type>
+[(str, *int, <mixed-type>, *str)]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[*int]
+[dict]
+  list - <mixed-type>
+([], [{'key1': 'val1'}], [], [{'key1': 'val1'}])
+[(str, *int, <mixed-type>, *str)]
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[dict]
+  list - <mixed-type>
+[dict]
+  list - <mixed-type>
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  list - <mixed-type>
+[[[int]]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+(str, int)
+[*[[int]]]
+[dict]
+  list - [int]
+[*[[int]]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+(str, int)
+[NoneType]
+[dict]
+  list - [int]
+[dict]
+  list - [int]
+[]
+([{'key1': 'val1'}], ['coding', 'snowboarding'], [{'key1': 'val1'}], ['coding', 'snowboarding'])
+[str]
+([{'key1': 'val1'}], ['coding', 'snowboarding'], [{'key1': 'val1'}], ['coding', 'snowboarding'])
+([{'key1': 'val1'}], ['coding', 'snowboarding'], [{'key1': 'val1'}], ['coding', 'snowboarding'])
+[str]
+[dict]
+  list - <mixed-type>
+[dict]
+  list - <mixed-type>
+[dict]
+  list - [int]
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  list - <mixed-type>
+[dict]
+  list - <mixed-type>
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+([{'key1': 'val1'}, {'key1': 'val1'}], ['coding', 'snowboarding'], [{'key1': 'val1'}, {'key1': 'val1'}], ['coding', 'snowboarding'])
+(str, int)
+[dict]
+  *key1 - str
+  *key2 - str
+dict
+[str]
+[*int]
+[dict]
+  list - [int]
+[[<mixed-type>]]
+dict
+[dict]
+  list - [int]
+[(str, *int, <mixed-type>, *str)]
+[(*str, *int)]
+[(*str, *int)]
+[dict]
+  key - *str
+[dict]
+  key - *str
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+(str, int)
+dict
+(str, int)
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[<mixed-type>]]
+[[[int]]]
+[dict]
+  list - <mixed-type>
+([], [], [], [])
+[dict]
+  key - *str
+[*int]
+[dict]
+  list - [int]
+[*int]
+[dict]
+  list - [int]
+[dict]
+  list - [int]
+[(str, *int, <mixed-type>, *str)]
+[(*str, *int)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(*str, *int)]
+[dict]
+  list - <mixed-type>
+dict
+[str]
+[<mixed-type>]
+[<mixed-type>]
+(str, int)
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+([], [], [], [])
+[[<mixed-type>]]
+(str, int)
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[*int]
+[(str, *int, <mixed-type>, *str)]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[<mixed-type>]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+(str, int)
+(['coding', 'snowboarding'], [{'key1': 'val1'}], ['coding', 'snowboarding'], [{'key1': 'val1'}])
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  list - <mixed-type>
+(str, int)
+[*int]
+[*[[int]]]
+[[[int]]]
+[dict]
+  list - <mixed-type>
+(str, int)
+[[[int]]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[[int]]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[<mixed-type>]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[*[[int]]]
+(str, int)
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+dict
+[*[[int]]]
+[dict]
+  list - [int]
+([{'key1': 'val1'}, {'key1': 'val1'}], ['coding', 'snowboarding'], [{'key1': 'val1'}, {'key1': 'val1'}], ['coding', 'snowboarding'])
+[*[[int]]]
+(['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'])
+(['coding', 'snowboarding'], [{'key1': 'val1'}, {'key1': 'val1'}, {'key1': 'val1'}], ['coding', 'snowboarding'], [{'key1': 'val1'}, {'key1': 'val1'}, {'key1': 'val1'}])
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  key - *str
+[dict]
+  key - *str
+(str, int)
+[[<mixed-type>]]
+[(*str, *int)]
+[*int]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[]
+[(str, *int, <mixed-type>, *str)]
+[*[[int]]]
+[(str, *int, <mixed-type>, *str)]
+[str]
+[str]
+[NoneType]
+[str]
+[*[[int]]]
+[*[[int]]]
+[dict]
+  key - *str
+[[[int]]]
+[dict]
+  list - <mixed-type>
+(['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'])
+[[<mixed-type>]]
+(['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'])
+[(str, *int, <mixed-type>, *str)]
+(['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'])
+(['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'])
+(['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'])
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key - *str
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  list - [int]
+([], [], [], [])
+[(*str, *int)]
+[str]
+[NoneType]
+[dict]
+  list - [int]
+[str]
+[(str, *int, <mixed-type>, *str)]
+dict
+[]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[*int]
+[(str, *int, <mixed-type>, *str)]
+[str]
+[[[int]]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[<mixed-type>]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  *key1 - str
+  *key2 - str
+[NoneType]
+([], [], [], [])
+[(*str, *int)]
+[(str, *int, <mixed-type>, *str)]
+[<mixed-type>]
+(str, int)
+dict
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  key - *str
+[[[int]]]
+[NoneType]
+[(str, *int, <mixed-type>, *str)]
+(str, int)
+[dict]
+  list - [int]
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  *key1 - str
+  *key2 - str
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  key - *str
+[dict]
+  list - [int]
+[]
+(str, int)
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  list - [int]
+[str]
+[(*str, *int)]
+[]
+(['coding', 'snowboarding', {'key1': 'val1'}, 'coding', 'snowboarding'], ['coding', 'snowboarding', {'key1': 'val1'}, 'coding', 'snowboarding'], ['coding', 'snowboarding', {'key1': 'val1'}, 'coding', 'snowboarding'], ['coding', 'snowboarding', {'key1': 'val1'}, 'coding', 'snowboarding'])
+[str]
+[dict]
+  *key1 - str
+  *key2 - str
+[]
+[]
+[]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[str]
+[[[int]]]
+[[[int]]]
+dict
+dict
+[*[[int]]]
+(str, int)
+[*[[int]]]
+[dict]
+  key - *str
+[]
+[[<mixed-type>]]
+[dict]
+  list - [int]
+[(*str, *int)]
+(str, int)
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  list - <mixed-type>
+[dict]
+  list - [int]
+[NoneType]
+[[<mixed-type>]]
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[[<mixed-type>]]
+[(*str, *int)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[*[[int]]]
+[dict]
+  list - [int]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  list - <mixed-type>
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[<mixed-type>]]
+[*[[int]]]
+[[<mixed-type>]]
+[[[int]]]
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  list - <mixed-type>
+[(str, *int, <mixed-type>, *str)]
+[[[int]]]
+[]
+(['coding', 'snowboarding'], [], ['coding', 'snowboarding'], [])
+([], ['coding', 'snowboarding'], [], ['coding', 'snowboarding'])
+[(*str, *int)]
+([], [], [], [])
+[(*str, *int)]
+([], ['coding', 'snowboarding', 'coding', 'snowboarding'], [], ['coding', 'snowboarding', 'coding', 'snowboarding'])
+[(*str, *int)]
+([], ['coding', 'snowboarding', 'coding', 'snowboarding'], [], ['coding', 'snowboarding', 'coding', 'snowboarding'])
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+(['coding', 'snowboarding', 'coding', 'snowboarding'], ['coding', 'snowboarding', 'coding', 'snowboarding'], ['coding', 'snowboarding', 'coding', 'snowboarding'], ['coding', 'snowboarding', 'coding', 'snowboarding'])
+[[[int]]]
+[]
+(str, int)
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  *key1 - str
+  *key2 - str
+(['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}], ['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}], ['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}], ['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}])
+[dict]
+  key - *str
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[str]
+[dict]
+  list - <mixed-type>
+[*[[int]]]
+(str, int)
+[[<mixed-type>]]
+[[[int]]]
+[dict]
+  list - [int]
+[(str, *int, <mixed-type>, *str)]
+[]
+[str]
+[dict]
+  *key1 - str
+  *key2 - str
+[str]
+(str, int)
+[(*str, *int)]
+[dict]
+  list - <mixed-type>
+[dict]
+  list - [int]
+[str]
+[dict]
+  list - [int]
+([], [], [], [])
+[(str, *int, <mixed-type>, *str)]
+[*int]
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  list - <mixed-type>
+[str]
+[*int]
+([], [], [], [])
+dict
+[str]
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[dict]
+  list - [int]
+([{'key1': 'val1'}], [], [{'key1': 'val1'}], [])
+[]
+[str]
+(str, int)
+[[<mixed-type>]]
+[str]
+[*[[int]]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[[[int]]]
+[[<mixed-type>]]
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[str]
+[[<mixed-type>]]
+[[[int]]]
+[dict]
+  list - <mixed-type>
+[dict]
+  list - <mixed-type>
+[*int]
+[dict]
+  list - [int]
+[(*str, *int)]
+[*[[int]]]
+[dict]
+  *key1 - str
+  *key2 - str
+[str]
+[(*str, *int)]
+[(*str, *int)]
+[(*str, *int)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  *key1 - str
+  *key2 - str
+dict
+[dict]
+  list - [int]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+dict
+[]
+[dict]
+  list - [int]
+[(*str, *int)]
+[(*str, *int)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[*[[int]]]
+([], [], [], [])
+[dict]
+  key - *str
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+([], [], [], [])
+[dict]
+  *key1 - str
+  *key2 - str
+(str, int)
+[dict]
+  list - [int]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+([{'key1': 'val1'}, {'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, {'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, {'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, {'key1': 'val1'}, 'coding', 'snowboarding'])
+([{'key1': 'val1'}, {'key1': 'val1'}, 'coding', 'snowboarding', {'key1': 'val1'}], ['coding', 'snowboarding'], [{'key1': 'val1'}, {'key1': 'val1'}, 'coding', 'snowboarding', {'key1': 'val1'}], ['coding', 'snowboarding'])
+[[<mixed-type>]]
+dict
+[*int]
+[NoneType]
+[[[int]]]
+[str]
+[str]
+[*[[int]]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(*str, *int)]
+[str]
+[str]
+[]
+[str]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[*[[int]]]
+[dict]
+  list - <mixed-type>
+[dict]
+  *key1 - str
+  *key2 - str
+[*[[int]]]
+[dict]
+  list - <mixed-type>
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+[]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[NoneType]
+[str]
+[str]
+[str]
+[[[int]]]
+[str]
+[[[int]]]
+[(*str, *int)]
+[str]
+[<mixed-type>]
+[*[[int]]]
+dict
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+[*[[int]]]
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  key - *str
+[*int]
+[[[int]]]
+[str]
+[(*str, *int)]
+[*int]
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  list - [int]
+[[<mixed-type>]]
+(['coding', 'snowboarding'], [], ['coding', 'snowboarding'], [])
+[dict]
+  list - [int]
+[[<mixed-type>]]
+[str]
+[str]
+dict
+[str]
+[dict]
+  list - [int]
+[*[[int]]]
+[str]
+[(*str, *int)]
+[*[[int]]]
+[str]
+[*[[int]]]
+[*[[int]]]
+(['coding', 'snowboarding', {'key1': 'val1'}], [{'key1': 'val1'}], ['coding', 'snowboarding', {'key1': 'val1'}], [{'key1': 'val1'}])
+[dict]
+  list - [int]
+[NoneType]
+[]
+[*[[int]]]
+[dict]
+  *key1 - str
+  *key2 - str
+[*[[int]]]
+([], [], [], [])
+[*int]
+[(*str, *int)]
+[NoneType]
+([], [], [], [])
+[NoneType]
+[(*str, *int)]
+[dict]
+  *key1 - str
+  *key2 - str
+[NoneType]
+[NoneType]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+dict
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[(*str, *int)]
+(['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'])
+[(*str, *int)]
+([], [], [], [])
+[*[[int]]]
+([], ['coding', 'snowboarding'], [], ['coding', 'snowboarding'])
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+(['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'])
+[dict]
+  *key1 - str
+  *key2 - str
+[str]
+(['coding', 'snowboarding'], [], ['coding', 'snowboarding'], [])
+(str, int)
+(['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'])
+[str]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[str]
+[]
+[NoneType]
+([], [], [], [])
+dict
+[<mixed-type>]
+[[<mixed-type>]]
+[(*str, *int)]
+[<mixed-type>]
+[[<mixed-type>]]
+[<mixed-type>]
+[]
+[[[int]]]
+[(*str, *int)]
+[str]
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[dict]
+  list - <mixed-type>
+[(str, *int, <mixed-type>, *str)]
+[<mixed-type>]
+[<mixed-type>]
+[<mixed-type>]
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[<mixed-type>]
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+[<mixed-type>]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(*str, *int)]
+[(str, *int, <mixed-type>, *str)]
+[<mixed-type>]
+[dict]
+  list - [int]
+[<mixed-type>]
+[dict]
+  *key1 - str
+  *key2 - str
+[[[int]]]
+([], [], [], [])
+[NoneType]
+([], [], [], [])
+[(*str, *int)]
+[[<mixed-type>]]
+([], [], [], [])
+[[<mixed-type>]]
+[(str, *int, <mixed-type>, *str)]
+[[[int]]]
+(str, int)
+([], [{'key1': 'val1'}], [], [{'key1': 'val1'}])
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[[[int]]]
+[*[[int]]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+(str, int)
+[(*str, *int)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[(*str, *int)]
+[dict]
+  list - <mixed-type>
+[*[[int]]]
+[dict]
+  list - [int]
+[*[[int]]]
+[(*str, *int)]
+[(*str, *int)]
+[*int]
+([], [{'key1': 'val1'}, {'key1': 'val1'}], [], [{'key1': 'val1'}, {'key1': 'val1'}])
+[*[[int]]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[*[[int]]]
+[dict]
+  list - [int]
+([], [], [], [])
+([], [], [], [])
+[(*str, *int)]
+(['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'])
+[[[int]]]
+([], [], [], [])
+([], [], [], [])
+[dict]
+  list - [int]
+[[[int]]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+dict
+(str, int)
+(str, int)
+[(*str, *int)]
+([], [], [], [])
+([], [{'key1': 'val1'}], [], [{'key1': 'val1'}])
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[str]
+([], [], [], [])
+[str]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  list - [int]
+[str]
+([], [], [], [])
+[*int]
+[*int]
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  list - <mixed-type>
+[str]
+[str]
+([], [], [], [])
+[(*str, *int)]
+[str]
+(str, int)
+[dict]
+  list - [int]
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  *key1 - str
+  *key2 - str
+[<mixed-type>]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[str]
+[dict]
+  list - <mixed-type>
+[NoneType]
+[dict]
+  list - <mixed-type>
+[[<mixed-type>]]
+[(*str, *int)]
+[(str, *int, <mixed-type>, *str)]
+[NoneType]
+[str]
+[dict]
+  list - [int]
+[str]
+[str]
+[dict]
+  list - [int]
+[dict]
+  list - [int]
+[str]
+(str, int)
+[str]
+[str]
+[str]
+[str]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[str]
+[[<mixed-type>]]
+dict
+[str]
+[*int]
+[str]
+[dict]
+  key - *str
+[(str, *int, <mixed-type>, *str)]
+(str, int)
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[*int]
+[<mixed-type>]
+[*[[int]]]
+[*[[int]]]
+[*int]
+[str]
+[*[[int]]]
+[(str, *int, <mixed-type>, *str)]
+[NoneType]
+([], [], [], [])
+dict
+[NoneType]
+[str]
+[*int]
+[*[[int]]]
+[*[[int]]]
+[dict]
+  key - *str
+[(*str, *int)]
+[dict]
+  key - *str
+[<mixed-type>]
+[(str, *int, <mixed-type>, *str)]
+[str]
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  key - *str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[str]
+[<mixed-type>]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[str]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[str]
+[str]
+[str]
+[str]
+[<mixed-type>]
+[<mixed-type>]
+[str]
+[]
+[dict]
+  key - *str
+[dict]
+  list - <mixed-type>
+([], [], [], [])
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  *key1 - str
+  *key2 - str
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  list - <mixed-type>
+[dict]
+  list - [int]
+(str, int)
+(str, int)
+[[<mixed-type>]]
+[[[int]]]
+[*int]
+[NoneType]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+([{'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding'])
+[str]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[str]
+[str]
+(str, int)
+[*int]
+[dict]
+  list - <mixed-type>
+(str, int)
+[*int]
+[dict]
+  key - *str
+[str]
+[NoneType]
+([{'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding'])
+(str, int)
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  list - <mixed-type>
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  list - <mixed-type>
+[*int]
+[dict]
+  list - <mixed-type>
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  list - <mixed-type>
+[dict]
+  *key1 - str
+  *key2 - str
+(['coding', 'snowboarding'], [], ['coding', 'snowboarding'], [])
+[dict]
+  list - <mixed-type>
+[]
+[NoneType]
+[*int]
+([{'key1': 'val1'}], ['coding', 'snowboarding'], [{'key1': 'val1'}], ['coding', 'snowboarding'])
+([], [], [], [])
+[[[int]]]
+[dict]
+  list - [int]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+(['coding', 'snowboarding'], [], ['coding', 'snowboarding'], [])
+[dict]
+  list - <mixed-type>
+[]
+[dict]
+  list - <mixed-type>
+([], [{'key1': 'val1'}, 'coding', 'snowboarding'], [], [{'key1': 'val1'}, 'coding', 'snowboarding'])
+[*int]
+([], [{'key1': 'val1'}, 'coding', 'snowboarding'], [], [{'key1': 'val1'}, 'coding', 'snowboarding'])
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  list - <mixed-type>
+[*int]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[<mixed-type>]]
+[[<mixed-type>]]
+([], ['coding', 'snowboarding', 'coding', 'snowboarding'], [], ['coding', 'snowboarding', 'coding', 'snowboarding'])
+([], ['coding', 'snowboarding', 'coding', 'snowboarding'], [], ['coding', 'snowboarding', 'coding', 'snowboarding'])
+dict
+[dict]
+  list - [int]
+[str]
+dict
+(str, int)
+[]
+[dict]
+  list - [int]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+(str, int)
+[*[[int]]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+dict
+[*[[int]]]
+[[[int]]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[str]
+[dict]
+  key - *str
+[[[int]]]
+[[<mixed-type>]]
+(str, int)
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  list - <mixed-type>
+[[<mixed-type>]]
+[str]
+([], [], [], [])
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  list - [int]
+[str]
+[(str, *int, <mixed-type>, *str)]
+([], [], [], [])
+[*int]
+[*int]
+[*[[int]]]
+[dict]
+  list - [int]
+[*int]
+[dict]
+  *key1 - str
+  *key2 - str
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[(*str, *int)]
+[*[[int]]]
+[NoneType]
+[<mixed-type>]
+[<mixed-type>]
+[dict]
+  list - [int]
+[str]
+([], [], [], [])
+[str]
+(str, int)
+(str, int)
+[str]
+([], [], [], [])
+[<mixed-type>]
+(str, int)
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[<mixed-type>]
+[[[int]]]
+[*int]
+[*int]
+[(str, *int, <mixed-type>, *str)]
+dict
+[dict]
+  list - <mixed-type>
+dict
+[]
+[NoneType]
+[[<mixed-type>]]
+[*int]
+[dict]
+  key - *str
+[*int]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  list - [int]
+[[[int]]]
+[NoneType]
+[[[int]]]
+[dict]
+  key - *str
+[dict]
+  list - <mixed-type>
+[dict]
+  list - <mixed-type>
+[dict]
+  list - <mixed-type>
+[str]
+dict
+[dict]
+  list - [int]
+[dict]
+  *key1 - str
+  *key2 - str
+[[[int]]]
+[(*str, *int)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[str]
+[str]
+(str, int)
+[NoneType]
+[*[[int]]]
+[[<mixed-type>]]
+[str]
+[(*str, *int)]
+[dict]
+  list - [int]
+(str, int)
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[dict]
+  *key1 - str
+  *key2 - str
+[str]
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[(str, *int, <mixed-type>, *str)]
+(['coding', 'snowboarding'], [{'key1': 'val1'}], ['coding', 'snowboarding'], [{'key1': 'val1'}])
+[str]
+(str, int)
+[(*str, *int)]
+[dict]
+  list - <mixed-type>
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  *key1 - str
+  *key2 - str
+[str]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[(*str, *int)]
+[str]
+([{'key1': 'val1'}, 'coding', 'snowboarding', {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding', {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}, {'key1': 'val1'}])
+[*[[int]]]
+[(*str, *int)]
+[NoneType]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+(str, int)
+[dict]
+  list - [int]
+(str, int)
+[<mixed-type>]
+[<mixed-type>]
+[NoneType]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[*int]
+[]
+[[[int]]]
+[[[int]]]
+[dict]
+  key - *str
+[*[[int]]]
+[dict]
+  *key1 - str
+  *key2 - str
+(str, int)
+(str, int)
+[[<mixed-type>]]
+[NoneType]
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  key - *str
+([], [], [], [])
+[NoneType]
+([], [], [], [])
+[[<mixed-type>]]
+[NoneType]
+[dict]
+  *key1 - str
+  *key2 - str
+[[<mixed-type>]]
+[(*str, *int)]
+[dict]
+  key - *str
+[str]
+[[[int]]]
+[<mixed-type>]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+(str, int)
+[<mixed-type>]
+[dict]
+  key - *str
+[<mixed-type>]
+[dict]
+  *key1 - str
+  *key2 - str
+([], [], [], [])
+dict
+[NoneType]
+([], [], [], [])
+([], [], [], [])
+([], [], [], [])
+dict
+([], [], [], [])
+[str]
+[(*str, *int)]
+[dict]
+  key - *str
+[(*str, *int)]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+([], [{'key1': 'val1'}], [], [{'key1': 'val1'}])
+[*[[int]]]
+[dict]
+  *key1 - str
+  *key2 - str
+[[<mixed-type>]]
+dict
+[(str, *int, <mixed-type>, *str)]
+[str]
+[<mixed-type>]
+(['coding', 'snowboarding'], [{'key1': 'val1'}], ['coding', 'snowboarding'], [{'key1': 'val1'}])
+[<mixed-type>]
+[dict]
+  list - <mixed-type>
+[<mixed-type>]
+[<mixed-type>]
+[<mixed-type>]
+[<mixed-type>]
+[dict]
+  key - *str
+(['coding', 'snowboarding'], [{'key1': 'val1'}], ['coding', 'snowboarding'], [{'key1': 'val1'}])
+[[<mixed-type>]]
+[dict]
+  key - *str
+[<mixed-type>]
+[[<mixed-type>]]
+[dict]
+  key - *str
+[(*str, *int)]
+[(*str, *int)]
+[(*str, *int)]
+([], [], [], [])
+[(str, *int, <mixed-type>, *str)]
+([], [], [], [])
+[*int]
+dict
+[[[int]]]
+([], [], [], [])
+[[<mixed-type>]]
+[dict]
+  key - *str
+[NoneType]
+[]
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[dict]
+  list - [int]
+[[<mixed-type>]]
+[dict]
+  list - [int]
+[[<mixed-type>]]
+dict
+[str]
+[str]
+[[[int]]]
+[str]
+[dict]
+  key - *str
+[dict]
+  *key1 - str
+  *key2 - str
+[]
+[dict]
+  *key1 - str
+  *key2 - str
+[*[[int]]]
+[dict]
+  *key1 - str
+  *key2 - str
+[*[[int]]]
+[dict]
+  list - [int]
+[dict]
+  list - <mixed-type>
+[(str, *int, <mixed-type>, *str)]
+[[[int]]]
+[]
+[[<mixed-type>]]
+dict
+[[<mixed-type>]]
+dict
+[*int]
+(str, int)
+[(str, *int, <mixed-type>, *str)]
+(str, int)
+[(str, *int, <mixed-type>, *str)]
+[*int]
+[(*str, *int)]
+[*int]
+[]
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[[int]]]
+[[<mixed-type>]]
+[[<mixed-type>]]
+[dict]
+  *key1 - str
+  *key2 - str
+[[<mixed-type>]]
+[[<mixed-type>]]
+[dict]
+  *key1 - str
+  *key2 - str
+[(*str, *int)]
+[(str, *int, <mixed-type>, *str)]
+[(*str, *int)]
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  list - <mixed-type>
+(str, int)
+[[<mixed-type>]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key - *str
+[(*str, *int)]
+[dict]
+  key - *str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+dict
+([], [], [], [])
+[NoneType]
+[dict]
+  list - <mixed-type>
+[dict]
+  *key1 - str
+  *key2 - str
+([], [{'key1': 'val1'}], [], [{'key1': 'val1'}])
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[]
+[*int]
+dict
+[[[int]]]
+[dict]
+  key - *str
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+[str]
+[*int]
+[str]
+(str, int)
+([], [{'key1': 'val1'}], [], [{'key1': 'val1'}])
+[str]
+[*int]
+[str]
+[dict]
+  list - [int]
+dict
+[dict]
+  key - *str
+([], [], [], [])
+[*[[int]]]
+[<mixed-type>]
+[dict]
+  *key1 - str
+  *key2 - str
+[[[int]]]
+[<mixed-type>]
+[<mixed-type>]
+[(*str, *int)]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[(*str, *int)]
+dict
+[NoneType]
+[]
+[(*str, *int)]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[]
+[(*str, *int)]
+(str, int)
+[]
+[dict]
+  key - *str
+[*int]
+(str, int)
+[*[[int]]]
+[*[[int]]]
+[]
+[NoneType]
+[dict]
+  *key1 - str
+  *key2 - str
+[[[int]]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  list - <mixed-type>
+[*[[int]]]
+[[<mixed-type>]]
+[[[int]]]
+[(str, *int, <mixed-type>, *str)]
+[[<mixed-type>]]
+([], [], [], [])
+[NoneType]
+[]
+[[[int]]]
+[dict]
+  *key1 - str
+  *key2 - str
+[[<mixed-type>]]
+[[[int]]]
+([], [], [], [])
+([], [], [], [])
+[<mixed-type>]
+[<mixed-type>]
+[]
+[dict]
+  *key1 - str
+  *key2 - str
+dict
+[*int]
+[str]
+[[[int]]]
+([], [], [], [])
+[]
+[*int]
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+[str]
+[dict]
+  list - <mixed-type>
+[str]
+[]
+([], [], [], [])
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[str]
+[*int]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[str]
+[str]
+[(str, *int, <mixed-type>, *str)]
+[*[[int]]]
+[[<mixed-type>]]
+[dict]
+  list - <mixed-type>
+[str]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[(*str, *int)]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[*int]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[NoneType]
+[]
+[NoneType]
+[[[int]]]
+[(*str, *int)]
+[dict]
+  list - [int]
+[*[[int]]]
+[*int]
+[dict]
+  key - *str
+[(str, *int, <mixed-type>, *str)]
+[(*str, *int)]
+[(str, *int, <mixed-type>, *str)]
+(['coding', 'snowboarding', {'key1': 'val1'}], [], ['coding', 'snowboarding', {'key1': 'val1'}], [])
+[str]
+[[<mixed-type>]]
+([], ['coding', 'snowboarding', {'key1': 'val1'}], [], ['coding', 'snowboarding', {'key1': 'val1'}])
+[NoneType]
+([], ['coding', 'snowboarding', {'key1': 'val1'}], [], ['coding', 'snowboarding', {'key1': 'val1'}])
+[*int]
+(['coding', 'snowboarding', {'key1': 'val1'}], [], ['coding', 'snowboarding', {'key1': 'val1'}], [])
+[str]
+[dict]
+  list - <mixed-type>
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+(str, int)
+[(*str, *int)]
+[[<mixed-type>]]
+(str, int)
+([{'key1': 'val1'}], ['coding', 'snowboarding', {'key1': 'val1'}], [{'key1': 'val1'}], ['coding', 'snowboarding', {'key1': 'val1'}])
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  list - [int]
+[dict]
+  list - [int]
+([], [], [], [])
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+([], [], [], [])
+[]
+([], [], [], [])
+[[<mixed-type>]]
+([], [], [], [])
+[dict]
+  *key1 - str
+  *key2 - str
+[NoneType]
+([], [], [], [])
+([], [], [], [])
+[(*str, *int)]
+[[<mixed-type>]]
+[]
+[NoneType]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+(str, int)
+[<mixed-type>]
+[dict]
+  *key1 - str
+  *key2 - str
+[*[[int]]]
+([{'key1': 'val1'}], [], [{'key1': 'val1'}], [])
+[<mixed-type>]
+[<mixed-type>]
+[(*str, *int)]
+dict
+(str, int)
+[*int]
+[*int]
+[<mixed-type>]
+[<mixed-type>]
+(str, int)
+[<mixed-type>]
+[dict]
+  *key1 - str
+  *key2 - str
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  list - [int]
+(['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'])
+(['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'])
+[(*str, *int)]
+[dict]
+  list - <mixed-type>
+dict
+[*int]
+[]
+[dict]
+  list - [int]
+[(*str, *int)]
+[[[int]]]
+[]
+(['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'])
+[dict]
+  list - [int]
+[(*str, *int)]
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  list - [int]
+[NoneType]
+[[[int]]]
+(['coding', 'snowboarding'], [{'key1': 'val1'}], ['coding', 'snowboarding'], [{'key1': 'val1'}])
+[dict]
+  *key1 - str
+  *key2 - str
+[*[[int]]]
+[]
+([{'key1': 'val1'}], ['coding', 'snowboarding'], [{'key1': 'val1'}], ['coding', 'snowboarding'])
+[*int]
+[]
+[<mixed-type>]
+[[<mixed-type>]]
+[(str, *int, <mixed-type>, *str)]
+([{'key1': 'val1'}, {'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, {'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, {'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, {'key1': 'val1'}, 'coding', 'snowboarding'])
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[*[[int]]]
+dict
+dict
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[[int]]]
+([], [], [], [])
+(str, int)
+[dict]
+  key - *str
+[*[[int]]]
+[[[int]]]
+[dict]
+  key - *str
+([], [], [], [])
+[dict]
+  list - [int]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[*[[int]]]
+[dict]
+  list - <mixed-type>
+[dict]
+  key - *str
+(str, int)
+[[<mixed-type>]]
+(str, int)
+dict
+[[[int]]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  list - [int]
+[dict]
+  key - *str
+[NoneType]
+([{'key1': 'val1'}, {'key1': 'val1'}, {'key1': 'val1'}], [], [{'key1': 'val1'}, {'key1': 'val1'}, {'key1': 'val1'}], [])
+[(str, *int, <mixed-type>, *str)]
+[*int]
+[dict]
+  list - <mixed-type>
+[*[[int]]]
+([{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding'])
+[(str, *int, <mixed-type>, *str)]
+[(*str, *int)]
+[dict]
+  list - [int]
+([], [], [], [])
+[dict]
+  list - [int]
+[NoneType]
+[dict]
+  *key1 - str
+  *key2 - str
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  list - [int]
+[dict]
+  *key1 - str
+  *key2 - str
+([], [], [], [])
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+(str, int)
+[str]
+[(str, *int, <mixed-type>, *str)]
+[[<mixed-type>]]
+[dict]
+  list - [int]
+[(str, *int, <mixed-type>, *str)]
+[str]
+[<mixed-type>]
+[<mixed-type>]
+[]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+(str, int)
+(str, int)
+[dict]
+  list - <mixed-type>
+[]
+[dict]
+  key - *str
+[[<mixed-type>]]
+[(*str, *int)]
+(str, int)
+[*int]
+[dict]
+  list - <mixed-type>
+[*int]
+dict
+[[[int]]]
+[dict]
+  list - <mixed-type>
+[[<mixed-type>]]
+[*[[int]]]
+[*[[int]]]
+[dict]
+  key - *str
+[*[[int]]]
+(str, int)
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[*[[int]]]
+[dict]
+  key - *str
+([], [], [], [])
+[*int]
+[dict]
+  list - <mixed-type>
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  *key1 - str
+  *key2 - str
+(str, int)
+[dict]
+  *key1 - str
+  *key2 - str
+[*[[int]]]
+[*int]
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+[*int]
+[[[int]]]
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+[*int]
+[dict]
+  key - *str
+[dict]
+  *key1 - str
+  *key2 - str
+[[<mixed-type>]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[*int]
+(str, int)
+[str]
+[[[int]]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  list - [int]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[(*str, *int)]
+[]
+[dict]
+  list - [int]
+dict
+(str, int)
+[*[[int]]]
+([{'key1': 'val1'}, {'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, {'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, {'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, {'key1': 'val1'}, 'coding', 'snowboarding'])
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[]
+[dict]
+  list - [int]
+[dict]
+  list - [int]
+([], [], [], [])
+[[[int]]]
+([], [], [], [])
+[dict]
+  list - [int]
+[*int]
+[[[int]]]
+[NoneType]
+[NoneType]
+[(*str, *int)]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[NoneType]
+[(*str, *int)]
+[str]
+([], [], [], [])
+[[[int]]]
+[dict]
+  list - <mixed-type>
+[dict]
+  list - [int]
+[str]
+[dict]
+  list - [int]
+[[<mixed-type>]]
+[str]
+[*int]
+[dict]
+  list - <mixed-type>
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  key - *str
+[*int]
+dict
+[[<mixed-type>]]
+([], [{'key1': 'val1'}], [], [{'key1': 'val1'}])
+[*int]
+([], [], [], [])
+[NoneType]
+[NoneType]
+[dict]
+  key - *str
+[dict]
+  key - *str
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[[<mixed-type>]]
+[dict]
+  key - *str
+[(*str, *int)]
+[dict]
+  list - [int]
+[(*str, *int)]
+(str, int)
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+[NoneType]
+[*int]
+(['coding', 'snowboarding', 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}], ['coding', 'snowboarding', 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}])
+(['coding', 'snowboarding', 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding', {'key1': 'val1'}], ['coding', 'snowboarding', 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding', {'key1': 'val1'}])
+([{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding', {'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding', {'key1': 'val1'}])
+[dict]
+  *key1 - str
+  *key2 - str
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[*[[int]]]
+dict
+[dict]
+  key - *str
+[dict]
+  list - [int]
+(str, int)
+([{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}, {'key1': 'val1'}])
+[*[[int]]]
+[[[int]]]
+[*[[int]]]
+dict
+dict
+[*int]
+[dict]
+  list - <mixed-type>
+[*[[int]]]
+[(*str, *int)]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[[[int]]]
+[(str, *int, <mixed-type>, *str)]
+[*int]
+([], [], [], [])
+[NoneType]
+[*int]
+([], [], [], [])
+[*[[int]]]
+[*int]
+([], [], [], [])
+[*int]
+([], [], [], [])
+[str]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[<mixed-type>]]
+([], [], [], [])
+[*int]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(str, *int, <mixed-type>, *str)]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[(str, *int, <mixed-type>, *str)]
+(['coding', 'snowboarding', {'key1': 'val1'}], ['coding', 'snowboarding', {'key1': 'val1'}], ['coding', 'snowboarding', {'key1': 'val1'}], ['coding', 'snowboarding', {'key1': 'val1'}])
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[]
+(str, int)
+[[[int]]]
+[(str, *int, <mixed-type>, *str)]
+[]
+[[[int]]]
+[*[[int]]]
+[dict]
+  *key1 - str
+  *key2 - str
+(str, int)
+dict
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[[int]]]
+[*int]
+[dict]
+  list - <mixed-type>
+[dict]
+  list - <mixed-type>
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  list - <mixed-type>
+[[[int]]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[<mixed-type>]]
+[dict]
+  list - <mixed-type>
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+dict
+[*int]
+[dict]
+  *key1 - str
+  *key2 - str
+[*int]
+[dict]
+  *key1 - str
+  *key2 - str
+(str, int)
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[str]
+[str]
+(str, int)
+[str]
+[dict]
+  *key1 - str
+  *key2 - str
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[dict]
+  key - *str
+[dict]
+  list - [int]
+[]
+[[<mixed-type>]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+(['coding', 'snowboarding'], [], ['coding', 'snowboarding'], [])
+[dict]
+  list - <mixed-type>
+(['coding', 'snowboarding', 'coding', 'snowboarding'], ['coding', 'snowboarding', 'coding', 'snowboarding'], ['coding', 'snowboarding', 'coding', 'snowboarding'], ['coding', 'snowboarding', 'coding', 'snowboarding'])
+[(*str, *int)]
+[(str, *int, <mixed-type>, *str)]
+([{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding'])
+[*int]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[NoneType]
+[NoneType]
+(['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}], ['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}], ['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}], ['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}])
+([{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding'], ['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding'], ['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}])
+[str]
+([], [], [], [])
+([], [], [], [])
+[str]
+[dict]
+  *key1 - str
+  *key2 - str
+[<mixed-type>]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+dict
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  list - <mixed-type>
+[[[int]]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[[<mixed-type>]]
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+[[<mixed-type>]]
+dict
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[[[int]]]
+[[[int]]]
+[(str, *int, <mixed-type>, *str)]
+[[<mixed-type>]]
+[]
+([], [], [], [])
+[*int]
+[[<mixed-type>]]
+[dict]
+  list - [int]
+[(*str, *int)]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  list - [int]
+[str]
+[str]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[str]
+(str, int)
+[[<mixed-type>]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(*str, *int)]
+[str]
+[str]
+[dict]
+  *key1 - str
+  *key2 - str
+dict
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(str, *int, <mixed-type>, *str)]
+dict
+dict
+[(*str, *int)]
+[dict]
+  list - <mixed-type>
+[str]
+[str]
+[[<mixed-type>]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  list - <mixed-type>
+[dict]
+  key - *str
+(str, int)
+(str, int)
+(str, int)
+[dict]
+  key - *str
+[dict]
+  list - <mixed-type>
+(str, int)
+[str]
+[str]
+[dict]
+  list - <mixed-type>
+[str]
+[str]
+([], [], [], [])
+[[<mixed-type>]]
+[str]
+dict
+[str]
+[[<mixed-type>]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+(str, int)
+[*int]
+([], [], [], [])
+[]
+[*[[int]]]
+(str, int)
+(str, int)
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[NoneType]
+[]
+dict
+[<mixed-type>]
+[*int]
+[]
+[dict]
+  list - <mixed-type>
+[dict]
+  key - *str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  list - <mixed-type>
+([], [{'key1': 'val1'}], [], [{'key1': 'val1'}])
+[<mixed-type>]
+[dict]
+  list - <mixed-type>
+[dict]
+  list - <mixed-type>
+[dict]
+  list - <mixed-type>
+[str]
+[dict]
+  list - <mixed-type>
+[dict]
+  *key1 - str
+  *key2 - str
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[dict]
+  list - <mixed-type>
+[<mixed-type>]
+[(*str, *int)]
+[dict]
+  *key1 - str
+  *key2 - str
+[(str, *int, <mixed-type>, *str)]
+[<mixed-type>]
+[*int]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[<mixed-type>]
+[(str, *int, <mixed-type>, *str)]
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[<mixed-type>]
+[]
+[NoneType]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[(str, *int, <mixed-type>, *str)]
+[*[[int]]]
+(str, int)
+[NoneType]
+[dict]
+  list - <mixed-type>
+([], ['coding', 'snowboarding'], [], ['coding', 'snowboarding'])
+[NoneType]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[(str, *int, <mixed-type>, *str)]
+(['coding', 'snowboarding'], [], ['coding', 'snowboarding'], [])
+[dict]
+  *key1 - str
+  *key2 - str
+(['coding', 'snowboarding'], [], ['coding', 'snowboarding'], [])
+[[[int]]]
+[dict]
+  *key1 - str
+  *key2 - str
+[(*str, *int)]
+[[<mixed-type>]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[NoneType]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+(['coding', 'snowboarding', {'key1': 'val1'}], ['coding', 'snowboarding'], ['coding', 'snowboarding', {'key1': 'val1'}], ['coding', 'snowboarding'])
+[(str, *int, <mixed-type>, *str)]
+[*int]
+(['coding', 'snowboarding'], ['coding', 'snowboarding', {'key1': 'val1'}], ['coding', 'snowboarding'], ['coding', 'snowboarding', {'key1': 'val1'}])
+(str, int)
+[(str, *int, <mixed-type>, *str)]
+(str, int)
+[*[[int]]]
+[*int]
+[NoneType]
+[<mixed-type>]
+(['coding', 'snowboarding', {'key1': 'val1'}], ['coding', 'snowboarding'], ['coding', 'snowboarding', {'key1': 'val1'}], ['coding', 'snowboarding'])
+[<mixed-type>]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[[[int]]]
+[]
+[[[int]]]
+[*[[int]]]
+[]
+[*[[int]]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[str]
+[*[[int]]]
+[dict]
+  *key1 - str
+  *key2 - str
+[str]
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[dict]
+  list - <mixed-type>
+[str]
+[*[[int]]]
+[*int]
+[*[[int]]]
+[*int]
+[dict]
+  list - [int]
+[dict]
+  key - *str
+[str]
+[[<mixed-type>]]
+[str]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[NoneType]
+[dict]
+  key - *str
+[dict]
+  list - [int]
+[*int]
+[*[[int]]]
+[]
+[]
+[NoneType]
+[*int]
+[str]
+[dict]
+  list - <mixed-type>
+[str]
+[str]
+[str]
+[*int]
+[]
+[str]
+[str]
+[str]
+[]
+[*int]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[*int]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[str]
+[*[[int]]]
+[*int]
+[]
+[[<mixed-type>]]
+[str]
+[<mixed-type>]
+[<mixed-type>]
+[dict]
+  *key1 - str
+  *key2 - str
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  *key1 - str
+  *key2 - str
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[*int]
+[(*str, *int)]
+[[[int]]]
+[dict]
+  list - <mixed-type>
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[*[[int]]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  list - <mixed-type>
+[NoneType]
+(['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'])
+[(str, *int, <mixed-type>, *str)]
+[*int]
+[[[int]]]
+[*int]
+[*int]
+[[[int]]]
+[dict]
+  list - <mixed-type>
+[*int]
+[NoneType]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key - *str
+[*int]
+[[<mixed-type>]]
+(str, int)
+[dict]
+  list - [int]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  *key1 - str
+  *key2 - str
+[[<mixed-type>]]
+[[<mixed-type>]]
+[*int]
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[(str, *int, <mixed-type>, *str)]
+([{'key1': 'val1'}, {'key1': 'val1'}], [], [{'key1': 'val1'}, {'key1': 'val1'}], [])
+[*[[int]]]
+[*int]
+([], [], [], [])
+[dict]
+  *key1 - str
+  *key2 - str
+[NoneType]
+[[[int]]]
+[]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[str]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+([], [], [], [])
+[NoneType]
+[str]
+[dict]
+  *key1 - str
+  *key2 - str
+([], [{'key1': 'val1'}], [], [{'key1': 'val1'}])
+(str, int)
+[str]
+[dict]
+  list - <mixed-type>
+([], [{'key1': 'val1'}], [], [{'key1': 'val1'}])
+[[<mixed-type>]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+([], [{'key1': 'val1'}], [], [{'key1': 'val1'}])
+[(*str, *int)]
+([], [], [], [])
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[str]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  list - <mixed-type>
+[str]
+([{'key1': 'val1'}], [], [{'key1': 'val1'}], [])
+[str]
+[NoneType]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+([], [{'key1': 'val1'}], [], [{'key1': 'val1'}])
+[*int]
+[str]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  key - *str
+[dict]
+  key - *str
+[(*str, *int)]
+[]
+[(str, *int, <mixed-type>, *str)]
+dict
+[dict]
+  list - [int]
+[(*str, *int)]
+(str, int)
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key - *str
+[NoneType]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[*[[int]]]
+[]
+[dict]
+  *key1 - str
+  *key2 - str
+dict
+[dict]
+  key - *str
+[[[int]]]
+[[<mixed-type>]]
+[dict]
+  list - [int]
+[str]
+[*int]
+(str, int)
+([], [], [], [])
+[dict]
+  list - [int]
+[str]
+[dict]
+  list - <mixed-type>
+(str, int)
+([], [], [], [])
+[[[int]]]
+([{'key1': 'val1'}, {'key1': 'val1'}], [], [{'key1': 'val1'}, {'key1': 'val1'}], [])
+[dict]
+  *key1 - str
+  *key2 - str
+[(*str, *int)]
+[*int]
+[[<mixed-type>]]
+[[<mixed-type>]]
+(str, int)
+[[<mixed-type>]]
+[[<mixed-type>]]
+[[[int]]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[str]
+dict
+dict
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[[[int]]]
+[(*str, *int)]
+[(str, *int, <mixed-type>, *str)]
+[(*str, *int)]
+[dict]
+  *key1 - str
+  *key2 - str
+[<mixed-type>]
+[NoneType]
+([], [], [], [])
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[str]
+[NoneType]
+([], [], [], [])
+[str]
+[[<mixed-type>]]
+[[<mixed-type>]]
+[[<mixed-type>]]
+[dict]
+  list - [int]
+[str]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[]
+[[<mixed-type>]]
+[dict]
+  list - <mixed-type>
+[(str, *int, <mixed-type>, *str)]
+[[<mixed-type>]]
+([], [], [], [])
+[[[int]]]
+[(str, *int, <mixed-type>, *str)]
+[]
+[(*str, *int)]
+[]
+[dict]
+  *key1 - str
+  *key2 - str
+[str]
+dict
+[str]
+[<mixed-type>]
+[NoneType]
+[str]
+[<mixed-type>]
+[dict]
+  list - <mixed-type>
+[<mixed-type>]
+[dict]
+  list - [int]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[<mixed-type>]
+[*int]
+(str, int)
+(['coding', 'snowboarding', 'coding', 'snowboarding'], ['coding', 'snowboarding', 'coding', 'snowboarding'], ['coding', 'snowboarding', 'coding', 'snowboarding'], ['coding', 'snowboarding', 'coding', 'snowboarding'])
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(*str, *int)]
+[(str, *int, <mixed-type>, *str)]
+[NoneType]
+[dict]
+  list - <mixed-type>
+[dict]
+  key - *str
+[(*str, *int)]
+[<mixed-type>]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(*str, *int)]
+[(*str, *int)]
+[dict]
+  key - *str
+[NoneType]
+[]
+[<mixed-type>]
+[dict]
+  *key1 - str
+  *key2 - str
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[(*str, *int)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  list - <mixed-type>
+[<mixed-type>]
+[[<mixed-type>]]
+[<mixed-type>]
+[<mixed-type>]
+[(*str, *int)]
+[dict]
+  list - <mixed-type>
+[[<mixed-type>]]
+([], [], [], [])
+[*[[int]]]
+[[[int]]]
+[]
+[[<mixed-type>]]
+([], [], [], [])
+[dict]
+  key - *str
+[(*str, *int)]
+([], [], [], [])
+[(*str, *int)]
+[dict]
+  *key1 - str
+  *key2 - str
+[*int]
+[dict]
+  key - *str
+[dict]
+  list - <mixed-type>
+[dict]
+  key - *str
+[*int]
+[[[int]]]
+[dict]
+  list - [int]
+[*int]
+[dict]
+  list - <mixed-type>
+[dict]
+  list - [int]
+([{'key1': 'val1'}, {'key1': 'val1'}], [], [{'key1': 'val1'}, {'key1': 'val1'}], [])
+(['coding', 'snowboarding'], [], ['coding', 'snowboarding'], [])
+[*int]
+[dict]
+  *key1 - str
+  *key2 - str
+dict
+[<mixed-type>]
+[*[[int]]]
+dict
+(str, int)
+dict
+[]
+[(*str, *int)]
+dict
+([], [], [], [])
+[dict]
+  list - <mixed-type>
+[dict]
+  list - <mixed-type>
+[NoneType]
+([], [], [], [])
+[[<mixed-type>]]
+[(str, *int, <mixed-type>, *str)]
+[str]
+[str]
+[(*str, *int)]
+[str]
+[(str, *int, <mixed-type>, *str)]
+(str, int)
+(str, int)
+[dict]
+  *key1 - str
+  *key2 - str
+[]
+[dict]
+  list - <mixed-type>
+[str]
+[str]
+[str]
+[dict]
+  *key1 - str
+  *key2 - str
+[str]
+[dict]
+  list - <mixed-type>
+[]
+[str]
+[dict]
+  *key1 - str
+  *key2 - str
+[*int]
+[str]
+[(str, *int, <mixed-type>, *str)]
+[str]
+[*[[int]]]
+[NoneType]
+([], [], [], [])
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  *key1 - str
+  *key2 - str
+(str, int)
+[]
+[(*str, *int)]
+([{'key1': 'val1'}, 'coding', 'snowboarding'], ['coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'], ['coding', 'snowboarding'])
+(['coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'], ['coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'])
+([{'key1': 'val1'}, 'coding', 'snowboarding'], ['coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'], ['coding', 'snowboarding'])
+([{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'])
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+([], [], [], [])
+[*int]
+[<mixed-type>]
+[str]
+[*int]
+[str]
+[<mixed-type>]
+[<mixed-type>]
+[[[int]]]
+([{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'])
+[dict]
+  key - *str
+[dict]
+  key - *str
+[<mixed-type>]
+[str]
+[dict]
+  list - [int]
+[<mixed-type>]
+dict
+dict
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  list - <mixed-type>
+[]
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  list - <mixed-type>
+[*[[int]]]
+[dict]
+  *key1 - str
+  *key2 - str
+[[<mixed-type>]]
+[dict]
+  list - [int]
+[NoneType]
+([], [], [], [])
+[[<mixed-type>]]
+(str, int)
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[<mixed-type>]
+(['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'])
+[<mixed-type>]
+[<mixed-type>]
+[dict]
+  list - <mixed-type>
+[NoneType]
+[(str, *int, <mixed-type>, *str)]
+[<mixed-type>]
+[*int]
+[(str, *int, <mixed-type>, *str)]
+[<mixed-type>]
+[[[int]]]
+[[[int]]]
+[<mixed-type>]
+[<mixed-type>]
+[dict]
+  list - <mixed-type>
+(str, int)
+(str, int)
+(str, int)
+[[<mixed-type>]]
+[]
+[*int]
+[(*str, *int)]
+[dict]
+  key - *str
+[]
+[(*str, *int)]
+[dict]
+  key - *str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[*[[int]]]
+[dict]
+  key - *str
+[dict]
+  *key1 - str
+  *key2 - str
+[[[int]]]
+[[<mixed-type>]]
+[[<mixed-type>]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[<mixed-type>]
+[dict]
+  key - *str
+[[[int]]]
+[str]
+[dict]
+  *key1 - str
+  *key2 - str
+[<mixed-type>]
+[*[[int]]]
+([], [], [], [])
+([], [], [], [])
+[[[int]]]
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+(str, int)
+([], [], [], [])
+[dict]
+  key - *str
+[dict]
+  list - <mixed-type>
+(str, int)
+(str, int)
+[*[[int]]]
+[*[[int]]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key - *str
+[*[[int]]]
+[dict]
+  list - [int]
+[(str, *int, <mixed-type>, *str)]
+(str, int)
+[(str, *int, <mixed-type>, *str)]
+[[<mixed-type>]]
+[(str, *int, <mixed-type>, *str)]
+[*[[int]]]
+[(*str, *int)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[*[[int]]]
+[(*str, *int)]
+[]
+[[<mixed-type>]]
+[(str, *int, <mixed-type>, *str)]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[]
+[*[[int]]]
+[dict]
+  list - <mixed-type>
+dict
+[[[int]]]
+[dict]
+  key - *str
+(['coding', 'snowboarding'], [], ['coding', 'snowboarding'], [])
+[(str, *int, <mixed-type>, *str)]
+[*[[int]]]
+(str, int)
+dict
+[[<mixed-type>]]
+[*[[int]]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+(str, int)
+(str, int)
+[*[[int]]]
+[*[[int]]]
+[dict]
+  key - *str
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  key - *str
+dict
+[dict]
+  list - [int]
+[]
+([{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}])
+(str, int)
+[*int]
+[[[int]]]
+(str, int)
+[str]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+dict
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(*str, *int)]
+([{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}])
+[*int]
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[*[[int]]]
+[(*str, *int)]
+[dict]
+  list - [int]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[*[[int]]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[*[[int]]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[*[[int]]]
+[[<mixed-type>]]
+[*[[int]]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+dict
+[*[[int]]]
+[(*str, *int)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  list - [int]
+[*[[int]]]
+[[<mixed-type>]]
+dict
+[]
+[NoneType]
+[dict]
+  list - <mixed-type>
+(str, int)
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  key - *str
+[dict]
+  list - <mixed-type>
+[*int]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  list - [int]
+([], [], [], [])
+dict
+[*int]
+([], [], [], [])
+[(str, *int, <mixed-type>, *str)]
+[[[int]]]
+[NoneType]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+([], [], [], [])
+([], [{'key1': 'val1'}], [], [{'key1': 'val1'}])
+[(str, *int, <mixed-type>, *str)]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  list - [int]
+dict
+[(str, *int, <mixed-type>, *str)]
+dict
+[dict]
+  key - *str
+[(*str, *int)]
+[]
+[[[int]]]
+(['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'])
+[(*str, *int)]
+[dict]
+  list - [int]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+(str, int)
+([], [], [], [])
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  list - [int]
+[dict]
+  list - <mixed-type>
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+(str, int)
+[(*str, *int)]
+[(*str, *int)]
+([], [], [], [])
+[*[[int]]]
+(['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}, 'coding', 'snowboarding'], ['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}, 'coding', 'snowboarding'], ['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}, 'coding', 'snowboarding'], ['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}, 'coding', 'snowboarding'])
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  list - [int]
+[[<mixed-type>]]
+[dict]
+  list - <mixed-type>
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[<mixed-type>]]
+[str]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+(['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}, 'coding', 'snowboarding'], [], ['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}, 'coding', 'snowboarding'], [])
+[*int]
+[*int]
+(str, int)
+[(*str, *int)]
+[dict]
+  list - [int]
+dict
+[[<mixed-type>]]
+[dict]
+  key - *str
+[dict]
+  key - *str
+[[[int]]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+([], ['coding', 'snowboarding', {'key1': 'val1'}], [], ['coding', 'snowboarding', {'key1': 'val1'}])
+[dict]
+  key - *str
+[]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[<mixed-type>]
+[<mixed-type>]
+[*int]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+dict
+[<mixed-type>]
+[<mixed-type>]
+[(str, *int, <mixed-type>, *str)]
+[<mixed-type>]
+(['coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}], [], ['coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}], [])
+[(*str, *int)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+([], ['coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}], [], ['coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}])
+[NoneType]
+[dict]
+  list - [int]
+[NoneType]
+(['coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}], [], ['coding', 'snowboarding', {'key1': 'val1'}, {'key1': 'val1'}], [])
+[<mixed-type>]
+[(str, *int, <mixed-type>, *str)]
+[NoneType]
+[*int]
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+[NoneType]
+[*int]
+[[[int]]]
+[[[int]]]
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+([], [], [], [])
+[(str, *int, <mixed-type>, *str)]
+[(*str, *int)]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+(str, int)
+[(*str, *int)]
+[dict]
+  list - [int]
+[NoneType]
+[[[int]]]
+[]
+[(*str, *int)]
+[*[[int]]]
+[dict]
+  list - <mixed-type>
+([{'key1': 'val1'}], [], [{'key1': 'val1'}], [])
+[dict]
+  list - [int]
+[dict]
+  list - [int]
+[[<mixed-type>]]
+[(str, *int, <mixed-type>, *str)]
+[[<mixed-type>]]
+[<mixed-type>]
+[(str, *int, <mixed-type>, *str)]
+([], [], [], [])
+[dict]
+  *key1 - str
+  *key2 - str
+[<mixed-type>]
+[dict]
+  list - <mixed-type>
+([], [], [], [])
+[*int]
+[[<mixed-type>]]
+[*[[int]]]
+[[<mixed-type>]]
+[(str, *int, <mixed-type>, *str)]
+dict
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+(str, int)
+([], [], [], [])
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+([{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'])
+[(*str, *int)]
+[]
+[(str, *int, <mixed-type>, *str)]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[*int]
+[]
+[str]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  list - <mixed-type>
+([], [{'key1': 'val1'}, 'coding', 'snowboarding'], [], [{'key1': 'val1'}, 'coding', 'snowboarding'])
+[(str, *int, <mixed-type>, *str)]
+[str]
+[<mixed-type>]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[]
+(['coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'], ['coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'])
+(['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'], ['coding', 'snowboarding'])
+([{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'])
+[str]
+[str]
+[dict]
+  key - *str
+dict
+([{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}, 'coding', 'snowboarding'])
+dict
+([], [], [], [])
+([], [], [], [])
+(str, int)
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[(*str, *int)]
+[*int]
+[dict]
+  *key1 - str
+  *key2 - str
+[NoneType]
+[*[[int]]]
+[dict]
+  list - [int]
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  list - [int]
+[(*str, *int)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[NoneType]
+[*[[int]]]
+dict
+(['coding', 'snowboarding'], [], ['coding', 'snowboarding'], [])
+dict
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+dict
+[dict]
+  list - <mixed-type>
+[dict]
+  list - [int]
+[*int]
+[]
+[[[int]]]
+[NoneType]
+[NoneType]
+[]
+[]
+[]
+(str, int)
+[]
+[NoneType]
+[dict]
+  list - <mixed-type>
+[]
+[dict]
+  list - [int]
+([{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}])
+[[[int]]]
+[*[[int]]]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+(str, int)
+(str, int)
+(str, int)
+[*int]
+(str, int)
+[dict]
+  list - <mixed-type>
+[*[[int]]]
+[dict]
+  list - [int]
+([{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}])
+[*[[int]]]
+(str, int)
+[dict]
+  *key1 - str
+  *key2 - str
+(str, int)
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  *key1 - str
+  *key2 - str
+([], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}], [], [{'key1': 'val1'}, 'coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}])
+[dict]
+  key - *str
+dict
+[*[[int]]]
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  list - <mixed-type>
+[(*str, *int)]
+[<mixed-type>]
+(str, int)
+[*[[int]]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[[[int]]]
+[<mixed-type>]
+[[<mixed-type>]]
+[]
+[*[[int]]]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[(*str, *int)]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+dict
+[dict]
+  list - <mixed-type>
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+(['coding', 'snowboarding', 'coding', 'snowboarding'], ['coding', 'snowboarding', 'coding', 'snowboarding'], ['coding', 'snowboarding', 'coding', 'snowboarding'], ['coding', 'snowboarding', 'coding', 'snowboarding'])
+(str, int)
+(str, int)
+(['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}], ['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}], ['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}], ['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}])
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+[NoneType]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+(str, int)
+[*int]
+[dict]
+  list - [int]
+[dict]
+  key - *str
+[str]
+[*int]
+(['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}], [], ['coding', 'snowboarding', 'coding', 'snowboarding', {'key1': 'val1'}], [])
+[[<mixed-type>]]
+[(*str, *int)]
+[dict]
+  key - *str
+[<mixed-type>]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[<mixed-type>]
+[dict]
+  list - [int]
+[]
+[dict]
+  key - *str
+[(*str, *int)]
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  list - <mixed-type>
+[]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+([], [], [], [])
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  list - [int]
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[[[int]]]
+[(*str, *int)]
+[dict]
+  list - [int]
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  list - <mixed-type>
+[(*str, *int)]
+([], [], [], [])
+[[[int]]]
+([], [], [], [])
+([], [], [], [])
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  list - [int]
+[dict]
+  key - *str
+[NoneType]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[<mixed-type>]
+[]
+[NoneType]
+[]
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[*int]
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  key - *str
+(str, int)
+[NoneType]
+[<mixed-type>]
+[[<mixed-type>]]
+[[[int]]]
+[<mixed-type>]
+([{'key1': 'val1'}], ['coding', 'snowboarding'], [{'key1': 'val1'}], ['coding', 'snowboarding'])
+[<mixed-type>]
+[dict]
+  key - *str
+(str, int)
+(str, int)
+dict
+[*int]
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  list - <mixed-type>
+[[<mixed-type>]]
+[*int]
+([{'key1': 'val1'}, {'key1': 'val1'}, 'coding', 'snowboarding'], [], [{'key1': 'val1'}, {'key1': 'val1'}, 'coding', 'snowboarding'], [])
+[[<mixed-type>]]
+[<mixed-type>]
+([{'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}, 'coding', 'snowboarding'], [{'key1': 'val1'}], [{'key1': 'val1'}, {'key1': 'val1'}, 'coding', 'snowboarding'])
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+dict
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  list - <mixed-type>
+[dict]
+  *key1 - str
+  *key2 - str
+([], [], [], [])
+([{'key1': 'val1'}], [], [{'key1': 'val1'}], [])
+[*int]
+[dict]
+  key - *str
+[dict]
+  list - [int]
+[]
+[*[[int]]]
+[(str, *int, <mixed-type>, *str)]
+[[[int]]]
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  key - *str
+(str, int)
+(str, int)
+([{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}], [{'key1': 'val1'}])
+[dict]
+  *key1 - str
+  *key2 - str
+[dict]
+  list - <mixed-type>
+[NoneType]
+([{'key1': 'val1'}], [], [{'key1': 'val1'}], [])
+dict
+  l1 - dict
+    l2 - dict
+      l3 - str
+[dict]
+  list - [int]
+[dict]
+  key - *str
+(str, int)
+[dict]
+  list - <mixed-type>
+[dict]
+  list - [int]
+[]
+[dict]
+  *key1 - str
+  *key2 - str
+[]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[NoneType]
+[dict]
+  key - *str
+([], [], [], [])
+[[[int]]]
+dict
+[*int]
+[str]
+[[[int]]]
+dict
+[*[[int]]]
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+[str]
+[(str, *int, <mixed-type>, *str)]
+[dict]
+  list - <mixed-type>
+[str]
+dict
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  list - [int]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+([{'key1': 'val1'}], [], [{'key1': 'val1'}], [])
+[dict]
+  key - *str
+[[<mixed-type>]]
+[str]
+[str]
+[dict]
+  *key1 - str
+  *key2 - str
+([], [], [], [])
+[(str, *int, <mixed-type>, *str)]
+[<mixed-type>]
+[<mixed-type>]
+([{'key1': 'val1'}, {'key1': 'val1'}], [], [{'key1': 'val1'}, {'key1': 'val1'}], [])
+[dict]
+  list - [int]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[[<mixed-type>]]
+[*int]
+[]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[(*str, *int)]
+[[[int]]]
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+(str, int)
+[(str, *int, <mixed-type>, *str)]
+[*[[int]]]
+[[<mixed-type>]]
+([], [], [], [])
+dict
+[dict]
+  *key1 - str
+  *key2 - str
+[str]
+(str, int)
+[(str, *int, <mixed-type>, *str)]
+[*[[int]]]
+([], [], [], [])
+[str]
+[]
+([], [], [], [])
+[<mixed-type>]
+[[<mixed-type>]]
+[<mixed-type>]
+[[<mixed-type>]]
+[NoneType]
+[(str, *int, <mixed-type>, *str)]
+[(*str, *int)]
+[*[[int]]]
+[[<mixed-type>]]
+[(str, *int, <mixed-type>, *str)]
+([], [], [], [])
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+[str]
+[(*str, *int)]
+[]
+[(*str, *int)]
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  key - *str
+[dict]
+  key - *str
+([], [], [], [])
+[(str, *int, <mixed-type>, *str)]
+dict
+[dict]
+  *key1 - str
+  *key2 - str
+dict
+[[[int]]]
+([], [], [], [])
+[dict]
+  key1 - [dict]
+    subkey1 - str
+    *subkey2 - str
+[dict]
+  list - [int]
+dict
+[(str, *int, <mixed-type>, *str)]
+[(str, *int, <mixed-type>, *str)]
+[str]
+[*[[int]]]
+[*int]
+(str, int)
+([], [], [], [])
+[dict]
+  list - [int]
+[<mixed-type>]
+([], [], [], [])
+[dict]
+  key - *str
+[(str, *int, <mixed-type>, *str)]
+([{'key1': 'val1'}], [], [{'key1': 'val1'}], [])
+[<mixed-type>]
+0.40921998024 TOTAL RUNTIME
+100 EXECUTED
+10000 TOTAL TEST OPERATIONS
+0.240902662277 TIME SPENT EXECUTING TEST OPERATIONS
+0.104068279266 TIME SPENT EVALUATING GUARDS AND CHOOSING ACTIONS
+0.0060818195343 TIME SPENT CHECKING PROPERTIES
+0.246984481812 TOTAL TIME SPENT RUNNING SUT
+0.0287914276123 TIME SPENT RESTARTING
+0.0 TIME SPENT REDUCING TEST CASES
