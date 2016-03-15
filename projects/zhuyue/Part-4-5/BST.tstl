@@ -1,0 +1,40 @@
+@import math
+@import time
+@import BST
+
+# @ indicates raw python code, such as imports, and is usually not parsed by TSTL, but available for use in testing
+<@
+
+
+
+@>
+
+
+source: BST.py
+pools:
+       <int> 2
+       <tree> 1
+       <sortkey> 2
+ 
+
+actions:
+        <int> := <[1..20]>
+
+        <sortkey> := <[1..20]>
+
+        <tree> := BST.BinarySearchTree()
+
+        ~<tree>.insert(<int>) => (<tree,1>._len == pre<(<tree,1>._len)>+1)
+
+        ~<tree>.insert(<int>) => (<tree,1>.__nonzero__() == True)
+        
+#        (<tree>.__nonzero__() == False) -> ~<tree,1>.pop_max() => True
+
+         ~<tree>.pop_max() => ((<tree,1>._len == pre<(<tree,1>._len)>-1) or (pre<(<tree,1>._len)> == 0))
+
+         ~<tree>.insert(<int>) => (<tree,1>.__nonzero__() == True)
+
+         ~<tree>.pop_min() => ((<tree,1>._len == pre<(<tree,1>._len)>-1) or (pre<(<tree,1>._len)> == 0))
+
+#        ~<tree>.insert(<int>) => (test_extreme(<tree>,1) == tree._extreme_node(1)[_VALUE])
+    
