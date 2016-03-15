@@ -1,0 +1,13 @@
+@import rb
+
+pools:
+	<int> 6
+	<tr> 2
+	<node> 5
+
+actions:
+<int> := <[1..20]>
+<tr> := rb.RedBlackTree()
+<node> := rb.Node(<int>)
+~<tr>.add(<int>); print <tr>.root
+#<tr>.insert(<node>)
