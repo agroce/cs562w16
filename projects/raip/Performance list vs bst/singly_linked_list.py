@@ -43,10 +43,9 @@ class SinglyLinkedList:
 
         Time Complexity:  O(N)
         """
+	if self.search(value):
+		return 
 
-		if self.search(value):
-			return 
-			
         node = Node(value)
         node.set_next(self.head)
         self.head = node
@@ -59,7 +58,7 @@ class SinglyLinkedList:
         Time Complexity:  O(N)
         """
 	if self.head == None:
-		return None
+		found = False 
 
         current = self.head
         previous = None
@@ -102,6 +101,15 @@ class SinglyLinkedList:
 
     def length(self):
         return self.size
+
+    def display(self):
+        list = []
+        node = self.head
+        while node != None :
+                list.append(node.data)
+                node = node.next
+        return list
+
 
 #    def size(self):
 #        """
