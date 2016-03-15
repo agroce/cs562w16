@@ -1,0 +1,49 @@
+@from bintrees import RBTree
+@import myDict
+
+<@
+def traversal(k, v):
+	print k, v
+@>
+
+log: 1 <rbtree>
+
+pool: <int> 20
+pool: <rbtree> 2 REF
+pool: <ascii> 2
+pool: <letter> 2
+
+
+<ascii> := <[65..91]>
+<letter> := chr(<ascii>)
+<int> := <[1..20]>
+
+<rbtree> := RBTree()
+~<rbtree>.insert(<letter>, <int>)
+~<rbtree>.get(<letter>) > 0 -> ~<rbtree>.get(<letter>)
+~<rbtree>.__len__()
+~<rbtree>.__len__() > 0 -> ~<rbtree>.__max__()
+~<rbtree>.__len__() > 0 -> ~<rbtree>.__min__()
+~<rbtree>.get(<letter>) > 0 -> ~<rbtree>.remove_items(<letter>)
+~<rbtree>.is_empty()
+~<rbtree>.clear()
+~<rbtree>.__len__() > 0 -> ~<rbtree>.foreach(traversal, 0)
+
+
+reference: RBTree ==> myDict.Dict
+reference: insert ==> add
+reference: get ==> get
+reference: __len__() ==> getSize
+reference: __max__() ==> getMax
+reference: __min__() ==> getMin
+reference: remove_items() ==> remove
+reference: is_empty() ==> isEmpty
+reference: clear() ==> clear
+reference: foreach() ==> foreach
+
+
+compare: get
+compare: __len__
+compare: __max__
+compare: __min__
+
