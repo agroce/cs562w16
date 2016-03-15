@@ -43,7 +43,9 @@ class SinglyLinkedList:
 
         Time Complexity:  O(N)
         """
-
+		if self.search(value):
+			return 
+			
         node = Node(value)
         node.set_next(self.head)
         self.head = node
