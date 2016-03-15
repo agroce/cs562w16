@@ -1,0 +1,48 @@
+@from algorithms.sorting import bogo_sort
+@from algorithms.sorting import bubble_sort
+@from algorithms.sorting import heap_sort
+@from algorithms.sorting import merge_sort 
+@from algorithms.sorting import quick_sort 
+
+<@
+def is_sorted( seq ):
+	if len(seq) == 1:
+		return True
+	else:
+		return all(seq[i - 1] <= seq[i] for i in range(1, len(seq)))
+@>
+
+pool: <int> 10
+pool: <array> 3
+
+<int> := <[1..50]>
+<array> := []
+~<array>.append(<int>) => len(<array,1>) == pre<(len(<array,1>))>+1
+
+# test the sorting result
+bogo_sort.sort(~<array>); print(<array,1>); =>  is_sorted(<array,1>)
+
+bubble_sort.sort(~<array>); print(<array,1>); =>  is_sorted(<array,1>)
+
+heap_sort.sort(~<array>); print(<array,1>); =>  is_sorted(<array,1>)
+
+merge_sort.sort(~<array>); print(<array,1>); =>  is_sorted(<array,1>)
+
+quick_sort.sort(~<array>); print(<array,1>); =>  is_sorted(<array,1>)
+
+
+# test the function bogo_sort.is_sorted
+bogo_sort.sort(~<array>); print(<array,1>); => \
+is_sorted(<array,1>) == bogo_sort.is_sorted(<array,1>)
+
+bubble_sort.sort(~<array>); print(<array,1>); => \
+is_sorted(<array,1>) == bogo_sort.is_sorted(<array,1>)
+
+heap_sort.sort(~<array>); print(<array,1>); => \
+is_sorted(<array,1>) == bogo_sort.is_sorted(<array,1>)
+
+merge_sort.sort(~<array>); print(<array,1>); => \
+is_sorted(<array,1>) == bogo_sort.is_sorted(<array,1>)
+
+quick_sort.sort(~<array>); print(<array,1>); => \
+is_sorted(<array,1>) == bogo_sort.is_sorted(<array,1>)
