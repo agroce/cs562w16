@@ -1,0 +1,32 @@
+
+@from fuzzywuzzy import fuzz
+@from fuzzywuzzy import process
+
+source: fuzz.py
+source: process.py
+pool: <string> 5
+pool: <char> 20
+pool: <list> 2
+pool: <st1> 1
+pool: <st2> 1
+pool: <basicst> 1
+pool: <itemlist> 1
+
+<basicst>:= "this is a test"
+<char> :=<['a'..'z']>
+
+<string> := <char>+<char>+<char> 
+
+<st1>:=<string>+" "+<basicst>+" "+<string>
+
+<st2>:=<string>+" "+<basicst>+" "+<string>
+
+<itemlist>:=[<string>+" "+<string>,<string>+" "+<string>,<string>+" "+<string>,<string>+" "+<string>]
+
+print "st1:",<st1>;print "st2:",<st2>;print "partial ratio",fuzz.partial_ratio(<st1>, <st2>)
+
+print "st1:",<st1>;print "st2:",<st2>;print "token set ratio",fuzz.token_set_ratio(<st1>, <st2>) 
+
+print "st1:",<st1>;print "st2:",<st2>;print "token sort ratio",fuzz.token_sort_ratio(<st1>, <st2>) 
+
+print "list:",<list>;print "extractOne",process.extractOne(<string>, <list>); 

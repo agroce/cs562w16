@@ -1,0 +1,3 @@
+Name         Stmts   Miss Branch BrPart  Cover   Missing
+--------------------------------------------------------
+fuzzywuzzy   NoSource: No source for code: 'C:\Python27\Lib\site-packages\fuzzywuzzy': [Errno 13] Permission denied: u'C:\\Python27\\Lib\\site-packages\\fuzzywuzzy'
