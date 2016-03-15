@@ -1,0 +1,110 @@
+import collections
+import bstree
+
+@from avltree import AVLTree, Node
+
+
+<@
+def showTree(tree):
+        
+        ops = []
+        display(tree.root, ops)
+
+        return ops
+
+
+
+def check(tree):
+      a = 'error in ordering'
+      if preorder == postorder == inorder == levelorder:
+                  return a
+      
+
+class Node:
+       def __init__(self,key,value):
+        self.left = None
+        self.right = None
+        self.parent = None
+        self.key = key
+        self.value = value
+
+
+def parentcheck(tree):
+      s = 'error in parent'
+      if self.parent > self.right or self.left > self.right or self.left > self.parent or self.parent == self.right == self.left: 
+           return s
+
+def max(tree):
+      if self.parent == None:
+        get_max = None
+
+def switch(tree):
+      if node1 == None:
+        switch_node == None
+
+def delete(tree):
+      if self.parent == None:
+         delete == None
+
+def deletefrom(tree):
+      if self.parent == None:
+         delete_from == None
+
+
+def deletenode(tree):
+      if node == None:
+         _delete_node == None
+
+def valid(tree):
+     s = 'string is invalid'
+     if node.parent == node.parent.left == node.parent.right:
+      return s
+
+def display(self, ops):
+        b = 'showing tree'
+        if self == None:
+                return
+        ops.append(self.key)
+        display(self.left,ops)
+        display(self.value,s)
+        display(self.right,ops)
+
+
+
+@>
+
+
+source: avltree.py
+
+logs:
+   
+    POST 1 showTree(<av>)
+    POST 1 check(<av>)
+    POST 1 parentcheck(<av>)
+    POST 1 max(<av>)
+    POST 1 delete(<av>)
+    POST 1 deletefrom(<av>)
+    POST 1 deletenode(<av>)
+    1 deletenode(<av>)
+    1 valid(<av>)
+    
+    
+
+pools:
+    <key> 1
+    <val> 1
+    <ops> 1
+    <av> 1
+
+
+actions:
+<val> := <[1..10]>
+<key> := <[1..10]>
+<ops> := []
+<av>  := AVLTree()
+
+
+
+
+~<av>.insert(<key>,<val>); ~<ops>.append(<val>); print <av>
+~<av>.delete(<key>); 
