@@ -128,9 +128,11 @@ Finally, a syntax plugin for tools like PyCharm or Atom.io would be most excelle
 This is the reason that the vast majority of my code is in a raw python file and imported directly into the TSTL file since I found that writing tests of any significant complexity became tedious in a raw text file.
 
 #### Upsides of TSTL ####
-As I said before, writing tests in TSTL is nice, I can quickly setup constructors and actions and not worry about the order in which the details take place. The compressed syntax like `<[1..20]>` is a treat and a great way to think about things, however I find myself fretting over the possibly resulting python code.
+As I said before, writing tests in TSTL is nice, I can quickly setup constructors and actions and not worry about the order in which the details take place. The compressed syntax like `<[1..20]>` is a treat and a great way to think about things, however I find myself fretting over the possibly resulting bloated python code.
 The control constructs like pre and post conditions as well as preservation of state `~<item>` is wonderful as well and lends itself to data structure testing.
 The guard construct that is used to verify that items are initialized before a test is executed is fantastic as well.
+
+TSTL certainly lends itself to testing data structures, and with the addition of a few constructs it could be extremely well suited to test large systems and APIs.
 
 
 
