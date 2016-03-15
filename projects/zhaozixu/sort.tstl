@@ -2,32 +2,41 @@
 ######## pip install python-skiplist
 ######## pip install sortedcontainers
 
-@from skiplist import SortedDict
-@from sortedcontainers import SortedDict as Sort
+@from skiplist import SortedDict as CSort
+@from sortedcontainers import SortedDict as PSort
 @import time
 @import random
+@import csv
 
 <@
 #Generate the random string that we can use it for dictionary or set, the length can be as long as the maximum size of dictionary
-def genString(upper):
+
+def genString2(strSize):
 	s = ''
-	length = random.randint(0, upper)
+	#set random number from 0 to 1 to examine the correctness and set <size> as 10 
+	length = random.randint(0, strSize)			
 	while (len(s) < length):
+		s = s + chr(random.randint(0, 255))
+	return s
+	
+def genString(strSize):
+	s = ''	
+	while (len(s) < strSize):
 		s = s + chr(random.randint(0, 255))
 	return s
 	
 
 #Generate dictionary with multiple combinations of string and numbers
-def genMulDict(low, high, size):
+def genMulDict(low, high, size, strSize):
 	d = {}
 	flag = random.randint(0,3)
-	while (len(d) != size):
+	while (len(d) < size):
 		if (flag == 0):
-			d[genString(size)] = genString(size)
+			d[genString(strSize)] = genString(strSize)
 		elif (flag == 1):
-			d[random.randint(low, high)] = genString(size)
+			d[random.randint(low, high)] = genString(strSize)
 		elif (flag == 2):
-			d[genString(size)] = random.randint(low, high)
+			d[genString(strSize)] = random.randint(low, high)
 		else:
 			d[random.randint(low, high)] = random.randint(low, high)
 	return d
@@ -35,42 +44,48 @@ def genMulDict(low, high, size):
 #Generate dictionary with pure numbers
 def genNumDict(low, high, size):
 	d = {}
-	while (len(d) != size):
+	while (len(d) < size):
 		d[random.randint(low, high)] = random.randint(low, high)
 	return d
 	
 #Generate dictionary with pure strings
-def genStrDict(high, size):
+def genStrDict(high, size, strSize):
 	d = {}
-	while (len(d) != size):
-		d[genString(size)] = genString(size)
+	while (len(d) < size):
+		d[genString(strSize)] = genString(strSize)
 	return d
-
-	
+		
 def testCSortDict(dict):
 	dura = time.time()
-	SortedDict(dict)
+	CSort(dict)
 	dura = time.time() - dura
 	return dura
 	
 def testPSortDict(dict):
 	dura = time.time()
-	Sort(dict)
+	PSort(dict)
 	dura = time.time() - dura
 	return dura
 
 def EqualResult(dict):
-	c = SortedDict(dict)
-	p = Sort(dict)
+	c = CSort(dict)
+	p = PSort(dict)
 	if (c == p):
 		return True
 	else:
 		return False
+		
+def outputResult(cdura, pdura, dict, size, strsize, result):
+	f = file('dura.csv', 'ab')
+	writer = csv.writer(f)
+	writer.writerow([cdura, pdura, size, strsize, dict, result])
+	f.close()
 
 @>
 
 pool: <dict>		1
 pool: <size>		1
+pool: <strsize>		1
 pool: <high>		1
 pool: <low>			1
 pool: <cdura>		1
@@ -78,17 +93,18 @@ pool: <pdura>		1
 
 
 <dict>		:= {}
-<size>		:= 10
-<high>		:= 10
-<low>		:= -10
+<size>		:= <[10, 20, 30, 50, 100, 150, 200]>
+<strsize>	:= 1
+<high>		:= 1000
+<low>		:= -1000
 <cdura>		:= 0.0
 <pdura>		:= 0.0
 	
-<dict> = genMulDict(<low>, <high>, <size>) 	
+<dict> = genMulDict(<low>, <high>, <size>, <strsize>) 	
 #<dict> = genNumDict(<low>, <high>, <size>) 	
-#<dict> = genStrDict(<low>, <high>, <size>) 	
+#<dict> = genStrDict(<low>, <high>, <size>)
 
 
-len(<dict>) == <size> -> flag = EqualResult(<dict>); <cdura> = testCSortDict(<dict>); <pdura> = testPSortDict(<dict>); print 'C Sort: size = ', <size>, ';Duration = ', <cdura>; print 'Dictrionary: ', <dict>; print 'P Sort: size = ', <size>, ';Duration = ', <pdura>; print 'Result Corretness: ', flag;
+len(<dict>) == <size> -> flag = EqualResult(<dict>); <cdura> = testCSortDict(<dict>); <pdura> = testPSortDict(<dict>); print '============New Test============'; print 'Dictrionary: ', <dict>; print 'C Sort: size = ', <size>, ';Duration = ', <cdura>; print 'P Sort: size = ', <size>, ';Duration = ', <pdura>; print 'Result Corretness: ', flag; outputResult(<cdura>, <pdura>, <size>, <strsize>, <dict>, flag);
 
 	
