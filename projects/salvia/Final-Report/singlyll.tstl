@@ -1,0 +1,22 @@
+@import singly_linked_list
+
+
+
+pools:
+
+        <data> 10
+
+        <link> 3
+
+
+
+
+
+actions:
+
+        <data> := <[0..50]>
+		<link> := singly_linked_list.SinglyLinkedList()
+		<link>.add(<data>) -> (<link,1>.size != 0) => <link,1>.remove(<data,1>) -> (<link,1>.size == 0)
+		<link>.add(<data>) -> l = <link,1>.size ->  <link,1>.add(<data>) -> new = <link,1>.size -> (len == new-1)
+		<link>.add(<data>) -> (<link>.size != 0) and <link,1>.search(<data>) -> <link,1>.remove(<data,1>) => (<link,1>.size == pre<(<link,1>.size)>-1)
+		<link>.add(<data>) => (<link,1>.size == pre<(<link,1>.size)>+1)
