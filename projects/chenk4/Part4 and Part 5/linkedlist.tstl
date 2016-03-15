@@ -1,0 +1,211 @@
+# Description: purpose of linkedlist.tstl file is to test the functions for \
+# a single linked list. Library's name is (linkedlist.py). 
+# The class name in (linkedlist.py) is  (class linkedList)
+
+@import linkedlist
+@import math
+@import time
+
+<@
+# (function: countLength): calculate the length of single linked list 
+def countLength(self):
+    cot = 0
+    head=self.head
+    if head==None:
+        return cot
+    else:
+        while head!=None:
+            head=head.next
+            cot = cot + 1
+        return cot
+
+def lengthHead(head):
+    ncot=0;
+    if not head:
+        return ncot
+    while head:
+        ncot+=1
+        head=head.next
+    return ncot
+
+# (findFstValue function): get the value in the head position of linked list 
+def findFstValue (self):
+    head=self.head
+    if head == None:
+        return None
+    else:   
+        return head.val
+
+# (findSecValue function): get the value in the second position of linked list 
+def findSecValue (self):
+    pp=self.head
+    if pp ==None:
+        return None
+    elif pp.next ==None:
+        return None
+    else:   
+        return pp.next.val  
+
+ # (findTrdValue function): get the value in the third position of linked list 
+def findTrdValue (self):
+    pp=self.head
+    if pp ==None:
+        return None
+    elif pp.next ==None:
+        return None
+    elif pp.next.next ==None:
+        return None
+    else:            
+        return pp.next.next.val          
+
+#(findLstValue function): get the value in the tail position of liked list
+def findLstValue (self):
+    head=self.head
+    if head == None:
+		return None
+    else:
+        while(head.next!=None):
+            head=head.next
+        return head.val
+
+# if no continuted duplicate numbers, return False; 
+# otherwise return the first comming duplicate number. 
+def findFstDuplicates(self): 
+    head = self.head
+    if head==None or head.next==None:
+        return False
+    else:
+        while head.next:
+            if head.val==head.next.val:
+                return head.val
+            else:
+                head=head.next 
+                if not head.next:
+                    return False  
+
+# define a new function which input is self                   
+def nprintList (self): 
+    print "{{{{{{{{{{{{{{{{{{{{{{{{{{{"   
+    head = self.head 
+    if head == None :
+        return None
+    else:
+        while head:
+            print head.val
+            head=head.next
+    print "}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
+
+@>	
+
+# the tested python file is (linkedlist.py)
+source: linkedlist.py
+
+pool: <INT> 3
+pool: <CHAR> 3
+pool: <LINKED> 4
+pool: <LINKK> 3
+pool: <LIN> 3
+pool: <LIST> 3
+
+# <INT> :=<[1..5]>   # for finding bug in removeElements
+<INT> :=<[1..10]> 
+<CHAR> := <['a','b','c','d','*','$','hello good',100,200.1]>
+ # <CHAR> := <['a','b']>
+<LIST>:=[]
+~<LIST>.append(<INT>)
+
+<LINKED>:=linkedlist.linkedList()
+<LINKK>:=linkedlist.linkedList()
+<LIN>:=linkedlist.linkedList()
+#insert the randomized numbers and test (insert function)
+#Descprtion of (insert function): insert a value to the linked list
+<LINKED>.insert(<CHAR>) => \
+  (countLength(~<LINKED,1>)==pre<(countLength(~<LINKED,1>))>+1)
+
+# restrict the length of single linked list to be 6, then test (printList function) and \
+# test (ReversePrint function) 
+# Descprtion of (printList function): print the whole list from head to tail 
+# #Descprtion of (ReversePrint function): print the whole list from tail to head 
+countLength(~<LINKED,1>) == 6 -> print " % % % % % % % % % %  "; \
+~<LINKED,1>.printList(<LINKED>.getHead());~<LINKED,1>.ReversePrint(<LINKED,1>.getHead()); \
+print "%        %        %  "
+
+# #restrict the length of single linked list to be 6 and test (reverseList function) 
+# #Descprtion of (reverseList function): revese the order of original list
+countLength(~<LINKED,1>) == 6 -> print "? ? ? ? ? ? ? ? "; \
+~<LINKED,1>.printList(<LINKED>.getHead());\
+<LINKED,1>.printList(~<LINKED,1>.reverseList(~<LINKED,1>.getHead())); print "?         ?        ? "
+
+
+# ###### There are bugs in (removeElements function )
+# test (removeElements function): we need use (findLstValue function ) to get the value 
+# in the tail of list and delete this value    
+# Description of (removeElements function): remove given value from the list
+<LINKK>.insert(<INT>) 
+countLength(~<LINKK>) == 4 -> print "-------------------"; \
+~<LINKK,1>.printList(<LINKK,1>.getHead());\
+~<LINKK,1>.removeElements(~<LINKK,1>.getHead(),findLstValue(~<LINKK,1>)); \
+~<LINKK,1>.printList(<LINKK,1>.getHead()); print "-       -     -     - "; #=> \
+ # (countLength(~<LINKK,1>) < 4)
+
+# ###### There are bugs in (deleteNode function )
+# # Test (deleteNode function)
+# Description of (deleteNodefunction): remove given a node from the list
+# <LINKK>.insert(<INT>) 
+# countLength(~<LINKK>) == 4 -> ~<LINKK>.deleteNode((~<LINKK,1>).getTail());
+
+<LINKK>.insert(<INT>) 
+countLength(~<LINKK>) == 4 -> ~<LINKK>.deleteNode((~<LINKK,1>).getHead());
+
+# There are bugs in (deleteDuplicates function)
+# Test deleteDuplicates ()
+# Description of (findFstDuplicates function): find the first coming duplicate number
+<LINKK>.insert(<INT>) 
+(countLength(~<LINKK>) == 5) and (findFstDuplicates(~<LINKK>) !=False)  -> \
+print "--$--$---$---$----$----"; \
+nprintList(~<LINKK,1>); \
+~<LINKK,1>.deleteDuplicates(~<LINKK,1>.getHead());\
+nprintList(~<LINKK,1>); print "--$    ---$     ---$    ---$" #=> \
+# findFstDuplicates(~<LINKK,1>) ==False
+
+#Test rotateRight() function
+#Description of (rotateRight()):Given a list, rotate the list to the right by k places
+<LINKK>.insert(<INT>) 
+(countLength(~<LINKK>) == 6) -> nprintList(~<LINKK,1>);\
+~<LINKK,1>.printList(~<LINKK,1>.rotateRight(~<LINKK,1>.getHead(),1)); => \
+findLstValue(~<LINKK,1>)==(~<LINKK,1>.rotateRight(~<LINKK,1>.getHead(),1)).val
+
+#Test reorderList(self, head):
+<LINKK>.insert(<INT>) 
+(countLength(~<LINKK>) == 5) ->  a= findLstValue(~<LINKK,1>); nprintList(~<LINKK,1>);\
+~<LINKK,1>.reorderList(~<LINKK,1>.getHead());nprintList(~<LINKK,1>); => \
+  findSecValue(~<LINKK,1>) == a
+
+#There are bugs in swapPairs1
+#Test swapPairs1
+#Desciption of swapPairs1 (): swap every two adjacent nodes in a list
+<LINKK>.insert(<INT>) 
+(countLength(~<LINKK>) == 5) ->  a= findFstValue(~<LINKK,1>);\
+b=findTrdValue(~<LINKK,1>);\
+c=~<LINKK,1>.swapPairs1(~<LINKK,1>.getHead()); #=> \
+ # (a == c.next.val) and (b==c.next.next.next.val)
+
+#Test swapPairs
+#Desciption of swapPairs (): same as swapPairs1(), but use recursion
+<LINKK>.insert(<INT>) 
+(countLength(~<LINKK>) == 5) ->  a= findFstValue(~<LINKK,1>);\
+b=findTrdValue(~<LINKK,1>);\
+c=~<LINKK,1>.swapPairs(~<LINKK,1>.getHead()); => \
+  (a == c.next.val) and (b==c.next.next.next.val)
+
+#Test mergeTwoLists
+<LINKK>.insert(<INT>);<LIN>.insert(<CHAR>)
+(countLength(~<LIN>)==4) and (countLength(~<LINKK>)==5) -> \
+nprintList(~<LINKK,1>);nprintList(~<LIN,1>);\
+headA=~<LIN,1>.getHead(); headB= ~<LINKK,1>.getHead(); print "LOGGGG";\
+x=~<LINKK,1>.mergeTwoLists(headB,headA); ~<LINKK,1>.printList(x); => \
+ lengthHead(x)==9
+
+
+
+
