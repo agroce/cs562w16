@@ -1,3 +1,4 @@
+@import random
 @import singly_linked_listmodified
 
 <@
@@ -8,7 +9,15 @@ def display(self):
         while node != None :
                 list.append(node.data)
                 node = node.next
-        return list
+        print list
+
+def multadd(list):
+        n = random.randint(100,500)
+
+        for i in range(n):
+                if list.search(i) == False:
+                        list.add(i)
+                       
 
 
 def whileempty(link):
@@ -28,13 +37,17 @@ pool:	<slist> 1
 	
 <int> := <[0..500]>
 
-	
+#Insert element when key not in list and check length and search function	
 ~<slist,1>.search(<int,1>) == False -> ~<slist>.add(<int>) => pre<(<slist,1>.length())> + 1 == ~<slist,1>.length() and ~<slist,1>.search(<int,1>) == True
 
+#delete element when key in list and check length and search functiom
 ~<slist,1>.search(<int,1>) == True -> ~<slist>.remove(<int>) => pre<(~<slist,1>.length())> - 1 == ~<slist,1>.length() and ~<slist,1>.search(<int,1>) == False
 
-whileempty(<slist,1>) -> checkval = ~<slist>.remove(<int>) => checkval == None
+#while list is empty check return of remove. This has been modified has to return none from the original source
+whileempty(~<slist,1>) -> checkval = ~<slist>.remove(<int>) => checkval == None
 
-whileempty(<slist,1>) -> checkval = ~<slist>.search(<int>) => checkval == False	
+#while list is empty check return of search. None condition changed to False , as not handled in original source
+whileempty(~<slist,1>) -> checkval = ~<slist>.search(<int>) => checkval == False	
 
-~<slist>.length() > 10 -> print "Length of List:", ~<slist,1>.length()
+
+~<slist>.length() > 10 -> print "List length is:", ~<slist,1>.length()

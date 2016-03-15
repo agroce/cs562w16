@@ -6,7 +6,7 @@ pools:
         
 
 actions:
-     <val> := <[0..30]>
+		<val> := <[0..30]>
 
         <llist> := singly_linked_list.SinglyLinkedList()
 
