@@ -1,4 +1,5 @@
 @from fuzzywuzzy import fuzz
+@from fuzzywuzzy import process
 @from difflib import SequenceMatcher
 @import Levenshtein as lvs
 
@@ -43,26 +44,35 @@ pool: <str3> 1
 pool: <str4> 2
 pool: <str5> 1
 pool: <str6> 1
+pool: <str7> 2
+pool: <choices> 1
+pool: <ascii> 1
 
 pool: <word> 2
-pool: <ascii> 1
+pool: <letter> 1
 pool: <common> 1
 pool: <index> 1
 
 #just capital letters for now
-<ascii> := <[65..90]> 
-<str1> := chr(<ascii>)
-<str1> += chr(<ascii>)
+#<ascii> := <[65..90]> 
+<letter> := <['A'..'Z']>
+<str1> := <letter>
+<str1> += <letter>
 <str1> += ' '
 
-<str2> := chr(<ascii>)
-<str2> += chr(<ascii>)
+<str2> := <letter>
+<str2> += <letter>
 <str2> += ' '
+
+#sanity check
+<ascii> := <[0..255]>
+<str6> := chr(<ascii>)
+<str6> += chr(<ascii>)
 
 #To test partial_ratio, we need a common word to be contained in both the strings, partial_ratio for which is always 100
 <common> := "COMMON"
-<word> := chr(<ascii>)
-<word> += chr(<ascii>)
+<word> := <letter>
+<word> += <letter>
 <str3> := <word> + ' ' + <common>
 <str3> += ' ' + <word>
 
@@ -73,6 +83,15 @@ pool: <index> 1
 <index> := <[1,2,3]>
 <str5> := <word> + ' ' + <word> + ' ' + <word>
 
+#to test extract() we need list of strings from which best matching string is returned
+<choices> := [<word>,<word>,<word>,<word>,<word>]
+
+#sanity check
+fuzz.ratio(<str6>,<str6>)
+fuzz.partial_ratio(<str6>,<str6>)
+fuzz.token_set_ratio(<str6>,<str6>)
+fuzz.token_sort_ratio(<str6>,<str6>)
+process.dedupe(<choices>)
 
 #Empty strings edit distance is zero 
 assert (fuzz.ratio("","") == 0)
@@ -89,14 +108,13 @@ assert (fuzz.token_set_ratio(<str1>,<str1,1>) == 100)
 
 # swap the strings. (It shouldnt matter by the commutative property of edit distance d i.e., d(a, b) = d(b, a) )
 
-assertRatioSwap(<str1>,<str2>)
+ assertRatioSwap(<str1>,<str2>)
 
-#partial_ratio is for strings with different lengths
-len(<str1>) != len(<str2>) -> assertPartialRatioSwap(<str1,1>,<str2,1>)
+ #assertPartialRatioSwap(<str1>,<str2>)
 
-assertTSortRatioSwap(<str1>,<str2>)
+ assertTSortRatioSwap(<str1>,<str2>)
 
-assertTSetRatioSwap(<str1>,<str2>)
+ assertTSetRatioSwap(<str1>,<str2>)
 
 #check if fuzz.ratio() behaves like ratio() of SequenceMatcher
 #tested. Commenting because the matcher library has been changed from difflib to Levenshteinf
@@ -139,15 +157,20 @@ assert(fuzz.token_set_ratio(<word>+' '+<word>, <word,2>+' '+<word>) ==100)
 assert(fuzz.token_set_ratio(<word>+' '+<word>, <word>+' '+<word,2>) ==100)
 
 
+#extractOne - takes a list of strings and applies all the above methods to find the most similar string
+#when  choices contain the exact same word, extractOne should return 100
 
+assert(process.extractOne(<word>, [<word,1>,<word>,<word>,<str4>]) == (<word,1>,100))
+assert(process.extractOne(<word>, [<word>,<word,1>,<word>,<str4>]) == (<word,1>,100))
+assert(process.extractOne(<word>, [<word>,<word>,<word,1>,<str4>]) == (<word,1>,100))
 
+#extractBests will return the string with best scores > threshold.
+assert(process.extractBests(<word>, [<str4>,<word>,<word>,<word,1>],None,None,None,1)[0] == (<word,1>,100))  
+assert(process.extractOne(<word>, ~<choices>) == process.extractBests(<word,1>,~<choices>,None,None,None,1)[0]) 
 
-
-
-
-
-
-
+#QRatio is for quick. The result should however be the same.
+#assert (fuzz.ratio(<str1>,<str2>) == fuzz.QRatio(<str1,1>,<str2,1>))
+fuzz.QRatio(<str1>,<str2>)
 
 
 
