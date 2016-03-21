@@ -1,0 +1,26 @@
+@from mininet.net import Mininet
+<@
+def addHost(<string>)
+    name =HostName
+    cont = a.Hosts()
+    
+    return name in cont
+def addSwitch(<string>)
+    name =SwitchtName
+    cont = a.Switch()
+       return name in cont
+@>
+#action
+source: controller.py
+pool: <cont> 1
+pool: <string> 2
+<string> := <["H1","H2"]>
+<string> := <["S1","S2"]>
+<cot> := cont.Topo()
+<cont>.addHost(<string>); print <cont>.Host()
+addhost(<cont>, <string>) == True
+<cont>.addSwitch(<string1>); print <cont>.Switches()
+addSwitch(<cont>,<string1>) == True
+<cont>.addSwitch("S1"); <cont>.addSwitch("S2");
+<cont>.addSwitch('H1'); <cont>.addSwitch('H2');
+
