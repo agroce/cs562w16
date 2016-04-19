@@ -1,0 +1,45 @@
+Proposal
+ Xinran Peng
+ cs562w16
+ Prof Groce Alex
+ 01/26/2016
+
+ In this assignment, I will choose to test a B Plus Tree finding from
+https://github.com/apeeyush/BPlusTree.
+
+ B plus tree is an n-ary tree with a variable but often large number of children
+ per node. A B+ tree consists of a root, internal nodes and leaves. The root may
+ be either a leaf or a node with two or more children. A B+ tree can be viewed
+ as a B-tree in which each node contains only keys (not key-value pairs), and
+ to which an additional level is added at the bottom with linked leaves. This data
+ structure is very common used in storing data for efficient retrieval in a
+ block-oriented storage context, especially in file systems. So it is meaningful to
+ test the correctness of the code of this data structure. Besides, the speed of the
+ operations is also very important because this data structure is mainly be used in
+ file system which is always very huge, and little differences in time complexity
+ will cause a big different. Last, we need to test the compatibility of the data
+ structure. What will happen if we add some punctuation? What will happen
+ when we add some other language character?
+
+ The code I found includes following functions. Inserting data in a B+ tree,
+ this function will insert data from a file. Querying a B+ tree, this function
+ will query the data in the file. Deleting the tree, this function will destroy the
+ tree and its node. Output the tree, this function will output the tree in a file.
+ Insert query, the output of this function contains ?insert?: followed by key
+ and value insert: key value. Search query, the output contains "search:" followed
+ by key the corresponding values are printed in next line separated by ','. If no
+ values are found, "Not Found" is printed. And range query, the output of this
+ function contains ?range:? followed by line contains a list of tuples where each
+ tuple represents a (key, value) pair. One thing we need to notice is that we can
+ add more then one same value in the tree. And it is interesting to see what will
+ happen when we add the value has already existed or delete this value.
+
+ With in this code, things I want to test include:
+ 1. The correctness of each function.
+ 2. The time of each function with different data sizes, and check if these times
+ are reasonable with the characteristics of B plus tree.
+ 3. The compatibility of the data structure. What will happen if we add special
+ symbol.
+ 4. The largest length of the structure and what will happen if we enter something
+ longer than it.
+ Some other test cases maybe added after this proposal.

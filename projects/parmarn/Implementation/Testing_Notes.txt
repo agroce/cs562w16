@@ -1,0 +1,300 @@
+
+CODE: pool: %int% 1
+
+CODE: pool: %stack% 1
+
+CODE: pool: %count% 1
+
+CODE:
+
+CODE: %int%    := 1
+
+CODE: %count%  := 0
+
+CODE:
+
+CODE: property: %stack%.empty() -> assert(~count==0)
+
+CODE:
+
+CODE: %stack% := mystack.stack(); ~%count% = 0
+
+CODE:
+
+CODE:
+
+CODE: %stack%.push(%int%); ~%count%.push(%int,1%)
+
+CODE: not %stack%.empty() -> %stack%.pop(); ~%count%.pop(%int,1%)
+
+CODE:
+
+-------- :code: --------
+['%int%    := 1\n',
+ '%count%  := 0\n',
+ '%stack% := mystack.stack(); ~%count% = 0\n',
+ '%stack%.push(%int%); ~%count%.push(%int,1%)\n',
+ 'not %stack%.empty() -> %stack%.pop(); ~%count%.pop(%int,1%)\n']
+------------------------
+:code: after expandPool(code)
+['%int% [0]    := 1\n',
+ '%count% [0]  := 0\n',
+ '%stack% [0] := mystack.stack(); ~%count% [0] = 0\n',
+ '%stack% [0].push(%int% [0]); ~%count% [0].push(%int,1%)\n',
+ 'not %stack% [0].empty() -> %stack% [0].pop(); ~%count% [0].pop(%int,1%)\n']
+------------------------
+Traceback (most recent call last):
+  File "C:\Python27\Scripts\tstl-script.py", line 9, in <module>
+    load_entry_point('tstl==0.2', 'console_scripts', 'tstl')()
+  File "build\bdist.win32\egg\src\harnessmaker.py", line 553, in main
+  File "build\bdist.win32\egg\src\harnessmaker.py", line 224, in expandRange
+IndexError: list index out of range
+
+D:\Oregon State University\6. WINTER 2016\CS 562>tstl Stack.tstl --debug
+Generating harness core using config=Config(tstl='Stack.tstl', classname='sut',
+defaultreplay=False, nocover=False, ignoreangles=False, debug=True, output='sut.
+py', coverreload=False, coverinit=False)
+CODE:
+
+CODE:
+
+CODE: pool: %int% 1
+
+CODE: pool: %stack% 1
+
+CODE: pool: %count% 1
+
+CODE:
+
+CODE:
+
+CODE: %count%  := 0
+
+CODE:
+
+CODE: property: %stack%.empty() -> assert(~count==0)
+
+CODE:
+
+CODE: %stack% := mystack.stack(); ~%count% = 0
+
+CODE:
+
+CODE:
+
+CODE: %stack%.push(%int%); ~%count%.push(%int,1%)
+
+CODE: not %stack%.empty() -> %stack%.pop(); ~%count%.pop(%int,1%)
+
+CODE:
+
+-------- :code: --------
+['%count%  := 0\n',
+ '%stack% := mystack.stack(); ~%count% = 0\n',
+ '%stack%.push(%int%); ~%count%.push(%int,1%)\n',
+ 'not %stack%.empty() -> %stack%.pop(); ~%count%.pop(%int,1%)\n']
+------------------------
+:code: after expandPool(code)
+['%count% [0]  := 0\n',
+ '%stack% [0] := mystack.stack(); ~%count% [0] = 0\n',
+ '%stack% [0].push(%int% [0]); ~%count% [0].push(%int,1%)\n',
+ 'not %stack% [0].empty() -> %stack% [0].pop(); ~%count% [0].pop(%int,1%)\n']
+------------------------
+Traceback (most recent call last):
+  File "C:\Python27\Scripts\tstl-script.py", line 9, in <module>
+    load_entry_point('tstl==0.2', 'console_scripts', 'tstl')()
+  File "build\bdist.win32\egg\src\harnessmaker.py", line 553, in main
+  File "build\bdist.win32\egg\src\harnessmaker.py", line 224, in expandRange
+IndexError: list index out of range
+
+D:\Oregon State University\6. WINTER 2016\CS 562>tstl Stack.tstl --debug
+Generating harness core using config=Config(tstl='Stack.tstl', classname='sut',
+defaultreplay=False, nocover=False, ignoreangles=False, debug=True, output='sut.
+py', coverreload=False, coverinit=False)
+CODE:
+
+CODE:
+
+CODE: pool: %int% 1
+
+CODE: pool: %stack% 1
+
+CODE: pool: %count% 1
+
+CODE:
+
+CODE: %int%     := [1..100]
+
+CODE: %count%   := 0
+
+CODE:
+
+CODE: property: %stack%.empty() -> assert(~count==0)
+
+CODE:
+
+CODE: %stack% := mystack.stack(); ~%count% = 0
+
+CODE:
+
+CODE:
+
+CODE: %stack%.push(%int%); ~%count%.push(%int,1%)
+
+CODE: not %stack%.empty() -> %stack%.pop(); ~%count%.pop(%int,1%)
+
+CODE:
+
+-------- :code: --------
+['%int%     := [1..100]\n',
+ '%count%   := 0\n',
+ '%stack% := mystack.stack(); ~%count% = 0\n',
+ '%stack%.push(%int%); ~%count%.push(%int,1%)\n',
+ 'not %stack%.empty() -> %stack%.pop(); ~%count%.pop(%int,1%)\n']
+------------------------
+:code: after expandPool(code)
+['%int% [0]     := [1..100]\n',
+ '%count% [0]   := 0\n',
+ '%stack% [0] := mystack.stack(); ~%count% [0] = 0\n',
+ '%stack% [0].push(%int% [0]); ~%count% [0].push(%int,1%)\n',
+ 'not %stack% [0].empty() -> %stack% [0].pop(); ~%count% [0].pop(%int,1%)\n']
+------------------------
+Traceback (most recent call last):
+  File "C:\Python27\Scripts\tstl-script.py", line 9, in <module>
+    load_entry_point('tstl==0.2', 'console_scripts', 'tstl')()
+  File "build\bdist.win32\egg\src\harnessmaker.py", line 553, in main
+  File "build\bdist.win32\egg\src\harnessmaker.py", line 224, in expandRange
+IndexError: list index out of range
+
+D:\Oregon State University\6. WINTER 2016\CS 562>tstl Stack.tstl --debug
+Generating harness core using config=Config(tstl='Stack.tstl', classname='sut',
+defaultreplay=False, nocover=False, ignoreangles=False, debug=True, output='sut.
+py', coverreload=False, coverinit=False)
+CODE:
+
+CODE:
+
+CODE: pool: %int% 1
+
+CODE: pool: %stack% 1
+
+CODE: pool: %count% 1
+
+CODE:
+
+CODE: %int%     := [1..100]
+
+CODE: %count%   := 0
+
+CODE:
+
+CODE: property: %stack%.empty() -> assert(~count==0)
+
+CODE:
+
+CODE: %stack% := mystack.stack(); ~%count% = 0
+
+CODE:
+
+CODE:
+
+CODE: %stack%.push(%int%); ~%count% += 1
+
+CODE: not %stack%.empty() -> %stack%.pop(); ~%count%.pop(%int,1%)
+
+CODE:
+
+-------- :code: --------
+['%int%     := [1..100]\n',
+ '%count%   := 0\n',
+ '%stack% := mystack.stack(); ~%count% = 0\n',
+ '%stack%.push(%int%); ~%count% += 1\n',
+ 'not %stack%.empty() -> %stack%.pop(); ~%count%.pop(%int,1%)\n']
+------------------------
+:code: after expandPool(code)
+['%int% [0]     := [1..100]\n',
+ '%count% [0]   := 0\n',
+ '%stack% [0] := mystack.stack(); ~%count% [0] = 0\n',
+ '%stack% [0].push(%int% [0]); ~%count% [0] += 1\n',
+ 'not %stack% [0].empty() -> %stack% [0].pop(); ~%count% [0].pop(%int,1%)\n']
+------------------------
+Traceback (most recent call last):
+  File "C:\Python27\Scripts\tstl-script.py", line 9, in <module>
+    load_entry_point('tstl==0.2', 'console_scripts', 'tstl')()
+  File "build\bdist.win32\egg\src\harnessmaker.py", line 553, in main
+  File "build\bdist.win32\egg\src\harnessmaker.py", line 224, in expandRange
+IndexError: list index out of range
+
+D:\Oregon State University\6. WINTER 2016\CS 562>tstl Stack.tstl --debug\
+usage: tstl-script.py [-h] [-o OUTPUT] [-c CLASSNAME] [-n] [-r] [-i] [-R] [-a]
+                      [--debug] [--no-debug]
+                      filename
+tstl-script.py: error: unrecognized arguments: --debug\
+
+D:\Oregon State University\6. WINTER 2016\CS 562>tstl Stack.tstl --debug\
+usage: tstl-script.py [-h] [-o OUTPUT] [-c CLASSNAME] [-n] [-r] [-i] [-R] [-a]
+                      [--debug] [--no-debug]
+                      filename
+tstl-script.py: error: unrecognized arguments: --debug\
+
+D:\Oregon State University\6. WINTER 2016\CS 562>tstl Stack.tstl --debug
+Generating harness core using config=Config(tstl='Stack.tstl', classname='sut',
+defaultreplay=False, nocover=False, ignoreangles=False, debug=True, output='sut.
+py', coverreload=False, coverinit=False)
+CODE:
+
+CODE:
+
+CODE: pool: %int% 1
+
+CODE: pool: %stack% 1
+
+CODE: pool: %count% 1
+
+CODE:
+
+CODE: %int%     := [1..100]
+
+CODE: %count%   := 0
+
+CODE:
+
+CODE: property: %stack%.empty() -> assert(~count==0)
+
+CODE:
+
+CODE: %stack% := mystack.stack(); ~%count% = 0
+
+CODE:
+
+CODE:
+
+CODE: %stack%.push(%int%); ~%count% += 1
+
+CODE: not %stack%.empty() -> %stack%.pop(); ~%count% -= 1
+
+CODE:
+
+-------- :code: --------
+['%int%     := [1..100]\n',
+ '%count%   := 0\n',
+ '%stack% := mystack.stack(); ~%count% = 0\n',
+ '%stack%.push(%int%); ~%count% += 1\n',
+ 'not %stack%.empty() -> %stack%.pop(); ~%count% -= 1\n']
+------------------------
+:code: after expandPool(code)
+['%int% [0]     := [1..100]\n',
+ '%count% [0]   := 0\n',
+ '%stack% [0] := mystack.stack(); ~%count% [0] = 0\n',
+ '%stack% [0].push(%int% [0]); ~%count% [0] += 1\n',
+ 'not %stack% [0].empty() -> %stack% [0].pop(); ~%count% [0] -= 1\n']
+------------------------
+:code: after expandRange(code)
+['%int% [0]     := [1..100]\n',
+ '%count% [0]   := 0\n',
+ '%stack% [0] := mystack.stack(); ~%count% [0] = 0\n',
+ '%stack% [0].push(%int% [0]); ~%count% [0] += 1\n',
+ 'not %stack% [0].empty() -> %stack% [0].pop(); ~%count% [0] -= 1\n']
+------------------------
+
+D:\Oregon State University\6. WINTER 2016\CS 562>

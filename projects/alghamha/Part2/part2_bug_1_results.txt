@@ -1,0 +1,133 @@
+Random testing using config=Config(verbose=False, failedLogging=None, maxtests=-1, greedyStutter=False, seed=None, generalize=False, uncaught=False, speed='FAST', internal=False, normalize=False, replayable=False, essentials=False, quickTests=False, coverfile='coverage.out', ignoreprops=False, total=False, noreassign=False, full=False, multiple=False, stutter=None, running=False, nocover=False, gendepth=None, logging=None, html=None, keep=False, depth=100, timeout=60, output=None)
+
+ The Column:    RS 
+CMMMM
+-----
+    7
+    7
+   -5 
+ We would like to update the Unit value to:  CMMMM 
+ The updated Unit value :  CMMMM
+
+ The Column:     LM   
+InchInch
+--------
+       2
+      -5
+       3 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  InchInch
+
+ The Column:     LM   
+InchInch
+--------
+       6
+       6
+       6 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  InchInch
+
+ The Column:     LM   
+InchInch
+--------
+      -4
+       6
+      -4 
+ We would like to update the Unit value to:  InchInch 
+ The updated Unit value :  InchInch
+
+ The Column:     LM   
+InchInch
+--------
+      10
+       4
+      10 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  InchInch
+UNCAUGHT EXCEPTION
+ERROR: (<type 'exceptions.AssertionError'>, AssertionError('Updating units is not working',), <traceback object at 0x4465098>)
+TRACEBACK:
+Original test has 24 steps
+REDUCING...
+
+ The Column:     LM   
+InchInch
+--------
+       6
+       4
+       6 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  InchInch
+
+ The Column:     LM   
+InchInch
+--------
+       6
+       4
+       6 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  InchInch
+
+ The Column:     LM   
+InchInch
+--------
+       6
+       4
+       6 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  InchInch
+
+ The Column:     LM   
+InchInch
+--------
+       6
+       4
+       6 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  InchInch
+Reduced test has 6 steps
+REDUCED IN 0.541682958603 SECONDS
+Column0 = "LM"                                                           # STEP 0
+Description0 = "pq"                                                      # STEP 1
+int0 = 6                                                                 # STEP 2
+int1 = 4                                                                 # STEP 3
+Unit0 = "MMMMMM"                                                         # STEP 4
+t[Column0]= Column([int0,int1,int0], unit= Unit0, description=Description0); print '
+ The Column: ', t[Column0] ,'
+ We would like to update the Unit value to: ', Unit0, '
+ The updated Unit value : ', t[Column0].unit  # STEP 5
+
+FINAL VERSION OF TEST, WITH LOGGED REPLAY:
+Column0 = "LM"                                                           # STEP 0
+Description0 = "pq"                                                      # STEP 1
+int0 = 6                                                                 # STEP 2
+int1 = 4                                                                 # STEP 3
+Unit0 = "MMMMMM"                                                         # STEP 4
+t[Column0]= Column([int0,int1,int0], unit= Unit0, description=Description0); print '
+ The Column: ', t[Column0] ,'
+ We would like to update the Unit value to: ', Unit0, '
+ The updated Unit value : ', t[Column0].unit  # STEP 5
+
+ The Column:     LM   
+InchInch
+--------
+       6
+       4
+       6 
+ We would like to update the Unit value to:  MMMMMM 
+ The updated Unit value :  InchInch
+ERROR: (<type 'exceptions.AssertionError'>, AssertionError('Updating units is not working',), <traceback object at 0x467c2d8>)
+TRACEBACK:
+STOPPING TESTING DUE TO FAILED TEST
+1.12359550562 PERCENT COVERED
+1.45906114578 TOTAL RUNTIME
+1 EXECUTED
+24 TOTAL TEST OPERATIONS
+0.700229644775 TIME SPENT EXECUTING TEST OPERATIONS
+0.000352144241333 TIME SPENT EVALUATING GUARDS AND CHOOSING ACTIONS
+2.50339508057e-05 TIME SPENT CHECKING PROPERTIES
+0.700254678726 TOTAL TIME SPENT RUNNING SUT
+0.000555992126465 TIME SPENT RESTARTING
+0.541803836823 TIME SPENT REDUCING TEST CASES
+7 BRANCHES COVERED
+5 STATEMENTS COVERED

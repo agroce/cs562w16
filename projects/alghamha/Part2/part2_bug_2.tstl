@@ -1,0 +1,89 @@
+# This TSTL file will required the installation of astropy and numpy libraries
+
+@from astropy.table import Table, Column
+@import numpy as np
+
+
+<@
+# To check the number of columns (width)
+
+def	CheckColumnNumber(t):
+	table1= t
+	columnsNumber = len(table1.columns)
+	return columnsNumber
+# To check the number of rows (height)
+
+def	CheckRowNumber():
+	rowsNumber = len(t)
+	return rowsNumber
+
+# This function will insert a column randomly and catches a bug 
+
+def	AddColumn(NewColumn):
+	c= NewColumn
+	t.add_column(c, rename_duplicate = True)
+	print(t)
+
+# This function will fix the inserttion of a column randomly problem to avoid the bug
+
+def	AddColumnFix( NewColumn, ColumnName):
+	#tableop= TableOp
+	c= NewColumn
+	cn = ColumnName
+	if ( (ColumnName in t.columns) == True):
+		t.add_column( NewColumn, rename_duplicate = True )
+		print(t)
+	else:
+		t.add_column(NewColumn)
+		print(t)
+# initilize a global table object
+
+t = Table()
+
+@>
+
+# Defining pools
+
+pool: <Table> 1
+pool: <ColumnData> 3
+pool: <Column> 1
+pool: <int> 3
+pool: <string> 1
+
+# This  property just breaks the testing when the insertion of columns exceeded a 1000000
+
+property: CheckColumnNumber(t) < 1000000
+
+#This property will ensure that we don't exceed 3 number of rows. it will break testing when 
+# the number of rows unexpecedly exceeded 3 as defined
+
+property: CheckRowNumber() < 4
+
+# pools initilization
+
+<int> := <[-10..10]>
+~<string> := <["ab","bc","cd","de","ef","fg","gh","hi","ij","jk","kl","lm","mn","no","op","pq","qr","rs"]>
+
+# Assigning random Column values
+<Column> := Column(name=<string>, data = [<int>,<int>,<int>])
+
+
+# Testing adding new column will raise an error unspecified in the library which can be
+# considered a critical bug because the library indicated that if rename_duplicate = True
+# then it will "unify new column names if they duplicate the existing ones". However, when
+# we run it with this option we get an error "local variable 'new_name' referenced before assignment". 
+# This is impractical because it should it should first check if the column exists in the table or not.
+#If the column is not exists in the table, then insert the column without changing the name, otherwise,
+# change the name of the column and add it to the table. To check this error, you can uncomment the
+#the following line and see what is the error. "Waiting for Alex reply about this bug. if it is a bug"
+
+#<Column> = Column(name=<string>, data = [<int>,<int>,<int>]); AddColumn(<Column>)
+
+# To avoid aforementioned bug and test adding infint number of columns randomly to check for other errors,
+# I used the following command
+
+<Column> = Column(name=<string>, data = [<int>,<int>,<int>]); AddColumnFix(<Column>, <string>)
+
+
+
+

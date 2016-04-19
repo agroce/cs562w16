@@ -1,0 +1,51 @@
+# @import LinkedList
+@import Linked_Single
+@import math
+@import time
+
+<@
+
+
+def length(head):
+    p = head
+    size = 0
+    while p:
+        size += 1
+        p = p.next
+    return size
+
+def appendTest(head):
+	p = head
+	size = length(head)
+	while size > 1:
+		size -= 1
+		p = p.next
+	return p.data
+
+	
+
+
+@>
+
+source: Linked_Single.py
+
+
+pools:
+	<INT> 1
+	<LIST> 1
+	<VALUE> 1
+	<TEMP> 1
+
+actions:
+	<INT>:=<[1..40]>
+	<VALUE> := <[50..80]>
+	<LIST>:=Linked_Single.LinkedList()
+	~<LIST>.insert(<INT>) => (length(<LIST,1>.head) == PRE<(length(<LIST,1>.head))>+1)
+
+
+	~<LIST>.append(<INT>) => (length(<LIST,1>.head) == PRE<(length(<LIST,1>.head))>+1) and (<INT> == appendTest(<LIST,1>.head))
+
+	<TEMP> = ~<LIST>.returnIndex(<VALUE>) => ( <TEMP> == None )
+
+
+

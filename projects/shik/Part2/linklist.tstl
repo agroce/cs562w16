@@ -1,0 +1,51 @@
+@import linklist
+@import math
+@import time
+
+<@
+def length(self):
+        length = 1
+        p = self.head
+        while p.next:
+            length += 1
+            p = p.next
+        return length
+@>
+
+<@
+def isempty(self):
+        if  True:
+            return len(self)
+@>
+
+
+source: linklist.py
+
+pool: <INT> 10
+pool: <LIST> 1
+pool: <LINKED> 3
+
+#<LIST>:=[] This is the bug of python file because it doesn't allow to insert null list.
+
+<LIST>:=[1,2]  
+#if using this list, it can work.
+
+~<LIST>.append(<INT>)
+
+<INT>:=<[1..10]>
+
+<LINKED>:=linklist.LinkList()
+
+
+~<LINKED>.create_by_head(<LIST>) => (length(<LINKED,1>) == PRE<(len(<LIST>))>)
+
+~<LINKED>.clear() => (length(<LINKED,1>) == 1)
+
+#~<LINKED>.is_empty() => (isempty(<LINKED,1>)==0) still working on
+
+#print <LIST>, len(<LIST>), <LINKED> , len(<LINKED,1>) 
+
+
+
+
+

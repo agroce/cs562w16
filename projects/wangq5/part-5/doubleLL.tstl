@@ -1,0 +1,255 @@
+@import LinkedList_Double
+@import math
+@import time
+
+<@
+def DLLlength(self):
+        ptr = self.head
+        count = 0
+        while ptr:
+            count += 1
+            ptr = ptr.next
+        return count
+
+def getNumOfVal(self, data):
+        ptr = self.head
+        number = 0
+        while (ptr):
+            if(ptr.data == data):
+                number += 1
+            ptr = ptr.next
+        return number
+
+
+
+
+def isEmpty(self):
+	if (DLLlength(self) == 0):
+		return True
+	else :
+		return False
+
+def printFirstValue(self):
+	ptr = self.head
+	return ptr.data
+
+
+def printValue(self):
+	ptr= self.head
+	size = DLLlength(self)
+	while size:
+		print self.head.data,
+		self.head = self.head.next
+		size = size -1
+	 
+def getValueIndex(self, data):
+        ptr = self.head
+        index = 0
+
+        while ptr:
+            if (ptr.data == data):
+                return index
+            ptr = ptr.next
+            index = index + 1
+        return -1
+
+		
+def insertTest(self, onedata):
+    ptr = self.head
+    if (ptr == None):
+        return False
+    if(onedata == ptr.data):
+        return True
+    else:
+        return False
+
+
+
+
+def appendTest(self, onedata):
+        ptr = self.head
+        if(ptr == None):
+            return False
+        else:
+            while ptr.next:
+                ptr=ptr.next
+            if (ptr.data == onedata):
+            	return True
+            else:
+            	return False
+
+def checkCopyList(self, secondDll):
+		if(DLLlength(self) != DLLlength(secondDll)):
+			return False
+		else:
+			return True
+
+
+
+
+def checkInsertAfterEveryData(self, xxx, data):
+	ptr = self.head
+	while ptr:
+		if (ptr.data == xxx):
+			ptr = ptr.next
+			if (ptr.data == data):
+				ptr =ptr.next
+			return False
+		else:
+			ptr= ptr.next
+	return True
+
+def checkInsertBeforeEveryData(self,xxx,data):
+	ptr =self.head
+	while ptr:
+		if(ptr.data == xxx):
+			ptr = ptr.prev
+			if (ptr.data == data):
+				ptr = ptr.prev
+			return False
+		else:
+			ptr= ptr.prev
+	return True
+
+
+def returnValue(self, indxx):
+        ptr = self.head
+        while indxx > 0:
+            ptr = ptr.next
+            indxx = indxx - 1
+        return ptr.data
+
+
+
+def checkIfValueInDll(self, theOne):
+        ptr = self.head
+        while ptr:
+            if (ptr.data == theOne):
+                return True
+	    ptr = ptr.next
+        return False
+
+
+
+def countNumOfDataOfTheDLL(self, theOne):
+        ptr = self.head
+        count = 0
+        while ptr:
+            if (ptr.data == theOne):
+                count += 1	
+	    ptr = ptr.next
+        return count
+
+
+
+def checkCopyList(self, secondDll):
+		if(DLLlength(self) != DLLlength(secondDll)):
+			return False
+		else:
+			return True
+
+
+@>
+
+source: LinkedList_Double.py
+
+pools:
+	<INT> 1
+	<VALUE> 1
+	<VALUE2> 1
+	<DLL> 1
+	#<VALUE3> 1
+	#<CHAR> 1
+
+actions:
+	<INT>:=<[1..50]>
+
+	#<CHAR>:=<['AA','BB','**','HELLO',100]
+
+	<VALUE>:=<[1..50]>
+	<VALUE2> := <[60 .. 100]>
+	#<VALUE3> := <[-100..-1]>
+	
+	#inital
+	<DLL>:=LinkedList_Double.DoublyLinkedList()
+
+	##TEST insert as the example of AVLtree test the length and judge if insert correctly.
+	~<DLL>.insert(<INT>);print "insert" => (DLLlength(<DLL,1>) == PRE<(DLLlength(<DLL,1>))>+1) and (insertTest(<DLL,1>,<INT>) == True )
+
+	##TEST append
+	~<DLL>.append(<INT>);print "append" => (DLLlength(<DLL,1>) == PRE<(DLLlength(<DLL,1>))>+1) and (appendTest(<DLL,1>,<INT>) == True )
+
+	##TEST deleteList
+	~<DLL>.deleteList();print "deleteList" => isEmpty(<DLL>) == True
+
+
+	##TEST copyList
+	SECONDDLL = ~<DLL>.copyList() ;print "copyList"  => (DLLlength(<DLL,1>) == DLLlength(SECONDDLL)) and (checkCopyList(~<DLL>, SECONDDLL) == True)
+
+	##TEST deleteIndex
+	<INT> >= DLLlength(<DLL>) -> FIRST = ~<DLL>.deleteIndex(<INT>) => FIRST == False 
+	#and ( DLLlength(<DLL,1>) == PRE<(DLLlength(<DLL,1>))> ) 
+	<INT> <= DLLlength(<DLL>)-1 -> FIRST = ~<DLL>.deleteIndex(<INT>) => ( DLLlength(<DLL,1>) + 1 == PRE<(DLLlength(<DLL,1>))> ) and (FIRST == True)
+
+
+	##TEST deleteData
+	#first situation the target is not exist
+	NUM = ~<DLL>.deleteData(<VALUE2>) => (DLLlength(<DLL,1>) == PRE<(DLLlength(<DLL,1>))>) and (NUM == False)
+	#check if the target data is in the doubly linked list, if do not the length did not change
+	checkIfValueInDll(<DLL>, <INT>) == False -> NUM = ~<DLL>.deleteData(<INT>) => (NUM == False) and (DLLlength(<DLL,1>) == PRE<(DLLlength(<DLL,1>))>)
+	#if in the list, the length plus 1 is the original length
+	checkIfValueInDll(<DLL>, <INT>) == True -> NUM = ~<DLL>.deleteData(<INT>) => (NUM == True) and (DLLlength(<DLL,1>) + 1 == PRE<(DLLlength(<DLL,1>))>) 
+
+
+	##TEST deleteAllData
+	#if the target is not in the list length is not changed
+	checkIfValueInDll(<DLL>, <INT>) == False -> NUM = ~<DLL>.deleteAllData(<INT>) => (DLLlength(<DLL,1>) == PRE<(DLLlength(<DLL,1>))>) and (NUM == False)
+	#utilize the count number of the target data in the dll to get the delete data's number
+	NUM = countNumOfDataOfTheDLL(~<DLL>, <INT>); ~<DLL>.deleteAllData(~<INT>); ANUM = checkIfValueInDll(<DLL>, <INT>) => (ANUM == False) and (DLLlength(<DLL,1>) + NUM == PRE<(DLLlength(<DLL,1>))>)
+
+
+
+	###TEST insertAfterEveryData
+	NUMB = ~<DLL>.insertAfterEveryData(<VALUE2>,<INT>) => (DLLlength(<DLL,1>) == PRE<(DLLlength(<DLL,1>))>) and (NUMB == False)
+	NUMB = countNumOfDataOfTheDLL(~<DLL>, <INT>); ~<DLL>.insertAfterEveryData(<INT>, <VALUE>) => (DLLlength(<DLL,1>) == PRE<(DLLlength(<DLL,1>))> + NUMB) 
+	#and (isEmpty (~<DLL>)== False)	and (checkInsertAfterEveryData(<DLL,1>,<INT>)==True) and (countNumOfDataOfTheDLL(<DLL,1>, <VALUE,1>) >= NUMB)
+						
+	##TEST insertBeforeEveryData
+	NUMB = ~<DLL>.insertBeforeEveryData(<VALUE2>,<INT>) => (DLLlength(<DLL,1>) == PRE<(DLLlength(<DLL,1>))>) and (NUMB == False)
+	NUMB = countNumOfDataOfTheDLL(~<DLL>, <INT>); ~<DLL>.insertBeforeEveryData(<INT>, <VALUE>) => (DLLlength(<DLL,1>) == PRE<(DLLlength(<DLL,1>))> + NUMB)
+
+	##TEST insertBeforeIndex function 
+	#if the insert is false then the length will not change
+	NUM = ~<DLL>.insertBeforeIndex(<VALUE2>, <INT>) =>  (NUM == False) and (DLLlength(<DLL,1>) == PRE<(DLLlength(<DLL,1>))>)
+	#get the length of the doubly linked list then if the target index large than the length is false
+	<INT> > DLLlength(<DLL>) -> NUM = ~<DLL>.insertBeforeIndex(<INT>, <VALUE>) => (NUM == False) 
+	#and (DLLlength(<DLL,1>) == PRE<(DLLlength(<DLL,1>))>) and 
+	<INT> <= DLLlength(<DLL>) -> NUM = ~<DLL>.insertBeforeIndex(<INT>, <VALUE>) => (NUM == True) and (DLLlength(<DLL,1>) - 1 == PRE<(DLLlength(<DLL,1>))>)
+
+	##TEST insertAfterIndex function
+	#this is pretty similar to the above one 
+	#if the insert is false then the length will not change
+	
+	NUMB = ~<DLL>.insertAfterIndex(<VALUE2>, <INT>) => (NUMB == False) and (DLLlength(<DLL,1>) == PRE<(DLLlength(<DLL,1>))>)
+	#get the length of the doubly linked list then if the target index large than the length is false
+	<INT> >= DLLlength(<DLL>) -> NUMB = ~<DLL>.insertAfterIndex(<INT>, <VALUE>) => (NUMB == False)
+	#(DLLlength(<DLL,1>) == PRE<(DLLlength(<DLL,1>))>) and 
+ 	<INT> < DLLlength(<DLL>) -> NUMB = ~<DLL>.insertAfterIndex(<INT>, <VALUE>) => (NUMB == True)and (DLLlength(<DLL,1>) - 1 == PRE<(DLLlength(<DLL,1>))>) 
+	# and ( returnValue(<DLL>, <INT>+1) == <VALUE>)
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

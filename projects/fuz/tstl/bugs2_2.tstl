@@ -1,0 +1,9 @@
+@from Equation import Expression
+# define fucntions used in tstl
+
+pools:
+    <str> 1
+actions:
+    <str> := 'x' + '+' + '2' + '*' +'j'
+    Expression(<str>,['x'])(3)
+

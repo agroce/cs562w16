@@ -1,0 +1,245 @@
+@import linklist
+@import math
+@import time
+
+
+<@
+def length(self):
+        length = 1
+        p = self.head
+        while p.next:
+            length += 1
+            p = p.next
+        return length
+@>
+
+
+
+<@
+def checklength(self,b):
+		if (b == True and len(self) == 0) or (b == False and len(self) > 0):
+			return True
+		else:
+			return False
+
+@>
+
+
+<@
+def checkgetbyindex(b,d):
+		if  (b == d):
+			return True
+		else:
+			return False
+
+@>
+
+
+<@
+def ckeckinsert(x,f,g,h):
+		if x>=h and g == False and f == False:
+			return True
+		if x<h and g == 10 and f ==True:
+			return True
+		else:
+			return False
+
+@>
+
+
+<@
+def checkdelidx(f,g,e):
+		if g==False and f== False and e == False:
+			return True
+		elif f== True and e==g:
+			return True
+		else:
+			return False
+
+@>
+
+
+<@
+def checkdelval(e,f):
+		if e == False and f==False:
+			return True
+		elif e == True and f==False:
+			return True
+		else:
+			return False
+
+@>
+
+<@
+def checkrepeat(a,y):
+		p = a.head
+		count = 0
+		while p:
+			if p.data == y:
+				count +=1
+			p = p.next
+
+		if count >1: 
+			return False
+
+		else:
+			return True 
+
+@>
+
+<@
+def checkrepeat(a,y):
+		p = a.head
+		count = 0
+		while p:
+			if p.data == y:
+				count +=1
+			p = p.next
+
+		if count >1: 
+			return False
+
+		else:
+			return True 
+
+@>
+
+<@
+def checkmerge(a):
+		p = a.head
+		q = a.head.next
+		while q:
+			if p.data <= q.data:
+				p = p.next
+				q = q.next
+				return True
+
+			else:
+				return False 
+
+@>
+
+<@
+def sortlist(a):
+		b=sorted(a)
+		return b
+
+@>
+
+
+source: linklist.py
+
+pool: <INT> 10
+pool: <LIST> 1
+pool: <LISTA> 1
+pool: <LISTB> 1
+pool: <LINKED> 3
+pool: <LINKEDA> 1
+pool: <LINKEDB> 1
+
+
+#This is the first bug of python file because it doesn't allow to insert null list.
+#<LIST>:=[] 
+
+#if using this list, it can work.
+<LIST>:=[1,2]  
+
+<LISTA>:=[1] 
+<LISTB>:=[1] 
+
+~<LIST>.append(<INT>)
+~<LISTA>.append(<INT>)
+~<LISTB>.append(<INT>)
+
+<INT>:=<[3..20]>
+
+
+
+<LINKED>:=linklist.LinkList()
+<LINKEDA>:=linklist.LinkList()
+<LINKEDB>:=linklist.LinkList()
+
+
+
+###################### test create_by_head function ##################
+
+~<LINKED>.create_by_head(<LIST>);print "create_by_head output", <LINKED,1> => (length(<LINKED,1>) == PRE<(len(<LIST>))>) and (<LINKED,1>.head.data != <LIST>[0])
+
+
+
+###################### test create_by_tail function ##################
+
+~<LINKED>.create_by_tail(<LIST>);print "create_by_tail output", <LINKED,1> => (length(<LINKED,1>) == PRE<(len(<LIST>))>) and (<LINKED,1>.head.data == <LIST>[0])
+
+
+
+###################### test clear function ##################
+
+~<LINKED>.clear() => (length(<LINKED,1>) == 1)
+
+
+
+###################### test is_empty function ##################
+
+a = ~<LINKED>.is_empty() => (checklength(<LINKED,1>,a) == True)
+
+
+
+###################### test getData_by_index function ##################
+
+~<LINKED>.create_by_tail(<LIST>);c= (len(<LIST>)-2); d=<LIST>[c]; b = ~<LINKED,1>.getData_by_index(c);print "getData_by_index", b,d => checkgetbyindex(b,d) == True
+
+~<LINKED>.create_by_tail(<LIST>);c= (len(<LIST>)+2); b = ~<LINKED,1>.getData_by_index(c);print "getData_by_index", b,c => b== False
+
+
+
+###################### test getData_by_value function ##################
+
+e = ~<LINKED>.getData_by_value(1) => e ==0 
+e = ~<LINKED>.getData_by_value(len(<LIST>)+1000) => e == False
+
+
+
+###################### test insertData function ##################
+
+x= <INT>; f = ~<LINKED>.insertData(x,10); g=~<LINKED,1>.getData_by_index(x); h= (length (<LINKED,1>));print "insertData", x,f,g,h => ckeckinsert(x,f,g,h) == True
+
+
+
+###################### test deleteData_by_index function ##################
+
+y= <INT>;e=~<LINKED>.getData_by_index(y+1); f= ~<LINKED,1>.deleteData_by_index(y); g=~<LINKED,1>.getData_by_index(y); print "deleteData_by_index", y,e,g,f  => checkdelidx(f,g,e) == True
+
+
+
+###################### test deleteData_by_value function ##################
+
+##### This is the next bug: it can only delete the first node which val==y.
+
+y= <INT>; e = ~<LINKED,1>.deleteData_by_value(y); f= ~<LINKED,1>.getData_by_value(y); print "Bug2 output", <LINKED>, y,e,f 
+#=> checkdelval(e,f) == True
+
+
+###################### test delete_repeat function ##################
+
+~<LINKED>.delete_repeat(); y=<INT>; print "delete_repeat output", <LINKED,1> => checkrepeat(<LINKED,1>,y) == True
+
+
+
+###################### test delete_one function ##################
+
+y= <INT>; ~<LINKED>.delete_one(y);e = ~<LINKED,1>.deleteData_by_value(y) => e ==False
+
+
+
+###################### test merge_linklist function ##################
+
+c=<LISTA>;d=<LISTB>;a = sortlist(c); b= sortlist(d); ~<LINKEDA>.create_by_tail(a); ~<LINKEDB>.create_by_tail(b); e = linklist.merge_linklist(<LINKEDA>,<LINKEDB>); print "merge output", <LISTA>,<LISTB>,e => checkmerge(e) == True
+
+
+
+
+
+
+
+

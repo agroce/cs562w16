@@ -1,0 +1,20 @@
+@from fuzzywuzzy import fuzz
+
+source: fuzz.py
+
+pool: <string> 2
+pool: <stringA> 1
+pool: <stringB> 1
+pool: <char> 3
+
+<char> := <['a'..'z']>
+<char> := <['A'..'Z']>
+<char> := <['!','@','#','$','%','^','&','*','-','+','/','~']>
+
+<string> := ""
+~<string> = ~<string> + <char>
+
+<stringA> := ~<string>
+<stringB> := ~<string>
+
+print "String #1:", <stringA>; print "String #2:", <stringB>; print "Result for Ratio =", fuzz.ratio(<stringA>,<stringB>); print "Result for Partial Ratio =", fuzz.partial_ratio(<stringA>,<stringB>); print "\n"

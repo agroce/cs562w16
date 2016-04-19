@@ -1,0 +1,25 @@
+@import math
+@import time
+@import BST1
+
+<@
+def _len(self):
+        if self is None:
+           return 0
+        else:
+           return _len(self.root.left) + _len(self.root.right) + 1
+
+
+@>
+
+
+source: BST1.py
+pools:
+       <int> 2
+       <tree> 1
+
+actions: 
+       <int>  := <[1..100]>
+       <tree> := BST1.BST()
+       ~<tree>.insert(<int>) => (_len(<tree,1>) == pre<(_len(<tree,1>))>+1) or <tree,1>.search(<int,1>) == False
+#      ~<tree>.insert(<int>) => <tree,1>.search(<int,1>)

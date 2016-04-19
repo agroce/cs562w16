@@ -1,0 +1,18 @@
+@import diagraph
+
+
+pools:
+
+        <graph> 3
+        <src> 10
+        <dest> 10
+
+
+
+actions:
+
+        <dest> := <['a','b','c','d','e','f','g','h','i','j','k','l','m','n']>
+	<src> := <['a','b','c','d','e','f','g','h','i','j','k','l','m','n']>
+        <graph> := diagraph.Digraph()
+        <graph>.add_edge(<src>,<dest>) => (<graph,1>.edge_count()) == (pre<(<graph,1>.edge_count())>+1)
+        <src> in <graph>.vertices() -> <graph,1>.outdegree(<src,1>) 

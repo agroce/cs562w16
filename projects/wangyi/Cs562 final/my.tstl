@@ -1,0 +1,33 @@
+@import math
+@import time
+@import treap
+@import immutable_treap
+
+source: treap.py
+source: immutable_treap.py
+source: mutable_treap.py
+
+
+<@
+
+
+
+@>
+
+
+pools:
+	<treap> 2
+	<value> 4
+	<priority> 4
+	<list1> 1
+	<list2> 2	
+	<treap1> 2	
+actions:
+	<value> := <[1..10]>
+	<priority> := <[1..10]>
+	<treap> := immutable_treap.ImmutableTreap()
+	<treap1> := treap.Treap()
+        ~<treap>.insert(<value>) => (<treap1>.__contain(<value>) == True) 
+	<treap>.delete(<value>) => (<treap1>.__contain(<value>) == False)
+	
+		

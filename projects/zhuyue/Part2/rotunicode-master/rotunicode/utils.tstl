@@ -1,0 +1,29 @@
+@import utils
+@import math
+@import time
+
+ 
+
+
+<@
+def test_compare(self,pf):
+    if self.unicode('utf-8') == pf:
+        return True
+    else: 
+        return False  
+@>
+
+source: utils.py
+
+pools:
+	<string> 1
+	<char> 1 
+
+actions:
+	<char> := <['a','B','!','c']>
+	<string> := ''
+	<string> = <string> + <char>
+
+	<utils>.safe_unicode(<string>) => (test_compare(<string,1>,pre(<string,1>)) == True)
+
+

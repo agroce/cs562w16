@@ -1,0 +1,21 @@
+@import binary_search_tree
+
+
+
+pools:
+        <val> 20
+        <key> 20
+        <BST> 5
+        <Complist> 5
+
+
+actions:
+        <val> := <[0..20]>
+        <key> := <[0..20]>
+        <Complist> := []
+        <BST> := binary_search_tree.BinarySearchTree()
+        ~<BST>.put(<key>,<val>)
+
+        ~<BST>.contains(<key>) and (~<BST,1>.get(<key,1>) in ~<Complist>) -> \
+        values = (~<BST,1>.get(<key,1>)); ~<BST,1>.delete(<key,1>); ~<Complist,1>.remove(values); => \
+        (<BST,1>.contains(<key,1>) == False) 

@@ -1,0 +1,93 @@
+@import random
+@from datetime import datetime,timedelta
+@import binary_search_tree
+
+@import singly_linked_list
+
+<@
+
+def checkavg(int,totalbst,totallist):
+	totalbst = totalbst.total_seconds()
+	totallist = totallist.total_seconds()
+	avg = totalbst/float(int)
+	avg1 = totallist/float(int)
+	print "avg time to modify  bst",'{:f}'.format(avg).rstrip('0')
+	print "avg time to modify  list is",'{:f}'.format(avg1).rstrip('0')
+
+def multadd(list,tree):
+	n = random.randint(100,1000)
+	
+	for i in range(n):
+		if list.search(i) == False and tree.contains(n) == False :
+			list.add(i)
+			tree.put(i,i+1)
+
+	
+@> 
+
+pool:        <int> 4
+pool:        <bst> 2
+pool:        <key> 4
+pool:        <slist> 2
+pool:        <insertimebst> 1
+pool:        <insertimelist> 1
+pool: 	     <deletetimelist> 1
+pool: 	     <deletetimebst> 1
+pool:        <insertcalls> 1
+pool: 	     <totalinserttimebst> 1
+pool: 	     <totalinserttimelist> 1
+pool:	     <totaldeletetimelist> 1
+pool: 	     <totaldeletetimebst> 1
+pool:	     <deletecalls> 1
+
+<key>:= <[0..500]>
+
+<int>:= <[0..500]>
+
+~<bst>:= binary_search_tree.BinarySearchTree()
+
+~<slist> := singly_linked_list.SinglyLinkedList()
+
+~<insertimebst> := 0.0
+
+~<insertimelist> := 0.0
+
+~<deletetimelist> := 0.0
+
+~<deletetimebst> := 0.0
+
+~<insertcalls> := 0
+
+~<deletecalls> := 0
+
+~<totalinserttimebst> := timedelta()
+
+~<totalinserttimelist> := timedelta()
+
+~<totaldeletetimebst> := timedelta()
+
+~<totaldeletetimelist> := timedelta()
+
+#if length of list not equal to tree then burst add data into list and tree 
+<slist,1>.length() != <bst,1>.size() -> multadd(~<slist>,~<bst>); #print "LEngth in tree and list is " , ~<slist,1>.length(),~<slist,1>.display(), " and tree is", ~<bst,1>.size(),~<bst,1>.inorder()
+
+#if length of list equals size of tree then display average time taken by both data structures for insertion operation
+<slist,1>.length() ==  <bst,1>.size()  -> start = datetime.now(); <slist>.add(<key>); ~<insertimelist> = datetime.now() - start;\
+start = datetime.now(); ~<bst>.put(<key,1>,<int>);~<insertimebst> = datetime.now() - start ; \
+print " time taken to insert current key into list is  ",<insertimelist,1>,"\n", "and time taken to insert current key into tree is ", <insertimebst,1>;\
+print "the length of the tree is", <bst,1>.size(),"and length of list is",<slist,1>.length(); <insertcalls> += 1;  print "Insert calls are", ~<insertcalls,1>; ~<totalinserttimebst> = \
+~<totalinserttimebst,1> + ~<insertimebst,1>; ~<totalinserttimelist> += ~<insertimelist,1>; print "total insert time for bst is",~<totalinserttimebst,1>,"and for total time for list is",~<totalinserttimelist,1>; \
+checkavg(<insertcalls,1>,~<totalinserttimebst,1>,~<totalinserttimelist,1>);print "\n\n"
+
+    
+#if length of list equals size of tree then average time for delete is checked. 
+<slist,1>.length() == <bst,1>.size() and <slist,1>.length() > 10 and  <slist,1>.search(<key,1>) and <bst,1>.contains(<key,1>)  -> start = datetime.now(); <slist>.remove(<key>); ~<deletetimelist> = datetime.now() -start;\
+start = datetime.now(); ~<bst>.delete(<key,1>); ~<deletetimebst> = datetime.now() - start ; \
+print " time taken to delete current key from list is ",~<deletetimelist,1>,"\n", "and time taken delete current key from tree is ", ~<deletetimebst,1>; \
+print "the length of the tree is", <bst,1>.size(), <bst,1>.inorder(),"and length of list is",<slist,1>.length(), <slist,1>.display(); <deletecalls> += 1;\
+print "Delete calls are", ~<deletecalls,1>; ~<totaldeletetimebst> = ~<totaldeletetimebst,1> + ~<deletetimebst,1>; ~<totaldeletetimelist> += ~<deletetimelist,1>;\
+print "total delete time is",~<totaldeletetimebst,1>;\
+checkavg(<deletecalls,1>,~<totaldeletetimebst,1>,~<totaldeletetimelist,1>); print "\n\n"
+
+
+

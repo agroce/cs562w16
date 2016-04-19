@@ -1,0 +1,24 @@
+@import BTreenew
+@import math
+@import time
+
+<@
+def elemNum(num):
+    return num
+@>
+
+source: BTreenew.py
+
+pool: <int> 3
+pool: <BT> 3
+pool: <LIST> 3
+
+<LIST>:=[]
+~<LIST>.append(<int>)
+<int> := <[1..200]>
+
+<BT> := BTreenew.BTree()
+
+~<BT>.insert(<int>) => \
+   (elemNum(<BT,1>.treesize()) == pre<(elemNum(<BT,1>.treesize()))>+1)
+

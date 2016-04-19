@@ -1,0 +1,160 @@
+@import LinkedList_Single 
+@import math
+@import time
+
+<@
+
+
+def cap(head):
+    pointer = head
+    count = 0
+    while pointer:
+        count = count+1
+        pointer = pointer.next
+    return count
+
+def check(head):
+	pointer = head
+	count = cap(head)
+	while count > 1:
+		count -= 1
+		pointer = pointer.next
+	return pointer.data
+
+def check1(head,v, data):
+        pointer = head
+        while(pointer):
+            if(pointer.data == v):
+                pointer = pointer.next
+                if (pointer.data == data):
+                    pointer = pointer.next
+                else:
+                    return False
+            else:
+                pointer = pointer.next
+        return True
+
+def getNum(head, data):
+        pointer = head
+        number = 0
+        while (pointer):
+            if(pointer.data == data):
+                number += 1
+            pointer = pointer.next
+        return number
+
+def getValue(head, data):
+        pointer = head
+        index = 0
+
+        while pointer:
+            if (pointer.data == data):
+                return index
+            pointer = pointer.next
+            index = index + 1
+        return -1
+
+def search(head,x):
+    pointer = head 
+    count = cap(head)
+    currentIndex=0
+    if (x < count):
+        while ( currentIndex < x):
+            currentIndex = currentIndex + 1                 
+            pointer = pointer.next
+        return pointer.data    
+    else:
+        return None
+
+def delete(self, list, I):
+    pointer1 = self.head
+    pointer2 = list.head
+    index = 0;
+    while (pointer1 and pointer2):
+        if(index == I):
+            pointer2 = pointer2.next
+
+        if(pointer1.data == pointer2.data):
+            pointer1 = pointer1.next
+            pointer2 = pointer2.next
+            index = index + 1
+        else:
+            return False
+    return True
+
+def deleteAll(self, list, data):
+    pointer1 = self.head
+    pointer2 = list.head
+    while (pointer1 and pointer2):
+        while (pointer2.data == data):
+            pointer2 = pointer2.next
+
+        if(pointer1.data == pointer2.data):
+            pointer1 = pointer1.next
+            pointer2 = pointer2.next
+        else:
+            return False
+    return True
+
+    
+@>
+
+source: LinkedList_Single.py
+
+
+pools:
+	<INT> 1
+	<INT2> 1
+	<SINGLE> 1
+	<VALUE> 1 
+	<CHAR> 1
+
+
+actions:
+
+<INT>:=<[1..40]>
+<INT2> := <[1..40]>
+<VALUE> := <[50..80]>
+<CHAR> := <['a','b','c','d','*','+','-','=''Hello World','Thank You','abcdefg','123456','34572579536','fawelijaeijoafij']>
+<SINGLE>:=LinkedList_Single.LinkedList()
+	
+~<SINGLE>.insert(<INT>); print"Do Insert!" => (search(<SINGLE,1>.head, 0) == <INT>) 
+~<SINGLE>.insert(<INT2>); print"Do Insert!" => (search(<SINGLE,1>.head, 0) == <INT2>)
+~<SINGLE>.insert(<CHAR>); print"Do Insert!" => (cap(<SINGLE,1>.head) == PRE<(cap(<SINGLE,1>.head))>+1) and (search(<SINGLE,1>.head, 0) == <CHAR>) 
+
+
+~<SINGLE>.append(<INT>); print"Do Append!" => (<INT> == check(<SINGLE,1>.head))
+~<SINGLE>.append(<INT2>); print"Do Append!" => (<INT2> == check(<SINGLE,1>.head))
+~<SINGLE>.append(<CHAR>); print"Do Append!" => (cap(<SINGLE,1>.head) == PRE<(cap(<SINGLE,1>.head))>+1) and (<CHAR> == check(<SINGLE,1>.head))
+	
+
+print"Do Return Index!"; RESULT = ~<SINGLE>.returnIndex(<VALUE>) => ( RESULT == None )
+	 
+print"Do Return Index!"; ~<SINGLE>.insert(<INT>); RESULT = ~<SINGLE>.returnIndex(<INT>) => ( RESULT == 0 )
+
+
+<INT> <= cap(~<SINGLE,1>.head) -> RESULT = ~<SINGLE>.insertBeforeIndex(<INT>, <INT2>) ; print"Do Insert a Data Before a Given Index!" => (RESULT == True) and (cap(<SINGLE,1>.head) == PRE<(cap(<SINGLE,1>.head))>+1) and (search(<SINGLE,1>.head, <INT>) == <INT2>)
+	
+
+<INT> < cap(~<SINGLE,1>.head) -> RESULT = ~<SINGLE>.insertAfterIndex(<INT>, <INT2>) ; print"Do Insert a Data After a Given Index!" => (RESULT == True) and (cap(<SINGLE,1>.head) == PRE<(cap(<SINGLE,1>.head))>+1) and (search(<SINGLE,1>.head, <INT>+1) == <INT2>)
+   													
+   	
+getValue(~<SINGLE>.head, <INT>) != -1 -> N=getNum(~<SINGLE>.head, <INT>);RESULT = ~<SINGLE>.insertBeforeEveryData(<INT>, <INT2>); print"Do Insert a Data Before a Data!" => (RESULT == True) and (cap(<SINGLE,1>.head) == PRE<(cap(<SINGLE,1>.head))>+N) 
+
+    	
+getValue(~<SINGLE>.head, <INT>) != -1 -> RESULT = ~<SINGLE>.insertAfterEveryData(<INT>, <INT2>); print"Do Insert a Data After a Data!" => (RESULT == True) and (check1(~<SINGLE>.head, <INT>, <INT2>) == True)
+
+    
+
+<INT> < cap(~<SINGLE,1>.head) -> list ; RESULT = ~<SINGLE>.deleteIndex(<INT>) ; print"Do Delete Index!", RESULT => ( RESULT == True ) and (cap(<SINGLE,1>.head) == PRE<(cap(<SINGLE,1>.head))>-1) 
+											
+
+getValue(~<SINGLE>.head, <INT>) != -1 -> list = ~<SINGLE>.copyList(); RESULT = getValue(<SINGLE>.head, <INT>); ~<SINGLE>.deleteData(<INT>);print"Do Delete Data!" => (cap(<SINGLE,1>.head) == PRE<(cap(<SINGLE,1>.head))>-1) and (delete(~<SINGLE>, list, RESULT) == True) 
+    
+   	
+getValue(~<SINGLE>.head, <INT>) != -1 -> list = ~<SINGLE>.copyList(); RESULT = ~<SINGLE>.deleteAllData(<INT>); print"Do Delete All of Data!" => (RESULT == True) and (deleteAll(~<SINGLE,1>, list, <INT>) == True) 
+
+
+print"Do Delete List!"; ~<SINGLE>.deleteList() => (cap(<SINGLE,1>.head) == 0)
+
+

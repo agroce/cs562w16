@@ -1,0 +1,28 @@
+# -*- coding: utf-8 -*-
+@from xpinyin import Pinyin
+
+pool: <p> 1
+pool: <str1> 4
+pool: <str2> 4
+pool: <str3> 2
+
+
+
+<p> := Pinyin()
+
+<str1> := <[u"阿姨",u"阿胶",u"扒开",u"扒手"]>
+<str2> := <[u"开辟",u"复辟",u"扁担",u"扁舟"]> 
+<str3> := <[u"禅让",u"禅师"]>
+
+
+print <p>.get_pinyin(<str1>, show_tone_marks=True)
+print <p>.get_initials(<str1>)
+
+print <p>.get_pinyin(<str2>, show_tone_marks=True)
+print <p>.get_initials(<str2>)
+
+print <p>.get_pinyin(<str3>, show_tone_marks=True)
+print <p>.get_initials(<str3>)
+
+
+

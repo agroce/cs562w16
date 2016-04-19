@@ -1,0 +1,61 @@
+@from BTrees.OOBTree import OOBTree
+@from BTrees.check import *
+
+
+
+
+
+pools:
+       <int>    4
+       <char>   4
+       <string> 4
+       <key>    4
+       <value>  4
+       <btree>  4
+       <Complist> 5
+
+
+
+actions:
+	<int> := <[1..100]>
+
+    <char> :=<["a","b","c","d","e","$","&",")"," "]>
+	<string> := <char>
+	~<string> += <char>
+
+	<key> := <string>
+	<key> := <int>
+	 
+	<value> := <string>
+	<value> := <int>
+
+
+	
+	<btree> := OOBTree()
+	~<btree>.insert(<key>,<value>) =>  check(<btree,1>) == None \
+	 and  (len(<btree,1>) == pre<(len(<btree,1>))> + 1 or <btree,1>.has_key(<key,1>) > 0 ) 
+
+	 	 
+	~<btree>.pop(<key>,0) => check(<btree,1>) == None \
+	 and  (len(<btree,1>) == pre<(len(<btree,1>))> -1 or <btree,1>.pop(<key,1>,0) == 0) \
+	 and <btree,1>.has_key(<key,1>) == 0
+
+
+    ~<btree>.contains(<key>) and (~<btree,1>.get(<key,1>) in ~<Complist>) -> \
+    values = (~<btree,1>.get(<key,1>)); ~<btree,1>.delete(<key,1>); ~<Complist,1>.remove(values); => \
+    (<btree,1>.contains(<key,1>) == False)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

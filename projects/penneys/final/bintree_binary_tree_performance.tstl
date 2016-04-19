@@ -1,0 +1,47 @@
+@from bintrees import BinaryTree
+@import myDict
+@import math
+@import time
+
+<@
+
+def insertTree(binarytree, letter, int):
+	binarytree.insert(letter, int)
+	
+def insertDict(dict, letter, int):
+	dict.add(letter, int)
+
+def writeResults(insertcalls, inserttotaltime, filename):
+	if insertcalls > 0:
+		f = open(filename, 'a')
+		f.write(str(inserttotaltime / insertcalls) + '\n')
+		f.close()
+	
+@>
+
+pool: <int> 20
+pool: <binarytree> 1
+pool: <mydict> 1
+pool: <ascii> 2
+pool: <letter> 2
+pool: <binarytreeinsertcalls> 1
+pool: <binarytreeinserttotaltime> 1
+pool: <dictinsertcalls> 1
+pool: <dictinserttotaltime> 1
+
+
+<binarytreeinsertcalls> := 0
+<binarytreeinserttotaltime> := 0
+<dictinsertcalls> := 0
+<dictinserttotaltime> := 0
+
+<ascii> := <[65..91]>
+<letter> := chr(<ascii>)
+<int> := <[1..20]>
+
+<binarytree> := BinaryTree()
+<mydict> := myDict.Dict()
+
+<binarytreeinsertcalls> += 1; start = time.time(); insertTree(~<binarytree>, <letter>, <int>); <binarytreeinserttotaltime> = <binarytreeinserttotaltime> + (time.time() - start); writeResults(<binarytreeinsertcalls>, <binarytreeinserttotaltime>, 'binarytreePerformance.txt');
+<dictinsertcalls> += 1; start = time.time(); insertDict(~<mydict>, <letter>, <int>); <dictinserttotaltime> = <dictinserttotaltime> + (time.time() - start); writeResults(<dictinsertcalls>, <dictinserttotaltime>, 'dictPerformance.txt');
+

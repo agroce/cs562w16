@@ -1,0 +1,3 @@
+Name      Stmts   Miss Branch BrPart  Cover   Missing
+-----------------------------------------------------
+fuzz.py     116    116     28      0     0%   3-263

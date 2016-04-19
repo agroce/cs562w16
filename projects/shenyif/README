@@ -1,0 +1,7 @@
+The rbt.tstl is the test file for the red black tree. 
+To run this this test file, you need to put the rbt.tstl and red.py and randomtester.py in a same direction and insert the following command:
+
+tstl rbt.tstl -n
+python randomtester 
+
+The result will show on the screen.

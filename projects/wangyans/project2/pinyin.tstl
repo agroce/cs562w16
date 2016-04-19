@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+@from xpinyin import Pinyin
+
+pool: <str> 4
+pool: <p> 1
+pool: <tra> 4
+pool: <poe> 4
+
+
+
+<p> := Pinyin()
+<str> := <[u"上海",u"北京",u"開心",u"快樂"]>
+<tra> := <[u"上",u"海",u"北",u"京",u"開",u"心",u"快",u"樂"]> 
+<poe> := <[u"春眠不觉晓",u"处处闻啼鸟",u"夜来风雨声",u"花落知多少"]>
+
+print <p>.get_pinyin(<poe>)
+print <p>.get_pinyin(<str>, show_tone_marks=True)
+print <p>.get_initials(<str>)
+print <p>.get_initial(<tra>)
+
+
+
+
+
+
+
+
+
+
+

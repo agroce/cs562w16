@@ -1,0 +1,16 @@
+@import undirected
+
+
+
+pools:
+        <source> 10
+        <desti> 10
+        <graph> 3
+
+
+actions:
+
+        <source> := <[0..20]>
+        <desti> := <[0..20]>
+        <graph> := undirected.Undirected_Graph()
+        <graph>.add_edge(<source>, <desti>) => (<graph,1>.edge_count()) == (pre<(<graph,1>.edge_count())>+1)

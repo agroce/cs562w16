@@ -1,0 +1,6 @@
+-rrequirements.txt
+coveralls
+genty>=1.0.0
+pep8
+pylint
+tox

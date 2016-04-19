@@ -1,0 +1,14 @@
+@import LinkedList as sll
+@import Node
+pools:
+<data> 10
+<sll> 3
+
+actions:
+<data> := <[0..50]>
+<sll> := sll.Linkedlist()
+~<sll>.insertStart(~<data>) => (<sll,1>.size() == pre<(<sll,1>.size())>+1)
+~<sll>.insertEnd(~<data>) => (<sll,1>.size() == pre<(<sll,1>.size())>+2)
+	
+        
+

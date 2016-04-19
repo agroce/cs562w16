@@ -1,0 +1,15 @@
+Name                                                                          Stmts   Miss Branch BrPart  Cover   Missing
+-------------------------------------------------------------------------------------------------------------------------
+/usr/local/lib/python2.7/site-packages/algorithms/sorting/bubble_sort.py          7      1      6      0    92%   17
+/usr/local/lib/python2.7/site-packages/algorithms/sorting/cocktail_sort.py       20      1     12      0    97%   18
+/usr/local/lib/python2.7/site-packages/algorithms/sorting/comb_sort.py           11      1      6      0    94%   17
+/usr/local/lib/python2.7/site-packages/algorithms/sorting/gnome_sort.py          16      1     10      0    96%   18
+/usr/local/lib/python2.7/site-packages/algorithms/sorting/heap_sort.py           23      3     10      0    91%   17, 42, 53
+/usr/local/lib/python2.7/site-packages/algorithms/sorting/insertion_sort.py       9      1      4      0    92%   17
+/usr/local/lib/python2.7/site-packages/algorithms/sorting/merge_sort.py          19      2      6      0    92%   17, 41
+/usr/local/lib/python2.7/site-packages/algorithms/sorting/quick_sort.py          10      1      6      0    94%   17
+/usr/local/lib/python2.7/site-packages/algorithms/sorting/selection_sort.py       9      1      8      0    94%   17
+/usr/local/lib/python2.7/site-packages/algorithms/sorting/shell_sort.py          11      1      6      0    94%   17
+/usr/local/lib/python2.7/site-packages/algorithms/sorting/strand_sort.py         36      3     18      2    91%   21, 44, 48, 47->48, 50->53
+-------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                           171     16     92      2    93%   

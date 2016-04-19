@@ -1,0 +1,49 @@
+@from bintrees import BinaryTree
+@import myDict
+
+<@
+def traversal(k, v):
+	print k, v
+@>
+
+log: 1 <binarytree>
+
+pool: <int> 20
+pool: <binarytree> 2 REF
+pool: <ascii> 2
+pool: <letter> 2
+
+
+<ascii> := <[65..91]>
+<letter> := chr(<ascii>)
+<int> := <[1..20]>
+
+<binarytree> := BinaryTree()
+~<binarytree>.insert(<letter>, <int>)
+~<binarytree>.__len__() > 0 -> ~<binarytree>.get(<letter>)
+~<binarytree>.__len__()
+~<binarytree>.__len__() > 0 -> ~<binarytree>.__max__()
+~<binarytree>.__len__() > 0 -> ~<binarytree>.__min__()
+~<binarytree>.get(<letter>) > 0 -> ~<binarytree>.remove_items(<letter>)
+~<binarytree>.is_empty()
+~<binarytree>.clear()
+~<binarytree>.__len__() > 0 -> ~<binarytree>.foreach(traversal, 0)
+
+
+reference: BinaryTree ==> myDict.Dict
+reference: insert ==> add
+reference: get ==> get
+reference: __len__() ==> getSize
+reference: __max__() ==> getMax
+reference: __min__() ==> getMin
+reference: remove_items() ==> remove
+reference: is_empty() ==> isEmpty
+reference: clear() ==> clear
+reference: foreach() ==> foreach
+
+
+compare: get
+compare: __len__
+compare: __max__
+compare: __min__
+compare: is_empty

@@ -1,0 +1,15 @@
+@import queue
+
+pools:
+        <value> 10
+        <queue> 2
+
+actions:
+		<value> := <[0..10]>
+		<queue> := queue.Queue()
+		<queue>.add(<value>) -> not <queue>.is_empty() -> <queue,1>.remove()
+		<queue>.add(<value>) -> <queue,1>.remove() => (<queue>.is_empty() == True) => <queue,1>.size() == 0
+		<queue>.add(<value>) => <queue,1>.size() == pre<(<queue,1>.size())>+1
+		<queue>.add(<value>) -> not <queue>.is_empty() -> <queue,1>.remove() => <queue,1>.size() == pre<(<queue,1>.size())>
+		<queue>.add(<value>) -> <queue,1>.remove() => (<queue,1>.is_empty() == True)
+

@@ -1,0 +1,3 @@
+Name                                                                           Stmts   Miss Branch BrPart  Cover   Missing
+--------------------------------------------------------------------------------------------------------------------------
+/usr/local/lib/python2.7/site-packages/algorithms/data_structures/digraph.py      43     13     14      1    75%   11-12, 17-35, 56, 64, 73-75, 83, 97, 70->73

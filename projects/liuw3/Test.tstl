@@ -1,0 +1,12 @@
+@import LinkedList_Single as all
+
+pools:
+        <dat> 10
+        <all> 3
+
+
+actions:
+        <dat> := <[0..50]>
+        <all> := all.LinkedList()
+        ~<all>.insert(<dat>) => (<all,1>.head.next == pre<(<all,1>.head)>)
+        print <all>.head

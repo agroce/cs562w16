@@ -1,0 +1,7 @@
+Name                                                                                Stmts   Miss Branch BrPart  Cover   Missing
+-------------------------------------------------------------------------------------------------------------------------------
+/usr/local/lib/python2.7/site-packages/algorithms/searching/binary_search.py           11      2      6      1    82%   13, 34, 31->34
+/usr/local/lib/python2.7/site-packages/algorithms/searching/bmh_search.py              21      4     10      2    81%   16, 31, 42-43, 30->31, 40->42
+/usr/local/lib/python2.7/site-packages/algorithms/searching/depth_first_search.py       8      6      6      1    21%   18, 31-35, 29->31
+-------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                  40     12     22      4    68%   

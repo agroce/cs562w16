@@ -1,0 +1,96 @@
+@import BST2
+<@
+
+def lenth(self):
+    if self == None:
+        return 0
+    else:
+        return lenth(self.left) + lenth(self.right) +1
+
+def _inorder(self,node):
+        if node == None:
+                return
+
+        if node != None:
+                        self._inorder(node.left)
+
+                        if node:
+                                self.__nodes.append(node.key)
+
+                        self._inorder(node.right)
+
+        return self.__nodes
+
+def inorder(self):
+	self.__nodes = []
+     	return self._inorder(self.root)
+
+def checktreelength(treenew,treeold):
+	p = treenew.inorder()
+	q = treeold.inorder()
+	print(p)
+	print(q)
+	if len(p) == (len(q) + 1):
+		return True
+def checkroot(self):
+	if self.root == None:
+		return 0
+	else:
+		return 1
+
+def checkmax(tree,key):
+	
+		t = tree.inorder()
+		if key > t[-1]:
+			return True
+
+def checkmin(tree,key):
+
+                t = tree.inorder()
+                if key < t[0]:
+                        return True
+
+def checkkeys(tree):
+	t = tree.inorder()
+	return sorted(tree.keys()) == t
+
+@>
+
+source: BST2.py
+
+	
+pools:
+	<int> 2
+	<tree> 1
+	<key> 2
+
+
+actions:
+	<key>:= <[0..1000]>
+	
+	<int>:= <[0..1000]>
+	
+	~<tree>:= BST2.BST() 
+	
+	~<tree>.insert(~<key>,<int>) => <tree,1>.search(<key,1>)
+	
+	(<tree>.search(<key>) == False) -> ~<tree,1>.insert(<key,1>,<int>) => (pre<(~<tree,1>.size())> + 1) == ~<tree,1>.size()     
+	
+ #       ~<tree>.insert(<key>, <int>) => (lenth(<tree,1>) <= pre<(lenth(<tree,1>))>+1)
+
+        (<tree>.search(<key>) == False) -> ~<tree,1>.insert(<key,1>,<int>) => (pre<(~<tree,1>.size())> + 1) == ~<tree,1>.size()    
+	
+	~<tree>.search(<key>) -> ~<tree,1>.delete(<key,1>) => (pre<(~<tree,1>.size())>  == ~<tree,1>.size() + 1) and (~<tree,1>.search(<key,1>) == False)  
+	
+	(checkroot(~<tree>) == -1) -> ~<tree,1>.delete(<key>) => ~<tree,1>.is_empty() 
+	
+	(<tree>.search(~<key>) == True) -> ~<tree,1>.insert(<key,1>,<int>) => (pre<(~<tree,1>.size())> ) == ~<tree,1>.size()
+		
+	(~<tree>.is_empty() == False) and checkmax(~<tree,1>,<key>) -> ~<tree,1>.insert(<key,1>,<int>) => ~<tree,1>.max_key() == <key,1>	
+	
+	~<tree>.is_empty() == True -> checkmax = ~<tree,1>.max_key() == None => checkmax == True
+	
+	(~<tree>.is_empty() == False) and checkmin(~<tree,1>,<key>) -> ~<tree,1>.insert(<key,1>,<int>) => ~<tree,1>.min_key() == <key,1>
+
+        ~<tree>.is_empty() == True -> checkmin = ~<tree,1>.min_key() == None  => checkmin == True
+

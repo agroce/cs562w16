@@ -1,0 +1,124 @@
+@import binary_search_tree
+<@
+
+def printbst(tree):
+	print tree.inorder()
+
+def checktreeBST(tree):
+	p = tree.inorder()
+	s = sorted(set(p))
+	if s == p:
+	
+		return True
+	else:
+
+		return False
+
+def _inorder(self,node):
+        if node == None:
+                return
+
+        if node != None:
+                        self._inorder(node.left)
+
+                        if node:
+                                self.__nodes.append(node.key)
+
+                        self._inorder(node.right)
+
+        return self.__nodes
+
+def inorder(self):
+	self.__nodes = []
+     	return self._inorder(self.root)
+
+def checktreelength(treenew,treeold):
+	p = treenew.inorder()
+	q = treeold.inorder()
+	print(p)
+	print(q)
+	if len(p) == (len(q) + 1):
+		return True
+def checkroot(self):
+	if self.root == None:
+		return 0
+	else:
+		return 1
+
+def checkmax(tree,key):
+	
+		t = tree.inorder()
+		if key > t[-1]:
+			return True
+
+def checkmin(tree,key):
+
+                t = tree.inorder()
+                if key < t[0]:
+                        return True
+
+def checkkeys(tree):
+	t = tree.inorder()
+	return sorted(tree.keys()) == t
+		
+	
+
+@>
+
+source: binary_search_tree.py
+
+logs:	1 printbst(<bst>)
+	POST 1 printbst(<bst>)
+	1 <int>		
+	
+pools:
+	<int> 2
+	<bst> 1
+	<key> 2
+
+
+actions:
+	<key>:= <[0..500]>
+	
+	<int>:= <[0..500]>
+	
+	~<bst>:= binary_search_tree.BinarySearchTree() 
+	
+	#Insert key in tree and check if contains function returns key exist and bst property is adhered	
+	~<bst>.put(~<key>,<int>) => <bst,1>.contains(<key,1>) and checktreeBST(<bst,1>)
+	
+	#If key not in tree then tree size is checked for increase and bst property is checked
+	(<bst>.contains(<key>) == False) -> ~<bst,1>.put(<key,1>,<int>) => (pre<(~<bst,1>.size())> + 1) == ~<bst,1>.size() and checktreeBST(~<bst,1>)     
+	
+	#if tree contains key then deletion is checked so that length is one less and contains returns false on given key
+	~<bst>.contains(<key>) -> ~<bst,1>.delete(<key,1>) => (pre<(~<bst,1>.size())>  == ~<bst,1>.size() + 1) and (~<bst,1>.contains(<key,1>) == False)  
+	
+	#when tree is empty delete module is checked and is_empty module is checked on tree
+	(checkroot(~<bst>) == -1) -> ~<bst,1>.delete(<key>) => ~<bst,1>.is_empty() 
+	
+	#if tree contains key then adding same key should return the size of tree to be same as only value of key is overridden. Property of bst is checked. 
+	(<bst>.contains(~<key>) == True) -> ~<bst,1>.put(<key,1>,<int>) => (pre<(~<bst,1>.size())> ) == ~<bst,1>.size() and checktreeBST(~<bst,1>)
+	
+	#if tree not empty and key to be inserted is greater than all keys in tree. Then after insertion max_key module should return given key.	
+	(~<bst>.is_empty() == False) and checkmax(~<bst,1>,<key>) -> ~<bst,1>.put(<key,1>,<int>) => ~<bst,1>.max_key() == <key,1>	
+	
+	#max_key module is checked when tree is empty.
+	~<bst>.is_empty() == True -> checkmax = ~<bst,1>.max_key() == None => checkmax == True
+	
+	#when tree is not empty. min_key module is checked after insertion of miniumum element relative to keys that exist in tree.
+	(~<bst>.is_empty() == False) and checkmin(~<bst,1>,<key>) -> ~<bst,1>.put(<key,1>,<int>) => ~<bst,1>.min_key() == <key,1>
+	
+	#when tree is empty. min_key module is checked to be none
+        ~<bst>.is_empty() == True -> checkmin = ~<bst,1>.min_key() == None  => checkmin == True
+	
+	#this checks if keys module returns accurately all keys that exist in tree.
+	checkkeys(~<bst>); print printbst(~<bst>) 
+		
+	
+	
+	
+
+	
+
+
+	

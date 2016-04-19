@@ -1,0 +1,35 @@
+@import examine as examine
+<@
+def check(object):
+	if object==None:
+		print("None")
+	else: 
+		print(object)
+@>
+source: examine.py
+pool: <strname> 3
+pool: <exam1> 3
+pool: <list1> 3
+pool: <exam2> 3
+pool: <exams> 3 
+pool: <int> 3
+pool: <datalist> 3
+
+<strname> := ['coding', 'snowboarding']
+<list1> :=[{'key1': 'val1'}, {'key2': 'val2'}]
+<datalist> := ['<list1>'] 
+<exams> := []
+~<exams>.append(<datalist>)
+
+<exam1>:= examine.Structure(<strname>)
+<exam2>:= examine.Structure(<list1>)
+
+#<exam2>:= examine.Structure(<exams,2>)
+#<exam1>:= examine.Structure(<exams,1>)
+#check(<exams,1>.__add__<exams,2>)
+
+check(<exam1>.__add__(<exam2>))
+check(examine.Structure(<strname>))
+
+
+

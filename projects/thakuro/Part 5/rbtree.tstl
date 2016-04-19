@@ -1,0 +1,119 @@
+import collections
+import bstree
+
+@from rbtree import RBTree, Node
+
+
+<@
+def showTree(tree):
+        
+        ops = []
+        display(tree.root, ops)
+
+        return ops
+
+
+
+def check(tree):
+      a = 'error in ordering'
+      if preorder == porborder == inorder == levelorder:
+                  return a
+      
+
+class Node:
+       def __init__(self,key,value):
+        self.left = None
+        self.right = None
+        self.parent = None
+        self.key = key
+        self.value = value
+
+
+def parentcheck(tree):
+      s = 'error in parent'
+      if self.parent > self.right or self.left > self.right or self.left > self.parent or self.parent == self.right == self.left: 
+           return s
+
+def max(tree):
+      if self.parent == None:
+        get_max = None
+
+def switch(tree):
+      if node1 == None:
+        switch_node == None
+
+def delete(tree):
+      if self.parent == None:
+         delete == None
+
+def deletefrom(tree):
+      if self.parent == None:
+         delete_from == None
+
+
+def deletenode(tree):
+      if node == None:
+         _delete_node == None
+
+def deletecase(tree):
+      if _delete_case_one == _delete_case_two == _delete_case_three == _delete_case_four == _delete_case_five == _delete_case_six:
+          return
+
+def insertcase(tree):
+      if _insert_case_one == _insert_case_two == _insert_case_three == _insert_case_four == _insert_case_five == _insert_case_six:
+          return 
+ 
+def valid(tree):
+     s = 'rbring is invalid'
+     if node.parent == node.parent.left == node.parent.right:
+      return s
+
+def display(self, ops):
+        b = 'showing tree'
+        if self == None:
+                return
+        ops.append(self.key)
+        display(self.left,ops)
+        display(self.value,s)
+        display(self.right,ops)
+
+
+
+@>
+
+
+source: rbtree.py
+
+logs:
+   
+    POST 1 showTree(<rb>)
+    POST 1 check(<rb>)
+    POST 1 parentcheck(<rb>)
+    POST 1 max(<rb>)
+    POST 1 delete(<rb>)
+    POST 1 deletefrom(<rb>)
+    POST 1 deletenode(<rb>)
+    POST 1 deletecase(<rb>)
+    1 deletenode(<rb>)
+    1 valid(<rb>)
+    
+    
+
+pools:
+    <key> 1
+    <val> 1
+    <ops> 1
+    <rb> 1
+
+
+actions:
+<val> := <[1..10]>
+<key> := <[1..10]>
+<ops> := []
+<rb>  := RBTree()
+
+
+
+
+~<rb>.insert(<key>,<val>); ~<ops>.append(<val>); print <rb>
+#~<rb>.delete(<key>); 

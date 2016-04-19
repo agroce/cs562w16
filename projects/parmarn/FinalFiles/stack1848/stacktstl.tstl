@@ -1,0 +1,71 @@
+@import stack
+<@
+#Randomly does not pop the stacks, checks the element and then pops
+def popOk(stack,count):
+	if(stack.isEmpty()):
+		print("Cannot pop -- fail safe")
+		return 0
+	else:
+		stack.pop()
+		print("Popping the head element -- return to stacks")
+		count -=1
+		return stack,count
+
+#Randomly does not push an element onto the stack, checks first and pushes in an ordered manner		
+def pushOk(stack,count,variable):
+	stack.push(variable)
+	count +=1
+	print("Pushing an element",variable)
+	return stack,count,variable
+
+#Cleaning the data whenever the number of elements in the stack does not match the counter	
+def cleanOk(stack):
+	while(stack.isEmpty()!=True):
+		print("Into The Cleanup mode!--Cleaning the elements")
+		stack.pop()
+	print("Cleansed")
+	return stack		
+	
+def testOk(stack,count):
+		if((stack.size)==count):
+			print('Code Maintenance Correct')
+			return stack,count
+		else:
+			print('Code Incorrect-----*****')
+			cleanOk(stack)
+			count = 0
+			return stack,count
+@>
+
+# source file name for working with Stacks
+source: stack.py
+
+#pool variables
+pool: <int> 1
+pool: <list> 1
+pool: <stack> 1
+pool: <count> 1
+
+#Initializations
+<count>  := 0
+<int>    := <[1..10]>
+<stack> := stack.Stack()
+
+#Testing the condition for stack being empty
+~<stack>.isEmpty() -> assert(~<count>==0)
+
+#Pushing an element onto the stack and computing size:1
+pushOk(~<stack>,~<count>,<int>)
+
+#Calling popOk to pop an element from the stack
+#~<count>!=0 -> popOk(~<stack>,~<count>) 
+#PopOk is a safer way to pop the function -- without popOK testing the counter
+#value particularly gives an error in the output. It does not consider popping.
+popOk(~<stack>,~<count>)
+#Computing the size of the stack
+
+#Testing whether the size of the stack matches the count of the stack
+testOk(~<stack>,~<count>)
+#print(<stack>.size)
+
+

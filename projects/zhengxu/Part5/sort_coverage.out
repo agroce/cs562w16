@@ -1,0 +1,7 @@
+Name                                                                  Stmts   Miss Branch BrPart  Cover   Missing
+-----------------------------------------------------------------------------------------------------------------
+/Library/Python/2.7/site-packages/algorithms/sorting/bogo_sort.py        15      3      8      0    87%   17-20, 43
+/Library/Python/2.7/site-packages/algorithms/sorting/bubble_sort.py       7      1      6      0    92%   17
+/Library/Python/2.7/site-packages/algorithms/sorting/heap_sort.py        23      3     10      0    91%   17, 42, 53
+/Library/Python/2.7/site-packages/algorithms/sorting/merge_sort.py       19      2      6      0    92%   17, 41
+/Library/Python/2.7/site-packages/algorithms/sorting/quick_sort.py       10      2      6      1    81%   17, 32, 31->32

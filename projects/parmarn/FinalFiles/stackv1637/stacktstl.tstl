@@ -1,0 +1,60 @@
+@import stack
+<@
+#Randomly does not pop the stacks, checks the element and then pops
+def popOk(stack,count):
+	if(stack.isEmpty()):
+		print("Cannot pop -- fail safe")
+		return 0
+	else:
+		stack.pop()
+		print("Popping the head element -- return to stacks")
+		count -=1
+		return stack,count
+
+#Randomly does not push an element onto the stack, checks first and pushes in an ordered manner		
+def pushOk(stack,count,variable):
+	stack.push(variable)
+	count +=1
+	print("Pushing an element",variable)
+	return stack,count,variable
+
+@>
+
+# source file name for working with Stacks
+source: stack.py
+
+#pool variables
+pool: <int> 1
+pool: <list> 1
+pool: <stack> 1
+pool: <count> 1
+
+#Initializations
+<count>  := 0
+<int>    := <[1..10]>
+<stack> := stack.Stack()
+
+#Testing the condition for stack being empty
+print ("#")
+~<stack>.isEmpty() -> assert(~<count>==0)
+#print (<stack>)
+#print (<stack>.size)
+
+#Pushing an element onto the stack and computing size:1
+pushOk(~<stack>,~<count>,<int>)
+#<stack>.push(<int>)
+#print (<stack>)
+#print (<stack>.size)
+#print ("##")
+
+#Pushing an element onto the stack and computing size:2
+#<stack>.push(<int>)
+#print ("###")
+#print (<stack>)
+#print (<stack>.size)
+
+#Calling popOk to pop an element from the stack
+popOk(~<stack>,<count>)
+
+
+

@@ -1,0 +1,13 @@
+
+1. All the tested files are from Python Library “Algorithms”, Corresponding code
+files have been pasted into current files, so TSTL can be tested directly without 
+install Python Library mentioned above(you can install it either).
+
+2. two data structures Stack and Queue have been preliminary tested. Including:
+	(a)Function usability in Stack (add,remove,is_empty,stack_list)
+	(b)Function usability in Queue (add,remove,is_empty,stack_list)
+	
+3. randomtester.py is attached. To test,type those into terminal: 
+	step1: type “tstl filename —nocover”
+	step2: running “python randomtester.py”
+	

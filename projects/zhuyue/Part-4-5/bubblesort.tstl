@@ -1,0 +1,22 @@
+@from bubblesort import bubbleSort
+
+<@
+def test(self):
+       
+       return sorted(self)
+
+@>
+
+source: bubblesort.py
+pools:
+        <int> 10
+        <array> 5
+
+
+actions:
+
+        <int> := <[1..100]>
+        <array> := []
+        ~<array>.append(<int>) => len(<array,1>) == pre<(len(<array,1>))>+1
+        bubbleSort(<array>)
+#        ~bubbleSort(<array>) => bubbleSort(<array,1>) == pre<(test(<array,1>))>

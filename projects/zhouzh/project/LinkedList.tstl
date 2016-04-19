@@ -1,0 +1,14 @@
+@from algorithms.data_structures import singly_linked_list as sll 
+
+pools:
+        <data> 10
+        <sll> 3
+        
+
+actions:
+        <data> := <[0..50]>
+        <sll> := sll.SinglyLinkedList()
+        ~<sll>.add(<data>) => (<sll,1>.size == pre<(<sll,1>.size)>+1)
+        (~<sll>.size != 0) and <sll,1>.search(<data>) -> ~<sll,1>.remove(<data,1>) => (<sll,1>.size == pre<(<sll,1>.size)>-1)
+        
+        

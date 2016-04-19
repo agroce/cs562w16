@@ -1,0 +1,26 @@
+@from fuzzywuzzy import fuzz
+@from fuzzywuzzy import process
+
+source: fuzz.py
+source: process.py
+
+pool: <string> 3
+pool: <stringIn> 3
+pool: <stringFind> 1
+pool: <char> 3
+pool: <int> 1
+pool: <choices> 3
+
+<char> := <['a'..'z']>
+<char> := <['A'..'Z']>
+<char> := <['!','@','#','$','%','^','&','*','-','+','/','~']>
+
+<string> := <char>
+~<string> = ~<string> + <char>
+<stringIn> := <string> + ' ' + <string>
+
+<choices> := [<stringIn>,<stringIn>,<stringIn>,<stringIn>,<stringIn>]
+<stringFind> := ~<stringIn>
+<int> := <[1..5]>
+
+print "Choices:", ~<choices>; print "Extract Goal:", ~<stringFind>; print "Limit:", ~<int>; print "Result for Extract =", process.extract(~<stringFind>, ~<choices>, limit=~<int>); print "Result for ExtractOne =", process.extractOne(~<stringFind>, ~<choices>); print "\n"

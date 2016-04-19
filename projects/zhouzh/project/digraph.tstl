@@ -1,0 +1,44 @@
+@from algorithms.data_structures import digraph
+
+<@
+def isReverse(graph1, graph2):
+        reverse = digraph.Digraph()
+        for src in graph1.vertices():
+                for dest in graph1.adj(src):
+                        reverse.add_edge(dest,src)
+        if not isSameGraph(reverse, graph2):
+                return False
+        return True
+                        
+
+def isSameGraph(graph1, graph2):
+        for src in graph1.vertices():
+                for dest in graph1.adj(src):
+                        if not comp(graph2.adj(dest), graph1.adj(dest)) or not comp(graph2.adj(src), graph1.adj(src)):
+                                return False
+
+        return True
+                                        
+def comp(list1, list2):
+        for val in list1:
+                if val not in list2:
+                        return False
+        return True
+@>
+
+pools:
+        <graph> 3
+        <src> 10
+        <dest> 10
+
+actions:
+        <dest> := <['a','b','c','d','e','f','g','h','i','j','k','l','m','n']>
+        <src> := <['a','b','c','d','e','f','g','h','i','j','k','l','m','n']>
+        <graph> := digraph.Digraph()
+        
+        ~<graph>.add_edge(<src>,<dest>); print <graph,1> => (<graph,1>.edge_count()) == (pre<(<graph,1>.edge_count())>+1)
+        r_graph = ~<graph>.reverse(); print "REVERSE:\n{}".format(r_graph) => isReverse(<graph,1>, r_graph)
+        <src> in ~<graph>.vertices() -> <graph,1>.outdegree(<src,1>)        
+
+
+

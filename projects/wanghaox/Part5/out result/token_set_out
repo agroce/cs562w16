@@ -1,0 +1,38 @@
+Random testing using config=Config(verbose=False, failedLogging=None, maxtests=-1, greedyStutter=False, seed=None, generalize=False, uncaught=False, speed='FAST', internal=False, normalize=False, replayable=False, essentials=False, quickTests=False, coverfile='coverage.out', ignoreprops=False, total=False, noreassign=False, full=False, multiple=False, stutter=None, running=False, nocover=False, gendepth=None, logging=None, html=None, keep=False, depth=100, timeout=10, output=None)
+String #1: qqwTqqwTNN qqwTqqwTNN
+String #2: qqwTqqwTNN
+Result for Ratio = 65
+Result for Token Set Ratio = 100
+
+String #1: %%jj %%jj
+String #2: %%jj
+Result for Ratio = 62
+Result for Token Set Ratio = 100
+
+
+String #1: /Pn/PnZ/PnZ/PnZ
+String #2: /PnZ/PnZ/Pn/Pn
+Result for Ratio = 76
+Result for Token Set Ratio = 100
+
+
+String #1: nfVfVfV nfVfVfV
+String #2: nfVfVfV
+Result for Ratio = 64
+Result for Token Set Ratio = 100
+
+String #1:  &&yu&& v&yuv&  &&yu&& v&yuv&
+String #2: &&&&~
+Result for Ratio = 24
+Result for Token Set Ratio = 0
+
+String #1: qqqq qqqq qqqq qqqq
+String #2: qqqq
+Result for Ratio = 35
+Result for Token Set Ratio = 100
+
+String #1: Imik~TDfImik~TfImik~TDImik~Tf
+String #2: Imik~TfImik~TDfImik~TfImik~TDfn
+Result for Ratio = 77
+Result for Token Set Ratio = 88
+

@@ -1,0 +1,116 @@
+# NOTE: Need to install "Cython-0.23.4" and "bintrees-2.0.4".
+# Download "Cython-0.23.4" at "http://cython.org/#download".
+# Download "bintrees-2.0.4" at "https://pypi.python.org/pypi/bintrees/2.0.4#downloads".
+# Install them by "sudo python setup.py install" at each directory.
+# Move to the directory where "perftrees.tstl" and "randomtester.py" are together.
+# Do performance test by "tstl perftrees.tstl" and "python randomtester.py -t 30".
+# The program prints out the inserting and removing times for AVL Tree and Red Black Tree,
+# and it saves them into insert.txt and remove.txt.
+
+@import time
+@import random
+@import bintrees
+
+<@
+# display result
+def displayResult(timeInAVL, timeInRBT, timeReAVL, timeReRBT):
+	print 'timeInAVL:', timeInAVL, 'timeInRBT:', timeInRBT, 'timeReAVL:', timeReAVL, 'timeReRBT:', timeReRBT
+
+# create a distinct list with integer
+def listDistinct(low, high, size):
+	return random.sample(range(low, high), size)
+
+# create a duplicate list with integer
+def listDuplicate(low, high, size):
+	temp = []
+	while len(temp) != size:
+		temp.append(random.randint(low, high))
+	return temp
+
+# create a list with negative integer
+def listNegative(low, size):
+	return listDistinct(low, -1, size)
+
+# create a list with postive integer
+def listPositive(high, size):
+	return listDistinct(0, high, size)
+
+
+# create a list with postive integer
+def listPositive(high, size):
+	return listDistinct(0, high, size)
+
+
+# create a list with postive integer
+def listPositive(high, size):
+	return listDistinct(0, high, size)
+
+
+# time for inserting each element in list into tree
+def timeInsert(tree, list):
+	start = time.time()
+	for value, key in enumerate(list):
+		tree.insert(key, value)
+	return time.time() - start
+
+# time for removing each node in tree
+def timeRemove(tree, list):
+	start = time.time()
+	for key in list:
+		tree.remove(key)
+	return time.time() - start
+
+# remove duplicate in list
+def removeDuplicate(list):
+	temp = []
+	[temp.append(i) for i in list if not temp.count(i)]
+	return temp
+
+# save result
+def saveResult(timeInAVL, timeInRBT, timeReAVL, timeReRBT, list, removed):
+	f = open('insert.txt', 'a')
+	f.write(str(timeInAVL) + '\t' + str(timeInRBT) + '\t' + str(list) + '\n')
+	f.close()
+
+	f = open('remove.txt', 'a')
+	f.write(str(timeReAVL) + '\t' + str(timeReRBT) + '\t' + str(removed) + '\n')
+	f.close()
+@>
+
+# set pools
+pool: <list>		1
+pool: <removed>		1
+pool: <avl>		1
+pool: <rbt>		1
+pool: <size>		1
+pool: <timeInRBT>	1
+pool: <timeInAVL>	1
+pool: <timeReRBT>	1
+pool: <timeReAVL>	1
+
+# init
+<list>		:= []
+<removed>	:= []
+<avl>		:= bintrees.AVLTree()
+<rbt>		:= bintrees.RBTree()
+<size>		:= 100
+<timeInAVL>	:= 0.0
+<timeInRBT>	:= 0.0
+<timeReAVL>	:= 0.0
+<timeReRBT>	:= 0.0
+
+# create a list
+~<list> = listDistinct(-<size>, <size>, <size>)
+#~<list> = listDuplicate(-(<size>/10), <size>/10, <size>)
+#~<list> = listPositive(<size>*2, <size>)
+#~<list> = listNegative(-(<size>*2), <size>)
+
+# performance test for insert and remove functions in bintrees-2.0.4/bintrees/avltree.py and bintrees-2.0.4/bintrees/rbtree.py
+len(<list>) == <size> -> \
+	<timeInAVL> = timeInsert(<avl>, <list>); \
+	<timeInRBT> = timeInsert(<rbt>, <list>); \
+	<removed> = removeDuplicate(<list>); \
+	<timeReAVL> = timeRemove(<avl>, <removed>); \
+	<timeReRBT> = timeRemove(<rbt>, <removed>); \
+	displayResult(<timeInAVL>, <timeInRBT>, <timeReAVL>, <timeReRBT>); \
+	saveResult(<timeInAVL>, <timeInRBT>, <timeReAVL>, <timeReRBT>, <list>, <removed>)

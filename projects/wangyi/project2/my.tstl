@@ -1,0 +1,28 @@
+@import math
+@import time
+@import treap
+@import immutable_treap
+
+source: treap.py
+source: immutable_treap.py
+<@
+def test_contain(self, value):
+	if self.contains(value) == True:
+	 	return True
+	else:
+		return False
+@>
+
+pools:
+	<treap> 2 
+	<value> 4
+	<priority> 1
+        <root> 1
+		
+actions:
+	<value> := <[1..10]>
+	<priority> := 2
+	<treap> := immutable_treap.ImmutableTreap()
+        <root> := <treap>.__init__()
+	<root>.insert(<value>, <priority>) => (test_contain(<root,1>,<value,1>) == True)
+	

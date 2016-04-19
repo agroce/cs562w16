@@ -1,0 +1,28 @@
+@import stack
+
+<@
+@>		#Implementation Pending
+
+#pool
+pool: <int> 1
+pool: <stack> 1
+pool: <count> 1
+#pool: <record> 1
+
+#Initializations
+<int>     := [1..100]
+<count>   := 0
+#<record> := []
+
+#Temporary Property (yet to be defined)
+#property: <stack>.empty() -> assert(~record== [])
+property: <stack>.empty() -> assert(~count==0)
+
+#Testing based upon Count and maintaining LinkedList
+<stack> := mystack.stack(); ~<count> = 0
+
+
+<stack>.push(<int>); ~<count> += 1
+#something weird happening with the pop. 
+not <stack>.empty() -> <stack>.pop(); ~<count> -= 1
+

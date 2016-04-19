@@ -1,0 +1,391 @@
+P == P
+ YN
+ P 
+---
+  6
+  6
+  6
+Pass test for adding column:   YN
+ P 
+---
+  6
+  6
+  6
+X == X
+ YN  CV
+ P   X 
+--- ---
+  6   3
+  6   3
+  6   7
+Pass test for adding column:   CV
+ X 
+---
+  3
+  3
+  7
+C == C
+ YN  CV  LH
+ P   X   C 
+--- --- ---
+  6   3   1
+  6   3   8
+  6   7   2
+Pass test for adding column:   LH
+ C 
+---
+  1
+  8
+  2
+X == X
+ YN  CV  LH  XF
+ P   X   C   X 
+--- --- --- ---
+  6   3   1   0
+  6   3   8   3
+  6   7   2   0
+Pass test for adding column:   XF
+ X 
+---
+  0
+  3
+  0
+E == E
+ YN  CV  LH  XF  AC
+ P   X   C   X   E 
+--- --- --- --- ---
+  6   3   1   0   9
+  6   3   8   3   2
+  6   7   2   0   1
+Pass test for adding column:   AC
+ E 
+---
+  9
+  2
+  1
+I == I
+ YN  CV  LH  XF  AC  ZE
+ P   X   C   X   E   I 
+--- --- --- --- --- ---
+  6   3   1   0   9   6
+  6   3   8   3   2   5
+  6   7   2   0   1   3
+Pass test for adding column:   ZE
+ I 
+---
+  6
+  5
+  3
+P == P
+ YN  CV  LH  XF  AC  ZE  MX
+ P   X   C   X   E   I   P 
+--- --- --- --- --- --- ---
+  6   3   1   0   9   6   6
+  6   3   8   3   2   5   2
+  6   7   2   0   1   3   2
+Pass test for adding column:   MX
+ P 
+---
+  6
+  2
+  2
+C == C
+ YN  CV  LH  XF  AC  ZE  MX  BP
+ P   X   C   X   E   I   P   C 
+--- --- --- --- --- --- --- ---
+  6   3   1   0   9   6   6   1
+  6   3   8   3   2   5   2   2
+  6   7   2   0   1   3   2   8
+Pass test for adding column:   BP
+ C 
+---
+  1
+  2
+  8
+N == N
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT
+ P   X   C   X   E   I   P   C   N 
+--- --- --- --- --- --- --- --- ---
+  6   3   1   0   9   6   6   1   1
+  6   3   8   3   2   5   2   2   4
+  6   7   2   0   1   3   2   8   5
+Pass test for adding column:   WT
+ N 
+---
+  1
+  4
+  5
+K == K
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU
+ P   X   C   X   E   I   P   C   N   K 
+--- --- --- --- --- --- --- --- --- ---
+  6   3   1   0   9   6   6   1   1   8
+  6   3   8   3   2   5   2   2   4   4
+  6   7   2   0   1   3   2   8   5   7
+Pass test for adding column:   NU
+ K 
+---
+  8
+  4
+  7
+B == byte
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU  IB 
+ P   X   C   X   E   I   P   C   N   K  byte
+--- --- --- --- --- --- --- --- --- --- ----
+  6   3   1   0   9   6   6   1   1   8    5
+  6   3   8   3   2   5   2   2   4   4    4
+  6   7   2   0   1   3   2   8   5   7    7
+Pass test for adding column:   IB 
+byte
+----
+   5
+   4
+   7
+D == D
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU  IB   KH
+ P   X   C   X   E   I   P   C   N   K  byte  D 
+--- --- --- --- --- --- --- --- --- --- ---- ---
+  6   3   1   0   9   6   6   1   1   8    5   0
+  6   3   8   3   2   5   2   2   4   4    4   1
+  6   7   2   0   1   3   2   8   5   7    7   7
+Pass test for adding column:   KH
+ D 
+---
+  0
+  1
+  7
+X == X
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU  IB   KH  MK
+ P   X   C   X   E   I   P   C   N   K  byte  D   X 
+--- --- --- --- --- --- --- --- --- --- ---- --- ---
+  6   3   1   0   9   6   6   1   1   8    5   0   4
+  6   3   8   3   2   5   2   2   4   4    4   1   6
+  6   7   2   0   1   3   2   8   5   7    7   7   1
+Pass test for adding column:   MK
+ X 
+---
+  4
+  6
+  1
+U == U
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU  IB   KH  MK  BQ
+ P   X   C   X   E   I   P   C   N   K  byte  D   X   U 
+--- --- --- --- --- --- --- --- --- --- ---- --- --- ---
+  6   3   1   0   9   6   6   1   1   8    5   0   4   9
+  6   3   8   3   2   5   2   2   4   4    4   1   6   9
+  6   7   2   0   1   3   2   8   5   7    7   7   1   3
+Pass test for adding column:   BQ
+ U 
+---
+  9
+  9
+  3
+L == l
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU  IB   KH  MK  BQ  IN
+ P   X   C   X   E   I   P   C   N   K  byte  D   X   U   l 
+--- --- --- --- --- --- --- --- --- --- ---- --- --- --- ---
+  6   3   1   0   9   6   6   1   1   8    5   0   4   9   8
+  6   3   8   3   2   5   2   2   4   4    4   1   6   9   9
+  6   7   2   0   1   3   2   8   5   7    7   7   1   3   0
+Pass test for adding column:   IN
+ l 
+---
+  8
+  9
+  0
+N == N
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU  IB   KH  MK  BQ  IN  YC
+ P   X   C   X   E   I   P   C   N   K  byte  D   X   U   l   N 
+--- --- --- --- --- --- --- --- --- --- ---- --- --- --- --- ---
+  6   3   1   0   9   6   6   1   1   8    5   0   4   9   8   5
+  6   3   8   3   2   5   2   2   4   4    4   1   6   9   9   6
+  6   7   2   0   1   3   2   8   5   7    7   7   1   3   0   2
+Pass test for adding column:   YC
+ N 
+---
+  5
+  6
+  2
+R == R
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU  IB   KH  MK  BQ  IN  YC  WE
+ P   X   C   X   E   I   P   C   N   K  byte  D   X   U   l   N   R 
+--- --- --- --- --- --- --- --- --- --- ---- --- --- --- --- --- ---
+  6   3   1   0   9   6   6   1   1   8    5   0   4   9   8   5   7
+  6   3   8   3   2   5   2   2   4   4    4   1   6   9   9   6   6
+  6   7   2   0   1   3   2   8   5   7    7   7   1   3   0   2   9
+Pass test for adding column:   WE
+ R 
+---
+  7
+  6
+  9
+A == A
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU  IB   KH  MK  BQ  IN  YC  WE  HV
+ P   X   C   X   E   I   P   C   N   K  byte  D   X   U   l   N   R   A 
+--- --- --- --- --- --- --- --- --- --- ---- --- --- --- --- --- --- ---
+  6   3   1   0   9   6   6   1   1   8    5   0   4   9   8   5   7   5
+  6   3   8   3   2   5   2   2   4   4    4   1   6   9   9   6   6   7
+  6   7   2   0   1   3   2   8   5   7    7   7   1   3   0   2   9   1
+Pass test for adding column:   HV
+ A 
+---
+  5
+  7
+  1
+V == V
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU  IB   KH  MK  BQ  IN  YC  WE  HV  HT
+ P   X   C   X   E   I   P   C   N   K  byte  D   X   U   l   N   R   A   V 
+--- --- --- --- --- --- --- --- --- --- ---- --- --- --- --- --- --- --- ---
+  6   3   1   0   9   6   6   1   1   8    5   0   4   9   8   5   7   5   5
+  6   3   8   3   2   5   2   2   4   4    4   1   6   9   9   6   6   7   1
+  6   7   2   0   1   3   2   8   5   7    7   7   1   3   0   2   9   1   6
+Pass test for adding column:   HT
+ V 
+---
+  5
+  1
+  6
+N == N
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU  IB   KH  MK  BQ  IN  YC  WE  HV  HT  SA
+ P   X   C   X   E   I   P   C   N   K  byte  D   X   U   l   N   R   A   V   N 
+--- --- --- --- --- --- --- --- --- --- ---- --- --- --- --- --- --- --- --- ---
+  6   3   1   0   9   6   6   1   1   8    5   0   4   9   8   5   7   5   5   7
+  6   3   8   3   2   5   2   2   4   4    4   1   6   9   9   6   6   7   1   9
+  6   7   2   0   1   3   2   8   5   7    7   7   1   3   0   2   9   1   6   9
+Pass test for adding column:   SA
+ N 
+---
+  7
+  9
+  9
+D == D
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU ...  MK  BQ  IN  YC  WE  HV  HT  SA  OP
+ P   X   C   X   E   I   P   C   N   K  ...  X   U   l   N   R   A   V   N   D 
+--- --- --- --- --- --- --- --- --- --- ... --- --- --- --- --- --- --- --- ---
+  6   3   1   0   9   6   6   1   1   8 ...   4   9   8   5   7   5   5   7   8
+  6   3   8   3   2   5   2   2   4   4 ...   6   9   9   6   6   7   1   9   9
+  6   7   2   0   1   3   2   8   5   7 ...   1   3   0   2   9   1   6   9   5
+Pass test for adding column:   OP
+ D 
+---
+  8
+  9
+  5
+F == F
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU ...  BQ  IN  YC  WE  HV  HT  SA  OP  MF
+ P   X   C   X   E   I   P   C   N   K  ...  U   l   N   R   A   V   N   D   F 
+--- --- --- --- --- --- --- --- --- --- ... --- --- --- --- --- --- --- --- ---
+  6   3   1   0   9   6   6   1   1   8 ...   9   8   5   7   5   5   7   8   2
+  6   3   8   3   2   5   2   2   4   4 ...   9   9   6   6   7   1   9   9   3
+  6   7   2   0   1   3   2   8   5   7 ...   3   0   2   9   1   6   9   5   9
+Pass test for adding column:   MF
+ F 
+---
+  2
+  3
+  9
+R == R
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU ...  IN  YC  WE  HV  HT  SA  OP  MF  QH
+ P   X   C   X   E   I   P   C   N   K  ...  l   N   R   A   V   N   D   F   R 
+--- --- --- --- --- --- --- --- --- --- ... --- --- --- --- --- --- --- --- ---
+  6   3   1   0   9   6   6   1   1   8 ...   8   5   7   5   5   7   8   2   5
+  6   3   8   3   2   5   2   2   4   4 ...   9   6   6   7   1   9   9   3   0
+  6   7   2   0   1   3   2   8   5   7 ...   0   2   9   1   6   9   5   9   9
+Pass test for adding column:   QH
+ R 
+---
+  5
+  0
+  9
+M == M
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU ...  YC  WE  HV  HT  SA  OP  MF  QH  AG
+ P   X   C   X   E   I   P   C   N   K  ...  N   R   A   V   N   D   F   R   M 
+--- --- --- --- --- --- --- --- --- --- ... --- --- --- --- --- --- --- --- ---
+  6   3   1   0   9   6   6   1   1   8 ...   5   7   5   5   7   8   2   5   9
+  6   3   8   3   2   5   2   2   4   4 ...   6   6   7   1   9   9   3   0   7
+  6   7   2   0   1   3   2   8   5   7 ...   2   9   1   6   9   5   9   9   3
+Pass test for adding column:   AG
+ M 
+---
+  9
+  7
+  3
+N == N
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU ...  WE  HV  HT  SA  OP  MF  QH  AG  KY
+ P   X   C   X   E   I   P   C   N   K  ...  R   A   V   N   D   F   R   M   N 
+--- --- --- --- --- --- --- --- --- --- ... --- --- --- --- --- --- --- --- ---
+  6   3   1   0   9   6   6   1   1   8 ...   7   5   5   7   8   2   5   9   4
+  6   3   8   3   2   5   2   2   4   4 ...   6   7   1   9   9   3   0   7   2
+  6   7   2   0   1   3   2   8   5   7 ...   9   1   6   9   5   9   9   3   5
+Pass test for adding column:   KY
+ N 
+---
+  4
+  2
+  5
+Q == Q
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU ...  HV  HT  SA  OP  MF  QH  AG  KY  AF
+ P   X   C   X   E   I   P   C   N   K  ...  A   V   N   D   F   R   M   N   Q 
+--- --- --- --- --- --- --- --- --- --- ... --- --- --- --- --- --- --- --- ---
+  6   3   1   0   9   6   6   1   1   8 ...   5   5   7   8   2   5   9   4   5
+  6   3   8   3   2   5   2   2   4   4 ...   7   1   9   9   3   0   7   2   8
+  6   7   2   0   1   3   2   8   5   7 ...   1   6   9   5   9   9   3   5   0
+Pass test for adding column:   AF
+ Q 
+---
+  5
+  8
+  0
+J == J
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU ...  HT  SA  OP  MF  QH  AG  KY  AF  MQ
+ P   X   C   X   E   I   P   C   N   K  ...  V   N   D   F   R   M   N   Q   J 
+--- --- --- --- --- --- --- --- --- --- ... --- --- --- --- --- --- --- --- ---
+  6   3   1   0   9   6   6   1   1   8 ...   5   7   8   2   5   9   4   5   3
+  6   3   8   3   2   5   2   2   4   4 ...   1   9   9   3   0   7   2   8   3
+  6   7   2   0   1   3   2   8   5   7 ...   6   9   5   9   9   3   5   0   1
+Pass test for adding column:   MQ
+ J 
+---
+  3
+  3
+  1
+T == T
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU ...  SA  OP  MF  QH  AG  KY  AF  MQ  YS
+ P   X   C   X   E   I   P   C   N   K  ...  N   D   F   R   M   N   Q   J   T 
+--- --- --- --- --- --- --- --- --- --- ... --- --- --- --- --- --- --- --- ---
+  6   3   1   0   9   6   6   1   1   8 ...   7   8   2   5   9   4   5   3   3
+  6   3   8   3   2   5   2   2   4   4 ...   9   9   3   0   7   2   8   3   6
+  6   7   2   0   1   3   2   8   5   7 ...   9   5   9   9   3   5   0   1   4
+Pass test for adding column:   YS
+ T 
+---
+  3
+  6
+  4
+G == G
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU ...  OP  MF  QH  AG  KY  AF  MQ  YS  NF
+ P   X   C   X   E   I   P   C   N   K  ...  D   F   R   M   N   Q   J   T   G 
+--- --- --- --- --- --- --- --- --- --- ... --- --- --- --- --- --- --- --- ---
+  6   3   1   0   9   6   6   1   1   8 ...   8   2   5   9   4   5   3   3   7
+  6   3   8   3   2   5   2   2   4   4 ...   9   3   0   7   2   8   3   6   6
+  6   7   2   0   1   3   2   8   5   7 ...   5   9   9   3   5   0   1   4   3
+Pass test for adding column:   NF
+ G 
+---
+  7
+  6
+  3
+C == C
+ YN  CV  LH  XF  AC  ZE  MX  BP  WT  NU ...  MF  QH  AG  KY  AF  MQ  YS  NF  FB
+ P   X   C   X   E   I   P   C   N   K  ...  F   R   M   N   Q   J   T   G   C 
+--- --- --- --- --- --- --- --- --- --- ... --- --- --- --- --- --- --- --- ---
+  6   3   1   0   9   6   6   1   1   8 ...   2   5   9   4   5   3   3   7   4
+  6   3   8   3   2   5   2   2   4   4 ...   3   0   7   2   8   3   6   6   5
+  6   7   2   0   1   3   2   8   5   7 ...   9   9   3   5   0   1   4   3   3
+Pass test for adding column:   FB
+ C 
+---
+  4
+  5
+  3
+Q != U

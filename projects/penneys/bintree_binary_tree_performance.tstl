@@ -1,0 +1,44 @@
+@from bintrees import BinaryTree
+@import myDict
+@import math
+@import time
+
+<@
+def insertResults(inserttime, numinsertcalls):
+	if numinsertcalls > 0:
+		print "INSERT AVG:", inserttime / numinsertcalls,
+	else:
+		print "INSERT AVG: N/A",
+		
+@>
+
+log: 1 <binarytree>
+
+pool: <int> 20
+pool: <binarytree> 2 REF
+pool: <ascii> 2
+pool: <letter> 2
+pool: <inserttotaltime> 1
+pool: <insertcalls> 1
+
+init: print"STARTING NEW PERFORMANCE RUN"
+
+<inserttotaltime> := 0
+<insertcalls> := 0
+
+<ascii> := <[65..91]>
+<letter> := chr(<ascii>)
+<int> := <[1..20]>
+
+<binarytree> := BinaryTree()
+<insertcalls> += 1; start = time.time(); ~<binarytree>.insert(<letter>, <int>); <inserttotaltime> = <inserttotaltime> + (time.time() - start);
+print insertResults(<inserttotaltime>, <insertcalls>)
+
+
+
+reference: BinaryTree ==> myDict.Dict
+reference: insert ==> add
+
+
+
+

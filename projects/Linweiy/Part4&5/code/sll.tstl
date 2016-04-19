@@ -1,0 +1,14 @@
+@import singly_linked_list
+
+pools:
+        <value> 20
+        <sllist> 5
+        
+
+actions:
+        <value> := <[0..20]>
+        <sllist> := singly_linked_list.SinglyLinkedList()
+        ~<sllist>.size == 0
+        ~<sllist>.add(<value>) => (<sllist,1>.size - pre<(<sllist,1>.size)> == 1)
+        (~<sllist>.size > 0) and <sllist,1>.search(<value>) -> ~<sllist,1>.remove(<value,1>)
+        ~<sllist>.size == 0

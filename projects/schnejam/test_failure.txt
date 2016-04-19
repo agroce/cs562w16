@@ -1,0 +1,40 @@
+Original test has 16 steps
+REDUCING...
+Reduced test has 5 steps
+REDUCED IN 0.269637107849 SECONDS
+seed2 = 20                                                               # STEP 0
+length1 = int(red.array_len(10))                                         # STEP 1
+array1 = red.get_cpu_data(seed=seed2, min_endpoint=-10, max_endpoint=10, length=length1)  # STEP 2
+ufunc1 =  "ary[i] < val"                                                 # STEP 3
+compare_predicates(array1, ufunc1)                                       # STEP 4
+
+FINAL VERSION OF TEST, WITH LOGGED REPLAY:
+seed2 = 20                                                               # STEP 0
+length1 = int(red.array_len(10))                                         # STEP 1
+array1 = red.get_cpu_data(seed=seed2, min_endpoint=-10, max_endpoint=10, length=length1)  # STEP 2
+ufunc1 =  "ary[i] < val"                                                 # STEP 3
+compare_predicates(array1, ufunc1)                                       # STEP 4
+ERROR: (<class 'pyopencl.cffi_cl.RuntimeError'>, RuntimeError(<pyopencl.cffi_cl._ErrorRecord object at 0x7fafca382368>,), <traceback object at 0x7fafc2445680>)
+TRACEBACK:
+  File "/home/t0rqued/cs562w16/projects/schnejam/sut.py", line 4434, in safely
+    act[2]()
+  File "/home/t0rqued/cs562w16/projects/schnejam/sut.py", line 2607, in act166
+    compare_predicates(self.p_array[1], self.p_ufunc[1])
+  File "/home/t0rqued/cs562w16/projects/schnejam/sut.py", line 29, in compare_predicates
+    success = red.pyopencl_filter(arr, func)
+  File "/home/t0rqued/cs562w16/projects/schnejam/reductions.py", line 58, in pyopencl_filter
+    platforms = cl.get_platforms()
+  File "/home/t0rqued/pyopencl-testing/local/lib/python2.7/site-packages/pyopencl/cffi_cl.py", line 670, in __init__
+    dev_type))
+  File "/home/t0rqued/pyopencl-testing/local/lib/python2.7/site-packages/pyopencl/cffi_cl.py", line 549, in _handle_error
+    raise e
+STOPPING TESTING DUE TO FAILED TEST
+3.97208213806 TOTAL RUNTIME
+16 EXECUTED
+391 TOTAL TEST OPERATIONS
+3.6641099453 TIME SPENT EXECUTING TEST OPERATIONS
+0.00830221176147 TIME SPENT EVALUATING GUARDS AND CHOOSING ACTIONS
+0.000192165374756 TIME SPENT CHECKING PROPERTIES
+3.66430211067 TOTAL TIME SPENT RUNNING SUT
+0.00828075408936 TIME SPENT RESTARTING
+0.26971411705 TIME SPENT REDUCING TEST CASES

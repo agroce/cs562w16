@@ -1,0 +1,75 @@
+@import LinkedList_Circular
+@import math
+@import time
+
+
+# @ indicates raw python code, such as imports, and is usually not parsed by TSTL, but available for use in testing
+<@
+def leng(self):
+        ptr = self.head
+        count = 0
+        while ptr:
+            count = count + 1
+            ptr = ptr.next
+        return count
+def checkInsert(self, D):
+    ptr = self.head
+    if (ptr == None):
+        return False
+    if(D == ptr.data):
+        return True
+    else:
+        return False
+def empty(self):
+	if (length(self) == 0):
+		return True
+	else :
+		return False
+def checkAppend(self, D):
+        ptr = self.head
+        if(ptr == None):
+            return False
+        else:
+            while ptr.next:
+                ptr=ptr.next
+            if (ptr.data == D):
+            	return True
+            else:
+            	return False
+def returnValue(self, I):
+        ptr = self.head
+        while I > 0:
+            ptr = ptr.next
+            I = I - 1
+        return ptr.data
+
+@>
+
+
+# tells TSTL where the source code of the module tested is, to enable code coverage
+	source: LinkedList_Circular.py
+
+# pools are where TSTL stores state of the SUT; REF indicates a pool that is mirrored by a reference implementation
+	pool: <INT> 100
+	pool: <LINKEDLIST> 1
+	pool: <VALUE> 1
+	pool: <NEGTIVE> 1
+	pool: <OVERFLOW> 1
+
+# initializes value
+	<INT>:=<[1..200]>
+	<VALUE>:=<[1..20]>
+	<NEGTIVE> := <[-4..-2]>
+	<OVERFLOW> := <[20 .. 100]>
+
+
+# initialize an empty LinkedList
+	<LINKEDLIST> := LinkedList_Circular.CircularLinkedList()
+
+# insert 
+	~<LINKEDLIST>.insert(<INT>) => (leng(<LINKEDLIST,1>) == PRE<(leng(<LINKEDLIST,1>))>+1) and (checkInsert(%LINKEDLIST,1%,%INT%) == True )
+# append
+	~%LINKEDLIST%.append(%INT%) => (length(%LINKEDLIST,1%) == PRE%(length(%LINKEDLIST,1%))%+1) and (checkAppend(%LINKEDLIST,1%,%INT%) == True )
+# returnValue
+	a = %LINKEDLIST%.returnIndex(25) => ( a == None )
+

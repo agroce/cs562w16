@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+@from xpinyin import Pinyin
+
+pool: <p> 1
+pool: <str1> 3
+
+
+<p> := Pinyin()
+
+<str1> := <[u"開心 = kaixin", u"快樂 = kuaile", u"萬事如意 = wanshiruyi"]>
+
+print <p>.get_pinyin(<str1>, show_tone_marks=True)
+print <p>.get_initials(<str1>)
+
+

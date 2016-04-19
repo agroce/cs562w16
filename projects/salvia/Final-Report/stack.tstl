@@ -1,0 +1,14 @@
+@import stack
+
+
+pools:
+        <stack> 5
+        <data> 20
+
+
+actions:
+        <data> := <[0..10]>      
+        <stack> := stack.Stack()
+        <stack>.add(<data>) -> (not <stack,1>.is_empty()) -> temp = <stack,1>.stack_list; value = temp[len(temp)-1]; pop = <stack,1>.remove() => value == pop 
+		<stack>.add(<data>) -> not <stack,1>.is_empty() => <stack,1>.remove()
+        <stack>.add(<data>) => (<data,1> in <stack,1>.stack_list) and (<stack,1>.size() == (pre<(<stack,1>.size())>+1))

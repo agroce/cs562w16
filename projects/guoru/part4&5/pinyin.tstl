@@ -1,0 +1,58 @@
+# _*_ coding: utf-8 _*_
+@from xpinyin import Pinyin
+
+pool: <word1> 8
+pool: <word2> 8
+pool: <word3> 3
+pool: <word4> 3
+pool: <word5> 3
+pool: <word6> 3
+pool: <w> 1
+<w> := Pinyin()
+
+
+<word1> := <[u"骉: biao1",u"麤: cu1", u"奡: ao4",u"砳: le4",u"嘂: jiao"]>
+
+<word2> := <[u"蛤蚌",u"蚌埠", u"纸薄",u"稀薄",u"碉堡",u"瓦窑堡",u"十里堡"]>
+
+<word3> := <[u"一群嗜血的蚂蚁被腐肉所吸引我面无表情看孤独的风景失去你爱恨开始分明失去你还有什么事好关心当鸽子不再象征和平我终于被提广场上喂食的是秃鹰我用漂亮的押韵形容被掠夺一空的爱情啊乌云开始遮蔽 夜色不干净公园里葬礼的回音在漫天飞行送你的白色玫瑰在纯黑的环境凋乌鸦在树枝上诡异的很安静静静听我黑色的大衣想温暖你日渐冰冷的回忆",u"走过的走过的生命啊四周弥漫雾气我在空旷的墓地老去后还爱你为你弹奏肖邦的夜曲纪念我死去的爱情跟夜风一样的声音心碎的很好听手在键盘敲很轻我给的思念很小心你埋葬的地方叫幽冥为你弹奏肖邦的夜曲纪念我死去的爱情而我为你隐姓埋名在月光下弹琴对你心跳的感应还是如此温热亲近怀念你那鲜红的唇印那些断翅的蜻蜓散落在这森林而我的眼睛没有丝毫同情失去你泪水混浊不清失去你我连笑容都有阴影风在长满青苔的屋顶嘲笑我的伤心像一口没有水的枯井我用凄美的字型描绘后悔莫及的那爱情",u"为你弹奏肖邦的夜曲纪念我死去的爱情跟夜风一样的声音心碎的很好听手在键盘敲很轻我给的思念很小心你埋葬的地方叫幽冥为你弹奏肖邦的夜曲纪念我死去的爱情而我为你隐姓埋名在月光下弹琴对你心跳的感应还是如此温热亲近怀念你那鲜红的唇印一群嗜血的蚂蚁被腐肉所吸引我面无表情看孤独的风景失去你爱恨开始分明失去你还有什么事好关心当鸽子不再象征和平我终于被提醒广场上喂食的是秃鹰我用漂亮的押韵 形容被掠夺一空的爱情"]>
+
+<word4> := <[u"东海之外大壑少昊之国少吴孺帝颛顼于此弃其琴瑟有甘山者甘水出焉生甘渊知大荒大荒东南隅有名皮母地丘古东海东海之外大荒之中有山名曰大言日月所出有波谷山者有大人之国斋有大有大人之市名曰大人之堂有",u"一大人踆其上张其两耳主有小有小人国名靖人知有神有神人面身名曰霝鬼之尸古有有潏山杨水出斋有蔿有蔿国黍食使鸟虎豹熊罴主大荒大荒之中有山名曰合虚日月所出知",u"有中有中容之国帝俊生中容中容人食木实使四鸟豹虎熊罴古有东有东口之山有君子之国其人衣冠带剑斋有司有司幽之国帝俊生晏龙晏龙生司幽司幽生思土不妻思女不夫食黍食兽"]>
+
+<word5> := <[u"君不見黃河之水天上來奔流到海不複回君不見高堂明鏡悲白發朝如青絲暮成雪",u"人生得意須盡歡莫使金樽空對月天生我材必有用千金散盡還複來烹羊宰牛且為樂會須一飲三百杯岑夫子丹丘生將進酒杯莫停與君歌一曲請君為我傾耳聽",u"鍾鼓馔玉不足貴但願長醉不複醒古來聖賢皆寞惟有飲者留其名陳王昔時宴平樂鬥酒十千恣歡谑主人何為言少錢徑須沽取對君酌五花馬千金裘呼兒將出換美酒與爾同銷萬古愁"]>
+
+<word6> := <[u"当前已经有一些流行的也比较成熟的软件产品能够很好地支持关系型数据模型",u"这些产品也因此称为关系型数据库管理系统RelationaDataBasManagemeSystemRDBM例如微软公司Microsoft Access和MSSQLServerSybase公司的Sybase甲骨文公司",u"的Oracle以及IBM公司的DB2其MicrosoftAccess是一个中小型数据库管理系统适用于一般的中小企MSSQLServerSybase和Oracle基本属于大中型的数据库管理而DB2则属于大型的数库管理系统并且对计算机硬件有很高和专门的要求"]>
+
+
+
+print <w>.get_pinyin(<word1>)
+print <w>.get_pinyin(<word2>)
+print <w>.get_pinyin(<word3>)
+print <w>.get_pinyin(<word4>)
+print <w>.get_pinyin(<word5>)
+print <w>.get_pinyin(<word6>)
+
+
+print <w>.get_initials(<word1>)
+print <w>.get_initials(<word2>)
+print <w>.get_initials(<word3>)
+print <w>.get_initials(<word4>)
+print <w>.get_initials(<word5>)
+print <w>.get_initials(<word6>)
+
+print <w>.get_pinyin(<word1>, show_tone_marks=True)
+print <w>.get_pinyin(<word2>, show_tone_marks=True)
+print <w>.get_pinyin(<word3>, show_tone_marks=True)
+print <w>.get_pinyin(<word4>, show_tone_marks=True)
+print <w>.get_pinyin(<word5>, show_tone_marks=True)
+print <w>.get_pinyin(<word6>, show_tone_marks=True)
+
+print <w>.get_pinyin(<word1>, ' ')
+print <w>.get_pinyin(<word2>, ' ')
+print <w>.get_pinyin(<word3>, ' ')
+print <w>.get_pinyin(<word4>, ' ')
+print <w>.get_pinyin(<word5>, ' ')
+print <w>.get_pinyin(<word6>, ' ')
+
+
+

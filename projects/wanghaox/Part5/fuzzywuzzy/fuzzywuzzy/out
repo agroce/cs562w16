@@ -1,0 +1,85 @@
+Random testing using config=Config(verbose=False, failedLogging=None, maxtests=-1, greedyStutter=False, seed=None, generalize=False, uncaught=False, speed='FAST', internal=False, normalize=False, replayable=False, essentials=False, quickTests=False, coverfile='coverage.out', ignoreprops=False, total=False, noreassign=False, full=False, multiple=False, stutter=None, running=False, nocover=False, gendepth=None, logging=None, html=None, keep=False, depth=100, timeout=50, output=None)
+String #1:  sSsS YsYs ttkk
+String #2:  naaa ttkk YsYs
+Result for Ratio = 40
+Result for Token Sort Ratio = 71
+
+
+String #1:  sSsS YsYs ttkk
+String #2:  naaa ttkk YsYs
+Result for Ratio = 40
+Result for Token Sort Ratio = 71
+
+
+String #1: wkwkwq
+String #2: qqwP
+Result for Ratio = 20
+Result for Token Sort Ratio = 20
+
+
+String #1: ****
+String #2: DD*p*p
+Result for Ratio = 40
+Result for Token Sort Ratio = 0
+
+
+String #1:   hhhh --sjBah!- sysssssy sjBah!yUcsjBah!yUcsjBah!yUcSsjBah!yr sjBah!yULsjBah!yUcsjBah!yUcsjBah!yU
+String #2:   @h@h sysssssy --sjBah!- sjBah!yULsjBah!yUcsjBah!yUcsjBah!yU sjBah!yUcsjBah!yUcsjBah!yUcSsjBah!yr
+Result for Ratio = 59
+Result for Token Sort Ratio = 98
+
+
+String #1: CCCE
+String #2: CCCC
+Result for Ratio = 75
+Result for Token Sort Ratio = 75
+
+
+String #1: CDxtXCDxC!Fp
+String #2: CCCC
+Result for Ratio = 38
+Result for Token Sort Ratio = 38
+
+
+String #1: rrrr
+String #2: rDrDrDvrDv
+Result for Ratio = 57
+Result for Token Sort Ratio = 57
+
+
+String #1:   XKKK KKKGK KGKKK ++Y+Y+ +Y++Y+
+String #2:   XKXX KGKKK KKKGK +Y++Y+ ++Y+Y+
+Result for Ratio = 63
+Result for Token Sort Ratio = 92
+
+
+String #1:   XKKK KKKGK KGKKK ++Y+Y+ +Y++Y+
+String #2:   XKXX KGKKK KKKGK +Y++Y+ ++Y+Y+
+Result for Ratio = 63
+Result for Token Sort Ratio = 92
+
+
+String #1:   XKKK KKKGK KGKKK ++Y+Y+ +Y++Y+
+String #2:   XKXX KGKKK KKKGK +Y++Y+ ++Y+Y+
+Result for Ratio = 63
+Result for Token Sort Ratio = 92
+
+
+String #1:  E-UE-Uer E-UvqE-UE-Uv ~i!JoF~i!JoFS~i!Jo~i!Jo
+String #2:  rrrr ~i!JoF~i!JoFS~i!Jo~i!Jo E-UvqE-UE-Uv
+Result for Ratio = 59
+Result for Token Sort Ratio = 86
+
+
+String #1: EeEecc
+String #2: ccEec
+Result for Ratio = 55
+Result for Token Sort Ratio = 55
+
+
+String #1: EeEecc
+String #2: W#Fw#vW#Fw#W#Fw#vW#Fw#v
+Result for Ratio = 0
+Result for Token Sort Ratio = 0
+
+

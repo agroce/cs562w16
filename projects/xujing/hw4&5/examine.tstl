@@ -1,0 +1,117 @@
+@import examine as examine
+<@
+def check(object):
+	if object==None:
+		print("None")
+	else: 
+		print(object)
+@>
+source: examine.py
+pool: <strname> 3
+pool: <exam1> 3
+pool: <list1> 3
+pool: <exam2> 3
+pool: <exams> 3 
+pool: <datalist> 3
+pool: <exam3> 3
+pool: <alist> 3
+pool: <alistmerge> 3
+pool: <nestedlist> 3
+pool: <incosistentdepth> 3
+pool: <nesteddict> 3
+pool: <addemptylistdicts> 3
+pool: <noneinlist> 3
+pool: <nonekeydicts> 3
+pool: <tuple> 3
+pool: <deeplistnest> 3
+pool: <listuples> 3
+pool: <emptytuplemerging> 3
+
+actions:
+#test no structure
+pool: <strtest> 3
+<strtest> :=[]
+<strtest> +=[{'key1': 'val1'}]
+<strtest> +=['coding', 'snowboarding']
+print(<strtest>,<strtest>,<strtest,1>,<strtest,2>)
+
+# test simple list sturcture
+<strname> := ['coding', 'snowboarding']
+<list1> :=[{'key1': 'val1'}, {'key2': 'val2'}]
+print examine.Structure(<list1>);examine.Structure(<list1,1>)
+
+
+#test None list  structure
+print (examine.Structure([None])).__add__(examine.Structure([]))
+
+#test mixed type list structure
+<datalist> := ['<list1>','<strname>']
+<exams> := ['<list1>']
+~<exams>.append(<datalist>)
+<strname> := ['coding', 'snowboarding']
+
+<exam1>:= examine.Structure(<strname>)
+<exam2>:= examine.Structure(<list1>)
+<exam3>:= examine.Structure(<exams>)
+
+check(<exam3>.__add__(<exam3>))
+check(<exam1>.__add__(<exam3>))
+
+#test blank list
+print (examine.Structure([]))
+
+#test blank dict
+print (examine.Structure({}))
+##print examine.Structure(<exams>);examine.Structure(<exams,1>)
+#print <exam3>.__add__(<exam3>);<exam3,1>.__add__(<exam3,1>)
+
+#test defer list type if empty
+<alist>:= [{'list': [1, 2, 3]}, {'list': []}]
+print (examine.Structure(<alist>))
+
+#test empty list merged with non list
+<alistmerge>:= [{'list': []}, {'list': 'str'}]
+print (examine.Structure(<alistmerge>))
+
+#nested_list
+<nestedlist>:= [[[1, 2, 3], [4, 5, 6]], [[7, 8, 9]]]
+print (examine.Structure(<nestedlist>))
+
+#incosistent_list_depth
+<incosistentdepth>:= [[1, 2, 3], [[4, 5, 6], [7, 8, 9]]]
+print (examine.Structure(<incosistentdepth>))
+
+#merging_none_list_with_int_list
+
+
+#nested_dict
+<nesteddict>:= {'l1': {'l2': {'l3': 'val'}}}
+print (examine.Structure(<nesteddict>))
+
+#add_empty_list_to_list_of_dicts 
+<addemptylistdicts>:= [{'key1': [{'subkey1': 'subval1', 'subkey2': 'subval2'}]},{'key1': []},{'key1': [{'subkey1': 'subval1'}]}]
+print (examine.Structure(<addemptylistdicts>))
+
+#none_in_list
+<noneinlist>:=[1, 2, 3, None]
+print (examine.Structure(<noneinlist>))
+
+#none_as_val_of_key_in_list_of_dicts
+<nonekeydicts>:= [{'key': 'val'}, {'key': None}]
+print (examine.Structure(<nonekeydicts>))
+
+#tuple
+<tuple>:= ('string', 1)
+print (examine.Structure(<tuple>))
+
+#deep_list_nest
+<deeplistnest>:= [[[1], []], [[], [1]], None, []]
+print (examine.Structure(<deeplistnest>))
+
+#list_of_tuples
+<listuples>:= [('str', None, []), ('str', 1, 2, 'over')]
+print (examine.Structure(<listuples>))
+
+#empty_tuple_merging
+<emptytuplemerging>:= [tuple(), ('str', 1)]
+print (examine.Structure(<emptytuplemerging>))

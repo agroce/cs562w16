@@ -1,0 +1,27 @@
+#Instructions: SEE README ON HOW TO INSTALL pyopencl (into a virtualenv if you wish) using pip
+
+@from pyopencltests import compare_zip, compare_fold, compare_filters, compare_unique, array_len, get_cpu_data
+@import math
+@import numpy as np
+
+pool: <seed> 3
+<seed> := <[1..20]>
+
+pool: <length> 3
+<length> := int(array_len(<[1..13]>))
+
+pool: <array> 3
+<array> := get_cpu_data(seed=<seed>, min_endpoint=-10, max_endpoint=10, length=<length>)
+
+#valid GPU operations for folding must be associative
+pool: <afunc> 3
+<afunc> := "a+b"  # "a*b" results in overflow for even small values
+
+#valid GPU comparison operations
+pool: <ufunc> 3
+<ufunc> := <["ary[i] > val", "ary[i] < val", "ary[i] >= val", "ary[i] <= val", "ary[i] == val"]>
+
+compare_zip(<array>, <afunc>)
+compare_filters(<array>, <ufunc>)
+compare_fold(<array>, <afunc>)
+compare_unique(<array>)
